@@ -365,10 +365,6 @@
                     <param id="1" name="Value">0</param>
                 </action>
                 <action id="-9" name="Destroy" sid="397342147853747" type="Grigliainvisibile" />
-                <action id="-12" name="Subtract from" sid="540134452667117" type="Player">
-                    <param id="0" name="Instance variable">Earth</param>
-                    <param id="1" name="Value">1</param>
-                </action>
             </actions>
         </event-block>
         <event-block sid="336058101686383">
@@ -420,6 +416,10 @@
                 <action id="-3" name="Set position" sid="491458283193983" type="Grigliainvisibile">
                     <param id="0" name="X">round(self.X / TILESIZE)*TILESIZE + 32 </param>
                     <param id="1" name="Y">round(self.Y / TILESIZE)*TILESIZE + 32</param>
+                </action>
+                <action id="-12" name="Subtract from" sid="540134452667117" type="Player">
+                    <param id="0" name="Instance variable">Earth</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
