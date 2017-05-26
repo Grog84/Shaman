@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
+        <variable constant="1" name="TILESIZE" sid="993735975944735" static="0" type="number">64</variable>
         <event-block sid="814427853195352">
             <conditions>
                 <condition behavior="Bullet" id="1" name="Compare distance travelled" sid="818041906539840" type="Interaction">
@@ -265,12 +266,252 @@
         </event-block>
         <event-block sid="576159927434724">
             <conditions>
-                <condition id="0" name="On click" sid="352877834140190" type="Mouse">
-                    <param id="0" name="Mouse button">2</param>
-                    <param id="1" name="Click type">0</param>
+                <condition id="2" name="Key is down" sid="691494602668008" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="530617501016183" type="Keyboard">
+                    <param id="0" name="Key">32 (Barra Spaziatrice)</param>
                 </condition>
             </conditions>
-            <actions />
+            <actions>
+                <action id="0" name="Call function" sid="925133897935153" type="Function">
+                    <param id="0" name="Name">&quot;StopMoving&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="952099417663145">
+            <conditions>
+                <condition id="2" name="Key is down" sid="200014527144839" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="645845136023951" type="Keyboard">
+                    <param id="0" name="Key">32 (Barra Spaziatrice)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="984620691515287" type="Function">
+                    <param id="0" name="Name">&quot;StopMoving&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="974107009548009">
+            <conditions>
+                <condition id="2" name="Key is down" sid="481941022586215" type="Keyboard">
+                    <param id="0" name="Key">32 (Barra Spaziatrice)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="908680201742633" type="Function">
+                    <param id="0" name="Name">&quot;StopMoving&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="577203957404519">
+            <conditions>
+                <condition id="2" name="Key is down" sid="126246905236328" type="Keyboard">
+                    <param id="0" name="Key">32 (Barra Spaziatrice)</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="483432622455850" type="System" />
+                <condition id="-7" name="Compare instance variable" sid="288707893941304" type="Player">
+                    <param id="0" name="Instance variable">Earth</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="603928524309901" type="Function">
+                    <param id="0" name="Name">&quot;CreateGriglia&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="567351983771148">
+            <conditions>
+                <condition id="0" name="On function" sid="194938374978002" type="Function">
+                    <param id="0" name="Name">&quot;StopMoving&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="919618387884054" type="Player">
+                    <param id="0" name="Instance variable">Speed</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="922724801822963">
+            <conditions>
+                <condition id="3" name="On key released" sid="830504475782749" type="Keyboard">
+                    <param id="0" name="Key">32 (Barra Spaziatrice)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="713045803205348" type="Player">
+                    <param id="0" name="Instance variable">Speed</param>
+                    <param id="1" name="Value">300</param>
+                </action>
+                <action disabled="1" id="-1" name="Set X" sid="276414377753361" type="Player">
+                    <param id="0" name="X">Self.X + Self.Speed*dt</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="397622752623596" type="Grigliainvisibile">
+                    <param id="0" name="Object">Tile</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="596261541110140" type="Grigliainvisibile">
+                    <param id="0" name="Instance variable">IsOnLayer</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="397342147853747" type="Grigliainvisibile" />
+                <action id="-12" name="Subtract from" sid="540134452667117" type="Player">
+                    <param id="0" name="Instance variable">Earth</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="336058101686383">
+            <conditions>
+                <condition id="2" name="Key is down" sid="123650624078350" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="705552077882771" type="Player">
+                    <param id="0" name="Instance variable">TilePositioning</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="859186324114293" type="Player">
+                    <param id="0" name="X">Self.X + Self.Speed*dt</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="904127996981401">
+            <conditions>
+                <condition id="2" name="Key is down" sid="427782296783577" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="488219663378466" type="Player">
+                    <param id="0" name="Instance variable">TilePositioning</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="502747134174391" type="Player">
+                    <param id="0" name="X">Self.X - Self.Speed*dt</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="782047440123875">
+            <conditions>
+                <condition id="0" name="On function" sid="156305496622219" type="Function">
+                    <param id="0" name="Name">&quot;CreateGriglia&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="646455740150102" type="Player">
+                    <param id="0" name="Object">Grigliainvisibile</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="544745157023325" type="Grigliainvisibile">
+                    <param id="0" name="Instance variable">IsOnLayer</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="491458283193983" type="Grigliainvisibile">
+                    <param id="0" name="X">round(self.X / TILESIZE)*TILESIZE + 32 </param>
+                    <param id="1" name="Y">round(self.Y / TILESIZE)*TILESIZE + 32</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="461848729132551">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="662198771804707" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="487599679124668" type="Player">
+                    <param id="0" name="Instance variable">TilePositioning</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="825868924100357" type="Grigliainvisibile">
+                    <param id="0" name="X">Self.X + TILESIZE</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="281678255878479">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="398949334355179" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="306487905853630" type="Player">
+                    <param id="0" name="Instance variable">TilePositioning</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="668293090109301" type="Grigliainvisibile">
+                    <param id="0" name="X">Self.X - TILESIZE</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="346842884149220">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="340480115198328" type="Keyboard">
+                    <param id="0" name="Key">38 (Up arrow)</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="419505352995447" type="Player">
+                    <param id="0" name="Instance variable">TilePositioning</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="245730889565792" type="Grigliainvisibile">
+                    <param id="0" name="Y">Self.Y - TILESIZE</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="999572148883343">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="356790618082636" type="Keyboard">
+                    <param id="0" name="Key">40 (Down arrow)</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="184901757143711" type="Player">
+                    <param id="0" name="Instance variable">TilePositioning</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="949419238876316" type="Grigliainvisibile">
+                    <param id="0" name="Y">Self.Y + TILESIZE</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="354819528941055">
+            <conditions>
+                <condition id="3" name="On key released" sid="307847425714070" type="Keyboard">
+                    <param id="0" name="Key">32 (Barra Spaziatrice)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-14" name="Toggle boolean" sid="947551804626120" type="Player">
+                    <param id="0" name="Instance variable">TilePositioning</param>
+                </action>
+                <action behavior="Platform" id="0" name="Set ignoring input" sid="744472777230846" type="Player">
+                    <param id="0" name="Input">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="954112740254363">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="767589736712292" type="Keyboard">
+                    <param id="0" name="Key">32 (Barra Spaziatrice)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-14" name="Toggle boolean" sid="127484084715612" type="Player">
+                    <param id="0" name="Instance variable">TilePositioning</param>
+                </action>
+                <action behavior="Platform" id="0" name="Set ignoring input" sid="400314093478606" type="Player">
+                    <param id="0" name="Input">1</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

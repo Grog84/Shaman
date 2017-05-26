@@ -922,8 +922,15 @@
                     </properties>
                     <instance-variables>
                         <Earth>0</Earth>
+                        <Speed>300</Speed>
+                        <TilePositioning>false</TilePositioning>
                     </instance-variables>
                     <behavior-instances>
+                        <behavior-instance type="BoundToLayout">
+                            <properties>
+                                <bound-by>Edge</bound-by>
+                            </properties>
+                        </behavior-instance>
                         <behavior-instance type="Platform">
                             <properties>
                                 <max-speed>330</max-speed>
@@ -938,17 +945,12 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="BoundToLayout">
-                            <properties>
-                                <bound-by>Edge</bound-by>
-                            </properties>
-                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>515</x>
-                        <y>832</y>
+                        <x>512</x>
+                        <y>864</y>
                         <z>0</z>
                         <width>64</width>
                         <height>128</height>
@@ -1088,7 +1090,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>608</x>
-                        <y>-32</y>
+                        <y>-64</y>
                         <z>0</z>
                         <width>20</width>
                         <height>20</height>
@@ -1154,6 +1156,34 @@
                         <z>0</z>
                         <width>20</width>
                         <height>20</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Grigliainvisibile" uid="36">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <IsOnLayer>false</IsOnLayer>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1888</x>
+                        <y>-384</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>64</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
