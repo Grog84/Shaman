@@ -29,8 +29,8 @@
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>1708</width>
-        <height>960</height>
+        <width>640</width>
+        <height>480</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
@@ -174,10 +174,28 @@
     </object-folder>
     <families />
     <layout-folder>
-        <layout>Layout 1.xml</layout>
+        <layout>Menu.xml</layout>
+        <layout>Level1.xml</layout>
+        <layout>Level2.xml</layout>
+        <layout>Level3.xml</layout>
+        <layout>Level4.xml</layout>
+        <layout>BossLevel1.xml</layout>
+        <layout>BossLevel2.xml</layout>
+        <layout>BossLevel3.xml</layout>
+        <layout>BossLevel4.xml</layout>
     </layout-folder>
     <event-folder>
+        <event-sheet>esLevel1.xml</event-sheet>
+        <event-sheet>esMenu.xml</event-sheet>
+        <event-sheet>Main.xml</event-sheet>
+        <event-sheet>esLevel2.xml</event-sheet>
+        <event-sheet>esLevel3.xml</event-sheet>
+        <event-sheet>esLevel4.xml</event-sheet>
+        <event-sheet>esBossLevel1.xml</event-sheet>
+        <event-sheet>esBossLevel2.xml</event-sheet>
+        <event-sheet>esBossLevel3.xml</event-sheet>
         <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>esBossLevel4.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="31" />
