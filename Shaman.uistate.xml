@@ -11,17 +11,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">Level1</layout>
-        <layout order="2">Menu</layout>
-        <layout order="4">Level2</layout>
-        <layout order="5">Level3</layout>
-        <layout order="6">Level4</layout>
-        <layout order="7">BossLevel1</layout>
-        <layout order="8">BossLevel2</layout>
-        <layout order="9">BossLevel3</layout>
-        <layout order="10">BossLevel4</layout>
         <event-sheet order="1">esLevel1</event-sheet>
-        <event-sheet order="3">Main</event-sheet>
-        <event-sheet active="1" order="11">esBossLevel4</event-sheet>
+        <event-sheet active="1" order="2">Main</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -29,7 +20,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="0" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
-    <families-expanded root="1" />
+    <families-expanded root="1">
+        <family expanded="0" name="Tile" />
+    </families-expanded>
     <folders-expanded>
         <folder expanded="0" path="object-folder/" />
         <folder expanded="0" path="layout-folder/" />
@@ -38,12 +31,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
-        <folder expanded="1" path="animation-folder/Tile/" />
+        <folder expanded="1" path="animation-folder/Tile_earth/" />
         <folder expanded="1" path="animation-folder/Player/" />
         <folder expanded="1" path="animation-folder/Interaction/" />
         <folder expanded="1" path="animation-folder/LandTile/" />
         <folder expanded="1" path="animation-folder/Sprite/" />
         <folder expanded="1" path="animation-folder/Sprite2/" />
         <folder expanded="1" path="animation-folder/Grigliainvisibile/" />
+        <folder expanded="1" path="animation-folder/Tile_water/" />
+        <folder expanded="1" path="animation-folder/Tile_Air/" />
     </folders-expanded>
 </c2uistate>

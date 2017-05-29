@@ -51,12 +51,12 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
-        <object-type name="Tile" sid="689074194758499">
+        <object-type name="Tile_earth" sid="689074194758499">
             <plugin id="Sprite" />
             <instance-variables>
-                <instance-variable name="ShrinkSpeed" sid="598410081871007" type="number" />
-                <instance-variable name="AbsorbSpeed" sid="404506659656373" type="number" />
-                <instance-variable name="IsAbsorbing" sid="560563823754322" type="number" />
+                <instance-variable name="ShrinkSpeedddd" sid="598410081871007" type="number" />
+                <instance-variable name="AbsorbSpeeddddd" sid="404506659656373" type="number" />
+                <instance-variable name="IsAbsorbingddd" sid="560563823754322" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Solid" sid="558354332826075">
@@ -75,6 +75,7 @@
                 <instance-variable name="Earth" sid="757722268867341" type="number" />
                 <instance-variable name="Speed" sid="115856489253393" type="number" />
                 <instance-variable name="TilePositioning" sid="766532813857393" type="boolean" />
+                <instance-variable name="BaseSpeed" sid="351333673472266" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="BoundToLayout" sid="603214758576246">
@@ -87,7 +88,7 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="447876683118469" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.75">
-                        <image-point name="Imagepoint 1" x="0.515625" y="0.140625" />
+                        <image-point name="Imagepoint 1" x="0.53125" y="0.140625" />
                     </frame>
                 </animation>
             </animation-folder>
@@ -171,8 +172,37 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Tile_water" sid="355600516418859">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="118206503403046" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Tile_Air" sid="627832559625701">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="198815342489658" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
-    <families />
+    <families>
+        <family name="Tile" plugin-id="Sprite" sid="792340356286362">
+            <members>
+                <member>Tile_Air</member>
+                <member>Tile_earth</member>
+                <member>Tile_water</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="IsAbsorbing" sid="169357067213731" type="number" />
+                <instance-variable name="AbsorbSpeed" sid="685452380014658" type="number" />
+                <instance-variable name="ShrinkSpeed" sid="145311910923305" type="number" />
+            </instance-variables>
+        </family>
+    </families>
     <layout-folder>
         <layout>Menu.xml</layout>
         <layout>Level1.xml</layout>

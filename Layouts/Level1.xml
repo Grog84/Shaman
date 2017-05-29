@@ -4,8 +4,8 @@
     <sid>861407496976329</sid>
     <event-sheet>esLevel1</event-sheet>
     <size>
-        <width>1708</width>
-        <height>960</height>
+        <width>13312</width>
+        <height>6272</height>
     </size>
     <margins>
         <horizontal>500</horizontal>
@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Tile" uid="0">
+                <instance type="Tile_earth" uid="0">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -37,9 +37,12 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <ShrinkSpeed>100</ShrinkSpeed>
-                        <AbsorbSpeed>300</AbsorbSpeed>
                         <IsAbsorbing>0</IsAbsorbing>
+                        <AbsorbSpeed>300</AbsorbSpeed>
+                        <ShrinkSpeed>100</ShrinkSpeed>
+                        <ShrinkSpeedddd>100</ShrinkSpeedddd>
+                        <AbsorbSpeeddddd>300</AbsorbSpeeddddd>
+                        <IsAbsorbingddd>0</IsAbsorbingddd>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -51,11 +54,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>32</x>
-                        <y>928</y>
+                        <x>16</x>
+                        <y>464</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>32</width>
+                        <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -63,7 +66,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile" uid="1">
+                <instance type="Tile_earth" uid="1">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -71,9 +74,12 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <ShrinkSpeed>100</ShrinkSpeed>
-                        <AbsorbSpeed>300</AbsorbSpeed>
                         <IsAbsorbing>0</IsAbsorbing>
+                        <AbsorbSpeed>300</AbsorbSpeed>
+                        <ShrinkSpeed>100</ShrinkSpeed>
+                        <ShrinkSpeedddd>100</ShrinkSpeedddd>
+                        <AbsorbSpeeddddd>300</AbsorbSpeeddddd>
+                        <IsAbsorbingddd>0</IsAbsorbingddd>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -85,11 +91,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>96</x>
-                        <y>928</y>
+                        <x>208</x>
+                        <y>464</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>32</width>
+                        <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -97,7 +103,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile" uid="2">
+                <instance type="Tile_earth" uid="2">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -105,9 +111,12 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <ShrinkSpeed>100</ShrinkSpeed>
-                        <AbsorbSpeed>300</AbsorbSpeed>
                         <IsAbsorbing>0</IsAbsorbing>
+                        <AbsorbSpeed>300</AbsorbSpeed>
+                        <ShrinkSpeed>100</ShrinkSpeed>
+                        <ShrinkSpeedddd>100</ShrinkSpeedddd>
+                        <AbsorbSpeeddddd>300</AbsorbSpeeddddd>
+                        <IsAbsorbingddd>0</IsAbsorbingddd>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -119,11 +128,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>160</x>
-                        <y>928</y>
+                        <x>240</x>
+                        <y>464</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>32</width>
+                        <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -131,7 +140,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile" uid="3">
+                <instance type="Tile_earth" uid="3">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -139,9 +148,12 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <ShrinkSpeed>100</ShrinkSpeed>
-                        <AbsorbSpeed>300</AbsorbSpeed>
                         <IsAbsorbing>0</IsAbsorbing>
+                        <AbsorbSpeed>300</AbsorbSpeed>
+                        <ShrinkSpeed>100</ShrinkSpeed>
+                        <ShrinkSpeedddd>100</ShrinkSpeedddd>
+                        <AbsorbSpeeddddd>300</AbsorbSpeeddddd>
+                        <IsAbsorbingddd>0</IsAbsorbingddd>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -153,11 +165,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>224</x>
-                        <y>928</y>
+                        <x>272</x>
+                        <y>464</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>32</width>
+                        <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -165,7 +177,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile" uid="4">
+                <instance type="Tile_earth" uid="4">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -173,9 +185,12 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <ShrinkSpeed>100</ShrinkSpeed>
-                        <AbsorbSpeed>300</AbsorbSpeed>
                         <IsAbsorbing>0</IsAbsorbing>
+                        <AbsorbSpeed>300</AbsorbSpeed>
+                        <ShrinkSpeed>100</ShrinkSpeed>
+                        <ShrinkSpeedddd>100</ShrinkSpeedddd>
+                        <AbsorbSpeeddddd>300</AbsorbSpeeddddd>
+                        <IsAbsorbingddd>0</IsAbsorbingddd>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -187,11 +202,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>288</x>
-                        <y>928</y>
+                        <x>368</x>
+                        <y>464</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>32</width>
+                        <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -199,7 +214,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile" uid="5">
+                <instance type="Tile_earth" uid="5">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -207,9 +222,12 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <ShrinkSpeed>100</ShrinkSpeed>
-                        <AbsorbSpeed>300</AbsorbSpeed>
                         <IsAbsorbing>0</IsAbsorbing>
+                        <AbsorbSpeed>300</AbsorbSpeed>
+                        <ShrinkSpeed>100</ShrinkSpeed>
+                        <ShrinkSpeedddd>100</ShrinkSpeedddd>
+                        <AbsorbSpeeddddd>300</AbsorbSpeeddddd>
+                        <IsAbsorbingddd>0</IsAbsorbingddd>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -221,11 +239,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>352</x>
-                        <y>928</y>
+                        <x>464</x>
+                        <y>464</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>32</width>
+                        <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -233,7 +251,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile" uid="6">
+                <instance type="Tile_earth" uid="12">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -241,9 +259,12 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <ShrinkSpeed>100</ShrinkSpeed>
-                        <AbsorbSpeed>300</AbsorbSpeed>
                         <IsAbsorbing>0</IsAbsorbing>
+                        <AbsorbSpeed>300</AbsorbSpeed>
+                        <ShrinkSpeed>100</ShrinkSpeed>
+                        <ShrinkSpeedddd>100</ShrinkSpeedddd>
+                        <AbsorbSpeeddddd>300</AbsorbSpeeddddd>
+                        <IsAbsorbingddd>0</IsAbsorbingddd>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -255,11 +276,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>416</x>
-                        <y>928</y>
+                        <x>624</x>
+                        <y>464</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>32</width>
+                        <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -267,7 +288,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile" uid="7">
+                <instance type="Tile_earth" uid="13">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -275,9 +296,12 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <ShrinkSpeed>100</ShrinkSpeed>
-                        <AbsorbSpeed>300</AbsorbSpeed>
                         <IsAbsorbing>0</IsAbsorbing>
+                        <AbsorbSpeed>300</AbsorbSpeed>
+                        <ShrinkSpeed>100</ShrinkSpeed>
+                        <ShrinkSpeedddd>100</ShrinkSpeedddd>
+                        <AbsorbSpeeddddd>300</AbsorbSpeeddddd>
+                        <IsAbsorbingddd>0</IsAbsorbingddd>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -289,11 +313,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>480</x>
-                        <y>928</y>
+                        <x>592</x>
+                        <y>464</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>32</width>
+                        <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -301,7 +325,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile" uid="8">
+                <instance type="Tile_earth" uid="14">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -309,9 +333,12 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <ShrinkSpeed>100</ShrinkSpeed>
-                        <AbsorbSpeed>300</AbsorbSpeed>
                         <IsAbsorbing>0</IsAbsorbing>
+                        <AbsorbSpeed>300</AbsorbSpeed>
+                        <ShrinkSpeed>100</ShrinkSpeed>
+                        <ShrinkSpeedddd>100</ShrinkSpeedddd>
+                        <AbsorbSpeeddddd>300</AbsorbSpeeddddd>
+                        <IsAbsorbingddd>0</IsAbsorbingddd>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -323,11 +350,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>544</x>
-                        <y>928</y>
+                        <x>560</x>
+                        <y>464</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>32</width>
+                        <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -335,7 +362,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile" uid="9">
+                <instance type="Tile_earth" uid="15">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -343,9 +370,12 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <ShrinkSpeed>100</ShrinkSpeed>
-                        <AbsorbSpeed>300</AbsorbSpeed>
                         <IsAbsorbing>0</IsAbsorbing>
+                        <AbsorbSpeed>300</AbsorbSpeed>
+                        <ShrinkSpeed>100</ShrinkSpeed>
+                        <ShrinkSpeedddd>100</ShrinkSpeedddd>
+                        <AbsorbSpeeddddd>300</AbsorbSpeeddddd>
+                        <IsAbsorbingddd>0</IsAbsorbingddd>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -357,11 +387,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>608</x>
-                        <y>928</y>
+                        <x>528</x>
+                        <y>464</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>32</width>
+                        <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -369,7 +399,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile" uid="10">
+                <instance type="Tile_earth" uid="16">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -377,9 +407,12 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <ShrinkSpeed>100</ShrinkSpeed>
-                        <AbsorbSpeed>300</AbsorbSpeed>
                         <IsAbsorbing>0</IsAbsorbing>
+                        <AbsorbSpeed>300</AbsorbSpeed>
+                        <ShrinkSpeed>100</ShrinkSpeed>
+                        <ShrinkSpeedddd>100</ShrinkSpeedddd>
+                        <AbsorbSpeeddddd>300</AbsorbSpeeddddd>
+                        <IsAbsorbingddd>0</IsAbsorbingddd>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -391,11 +424,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>672</x>
-                        <y>928</y>
+                        <x>496</x>
+                        <y>464</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>32</width>
+                        <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -403,7 +436,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile" uid="11">
+                <instance type="Tile_earth" uid="17">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -411,9 +444,12 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <ShrinkSpeed>100</ShrinkSpeed>
-                        <AbsorbSpeed>300</AbsorbSpeed>
                         <IsAbsorbing>0</IsAbsorbing>
+                        <AbsorbSpeed>300</AbsorbSpeed>
+                        <ShrinkSpeed>100</ShrinkSpeed>
+                        <ShrinkSpeedddd>100</ShrinkSpeedddd>
+                        <AbsorbSpeeddddd>300</AbsorbSpeeddddd>
+                        <IsAbsorbingddd>0</IsAbsorbingddd>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -425,11 +461,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>736</x>
-                        <y>928</y>
+                        <x>48</x>
+                        <y>464</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>32</width>
+                        <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -437,7 +473,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile" uid="12">
+                <instance type="Tile_earth" uid="18">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -445,9 +481,12 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <ShrinkSpeed>100</ShrinkSpeed>
-                        <AbsorbSpeed>300</AbsorbSpeed>
                         <IsAbsorbing>0</IsAbsorbing>
+                        <AbsorbSpeed>300</AbsorbSpeed>
+                        <ShrinkSpeed>100</ShrinkSpeed>
+                        <ShrinkSpeedddd>100</ShrinkSpeedddd>
+                        <AbsorbSpeeddddd>300</AbsorbSpeeddddd>
+                        <IsAbsorbingddd>0</IsAbsorbingddd>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -459,11 +498,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>800</x>
-                        <y>928</y>
+                        <x>112</x>
+                        <y>464</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>32</width>
+                        <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -471,7 +510,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile" uid="13">
+                <instance type="Tile_earth" uid="19">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -479,9 +518,12 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <ShrinkSpeed>100</ShrinkSpeed>
-                        <AbsorbSpeed>300</AbsorbSpeed>
                         <IsAbsorbing>0</IsAbsorbing>
+                        <AbsorbSpeed>300</AbsorbSpeed>
+                        <ShrinkSpeed>100</ShrinkSpeed>
+                        <ShrinkSpeedddd>100</ShrinkSpeedddd>
+                        <AbsorbSpeeddddd>300</AbsorbSpeeddddd>
+                        <IsAbsorbingddd>0</IsAbsorbingddd>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -493,11 +535,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>864</x>
-                        <y>928</y>
+                        <x>80</x>
+                        <y>464</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>32</width>
+                        <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -505,7 +547,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile" uid="14">
+                <instance type="Tile_earth" uid="20">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -513,9 +555,12 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <ShrinkSpeed>100</ShrinkSpeed>
-                        <AbsorbSpeed>300</AbsorbSpeed>
                         <IsAbsorbing>0</IsAbsorbing>
+                        <AbsorbSpeed>300</AbsorbSpeed>
+                        <ShrinkSpeed>100</ShrinkSpeed>
+                        <ShrinkSpeedddd>100</ShrinkSpeedddd>
+                        <AbsorbSpeeddddd>300</AbsorbSpeeddddd>
+                        <IsAbsorbingddd>0</IsAbsorbingddd>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -527,11 +572,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>928</x>
-                        <y>928</y>
+                        <x>432</x>
+                        <y>464</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>32</width>
+                        <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -539,7 +584,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile" uid="15">
+                <instance type="Tile_earth" uid="21">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -547,9 +592,12 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <ShrinkSpeed>100</ShrinkSpeed>
-                        <AbsorbSpeed>300</AbsorbSpeed>
                         <IsAbsorbing>0</IsAbsorbing>
+                        <AbsorbSpeed>300</AbsorbSpeed>
+                        <ShrinkSpeed>100</ShrinkSpeed>
+                        <ShrinkSpeedddd>100</ShrinkSpeedddd>
+                        <AbsorbSpeeddddd>300</AbsorbSpeeddddd>
+                        <IsAbsorbingddd>0</IsAbsorbingddd>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -561,11 +609,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>992</x>
-                        <y>928</y>
+                        <x>400</x>
+                        <y>464</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>32</width>
+                        <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -573,7 +621,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile" uid="16">
+                <instance type="Tile_earth" uid="22">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -581,9 +629,12 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <ShrinkSpeed>100</ShrinkSpeed>
-                        <AbsorbSpeed>300</AbsorbSpeed>
                         <IsAbsorbing>0</IsAbsorbing>
+                        <AbsorbSpeed>300</AbsorbSpeed>
+                        <ShrinkSpeed>100</ShrinkSpeed>
+                        <ShrinkSpeedddd>100</ShrinkSpeedddd>
+                        <AbsorbSpeeddddd>300</AbsorbSpeeddddd>
+                        <IsAbsorbingddd>0</IsAbsorbingddd>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -595,11 +646,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1056</x>
-                        <y>928</y>
+                        <x>336</x>
+                        <y>464</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>32</width>
+                        <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -607,7 +658,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile" uid="17">
+                <instance type="Tile_earth" uid="23">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -615,9 +666,12 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <ShrinkSpeed>100</ShrinkSpeed>
-                        <AbsorbSpeed>300</AbsorbSpeed>
                         <IsAbsorbing>0</IsAbsorbing>
+                        <AbsorbSpeed>300</AbsorbSpeed>
+                        <ShrinkSpeed>100</ShrinkSpeed>
+                        <ShrinkSpeedddd>100</ShrinkSpeedddd>
+                        <AbsorbSpeeddddd>300</AbsorbSpeeddddd>
+                        <IsAbsorbingddd>0</IsAbsorbingddd>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -629,11 +683,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1120</x>
-                        <y>928</y>
+                        <x>304</x>
+                        <y>464</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>32</width>
+                        <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -641,7 +695,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile" uid="18">
+                <instance type="Tile_earth" uid="24">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -649,9 +703,12 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <ShrinkSpeed>100</ShrinkSpeed>
-                        <AbsorbSpeed>300</AbsorbSpeed>
                         <IsAbsorbing>0</IsAbsorbing>
+                        <AbsorbSpeed>300</AbsorbSpeed>
+                        <ShrinkSpeed>100</ShrinkSpeed>
+                        <ShrinkSpeedddd>100</ShrinkSpeedddd>
+                        <AbsorbSpeeddddd>300</AbsorbSpeeddddd>
+                        <IsAbsorbingddd>0</IsAbsorbingddd>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -663,11 +720,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1184</x>
-                        <y>928</y>
+                        <x>176</x>
+                        <y>464</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>32</width>
+                        <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -675,7 +732,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile" uid="19">
+                <instance type="Tile_earth" uid="25">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -683,9 +740,12 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <ShrinkSpeed>100</ShrinkSpeed>
-                        <AbsorbSpeed>300</AbsorbSpeed>
                         <IsAbsorbing>0</IsAbsorbing>
+                        <AbsorbSpeed>300</AbsorbSpeed>
+                        <ShrinkSpeed>100</ShrinkSpeed>
+                        <ShrinkSpeedddd>100</ShrinkSpeedddd>
+                        <AbsorbSpeeddddd>300</AbsorbSpeeddddd>
+                        <IsAbsorbingddd>0</IsAbsorbingddd>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -697,215 +757,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1248</x>
-                        <y>928</y>
+                        <x>144</x>
+                        <y>464</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Tile" uid="20">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <ShrinkSpeed>100</ShrinkSpeed>
-                        <AbsorbSpeed>300</AbsorbSpeed>
-                        <IsAbsorbing>0</IsAbsorbing>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1312</x>
-                        <y>928</y>
-                        <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Tile" uid="21">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <ShrinkSpeed>100</ShrinkSpeed>
-                        <AbsorbSpeed>300</AbsorbSpeed>
-                        <IsAbsorbing>0</IsAbsorbing>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1376</x>
-                        <y>928</y>
-                        <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Tile" uid="22">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <ShrinkSpeed>100</ShrinkSpeed>
-                        <AbsorbSpeed>300</AbsorbSpeed>
-                        <IsAbsorbing>0</IsAbsorbing>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1440</x>
-                        <y>928</y>
-                        <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Tile" uid="23">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <ShrinkSpeed>100</ShrinkSpeed>
-                        <AbsorbSpeed>300</AbsorbSpeed>
-                        <IsAbsorbing>0</IsAbsorbing>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1504</x>
-                        <y>928</y>
-                        <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Tile" uid="24">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <ShrinkSpeed>100</ShrinkSpeed>
-                        <AbsorbSpeed>300</AbsorbSpeed>
-                        <IsAbsorbing>0</IsAbsorbing>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1568</x>
-                        <y>928</y>
-                        <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Tile" uid="25">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <ShrinkSpeed>100</ShrinkSpeed>
-                        <AbsorbSpeed>300</AbsorbSpeed>
-                        <IsAbsorbing>0</IsAbsorbing>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1632</x>
-                        <y>928</y>
-                        <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>32</width>
+                        <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -922,8 +778,9 @@
                     </properties>
                     <instance-variables>
                         <Earth>0</Earth>
-                        <Speed>300</Speed>
+                        <Speed>200</Speed>
                         <TilePositioning>false</TilePositioning>
+                        <BaseSpeed>300</BaseSpeed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="BoundToLayout">
@@ -949,11 +806,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>512</x>
-                        <y>864</y>
+                        <x>128</x>
+                        <y>432</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>128</height>
+                        <width>32</width>
+                        <height>64</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.75</hotspotY>
@@ -961,7 +818,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile" uid="27">
+                <instance type="Tile_earth" uid="27">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -969,9 +826,12 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <ShrinkSpeed>100</ShrinkSpeed>
-                        <AbsorbSpeed>300</AbsorbSpeed>
                         <IsAbsorbing>0</IsAbsorbing>
+                        <AbsorbSpeed>300</AbsorbSpeed>
+                        <ShrinkSpeed>100</ShrinkSpeed>
+                        <ShrinkSpeedddd>100</ShrinkSpeedddd>
+                        <AbsorbSpeeddddd>300</AbsorbSpeeddddd>
+                        <IsAbsorbingddd>0</IsAbsorbingddd>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -983,11 +843,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1216</x>
-                        <y>864</y>
+                        <x>432.364074707</x>
+                        <y>367.090484619</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>32</width>
+                        <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -995,7 +855,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile" uid="28">
+                <instance type="Tile_earth" uid="28">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1003,9 +863,12 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <ShrinkSpeed>100</ShrinkSpeed>
-                        <AbsorbSpeed>300</AbsorbSpeed>
                         <IsAbsorbing>0</IsAbsorbing>
+                        <AbsorbSpeed>300</AbsorbSpeed>
+                        <ShrinkSpeed>100</ShrinkSpeed>
+                        <ShrinkSpeedddd>100</ShrinkSpeedddd>
+                        <AbsorbSpeeddddd>300</AbsorbSpeeddddd>
+                        <IsAbsorbingddd>0</IsAbsorbingddd>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -1017,11 +880,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1216</x>
-                        <y>800</y>
+                        <x>432.364074707</x>
+                        <y>399.090484619</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>32</width>
+                        <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1029,7 +892,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tile" uid="29">
+                <instance type="Tile_earth" uid="29">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1037,9 +900,12 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <ShrinkSpeed>100</ShrinkSpeed>
-                        <AbsorbSpeed>300</AbsorbSpeed>
                         <IsAbsorbing>0</IsAbsorbing>
+                        <AbsorbSpeed>300</AbsorbSpeed>
+                        <ShrinkSpeed>100</ShrinkSpeed>
+                        <ShrinkSpeedddd>100</ShrinkSpeedddd>
+                        <AbsorbSpeeddddd>300</AbsorbSpeeddddd>
+                        <IsAbsorbingddd>0</IsAbsorbingddd>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -1051,11 +917,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1216</x>
-                        <y>736</y>
+                        <x>432.364074707</x>
+                        <y>431.090484619</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>32</width>
+                        <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1089,8 +955,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>608</x>
-                        <y>-64</y>
+                        <x>704</x>
+                        <y>304</y>
                         <z>0</z>
                         <width>20</width>
                         <height>20</height>
@@ -1105,7 +971,7 @@
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-64,700,0</font>
+                        <font>Arial,-29,700,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -1116,8 +982,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>576</x>
-                        <y>352</y>
+                        <x>16</x>
+                        <y>22</y>
                         <z>0</z>
                         <width>416</width>
                         <height>192</height>
@@ -1151,8 +1017,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>768</x>
-                        <y>-64</y>
+                        <x>704</x>
+                        <y>272</y>
                         <z>0</z>
                         <width>20</width>
                         <height>20</height>
@@ -1182,8 +1048,62 @@
                         <x>1888</x>
                         <y>-384</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Tile_water" uid="6">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <IsAbsorbing>0</IsAbsorbing>
+                        <AbsorbSpeed>300</AbsorbSpeed>
+                        <ShrinkSpeed>100</ShrinkSpeed>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>719.09161377</x>
+                        <y>400.453918457</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Tile_Air" uid="7">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <IsAbsorbing>0</IsAbsorbing>
+                        <AbsorbSpeed>300</AbsorbSpeed>
+                        <ShrinkSpeed>100</ShrinkSpeed>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>678.182128906</x>
+                        <y>399.54510498</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
