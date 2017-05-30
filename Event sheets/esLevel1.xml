@@ -4,5 +4,35 @@
     <name>esLevel1</name>
     <events>
         <include>Main</include>
+        <event-block sid="683128595895657">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="887810943282603" type="System" />
+            </conditions>
+            <actions>
+                <action id="1" name="Request project file" sid="387214712731662" type="AJAX">
+                    <param id="0" name="Tag">&quot;testmap&quot;</param>
+                    <param id="1" name="File">Test_map.json</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="309800532069827">
+            <conditions>
+                <condition id="0" name="On completed" sid="855754991898396" type="AJAX">
+                    <param id="0" name="Tag">&quot;testmap&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="342108404791994" type="Text">
+                    <param id="0" name="Text">AJAX.LastData</param>
+                </action>
+                <action id="0" name="Call function" sid="120965073928919" type="Function">
+                    <param id="0" name="Name">&quot;CreateMap&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action behavior="Platform" id="11" name="Set enabled" sid="788041239698440" type="Player">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
