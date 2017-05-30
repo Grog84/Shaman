@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Main</name>
     <events>
-        <variable constant="1" name="TILESIZE2" sid="347572452409448" static="0" type="number">64</variable>
+        <variable constant="1" name="TILESIZE" sid="347572452409448" static="0" type="number">32</variable>
         <event-group description="" sid="869951646668483" title="PlayerMovement">
             <sub-events>
                 <event-block sid="962924781194926">
@@ -84,6 +84,10 @@
                             <param id="0" name="Instance variable">Earth</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="-3" name="Set position" sid="792212817693423" type="Grigliainvisibile">
+                            <param id="0" name="X">int(self.X/TILESIZE)*TILESIZE + TILESIZE/2.0</param>
+                            <param id="1" name="Y">int(self.Y/TILESIZE)*TILESIZE + TILESIZE/2.0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="773067942213757">
@@ -95,7 +99,11 @@
                             <param id="0" name="Instance variable">TilePositioning</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-1" name="Set X" sid="843952297693523" type="Grigliainvisibile">
+                            <param id="0" name="X">self.X + TILESIZE</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="659665909801408">
                     <conditions>
@@ -106,7 +114,11 @@
                             <param id="0" name="Instance variable">TilePositioning</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-1" name="Set X" sid="575995467172998" type="Grigliainvisibile">
+                            <param id="0" name="X">self.X - TILESIZE</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="812120902191255">
                     <conditions>
@@ -117,7 +129,11 @@
                             <param id="0" name="Instance variable">TilePositioning</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-2" name="Set Y" sid="891972546134429" type="Grigliainvisibile">
+                            <param id="0" name="Y">self.Y - TILESIZE</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="375108047969866">
                     <conditions>
@@ -128,7 +144,11 @@
                             <param id="0" name="Instance variable">TilePositioning</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-2" name="Set Y" sid="746014735888352" type="Grigliainvisibile">
+                            <param id="0" name="Y">self.Y + TILESIZE</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block any="1" sid="987804746009848">
                     <conditions>
@@ -267,7 +287,7 @@
                                     <conditions>
                                         <condition id="-1" name="Compare X" sid="558022429311949" type="Player">
                                             <param id="0" name="Comparison">5</param>
-                                            <param id="1" name="X co-ordinate">Tile_earth.X</param>
+                                            <param id="1" name="X co-ordinate">Tile.X</param>
                                         </condition>
                                     </conditions>
                                     <actions />
@@ -276,7 +296,7 @@
                                             <conditions>
                                                 <condition id="-2" name="Compare Y" sid="433420311536863" type="Player">
                                                     <param id="0" name="Comparison">5</param>
-                                                    <param id="1" name="Y co-ordinate">Tile_earth.Y</param>
+                                                    <param id="1" name="Y co-ordinate">Tile.Y</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
@@ -290,7 +310,7 @@
                                             <conditions>
                                                 <condition id="-2" name="Compare Y" sid="805745465535909" type="Player">
                                                     <param id="0" name="Comparison">2</param>
-                                                    <param id="1" name="Y co-ordinate">Tile_earth.Y</param>
+                                                    <param id="1" name="Y co-ordinate">Tile.Y</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
@@ -312,7 +332,7 @@
                                             <conditions>
                                                 <condition id="-2" name="Compare Y" sid="444110996377147" type="Player">
                                                     <param id="0" name="Comparison">5</param>
-                                                    <param id="1" name="Y co-ordinate">Tile_earth.Y</param>
+                                                    <param id="1" name="Y co-ordinate">Tile.Y</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
@@ -326,7 +346,7 @@
                                             <conditions>
                                                 <condition id="-2" name="Compare Y" sid="401715239807073" type="Player">
                                                     <param id="0" name="Comparison">2</param>
-                                                    <param id="1" name="Y co-ordinate">Tile_earth.Y</param>
+                                                    <param id="1" name="Y co-ordinate">Tile.Y</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
@@ -353,18 +373,18 @@
                         <variable constant="0" name="MinSize" sid="479806518546316" static="0" type="number">0</variable>
                         <event-block sid="174237145372940">
                             <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="907487369931216" type="Tile_earth">
+                                <condition id="-14" name="Pick by unique ID" sid="907487369931216" type="Tile">
                                     <param id="0" name="Unique ID">Function.Param(0)</param>
                                 </condition>
-                                <condition id="-6" name="Compare height" sid="256930444090482" type="Tile_earth">
+                                <condition id="-6" name="Compare height" sid="256930444090482" type="Tile">
                                     <param id="0" name="Comparison">5</param>
                                     <param id="1" name="Height">Function.Call(&quot;CalcSize&quot;, Player.X, Tile_earth.X)</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-7" name="Set size" sid="872027747211327" type="Tile_earth">
-                                    <param id="0" name="Width">self.Width - Self.ShrinkSpeedddd*dt</param>
-                                    <param id="1" name="Height">self.Height - Self.ShrinkSpeedddd*dt</param>
+                                <action id="-7" name="Set size" sid="872027747211327" type="Tile">
+                                    <param id="0" name="Width">self.Width - Self.ShrinkSpeed*dt</param>
+                                    <param id="1" name="Height">self.Height - Self.ShrinkSpeed*dt</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -384,13 +404,13 @@
                 <event-block sid="312512127218091">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="782192627402205" type="Interaction">
-                            <param id="0" name="Object">Tile_earth</param>
+                            <param id="0" name="Object">Tile</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="806752666501008" type="Interaction" />
-                        <action id="-10" name="Set value" sid="585656484942374" type="Tile_earth">
-                            <param id="0" name="Instance variable">IsAbsorbingddd</param>
+                        <action id="-10" name="Set value" sid="585656484942374" type="Tile">
+                            <param id="0" name="Instance variable">IsAbsorbing</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
