@@ -13,6 +13,13 @@
                     <param id="0" name="Tag">&quot;testmap&quot;</param>
                     <param id="1" name="File">Test_map.json</param>
                 </action>
+                <action id="0" name="Set text" sid="655381135296255" type="Text">
+                    <param id="0" name="Text">Gamepad.GamepadCount</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="361421843292268" type="PlayerSprite">
+                    <param id="0" name="Pin to">Player</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="309800532069827">
@@ -22,15 +29,9 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Set text" sid="342108404791994" type="Text">
-                    <param id="0" name="Text">AJAX.LastData</param>
-                </action>
                 <action id="0" name="Call function" sid="120965073928919" type="Function">
                     <param id="0" name="Name">&quot;CreateMap&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
-                </action>
-                <action behavior="Platform" id="11" name="Set enabled" sid="788041239698440" type="Player">
-                    <param id="0" name="State">1</param>
                 </action>
             </actions>
         </event-block>

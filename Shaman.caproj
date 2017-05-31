@@ -17,9 +17,11 @@
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
@@ -49,7 +51,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">(default)</prop>
+        <prop name="Preview browser">Firefox</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -57,17 +59,31 @@
         <object-type name="Tile_earth" sid="689074194758499">
             <plugin id="Sprite" />
             <instance-variables>
-                <instance-variable name="ShrinkSpeedddd" sid="598410081871007" type="number" />
-                <instance-variable name="AbsorbSpeeddddd" sid="404506659656373" type="number" />
-                <instance-variable name="IsAbsorbingddd" sid="560563823754322" type="number" />
+                <instance-variable name="YSpeed" sid="820139537521595" type="number" />
+                <instance-variable name="IsFalling" sid="130832765218607" type="number" />
+                <instance-variable name="IsSolid" sid="477599943719461" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Solid" sid="558354332826075">
                     <behavior id="solid" />
                 </behavior-type>
+                <behavior-type name="Physics" sid="177584512020578">
+                    <behavior id="Physics" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="741028054155919" speed="5">
+                <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="741028054155919" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0625" y="0" />
+                            <point x="0.9375" y="0" />
+                            <point x="0.9375" y="1" />
+                            <point x="0.0625" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
@@ -75,32 +91,36 @@
         <object-type name="Player" sid="482351964103083">
             <plugin id="Sprite" />
             <instance-variables>
-                <instance-variable name="Earth" sid="757722268867341" type="number" />
-                <instance-variable name="Speed" sid="115856489253393" type="number" />
+                <instance-variable name="TotalNumberOfTiles" sid="577365652984165" type="number" />
+                <instance-variable name="RockTiles" sid="757722268867341" type="number" />
+                <instance-variable name="AirTiles" sid="558099877317637" type="number" />
+                <instance-variable name="WaterTiles" sid="373178009774704" type="number" />
                 <instance-variable name="TilePositioning" sid="766532813857393" type="boolean" />
+                <instance-variable name="Speed" sid="115856489253393" type="number" />
                 <instance-variable name="BaseSpeed" sid="351333673472266" type="number" />
+                <instance-variable name="JumpSpeed" sid="242682473713089" type="number" />
+                <instance-variable name="MaxSpeed" sid="911866706740815" type="number" />
+                <instance-variable name="Yspeed" sid="940876955232034" type="number" />
+                <instance-variable name="OnTheGround" sid="328036210391079" type="boolean" />
+                <instance-variable name="WaterIsActive" sid="332651627511156" type="number" />
+                <instance-variable name="AirIsActive" sid="416024974038565" type="number" />
+                <instance-variable name="FireIsActive" sid="149867978777798" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="BoundToLayout" sid="603214758576246">
                     <behavior id="bound" />
                 </behavior-type>
-                <behavior-type name="Platform" sid="755252426904650">
-                    <behavior id="Platform" />
-                </behavior-type>
                 <behavior-type name="ScrollTo" sid="658405825434070">
                     <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="Platform" sid="490239111208896">
+                    <behavior id="Platform" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="447876683118469" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75">
-                        <image-point name="Imagepoint 1" x="0.53125" y="0.140625" />
-                        <collision-poly>
-                            <point x="0.25" y="0" />
-                            <point x="0.65625" y="0" />
-                            <point x="0.65625" y="1" />
-                            <point x="0.25" y="1" />
-                        </collision-poly>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.535714" y="0.140625" />
                     </frame>
                 </animation>
             </animation-folder>
@@ -155,7 +175,7 @@
         <object-type name="Grigliainvisibile" sid="691465968880442">
             <plugin id="Sprite" />
             <instance-variables>
-                <instance-variable name="IsOnLayer" sid="894678269419855" type="boolean" />
+                <instance-variable name="IsValid" sid="729152017236160" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Pin" sid="648217471202540">
@@ -163,15 +183,64 @@
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="105618106982733" speed="5">
+                <animation framecount="2" loop="0" name="Rock" pingpong="0" repeatcount="1" repeatto="0" sid="105618106982733" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0625" y="0.0625" />
+                            <point x="0.9375" y="0.0625" />
+                            <point x="0.9375" y="0.9375" />
+                            <point x="0.0625" y="0.9375" />
+                        </collision-poly>
+                    </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="2" loop="0" name="Air" pingpong="0" repeatcount="1" repeatto="0" sid="817036940760608" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0625" y="0.0625" />
+                            <point x="0.9375" y="0.0625" />
+                            <point x="0.9375" y="0.9375" />
+                            <point x="0.0625" y="0.9375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0625" y="0.0625" />
+                            <point x="0.9375" y="0.0625" />
+                            <point x="0.9375" y="0.9375" />
+                            <point x="0.0625" y="0.9375" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="Water" pingpong="0" repeatcount="1" repeatto="0" sid="151562239735877" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0625" y="0.0625" />
+                            <point x="0.9375" y="0.0625" />
+                            <point x="0.9375" y="0.9375" />
+                            <point x="0.0625" y="0.9375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0625" y="0.0625" />
+                            <point x="0.9375" y="0.0625" />
+                            <point x="0.9375" y="0.9375" />
+                            <point x="0.0625" y="0.9375" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
         <object-type name="Tile_water" sid="355600516418859">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="118206503403046" speed="5">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="118206503403046" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="3" loop="0" name="Splash" pingpong="1" repeatcount="1" repeatto="0" sid="282218622794916" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
@@ -195,6 +264,9 @@
             <behaviors>
                 <behavior-type name="Solid" sid="264772984815362">
                     <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Physics" sid="140817668035276">
+                    <behavior id="Physics" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
@@ -226,6 +298,51 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Gamepad" sid="308056696736989">
+            <plugin id="gamepad" />
+        </object-type>
+        <object-type name="PlayerSprite" sid="826385389954723">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="418882207491891">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="473744263849009" speed="5">
+                    <frame duration="1" hotspotX="0.34375" hotspotY="0.515625" original-source="C:\Users\PU\Downloads\basepixel.png">
+                        <image-point name="Skall" x="0.515625" y="0.375" />
+                        <image-point name="SpawnTile" x="0.765625" y="0.421875" />
+                        <collision-poly>
+                            <point x="0.25" y="0.25" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.546875" y="0.453125" />
+                            <point x="0.515625" y="0.5" />
+                            <point x="0.515625" y="0.515625" />
+                            <point x="0.5" y="0.546875" />
+                            <point x="0.21875" y="0.78125" />
+                            <point x="0.21875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Crouch" pingpong="0" repeatcount="1" repeatto="0" sid="532840097984556" speed="5">
+                    <frame duration="1" hotspotX="0.34375" hotspotY="0.515625">
+                        <image-point name="Skall" x="0.609375" y="0.65625" />
+                        <image-point name="SpawnTile" x="0.609375" y="0.65625" />
+                        <collision-poly>
+                            <point x="0.25" y="0.25" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.546875" y="0.453125" />
+                            <point x="0.515625" y="0.5" />
+                            <point x="0.515625" y="0.515625" />
+                            <point x="0.5" y="0.546875" />
+                            <point x="0.21875" y="0.78125" />
+                            <point x="0.21875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Tile" plugin-id="Sprite" sid="792340356286362">
@@ -238,7 +355,14 @@
                 <instance-variable name="IsAbsorbing" sid="169357067213731" type="number" />
                 <instance-variable name="AbsorbSpeed" sid="685452380014658" type="number" />
                 <instance-variable name="ShrinkSpeed" sid="145311910923305" type="number" />
+                <instance-variable name="Type" sid="221704868895562" type="string" />
             </instance-variables>
+        </family>
+        <family name="Obstacle" plugin-id="Sprite" sid="185525865486483">
+            <members>
+                <member>BkgTile</member>
+                <member>Tile_earth</member>
+            </members>
         </family>
     </families>
     <layout-folder>
@@ -270,6 +394,11 @@
         <global-instance type="Function" uid="32" />
         <global-instance type="Keyboard" uid="34" />
         <global-instance type="AJAX" uid="9" />
+        <global-instance type="Gamepad" uid="11">
+            <properties>
+                <analog-deadzone>25</analog-deadzone>
+            </properties>
+        </global-instance>
     </global-instances>
     <sounds-folder />
     <music-folder />
