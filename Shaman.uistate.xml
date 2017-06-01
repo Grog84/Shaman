@@ -41,5 +41,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Tile_Air/" />
         <folder expanded="1" path="animation-folder/BkgTile/" />
         <folder expanded="1" path="animation-folder/PlayerSprite/" />
+        <folder expanded="1" path="animation-folder/cloudPlatform/" />
     </folders-expanded>
 </c2uistate>
