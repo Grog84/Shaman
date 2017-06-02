@@ -336,7 +336,11 @@
                                         </event-block>
                                         <event-block sid="501949329102823">
                                             <conditions>
-                                                <condition id="-22" name="Else" sid="873491970246813" type="System" />
+                                                <condition id="-7" name="Compare instance variable" sid="873491970246813" type="Player">
+                                                    <param id="0" name="Instance variable">RockTiles</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
                                             </conditions>
                                             <actions>
                                                 <action id="5" name="Set frame" sid="396224086373165" type="Grigliainvisibile">
@@ -348,12 +352,114 @@
                                                 </action>
                                             </actions>
                                         </event-block>
+                                        <event-block any="1" sid="823395500145361">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="352849396187118" type="System">
+                                                    <param id="0" name="First value">abs(Grigliainvisibile.X - Grigliainvisibile.SpawnPos_X)</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Second value">Player.RockTileRange * TILESIZE</param>
+                                                </condition>
+                                                <condition id="-8" name="Compare two values" sid="397678580725937" type="System">
+                                                    <param id="0" name="First value">abs(Grigliainvisibile.Y-Grigliainvisibile.SpawnPos_Y)</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Second value">Player.RockTileRange * TILESIZE</param>
+                                                </condition>
+                                                <condition disabled="1" id="-8" name="Compare two values" sid="863499135694406" type="System">
+                                                    <param id="0" name="First value">distance(Grigliainvisibile.X, Grigliainvisibile.Y, Grigliainvisibile.SpawnPos_X, Grigliainvisibile.SpawnPos_Y)</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Second value">Player.RockTileRange * TILESIZE</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="5" name="Set frame" sid="171873659021092" type="Grigliainvisibile">
+                                                    <param id="0" name="Frame number">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="924170653765327" type="Grigliainvisibile">
+                                                    <param id="0" name="Instance variable">IsValid</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="410616137045078">
+                                    <conditions>
+                                        <condition id="2" name="Is playing" sid="728562758693133" type="Grigliainvisibile">
+                                            <param id="0" name="Animation">&quot;Air&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="777588135629429">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="601252578206968" type="Player">
+                                                    <param id="0" name="Instance variable">AirTiles</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="5" name="Set frame" sid="482672263659612" type="Grigliainvisibile">
+                                                    <param id="0" name="Frame number">0</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="945411920008879" type="Grigliainvisibile">
+                                                    <param id="0" name="Instance variable">IsValid</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="796422200918937">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="926996162375543" type="Player">
+                                                    <param id="0" name="Instance variable">AirTiles</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="5" name="Set frame" sid="935916457463265" type="Grigliainvisibile">
+                                                    <param id="0" name="Frame number">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="449155121355051" type="Grigliainvisibile">
+                                                    <param id="0" name="Instance variable">IsValid</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block any="1" sid="995403585200933">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="342169858362162" type="System">
+                                                    <param id="0" name="First value">abs(Grigliainvisibile.X - Grigliainvisibile.SpawnPos_X)</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Second value">Player.AirTileRange * TILESIZE</param>
+                                                </condition>
+                                                <condition id="-8" name="Compare two values" sid="541258184764785" type="System">
+                                                    <param id="0" name="First value">abs(Grigliainvisibile.Y-Grigliainvisibile.SpawnPos_Y)</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Second value">Player.AirTileRange * TILESIZE</param>
+                                                </condition>
+                                                <condition disabled="1" id="-8" name="Compare two values" sid="733522518070001" type="System">
+                                                    <param id="0" name="First value">distance(Grigliainvisibile.X, Grigliainvisibile.Y, Grigliainvisibile.SpawnPos_X, Grigliainvisibile.SpawnPos_Y)</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Second value">Player.AirTileRange * TILESIZE</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="5" name="Set frame" sid="954184606238850" type="Grigliainvisibile">
+                                                    <param id="0" name="Frame number">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="807732592614422" type="Grigliainvisibile">
+                                                    <param id="0" name="Instance variable">IsValid</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
                                     </sub-events>
                                 </event-block>
                                 <event-block sid="801263431581391">
                                     <conditions>
                                         <condition id="2" name="Is playing" sid="568468875729519" type="Grigliainvisibile">
-                                            <param id="0" name="Animation">&quot;Air&quot;</param>
+                                            <param id="0" name="Animation">&quot;Water&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions />
@@ -361,7 +467,7 @@
                                         <event-block sid="753216219231661">
                                             <conditions>
                                                 <condition id="-7" name="Compare instance variable" sid="362197988075710" type="Player">
-                                                    <param id="0" name="Instance variable">AirTiles</param>
+                                                    <param id="0" name="Instance variable">WaterTiles</param>
                                                     <param id="1" name="Comparison">5</param>
                                                     <param id="2" name="Value">1</param>
                                                 </condition>
@@ -378,13 +484,45 @@
                                         </event-block>
                                         <event-block sid="707968909222370">
                                             <conditions>
-                                                <condition id="-22" name="Else" sid="303646471158647" type="System" />
+                                                <condition id="-7" name="Compare instance variable" sid="303646471158647" type="Player">
+                                                    <param id="0" name="Instance variable">WaterTiles</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
                                             </conditions>
                                             <actions>
                                                 <action id="5" name="Set frame" sid="353750206774213" type="Grigliainvisibile">
                                                     <param id="0" name="Frame number">1</param>
                                                 </action>
                                                 <action id="-10" name="Set value" sid="610098426693705" type="Grigliainvisibile">
+                                                    <param id="0" name="Instance variable">IsValid</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block any="1" sid="279597486112665">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="287900498311982" type="System">
+                                                    <param id="0" name="First value">abs(Grigliainvisibile.X - Grigliainvisibile.SpawnPos_X)</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Second value">Player.WaterTileRange * TILESIZE</param>
+                                                </condition>
+                                                <condition id="-8" name="Compare two values" sid="232650176530637" type="System">
+                                                    <param id="0" name="First value">abs(Grigliainvisibile.Y-Grigliainvisibile.SpawnPos_Y)</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Second value">Player.WaterTileRange * TILESIZE</param>
+                                                </condition>
+                                                <condition disabled="1" id="-8" name="Compare two values" sid="697553273674164" type="System">
+                                                    <param id="0" name="First value">distance(Grigliainvisibile.X, Grigliainvisibile.Y, Grigliainvisibile.SpawnPos_X, Grigliainvisibile.SpawnPos_Y)</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Second value">Player.WaterTileRange * TILESIZE</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="5" name="Set frame" sid="855054110329494" type="Grigliainvisibile">
+                                                    <param id="0" name="Frame number">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="979578011751980" type="Grigliainvisibile">
                                                     <param id="0" name="Instance variable">IsValid</param>
                                                     <param id="1" name="Value">0</param>
                                                 </action>
@@ -762,6 +900,18 @@
                                             <param id="1" name="From">1</param>
                                         </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="698938781896340">
+                                            <conditions>
+                                                <condition behavior="LineOfSight" id="0" inverted="1" name="Has LOS to object" sid="732171394069985" type="Player">
+                                                    <param id="0" name="Object">ValidArea</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Destroy" sid="488194293591668" type="ValidArea" />
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>

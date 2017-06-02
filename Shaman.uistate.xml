@@ -22,7 +22,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </properties>
     <families-expanded root="0">
         <family expanded="0" name="Tile" />
-        <family expanded="0" name="Obstacle" />
+        <family expanded="1" name="Obstacle" />
     </families-expanded>
     <folders-expanded>
         <folder expanded="0" path="object-folder/" />

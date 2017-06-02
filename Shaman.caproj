@@ -21,6 +21,7 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
@@ -116,6 +117,9 @@
                 </behavior-type>
                 <behavior-type name="Platform" sid="490239111208896">
                     <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="LineOfSight" sid="724624676139386">
+                    <behavior id="LOS" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
