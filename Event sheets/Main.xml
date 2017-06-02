@@ -880,6 +880,28 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="527151449165828">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="203413356029161" type="Grigliainvisibile">
+                                    <param id="0" name="Animation">&quot;Water&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="405273661101275" type="Player">
+                                    <param id="0" name="Instance variable">WaterTiles</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="821068777506604" type="Grigliainvisibile">
+                                    <param id="0" name="Object">Tile_water</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="826951950643720" type="Tile_Air">
+                                    <param id="0" name="Instance variable">Type</param>
+                                    <param id="1" name="Value">&quot;Water&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
                 <comment>Toggle Tile positioning</comment>
@@ -1199,6 +1221,49 @@
                             <actions>
                                 <action id="-9" name="Destroy" sid="932937958849366" type="Tile_water" />
                             </actions>
+                        </event-block>
+                        <event-block sid="298454994089416">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="886414336304347" type="Tile_water">
+                                    <param id="0" name="Animation">&quot;Splash&quot;</param>
+                                </condition>
+                                <condition id="1" name="Is overlapping another object" sid="625669090603894" type="Tile_water">
+                                    <param id="0" name="Object">Flower</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="818833989394030">
+                                    <conditions>
+                                        <condition id="3" name="Compare frame" sid="934564816021131" type="Flower">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="732309686933526" type="Flower">
+                                            <param id="0" name="Object">BouncingPlant</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="121891323865739" type="Flower" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="630845076440605">
+                                    <conditions>
+                                        <condition id="3" name="Compare frame" sid="283140352731293" type="Flower">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="797916435446401" type="Function">
+                                            <param id="0" name="Name">&quot;SpawnTree&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-group>
@@ -1651,6 +1716,23 @@
                             </sub-events>
                         </event-block>
                     </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="105741479965969" title="SpecialTiles">
+            <sub-events>
+                <event-block sid="634453608350830">
+                    <conditions>
+                        <condition behavior="Platform" id="4" name="Is falling" sid="722778103241612" type="Player" />
+                        <condition id="1" name="Is overlapping another object" sid="284154630042854" type="Player">
+                            <param id="0" name="Object">BouncingPlant</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="192684753905325" type="Player">
+                            <param id="0" name="Vector Y">-700</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

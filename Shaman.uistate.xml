@@ -25,7 +25,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="1" name="Obstacle" />
     </families-expanded>
     <folders-expanded>
-        <folder expanded="0" path="object-folder/" />
+        <folder expanded="1" path="object-folder/" />
         <folder expanded="0" path="layout-folder/" />
         <folder expanded="0" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />
@@ -42,5 +42,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/PlayerSprite/" />
         <folder expanded="1" path="animation-folder/cloudPlatform/" />
         <folder expanded="1" path="animation-folder/ValidArea/" />
+        <folder expanded="1" path="animation-folder/Flower/" />
+        <folder expanded="1" path="animation-folder/BouncingPlant/" />
     </folders-expanded>
 </c2uistate>
