@@ -257,6 +257,17 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="913373027642798">
+                    <conditions>
+                        <condition behavior="Platform" id="4" name="Is falling" sid="503510404328847" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="899199250238094" type="PlayerSprite">
+                            <param id="0" name="Animation">&quot;Falling&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="596663314544974" title="PlayerActions">
@@ -1721,19 +1732,35 @@
         </event-group>
         <event-group description="" sid="105741479965969" title="SpecialTiles">
             <sub-events>
-                <event-block sid="634453608350830">
-                    <conditions>
-                        <condition behavior="Platform" id="4" name="Is falling" sid="722778103241612" type="Player" />
-                        <condition id="1" name="Is overlapping another object" sid="284154630042854" type="Player">
-                            <param id="0" name="Object">BouncingPlant</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Platform" id="9" name="Set vector Y" sid="192684753905325" type="Player">
-                            <param id="0" name="Vector Y">-700</param>
-                        </action>
-                    </actions>
-                </event-block>
+                <event-group description="" sid="448066658886449" title="Tree">
+                    <sub-events>
+                        <event-block sid="144356126569486">
+                            <conditions>
+                                <condition id="0" name="On function" sid="467847784307850" type="Function">
+                                    <param id="0" name="Name">&quot;SpawnTree&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="820759296264992" title="BouncingPlant">
+                    <sub-events>
+                        <event-block sid="634453608350830">
+                            <conditions>
+                                <condition behavior="Platform" id="4" name="Is falling" sid="722778103241612" type="Player" />
+                                <condition id="1" name="Is overlapping another object" sid="284154630042854" type="Player">
+                                    <param id="0" name="Object">BouncingPlant</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="192684753905325" type="Player">
+                                    <param id="0" name="Vector Y">-700</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-group>
     </events>
