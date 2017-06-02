@@ -35,7 +35,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Tile_earth/" />
         <folder expanded="1" path="animation-folder/Player/" />
         <folder expanded="1" path="animation-folder/Interaction/" />
-        <folder expanded="1" path="animation-folder/LandTile/" />
         <folder expanded="1" path="animation-folder/Grigliainvisibile/" />
         <folder expanded="1" path="animation-folder/Tile_water/" />
         <folder expanded="1" path="animation-folder/Tile_Air/" />
