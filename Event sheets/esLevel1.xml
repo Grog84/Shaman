@@ -20,8 +20,13 @@
                     <param id="0" name="Pin to">Player</param>
                     <param id="1" name="Mode">0</param>
                 </action>
+                <action id="1" name="Request project file" sid="859114495084603" type="AJAX">
+                    <param id="0" name="Tag">&quot;tree&quot;</param>
+                    <param id="1" name="File">TestTree.json</param>
+                </action>
             </actions>
             <sub-events>
+                <comment>Activates or deactivates tiles selection/absorption</comment>
                 <event-block sid="684048397291725">
                     <conditions />
                     <actions>
@@ -74,6 +79,18 @@
                 <action id="0" name="Call function" sid="120965073928919" type="Function">
                     <param id="0" name="Name">&quot;CreateMap&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="792004696499244">
+            <conditions>
+                <condition id="0" name="On completed" sid="373282079408077" type="AJAX">
+                    <param id="0" name="Tag">&quot;tree&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="11" name="Load" sid="118071395307597" type="TreeModel">
+                    <param id="0" name="JSON">AJAX.LastData</param>
                 </action>
             </actions>
         </event-block>
