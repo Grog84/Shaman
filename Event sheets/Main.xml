@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Main</name>
     <events>
+        <variable constant="0" name="TreeTimerInterval" sid="881588116161554" static="0" type="number">0.2</variable>
         <variable constant="0" name="platformExisting" sid="877042634564734" static="0" type="number">1</variable>
         <variable constant="1" name="GRAVITY" sid="975299546861960" static="0" type="number">1000</variable>
         <variable constant="1" name="TILESIZE" sid="347572452409448" static="0" type="number">32</variable>
@@ -1268,6 +1269,9 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="-16" name="Wait" sid="831266887138449" type="System">
+                                            <param id="0" name="Seconds">1.0</param>
+                                        </action>
                                         <action id="0" name="Call function" sid="797916435446401" type="Function">
                                             <param id="0" name="Name">&quot;SpawnTree&quot;</param>
                                             <param id="1" name="Parameter {n}">Flower.X{###}Flower.Y</param>
@@ -1751,7 +1755,11 @@
                                             <param id="2" name="End index">TreeModel.Height</param>
                                         </condition>
                                     </conditions>
-                                    <actions />
+                                    <actions>
+                                        <action disabled="1" id="-16" name="Wait" sid="285373222424512" type="System">
+                                            <param id="0" name="Seconds">float(loopindex(&quot;yIDX&quot;)) * TreeTimerInterval</param>
+                                        </action>
+                                    </actions>
                                     <sub-events>
                                         <event-block sid="515399586669262">
                                             <conditions>
@@ -1761,7 +1769,11 @@
                                                     <param id="2" name="End index">int(TreeModel.Width/2.0) + 1</param>
                                                 </condition>
                                             </conditions>
-                                            <actions />
+                                            <actions>
+                                                <action disabled="1" id="-16" name="Wait" sid="918633604061906" type="System">
+                                                    <param id="0" name="Seconds">loopindex(&quot;yIDX&quot;) * TreeTimerInterval + loopindex(&quot;xIDX&quot;) * TreeTimerInterval</param>
+                                                </action>
+                                            </actions>
                                             <sub-events>
                                                 <variable constant="0" name="tileLeft" sid="310085756651386" static="0" type="number">0</variable>
                                                 <variable constant="0" name="tileMid" sid="826664818793490" static="0" type="number">0</variable>
