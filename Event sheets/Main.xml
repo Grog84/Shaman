@@ -1590,11 +1590,6 @@
                                     <param id="0" name="Comparison">2</param>
                                     <param id="1" name="Y co-ordinate">Tile_Air.Y -18</param>
                                 </condition>
-                                <condition id="-14" name="Compare variable" sid="331801499643954" type="System">
-                                    <param id="0" name="Variable">platformExisting</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-3" name="Create object" sid="326621708823227" type="System">
@@ -1644,11 +1639,28 @@
                                     <param id="0" name="Y">self.Y + self.FallingSpeed*dt</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="340326401270169">
+                                    <conditions>
+                                        <condition id="-2" name="Compare Y" sid="864221352188516" type="cloudPlatform">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="Y co-ordinate">Tile_Air.Y + 15</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="848423528888281" type="cloudPlatform" />
+                                        <action id="-12" name="Subtract from" sid="165274506002557" type="Tile_Air">
+                                            <param id="0" name="Instance variable">nbrOfPlatforms</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block any="1" sid="279996819815791">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="237781862375679" type="System">
-                                    <param id="0" name="First value">cloudPlatform.Y - Player.ImagePointY(1)</param>
+                                    <param id="0" name="First value">abs(cloudPlatform.Y - Player.ImagePointY(1))</param>
                                     <param id="1" name="Comparison">5</param>
                                     <param id="2" name="Second value">5</param>
                                 </condition>
