@@ -363,7 +363,7 @@
             <animation-folder>
                 <animation framecount="2" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="473744263849009" speed="2">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\PU\Downloads\Shaman\shamandiagskull.png">
-                        <image-point name="Skall" x="0.515625" y="0.375" />
+                        <image-point name="Skall" x="0.6875" y="0.4375" />
                         <image-point name="SpawnTile" x="1" y="0.421875" />
                         <collision-poly>
                             <point x="0.25" y="0.25" />
@@ -393,7 +393,7 @@
                 </animation>
                 <animation framecount="1" loop="0" name="Crouch" pingpong="0" repeatcount="1" repeatto="0" sid="532840097984556" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\PU\Downloads\Shaman\AnaCrouch.png">
-                        <image-point name="Skall" x="0.609375" y="0.65625" />
+                        <image-point name="Skall" x="0.890625" y="0.84375" />
                         <image-point name="SpawnTile" x="0.609375" y="0.65625" />
                         <collision-poly>
                             <point x="0.25" y="0.25" />
@@ -450,6 +450,42 @@
                 <animation framecount="2" loop="0" name="Waiting" pingpong="0" repeatcount="1" repeatto="0" sid="803336540192645" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="3" loop="0" name="Absorb" pingpong="0" repeatcount="1" repeatto="0" sid="722070004636471" speed="12">
+                    <frame duration="1" hotspotX="0.390625" hotspotY="0.5">
+                        <image-point name="Skall" x="0.875" y="0.578125" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.390625" hotspotY="0.5">
+                        <image-point name="Skall" x="0.875" y="0.578125" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.390625" hotspotY="0.5">
+                        <image-point name="Skall" x="0.875" y="0.578125" />
+                    </frame>
+                </animation>
+                <animation framecount="3" loop="0" name="AbsorbDown" pingpong="0" repeatcount="1" repeatto="0" sid="731826813856121" speed="6">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Skall" x="0.84375" y="0.90625" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Skall" x="0.84375" y="0.90625" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Skall" x="0.84375" y="0.90625" />
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="0" name="AbsorbJump" pingpong="0" repeatcount="1" repeatto="0" sid="709252916994108" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Skall" x="0.671875" y="0.515625" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Skall" x="0.671875" y="0.515625" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Skall" x="0.671875" y="0.515625" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Skall" x="0.671875" y="0.515625" />
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>

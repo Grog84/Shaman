@@ -1248,6 +1248,10 @@
                                 <condition id="7" name="Is mirrored" sid="752488141718269" type="PlayerSprite" />
                             </conditions>
                             <actions>
+                                <action id="4" name="Set animation" sid="866567865891578" type="PlayerSprite">
+                                    <param id="0" name="Animation">&quot;Absorb&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
                                 <action id="0" name="Spawn another object" sid="525500099883599" type="PlayerSprite">
                                     <param id="0" name="Object">Interaction</param>
                                     <param id="1" name="Layer">0</param>
@@ -1263,6 +1267,10 @@
                                 <condition id="-22" name="Else" sid="783663387214810" type="System" />
                             </conditions>
                             <actions>
+                                <action id="4" name="Set animation" sid="305019047311255" type="PlayerSprite">
+                                    <param id="0" name="Animation">&quot;Absorb&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
                                 <action id="0" name="Spawn another object" sid="469089094834918" type="PlayerSprite">
                                     <param id="0" name="Object">Interaction</param>
                                     <param id="1" name="Layer">0</param>
@@ -1434,6 +1442,19 @@
                             </sub-events>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="974834793966357">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="601042899515384" type="PlayerSprite">
+                            <param id="0" name="Animation">&quot;Absorb&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="707088441323875" type="PlayerSprite">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
