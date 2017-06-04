@@ -134,8 +134,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>160</x>
-                        <y>288</y>
+                        <x>48</x>
+                        <y>352</y>
                         <z>0</z>
                         <width>416</width>
                         <height>192</height>
@@ -446,8 +446,12 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <TreeID>0</TreeID>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
+                        <behavior-instance type="Timer" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -609,6 +613,7 @@
                     </properties>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
+                        <behavior-instance type="Timer" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

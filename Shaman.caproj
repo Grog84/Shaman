@@ -25,6 +25,7 @@
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
@@ -496,9 +497,15 @@
         </object-type>
         <object-type name="Bark" sid="951754131172123">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable comment="RICORDARSI" name="TreeID" sid="252360938105257" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="DestroyOutsideLayout" sid="420661854810421">
                     <behavior id="destroy" />
+                </behavior-type>
+                <behavior-type name="Timer" sid="519251120417412">
+                    <behavior id="Timer" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
@@ -522,6 +529,9 @@
             <behaviors>
                 <behavior-type name="DestroyOutsideLayout" sid="941212822372632">
                     <behavior id="destroy" />
+                </behavior-type>
+                <behavior-type name="Timer" sid="308916499385879">
+                    <behavior id="Timer" />
                 </behavior-type>
             </behaviors>
             <animation-folder>

@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Main</name>
     <events>
-        <variable constant="0" name="TreeTimerInterval" sid="881588116161554" static="0" type="number">0.2</variable>
+        <variable constant="0" name="TreeTimerInterval" sid="881588116161554" static="0" type="number">0.1</variable>
         <variable constant="0" name="platformExisting" sid="877042634564734" static="0" type="number">1</variable>
         <variable constant="1" name="GRAVITY" sid="975299546861960" static="0" type="number">1000</variable>
         <variable constant="1" name="TILESIZE" sid="347572452409448" static="0" type="number">32</variable>
@@ -1242,6 +1242,7 @@
                                 <condition id="1" name="Is overlapping another object" sid="625669090603894" type="Tile_water">
                                     <param id="0" name="Object">Flower</param>
                                 </condition>
+                                <condition id="-4" name="Trigger once while true" sid="622908093054342" type="System" />
                             </conditions>
                             <actions />
                             <sub-events>
@@ -1277,7 +1278,41 @@
                                             <param id="1" name="Parameter {n}">Flower.X{###}Flower.Y</param>
                                         </action>
                                         <action id="-9" name="Destroy" sid="163610036197761" type="Flower" />
+                                        <action id="-16" name="Wait" sid="529591365159147" type="System">
+                                            <param id="0" name="Seconds">TreeModel.Height * TreeTimerInterval</param>
+                                        </action>
                                     </actions>
+                                    <sub-events>
+                                        <variable constant="0" name="yminBark" sid="136830297585371" static="0" type="number">0</variable>
+                                        <event-block sid="990189209201576">
+                                            <conditions>
+                                                <condition id="-11" name="For Each" sid="761095376437205" type="System">
+                                                    <param id="0" name="Object">Bark</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="451540381176662" type="System">
+                                                    <param id="0" name="Variable">yminBark</param>
+                                                    <param id="1" name="Value">min(yminBark, Bark.Y)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="528645007590653">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-16" name="Wait" sid="276488856373872" type="System">
+                                                    <param id="0" name="Seconds">0.1</param>
+                                                </action>
+                                                <action id="0" name="Set text" sid="274021467690443" type="Text">
+                                                    <param id="0" name="Text">yminBark</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="151123863077409" type="Function">
+                                                    <param id="0" name="Name">&quot;displayLiane&quot;</param>
+                                                    <param id="1" name="Parameter {n}">yminBark</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -1739,6 +1774,79 @@
             <sub-events>
                 <event-group description="" sid="448066658886449" title="Tree">
                     <sub-events>
+                        <event-block sid="535271058018601">
+                            <conditions>
+                                <condition id="0" name="On function" sid="332034549852376" type="Function">
+                                    <param id="0" name="Name">&quot;displayLiane&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="parser" sid="652977369090188" static="0" type="number">0</variable>
+                                <event-block sid="929202269634821">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="964564809509958" type="System">
+                                            <param id="0" name="Variable">parser</param>
+                                            <param id="1" name="Value">Function.Param(0)</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="339599547219244">
+                                            <conditions>
+                                                <condition id="-10" name="For" sid="956124173272780" type="System">
+                                                    <param id="0" name="Name">&quot;lineSpawn&quot;</param>
+                                                    <param id="1" name="Start index">0</param>
+                                                    <param id="2" name="End index">TreeModel.Height</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="274425955292307">
+                                                    <conditions>
+                                                        <condition id="-11" name="For Each" sid="638287162493827" type="System">
+                                                            <param id="0" name="Object">Liane</param>
+                                                        </condition>
+                                                        <condition id="-2" name="Compare Y" sid="953679976598981" type="Liane">
+                                                            <param id="0" name="Comparison">0</param>
+                                                            <param id="1" name="Y co-ordinate">parser</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="Timer" id="0" name="Start timer" sid="111304138715119" type="Liane">
+                                                            <param id="0" name="Duration">loopindex(&quot;lineSpawn&quot;) * TreeTimerInterval</param>
+                                                            <param id="1" name="Type">0</param>
+                                                            <param id="2" name="Tag">&quot;liane_&quot;&amp;Liane.UID</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="587469881097907">
+                                                    <conditions />
+                                                    <actions>
+                                                        <action id="-10" name="Add to" sid="735961829860953" type="System">
+                                                            <param id="0" name="Variable">parser</param>
+                                                            <param id="1" name="Value">TILESIZE</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="785163538139224">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="176633988208941" type="System">
+                                                            <param id="0" name="First value">parser</param>
+                                                            <param id="1" name="Comparison">5</param>
+                                                            <param id="2" name="Second value">Function.Param(0) + TreeModel.Height*TILESIZE</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-24" name="Stop loop" sid="220783034549857" type="System" />
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                         <event-block sid="144356126569486">
                             <conditions>
                                 <condition id="0" name="On function" sid="467847784307850" type="Function">
@@ -1755,11 +1863,7 @@
                                             <param id="2" name="End index">TreeModel.Height</param>
                                         </condition>
                                     </conditions>
-                                    <actions>
-                                        <action disabled="1" id="-16" name="Wait" sid="285373222424512" type="System">
-                                            <param id="0" name="Seconds">float(loopindex(&quot;yIDX&quot;)) * TreeTimerInterval</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
                                     <sub-events>
                                         <event-block sid="515399586669262">
                                             <conditions>
@@ -1769,11 +1873,7 @@
                                                     <param id="2" name="End index">int(TreeModel.Width/2.0) + 1</param>
                                                 </condition>
                                             </conditions>
-                                            <actions>
-                                                <action disabled="1" id="-16" name="Wait" sid="918633604061906" type="System">
-                                                    <param id="0" name="Seconds">loopindex(&quot;yIDX&quot;) * TreeTimerInterval + loopindex(&quot;xIDX&quot;) * TreeTimerInterval</param>
-                                                </action>
-                                            </actions>
+                                            <actions />
                                             <sub-events>
                                                 <variable constant="0" name="tileLeft" sid="310085756651386" static="0" type="number">0</variable>
                                                 <variable constant="0" name="tileMid" sid="826664818793490" static="0" type="number">0</variable>
@@ -1813,8 +1913,16 @@
                                                                     <param id="2" name="X">Function.Param(0)</param>
                                                                     <param id="3" name="Y">Function.Param(1) - loopindex(&quot;yIDX&quot;) * TILESIZE</param>
                                                                 </action>
+                                                                <action id="-16" name="Set opacity" sid="313314343526244" type="Bark">
+                                                                    <param id="0" name="Opacity">0</param>
+                                                                </action>
                                                                 <action id="5" name="Set frame" sid="159190140534835" type="Bark">
                                                                     <param id="0" name="Frame number">tileMid -1</param>
+                                                                </action>
+                                                                <action behavior="Timer" id="0" name="Start timer" sid="361223726339220" type="Bark">
+                                                                    <param id="0" name="Duration">float(loopindex(&quot;yIDX&quot;)) * TreeTimerInterval</param>
+                                                                    <param id="1" name="Type">0</param>
+                                                                    <param id="2" name="Tag">&quot;bark_&quot;&amp;Bark.UID</param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
@@ -1833,6 +1941,9 @@
                                                                     <param id="2" name="X">Function.Param(0)</param>
                                                                     <param id="3" name="Y">Function.Param(1) - loopindex(&quot;yIDX&quot;) * TILESIZE</param>
                                                                 </action>
+                                                                <action id="-16" name="Set opacity" sid="601134776003587" type="Bark">
+                                                                    <param id="0" name="Opacity">0</param>
+                                                                </action>
                                                                 <action id="5" name="Set frame" sid="271837817466740" type="Bark">
                                                                     <param id="0" name="Frame number">(tileMid%100) -1</param>
                                                                 </action>
@@ -1842,8 +1953,16 @@
                                                                     <param id="2" name="X">Function.Param(0)</param>
                                                                     <param id="3" name="Y">Function.Param(1) - loopindex(&quot;yIDX&quot;) * TILESIZE</param>
                                                                 </action>
+                                                                <action id="-16" name="Set opacity" sid="332846041443504" type="Liane">
+                                                                    <param id="0" name="Opacity">0</param>
+                                                                </action>
                                                                 <action id="5" name="Set frame" sid="892692132985354" type="Liane">
                                                                     <param id="0" name="Frame number">5</param>
+                                                                </action>
+                                                                <action behavior="Timer" id="0" name="Start timer" sid="825412239657796" type="Bark">
+                                                                    <param id="0" name="Duration">float(loopindex(&quot;yIDX&quot;)) * TreeTimerInterval</param>
+                                                                    <param id="1" name="Type">0</param>
+                                                                    <param id="2" name="Tag">&quot;bark_&quot;&amp;Bark.UID</param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
@@ -1862,8 +1981,16 @@
                                                                     <param id="2" name="X">Function.Param(0)</param>
                                                                     <param id="3" name="Y">Function.Param(1) - loopindex(&quot;yIDX&quot;) * TILESIZE</param>
                                                                 </action>
+                                                                <action id="-16" name="Set opacity" sid="196544113474598" type="Liane">
+                                                                    <param id="0" name="Opacity">0</param>
+                                                                </action>
                                                                 <action id="5" name="Set frame" sid="815011990744030" type="Liane">
                                                                     <param id="0" name="Frame number">5</param>
+                                                                </action>
+                                                                <action behavior="Timer" id="0" name="Start timer" sid="297469763806162" type="Bark">
+                                                                    <param id="0" name="Duration">float(loopindex(&quot;yIDX&quot;)) * TreeTimerInterval</param>
+                                                                    <param id="1" name="Type">0</param>
+                                                                    <param id="2" name="Tag">&quot;bark_&quot;&amp;Bark.UID</param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
@@ -1904,8 +2031,16 @@
                                                                     <param id="2" name="X">Function.Param(0) - loopindex(&quot;xIDX&quot;)*TILESIZE</param>
                                                                     <param id="3" name="Y">Function.Param(1) - loopindex(&quot;yIDX&quot;)*TILESIZE</param>
                                                                 </action>
+                                                                <action id="-16" name="Set opacity" sid="666010027045996" type="Bark">
+                                                                    <param id="0" name="Opacity">0</param>
+                                                                </action>
                                                                 <action id="5" name="Set frame" sid="462636294954912" type="Bark">
                                                                     <param id="0" name="Frame number">tileLeft -1</param>
+                                                                </action>
+                                                                <action behavior="Timer" id="0" name="Start timer" sid="132649086150797" type="Bark">
+                                                                    <param id="0" name="Duration">loopindex(&quot;yIDX&quot;) * TreeTimerInterval + loopindex(&quot;xIDX&quot;) * TreeTimerInterval</param>
+                                                                    <param id="1" name="Type">0</param>
+                                                                    <param id="2" name="Tag">&quot;bark_&quot;&amp;Bark.UID</param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
@@ -1924,14 +2059,25 @@
                                                                     <param id="2" name="X">Function.Param(0) - loopindex(&quot;xIDX&quot;)*TILESIZE</param>
                                                                     <param id="3" name="Y">Function.Param(1) - loopindex(&quot;yIDX&quot;)*TILESIZE</param>
                                                                 </action>
+                                                                <action id="-16" name="Set opacity" sid="522004692912265" type="Bark">
+                                                                    <param id="0" name="Opacity">0</param>
+                                                                </action>
                                                                 <action id="5" name="Set frame" sid="680676017137718" type="Bark">
                                                                     <param id="0" name="Frame number">(tileLeft%100) -1</param>
+                                                                </action>
+                                                                <action behavior="Timer" id="0" name="Start timer" sid="920936800688028" type="Bark">
+                                                                    <param id="0" name="Duration">loopindex(&quot;yIDX&quot;) * TreeTimerInterval + loopindex(&quot;xIDX&quot;) * TreeTimerInterval</param>
+                                                                    <param id="1" name="Type">0</param>
+                                                                    <param id="2" name="Tag">&quot;bark_&quot;&amp;Bark.UID</param>
                                                                 </action>
                                                                 <action id="-3" name="Create object" sid="696123870424883" type="System">
                                                                     <param id="0" name="Object to create">Liane</param>
                                                                     <param id="1" name="Layer">0</param>
                                                                     <param id="2" name="X">Function.Param(0) - loopindex(&quot;xIDX&quot;) * TILESIZE</param>
                                                                     <param id="3" name="Y">Function.Param(1) - loopindex(&quot;yIDX&quot;) * TILESIZE</param>
+                                                                </action>
+                                                                <action id="-16" name="Set opacity" sid="157316605970570" type="Liane">
+                                                                    <param id="0" name="Opacity">0</param>
                                                                 </action>
                                                                 <action id="5" name="Set frame" sid="219807471896114" type="Liane">
                                                                     <param id="0" name="Frame number">5</param>
@@ -1952,6 +2098,9 @@
                                                                     <param id="1" name="Layer">0</param>
                                                                     <param id="2" name="X">Function.Param(0) - loopindex(&quot;xIDX&quot;) * TILESIZE</param>
                                                                     <param id="3" name="Y">Function.Param(1) - loopindex(&quot;yIDX&quot;) * TILESIZE</param>
+                                                                </action>
+                                                                <action id="-16" name="Set opacity" sid="107943509664776" type="Liane">
+                                                                    <param id="0" name="Opacity">0</param>
                                                                 </action>
                                                                 <action id="5" name="Set frame" sid="429144516330194" type="Liane">
                                                                     <param id="0" name="Frame number">5</param>
@@ -1978,8 +2127,16 @@
                                                                     <param id="2" name="X">Function.Param(0) + loopindex(&quot;xIDX&quot;)*TILESIZE</param>
                                                                     <param id="3" name="Y">Function.Param(1) - loopindex(&quot;yIDX&quot;)*TILESIZE</param>
                                                                 </action>
+                                                                <action id="-16" name="Set opacity" sid="622526104992951" type="Bark">
+                                                                    <param id="0" name="Opacity">0</param>
+                                                                </action>
                                                                 <action id="5" name="Set frame" sid="924698771270481" type="Bark">
                                                                     <param id="0" name="Frame number">tileRight -1</param>
+                                                                </action>
+                                                                <action behavior="Timer" id="0" name="Start timer" sid="706359477645102" type="Bark">
+                                                                    <param id="0" name="Duration">loopindex(&quot;yIDX&quot;) * TreeTimerInterval + loopindex(&quot;xIDX&quot;) * TreeTimerInterval</param>
+                                                                    <param id="1" name="Type">0</param>
+                                                                    <param id="2" name="Tag">&quot;bark_&quot;&amp;Bark.UID</param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
@@ -1998,14 +2155,25 @@
                                                                     <param id="2" name="X">Function.Param(0) + loopindex(&quot;xIDX&quot;)*TILESIZE</param>
                                                                     <param id="3" name="Y">Function.Param(1) - loopindex(&quot;yIDX&quot;)*TILESIZE</param>
                                                                 </action>
+                                                                <action id="-16" name="Set opacity" sid="701982604546155" type="Bark">
+                                                                    <param id="0" name="Opacity">0</param>
+                                                                </action>
                                                                 <action id="5" name="Set frame" sid="197962734356860" type="Bark">
                                                                     <param id="0" name="Frame number">(tileRight%100) -1</param>
+                                                                </action>
+                                                                <action behavior="Timer" id="0" name="Start timer" sid="784272990142713" type="Bark">
+                                                                    <param id="0" name="Duration">loopindex(&quot;yIDX&quot;) * TreeTimerInterval + loopindex(&quot;xIDX&quot;) * TreeTimerInterval</param>
+                                                                    <param id="1" name="Type">0</param>
+                                                                    <param id="2" name="Tag">&quot;bark_&quot;&amp;Bark.UID</param>
                                                                 </action>
                                                                 <action id="-3" name="Create object" sid="185482568819048" type="System">
                                                                     <param id="0" name="Object to create">Liane</param>
                                                                     <param id="1" name="Layer">0</param>
                                                                     <param id="2" name="X">Function.Param(0) + loopindex(&quot;xIDX&quot;) * TILESIZE</param>
                                                                     <param id="3" name="Y">Function.Param(1) - loopindex(&quot;yIDX&quot;) * TILESIZE</param>
+                                                                </action>
+                                                                <action id="-16" name="Set opacity" sid="535075508192693" type="Liane">
+                                                                    <param id="0" name="Opacity">0</param>
                                                                 </action>
                                                                 <action id="5" name="Set frame" sid="749255702027701" type="Liane">
                                                                     <param id="0" name="Frame number">5</param>
@@ -2027,6 +2195,9 @@
                                                                     <param id="2" name="X">Function.Param(0) + loopindex(&quot;xIDX&quot;) * TILESIZE</param>
                                                                     <param id="3" name="Y">Function.Param(1) - loopindex(&quot;yIDX&quot;) * TILESIZE</param>
                                                                 </action>
+                                                                <action id="-16" name="Set opacity" sid="264497308327381" type="Liane">
+                                                                    <param id="0" name="Opacity">0</param>
+                                                                </action>
                                                                 <action id="5" name="Set frame" sid="895200054724066" type="Liane">
                                                                     <param id="0" name="Frame number">5</param>
                                                                 </action>
@@ -2037,6 +2208,50 @@
                                             </sub-events>
                                         </event-block>
                                     </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="913827344426894">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="906803618886570" type="System">
+                                    <param id="0" name="Object">Bark</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="288223472136714">
+                                    <conditions>
+                                        <condition behavior="Timer" id="0" name="On timer" sid="264126898185798" type="Bark">
+                                            <param id="0" name="Tag">&quot;bark_&quot;&amp;Bark.UID</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Set opacity" sid="627982341562900" type="Bark">
+                                            <param id="0" name="Opacity">100</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="914302928942620">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="517858795737919" type="System">
+                                    <param id="0" name="Object">Liane</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="277656151927289">
+                                    <conditions>
+                                        <condition behavior="Timer" id="0" name="On timer" sid="894431878856022" type="Liane">
+                                            <param id="0" name="Tag">&quot;liane_&quot;&amp;Liane.UID</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Set opacity" sid="452969410619710" type="Liane">
+                                            <param id="0" name="Opacity">100</param>
+                                        </action>
+                                    </actions>
                                 </event-block>
                             </sub-events>
                         </event-block>
