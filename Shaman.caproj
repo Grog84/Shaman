@@ -361,8 +361,22 @@
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="473744263849009" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\PU\Downloads\basepixel.png">
+                <animation framecount="2" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="473744263849009" speed="2">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\PU\Downloads\Shaman\shamandiagskull.png">
+                        <image-point name="Skall" x="0.515625" y="0.375" />
+                        <image-point name="SpawnTile" x="1" y="0.421875" />
+                        <collision-poly>
+                            <point x="0.25" y="0.25" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.546875" y="0.453125" />
+                            <point x="0.515625" y="0.5" />
+                            <point x="0.515625" y="0.515625" />
+                            <point x="0.5" y="0.546875" />
+                            <point x="0.21875" y="0.78125" />
+                            <point x="0.21875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <image-point name="Skall" x="0.515625" y="0.375" />
                         <image-point name="SpawnTile" x="1" y="0.421875" />
                         <collision-poly>
@@ -378,7 +392,7 @@
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="Crouch" pingpong="0" repeatcount="1" repeatto="0" sid="532840097984556" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\PU\Downloads\Shaman\AnaCrouch.png">
                         <image-point name="Skall" x="0.609375" y="0.65625" />
                         <image-point name="SpawnTile" x="0.609375" y="0.65625" />
                         <collision-poly>
@@ -412,6 +426,30 @@
                 <animation framecount="2" loop="0" name="Falling" pingpong="0" repeatcount="1" repeatto="0" sid="580991396314930" speed="5">
                     <frame duration="0.8" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="0.8" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="4" loop="0" name="Climb" pingpong="0" repeatcount="1" repeatto="0" sid="920013137438315" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="4" loop="0" name="StartPos" pingpong="0" repeatcount="1" repeatto="0" sid="977587139806219" speed="4">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="2" loop="0" name="Positioning" pingpong="0" repeatcount="1" repeatto="0" sid="169389673573617" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="2" loop="0" name="EndPos" pingpong="0" repeatcount="1" repeatto="0" sid="415651245077746" speed="2">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="2" loop="0" name="Waiting" pingpong="0" repeatcount="1" repeatto="0" sid="803336540192645" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
