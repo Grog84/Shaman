@@ -448,10 +448,16 @@
                     </properties>
                     <instance-variables>
                         <TreeID>0</TreeID>
+                        <isPassage>0</isPassage>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
                         <behavior-instance type="Timer" />
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -510,6 +516,8 @@
                         <RockTileRange>2</RockTileRange>
                         <AirTileRange>4</AirTileRange>
                         <WaterTileRange>1</WaterTileRange>
+                        <ClimbingSpeed>100</ClimbingSpeed>
+                        <IsClimbing>0</IsClimbing>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="BoundToLayout">
@@ -552,7 +560,7 @@
                         <y>288</y>
                         <z>0</z>
                         <width>28</width>
-                        <height>64</height>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -574,7 +582,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>64</x>
-                        <y>289</y>
+                        <y>286</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
