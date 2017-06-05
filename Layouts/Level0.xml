@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>BossLevel4</name>
-    <sid>801225701436357</sid>
-    <event-sheet></event-sheet>
+    <name>Level0</name>
+    <sid>964341198511425</sid>
+    <event-sheet>esLevel0</event-sheet>
     <size>
-        <width>640</width>
-        <height>480</height>
+        <width>1708</width>
+        <height>960</height>
     </size>
     <margins>
         <horizontal>500</horizontal>
@@ -13,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="Layer 0" sid="664277498320776">
+        <layer name="Layer 0" sid="209844126874246">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>0</transparent>

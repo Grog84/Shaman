@@ -323,7 +323,23 @@
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="24" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="683500859447600" speed="0">
+                <animation framecount="40" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="683500859447600" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -726,6 +742,7 @@
     </families>
     <layout-folder>
         <layout>Menu.xml</layout>
+        <layout>Level0.xml</layout>
         <layout>Level1.xml</layout>
         <layout>Level2.xml</layout>
         <layout>Level3.xml</layout>
@@ -745,8 +762,8 @@
         <event-sheet>esBossLevel1.xml</event-sheet>
         <event-sheet>esBossLevel2.xml</event-sheet>
         <event-sheet>esBossLevel3.xml</event-sheet>
-        <event-sheet>Event sheet 1.xml</event-sheet>
         <event-sheet>esBossLevel4.xml</event-sheet>
+        <event-sheet>esLevel0.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="31" />

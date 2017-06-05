@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>esLevel0</name>
+    <events>
+        <include>Main</include>
+        <event-block sid="949726439680308">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="116516078074613" type="System" />
+            </conditions>
+            <actions>
+                <action id="1" name="Request project file" sid="803180273104213" type="AJAX">
+                    <param id="0" name="Tag">&quot;testmap&quot;</param>
+                    <param id="1" name="File">Test_map.json</param>
+                </action>
+                <action id="0" name="Set text" sid="439305065806817" type="Text">
+                    <param id="0" name="Text">Gamepad.GamepadCount</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="355062934673493" type="PlayerSprite">
+                    <param id="0" name="Pin to">Player</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="1" name="Request project file" sid="588330210517161" type="AJAX">
+                    <param id="0" name="Tag">&quot;tree&quot;</param>
+                    <param id="1" name="File">TestTree.json</param>
+                </action>
+            </actions>
+            <sub-events>
+                <comment>Activates or deactivates tiles selection/absorption</comment>
+                <event-block sid="466248496346347">
+                    <conditions />
+                    <actions>
+                        <action id="3" name="Set at XY" sid="762636495035879" type="TilePosType">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">&quot;Rock&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="869319990435297" type="TilePosType">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">1</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="275477652539921" type="TilePosType">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">&quot;Air&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="106527866004907" type="TilePosType">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">1</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="281682735970278" type="TilePosType">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">&quot;Water&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="593806059905619" type="TilePosType">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">1</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="168271183511310" type="TilePosType">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">&quot;Fire&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="423435474518465">
+            <conditions>
+                <condition id="0" name="On completed" sid="378249564084794" type="AJAX">
+                    <param id="0" name="Tag">&quot;testmap&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="238744355323861" type="Function">
+                    <param id="0" name="Name">&quot;CreateMap&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="260908394999393">
+            <conditions>
+                <condition id="0" name="On completed" sid="631414960519599" type="AJAX">
+                    <param id="0" name="Tag">&quot;tree&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="11" name="Load" sid="733700738630632" type="TreeModel">
+                    <param id="0" name="JSON">AJAX.LastData</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
