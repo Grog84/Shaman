@@ -10,8 +10,8 @@
             </conditions>
             <actions>
                 <action id="1" name="Request project file" sid="387214712731662" type="AJAX">
-                    <param id="0" name="Tag">&quot;testmap&quot;</param>
-                    <param id="1" name="File">Test_map.json</param>
+                    <param id="0" name="Tag">&quot;level1&quot;</param>
+                    <param id="1" name="File">SQCavernaMap.json</param>
                 </action>
                 <action id="0" name="Set text" sid="655381135296255" type="Text">
                     <param id="0" name="Text">Gamepad.GamepadCount</param>
@@ -19,10 +19,6 @@
                 <action behavior="Pin" id="0" name="Pin to object" sid="361421843292268" type="PlayerSprite">
                     <param id="0" name="Pin to">Player</param>
                     <param id="1" name="Mode">0</param>
-                </action>
-                <action id="1" name="Request project file" sid="859114495084603" type="AJAX">
-                    <param id="0" name="Tag">&quot;tree&quot;</param>
-                    <param id="1" name="File">TestTree.json</param>
                 </action>
             </actions>
             <sub-events>
@@ -48,7 +44,7 @@
                         <action id="3" name="Set at XY" sid="707906848396871" type="TilePosType">
                             <param id="0" name="X">1</param>
                             <param id="1" name="Y">1</param>
-                            <param id="2" name="Value">1</param>
+                            <param id="2" name="Value">0</param>
                         </action>
                         <action id="3" name="Set at XY" sid="233053005018316" type="TilePosType">
                             <param id="0" name="X">2</param>
@@ -58,7 +54,7 @@
                         <action id="3" name="Set at XY" sid="582687687708708" type="TilePosType">
                             <param id="0" name="X">2</param>
                             <param id="1" name="Y">1</param>
-                            <param id="2" name="Value">1</param>
+                            <param id="2" name="Value">0</param>
                         </action>
                         <action id="3" name="Set at XY" sid="909924177657146" type="TilePosType">
                             <param id="0" name="X">3</param>
@@ -72,25 +68,13 @@
         <event-block sid="309800532069827">
             <conditions>
                 <condition id="0" name="On completed" sid="855754991898396" type="AJAX">
-                    <param id="0" name="Tag">&quot;testmap&quot;</param>
+                    <param id="0" name="Tag">&quot;level1&quot;</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="0" name="Call function" sid="120965073928919" type="Function">
                     <param id="0" name="Name">&quot;CreateMap&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="792004696499244">
-            <conditions>
-                <condition id="0" name="On completed" sid="373282079408077" type="AJAX">
-                    <param id="0" name="Tag">&quot;tree&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="11" name="Load" sid="118071395307597" type="TreeModel">
-                    <param id="0" name="JSON">AJAX.LastData</param>
                 </action>
             </actions>
         </event-block>
