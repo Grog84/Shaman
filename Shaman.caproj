@@ -772,5 +772,6 @@
         </file-folder>
         <file name="Test_map.json" />
         <file name="TestTree.json" />
+        <file name="SQCavernaMap.json" />
     </files-folder>
 </c2project>
