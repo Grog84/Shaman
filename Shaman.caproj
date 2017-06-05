@@ -998,6 +998,12 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="LevelSelect" sid="611632334150156">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="ID" sid="736487352747119" type="number" />
+            </instance-variables>
+        </object-type>
     </object-folder>
     <families>
         <family name="Tile" plugin-id="Sprite" sid="792340356286362">
