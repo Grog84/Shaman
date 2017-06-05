@@ -110,6 +110,7 @@
                 <instance-variable name="WaterTileRange" sid="641955601209599" type="number" />
                 <instance-variable name="ClimbingSpeed" sid="928956671486717" type="number" />
                 <instance-variable name="IsClimbing" sid="425909979642388" type="number" />
+                <instance-variable name="TimeBeforeIdle" sid="298012101691421" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="BoundToLayout" sid="603214758576246">
@@ -359,6 +360,9 @@
                 <behavior-type name="Pin" sid="418882207491891">
                     <behavior id="Pin" />
                 </behavior-type>
+                <behavior-type name="Timer" sid="372929860315840">
+                    <behavior id="Timer" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="2" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="473744263849009" speed="2">
@@ -433,21 +437,33 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
-                <animation framecount="4" loop="0" name="StartPos" pingpong="0" repeatcount="1" repeatto="0" sid="977587139806219" speed="4">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                <animation framecount="4" loop="0" name="StartPos" pingpong="0" repeatcount="1" repeatto="0" sid="977587139806219" speed="8">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Skall" x="0.5" y="0.5" />
+                        <image-point name="BlockSpawn" x="0.984375" y="0.140625" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Skall" x="0.5" y="0.5" />
+                        <image-point name="BlockSpawn" x="0.984375" y="0.140625" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Skall" x="0.5" y="0.5" />
+                        <image-point name="BlockSpawn" x="0.984375" y="0.140625" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Skall" x="0.734375" y="0.140625" />
+                        <image-point name="BlockSpawn" x="0.734375" y="0.125" />
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="1" name="Positioning" pingpong="0" repeatcount="1" repeatto="0" sid="169389673573617" speed="4">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
-                <animation framecount="2" loop="0" name="Positioning" pingpong="0" repeatcount="1" repeatto="0" sid="169389673573617" speed="5">
+                <animation framecount="2" loop="0" name="EndPos" pingpong="0" repeatcount="1" repeatto="0" sid="415651245077746" speed="4">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
-                <animation framecount="2" loop="0" name="EndPos" pingpong="0" repeatcount="1" repeatto="0" sid="415651245077746" speed="2">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-                <animation framecount="2" loop="0" name="Waiting" pingpong="0" repeatcount="1" repeatto="0" sid="803336540192645" speed="5">
+                <animation framecount="2" loop="1" name="Waiting" pingpong="0" repeatcount="1" repeatto="0" sid="803336540192645" speed="2">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
@@ -462,7 +478,7 @@
                         <image-point name="Skall" x="0.875" y="0.578125" />
                     </frame>
                 </animation>
-                <animation framecount="3" loop="0" name="AbsorbDown" pingpong="0" repeatcount="1" repeatto="0" sid="731826813856121" speed="6">
+                <animation framecount="3" loop="0" name="AbsorbDown" pingpong="0" repeatcount="1" repeatto="0" sid="731826813856121" speed="12">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <image-point name="Skall" x="0.84375" y="0.90625" />
                     </frame>
