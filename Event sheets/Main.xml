@@ -1344,6 +1344,54 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <event-block any="1" sid="310284150078954">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="735406194595826" type="PlayerSprite">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="147243473780215" type="PlayerSprite">
+                                    <param id="0" name="Animation">&quot;Falling&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="641469777175487">
+                                    <conditions>
+                                        <condition id="7" name="Is mirrored" sid="921266672667317" type="PlayerSprite" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="992852135634742" type="PlayerSprite">
+                                            <param id="0" name="Animation">&quot;AbsorbUp&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="0" name="Spawn another object" sid="124811000736317" type="PlayerSprite">
+                                            <param id="0" name="Object">Interaction</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="Image point">1</param>
+                                        </action>
+                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="109835850244551" type="Interaction">
+                                            <param id="0" name="Angle">180</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="304249529597685">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="503170024496791" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="672543991491999" type="PlayerSprite">
+                                            <param id="0" name="Animation">&quot;AbsorbJump&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="0" name="Spawn another object" sid="806281832142732" type="PlayerSprite">
+                                            <param id="0" name="Object">Interaction</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="Image point">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                     </sub-events>
                 </event-block>
                 <comment>Tile positioner selection [Note: when an instance variable referred to a specif tile type is set to -1, the power of moving that kind of tile is not active]</comment>
@@ -2234,6 +2282,16 @@
                                                                     <param id="0" name="First value">MapArray.At(loopindex(&quot;X_idx&quot;), loopindex(&quot;Y_idx&quot;))</param>
                                                                     <param id="1" name="Comparison">0</param>
                                                                     <param id="2" name="Second value">41</param>
+                                                                </condition>
+                                                                <condition id="-8" name="Compare two values" sid="806607570478122" type="System">
+                                                                    <param id="0" name="First value">MapArray.At(loopindex(&quot;X_idx&quot;), loopindex(&quot;Y_idx&quot;))</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Second value">160</param>
+                                                                </condition>
+                                                                <condition id="-8" name="Compare two values" sid="227452673863755" type="System">
+                                                                    <param id="0" name="First value">MapArray.At(loopindex(&quot;X_idx&quot;), loopindex(&quot;Y_idx&quot;))</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Second value">161</param>
                                                                 </condition>
                                                             </conditions>
                                                             <actions />
