@@ -236,9 +236,27 @@
                         <AbsorbSpeed>300</AbsorbSpeed>
                         <ShrinkSpeed>100</ShrinkSpeed>
                         <Type>&quot;Rock&quot;</Type>
-                        <nbrOfPlatforms>0</nbrOfPlatforms>
-                        <platformUID>0</platformUID>
+                        <LifeDuration>0</LifeDuration>
+                        <IsSpawned>0</IsSpawned>
+                        <SpawnOrder>0</SpawnOrder>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Timer" />
+                        <behavior-instance type="Jumpthru">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>1</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -295,39 +313,6 @@
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="cloudPlatform" uid="1">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <FallingSpeed>8</FallingSpeed>
-                        <AirTileUID>0</AirTileUID>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>448</x>
-                        <y>-160</y>
-                        <z>0</z>
-                        <width>30</width>
-                        <height>10</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>0.5</opacity>
                     </world>
                 </instance>
                 <instance type="ValidArea" uid="3">
@@ -815,6 +800,13 @@
         <instance type="TreeModel" uid="14">
             <properties>
                 <width>10</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="CloudArray" uid="117">
+            <properties>
+                <width>6</width>
                 <height>1</height>
                 <depth>1</depth>
             </properties>

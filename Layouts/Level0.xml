@@ -236,9 +236,27 @@
                         <AbsorbSpeed>300</AbsorbSpeed>
                         <ShrinkSpeed>100</ShrinkSpeed>
                         <Type>&quot;Rock&quot;</Type>
-                        <nbrOfPlatforms>0</nbrOfPlatforms>
-                        <platformUID>0</platformUID>
+                        <LifeDuration>0</LifeDuration>
+                        <IsSpawned>0</IsSpawned>
+                        <SpawnOrder>0</SpawnOrder>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Timer" />
+                        <behavior-instance type="Jumpthru">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>1</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -252,39 +270,6 @@
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="cloudPlatform" uid="23">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <FallingSpeed>8</FallingSpeed>
-                        <AirTileUID>0</AirTileUID>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>55</x>
-                        <y>-127</y>
-                        <z>0</z>
-                        <width>30</width>
-                        <height>10</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>0.5</opacity>
                     </world>
                 </instance>
                 <instance type="ValidArea" uid="24">
@@ -427,9 +412,9 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <TotalNumberOfTiles>7</TotalNumberOfTiles>
+                        <TotalNumberOfTiles>102</TotalNumberOfTiles>
                         <RockTiles>0</RockTiles>
-                        <AirTiles>5</AirTiles>
+                        <AirTiles>100</AirTiles>
                         <WaterTiles>2</WaterTiles>
                         <TilePositioning>false</TilePositioning>
                         <Speed>200</Speed>
@@ -487,8 +472,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-73</x>
-                        <y>289</y>
+                        <x>59</x>
+                        <y>233</y>
                         <z>0</z>
                         <width>24</width>
                         <height>55</height>
@@ -513,8 +498,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-73</x>
-                        <y>287</y>
+                        <x>59</x>
+                        <y>231</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>

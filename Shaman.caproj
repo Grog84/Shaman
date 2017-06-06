@@ -29,6 +29,7 @@
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -314,9 +315,21 @@
         <object-type name="Tile_Air" sid="627832559625701">
             <plugin id="Sprite" />
             <instance-variables>
-                <instance-variable name="nbrOfPlatforms" sid="501434735759503" type="number" />
-                <instance-variable name="platformUID" sid="354703064418628" type="number" />
+                <instance-variable name="LifeDuration" sid="520346529833041" type="number" />
+                <instance-variable name="IsSpawned" sid="945916784995656" type="number" />
+                <instance-variable name="SpawnOrder" sid="578634150750600" type="number" />
             </instance-variables>
+            <behaviors>
+                <behavior-type name="Timer" sid="771587443911991">
+                    <behavior id="Timer" />
+                </behavior-type>
+                <behavior-type name="Jumpthru" sid="350095851566410">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+                <behavior-type name="Fade" sid="845401175359974">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="198815342489658" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_55\Downloads\WindTile_single2.png">
@@ -829,23 +842,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="cloudPlatform" sid="147979407080800">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="FallingSpeed" sid="903427009105719" type="number" />
-                <instance-variable name="AirTileUID" sid="307448009337175" type="number" />
-            </instance-variables>
-            <behaviors>
-                <behavior-type name="Solid" sid="467248177415878">
-                    <behavior id="solid" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="496697982539644" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type global="1" name="TilePosType" sid="462246655352896">
             <plugin id="Arr" />
         </object-type>
@@ -1176,6 +1172,9 @@
                     </frame>
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type global="1" name="CloudArray" sid="416207606981829">
+            <plugin id="Arr" />
         </object-type>
     </object-folder>
     <families>
