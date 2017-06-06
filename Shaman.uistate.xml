@@ -12,8 +12,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <open-tabs>
         <layout order="0">Level1</layout>
         <layout order="3">Menu</layout>
+        <layout active="1" order="4">BossLevel1</layout>
         <event-sheet order="1">esLevel1</event-sheet>
-        <event-sheet active="1" order="2">Main</event-sheet>
+        <event-sheet order="2">Main</event-sheet>
+        <event-sheet order="5">esBossLevel1</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -21,8 +23,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="0" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
-    <families-expanded root="0">
-        <family expanded="0" name="Tile" />
+    <families-expanded root="1">
+        <family expanded="1" name="Tile" />
         <family expanded="1" name="Obstacle" />
     </families-expanded>
     <folders-expanded>
@@ -52,5 +54,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Tornado/" />
         <folder expanded="1" path="animation-folder/TornadoStop/" />
         <folder expanded="1" path="animation-folder/End/" />
+        <folder expanded="1" path="animation-folder/Bkg/" />
+        <folder expanded="1" path="animation-folder/Boss/" />
+        <folder expanded="1" path="animation-folder/TriggerRight/" />
+        <folder expanded="1" path="animation-folder/TriggerLeft/" />
+        <folder expanded="1" path="animation-folder/TileDrop/" />
+        <folder expanded="1" path="animation-folder/GlobeArea/" />
     </folders-expanded>
 </c2uistate>

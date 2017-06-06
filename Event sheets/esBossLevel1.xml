@@ -4,5 +4,224 @@
     <name>esBossLevel1</name>
     <events>
         <include>Main</include>
+        <event-block sid="388484266233583">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="655726518416584" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="310794131295075" type="PlayerSprite">
+                    <param id="0" name="Pin to">Player</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="635084112703751" type="GlobeArea">
+                    <param id="0" name="Pin to">Boss</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <comment>Activates or deactivates tiles selection/absorption</comment>
+                <event-block sid="213023151429038">
+                    <conditions />
+                    <actions>
+                        <action id="3" name="Set at XY" sid="203562739976337" type="TilePosType">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">&quot;Rock&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="843290848808157" type="TilePosType">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">1</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="660967393550675" type="TilePosType">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">&quot;Air&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="282166005351800" type="TilePosType">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">0</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="247725416273280" type="TilePosType">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">&quot;Water&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="704997546492913" type="TilePosType">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">0</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="138377094913971" type="TilePosType">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">&quot;Fire&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="467393074305560">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="736503916411159" type="Boss">
+                    <param id="0" name="Object">TriggerRight</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="0" name="Set speed" sid="521965317770481" type="Boss">
+                    <param id="0" name="Speed">-self.Speed</param>
+                </action>
+                <action id="0" name="Call function" sid="404252218495080" type="Function">
+                    <param id="0" name="Name">&quot;Boss1GenerateTileDrop&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="692938258909780">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="515686515748932" type="Boss">
+                    <param id="0" name="Object">TriggerLeft</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="0" name="Set speed" sid="454175113733778" type="Boss">
+                    <param id="0" name="Speed">-self.Speed</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="977733801687345">
+            <conditions>
+                <condition id="0" name="On function" sid="871112262299625" type="Function">
+                    <param id="0" name="Name">&quot;Boss1GenerateTileDrop&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="spwnPoint1" sid="391553927629757" static="0" type="number">0</variable>
+                <variable constant="0" name="spwnPoint2" sid="851571907901123" static="0" type="number">0</variable>
+                <variable constant="0" name="spwnPoint3" sid="754357623371225" static="0" type="number">0</variable>
+                <event-block sid="281935698225010">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="404031344623720" type="System">
+                            <param id="0" name="Variable">spwnPoint1</param>
+                            <param id="1" name="Value">int(random(16))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="773019910633172" type="System">
+                            <param id="0" name="Variable">spwnPoint2</param>
+                            <param id="1" name="Value">int(random(16))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="437858932310424" type="System">
+                            <param id="0" name="Variable">spwnPoint3</param>
+                            <param id="1" name="Value">int(random(16))</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="242448804291593" type="System">
+                            <param id="0" name="Object to create">TileDrop</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">128 + spwnPoint1*32 +16</param>
+                            <param id="3" name="Y">32</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="820481625430213" type="System">
+                            <param id="0" name="Object to create">TileDrop</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">128 + spwnPoint2*32 +16</param>
+                            <param id="3" name="Y">32</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="231678609030835" type="System">
+                            <param id="0" name="Object to create">TileDrop</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">128 + spwnPoint3*32 +16</param>
+                            <param id="3" name="Y">32</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="212724018033110">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="241599924489283" type="TileDrop">
+                    <param id="0" name="Object">TileDrop</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="992882904685534">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="506811900782915" type="TileDrop">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">LayoutWidth - 64</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="282251579986370" type="TileDrop">
+                            <param id="0" name="X">self.X + 32</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="748193076918971">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="984411526993738" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="829866168726852" type="TileDrop">
+                            <param id="0" name="X">self.X - 32</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="824332139610552">
+            <conditions>
+                <condition id="-18" name="On created" sid="307247433413663" type="TileDrop" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="613485378665786" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="283356821691224" type="TileDrop">
+                    <param id="0" name="Object">Tile_earth</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="406599561321227" type="TileDrop" />
+            </actions>
+        </event-block>
+        <event-block sid="887898159017131">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="314854394482675" type="Player">
+                    <param id="0" name="Object">GlobeArea</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="719493130550280">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="374094241754799" type="Player">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">GlobeArea.Y - 20</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="716002862133495" type="Debugtext">
+                            <param id="0" name="Text">&quot;Yeee&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="339029374571354">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="839014985224443" type="Player">
+                    <param id="0" name="Object">Boss</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="978976188352921" type="Player">
+                    <param id="0" name="X">Self.X - 150 * dt</param>
+                    <param id="1" name="Y">Self.Y</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
