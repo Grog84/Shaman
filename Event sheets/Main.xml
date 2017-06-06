@@ -2565,6 +2565,40 @@
                                                                         </action>
                                                                     </actions>
                                                                 </event-block>
+                                                                <event-block sid="777548684830144">
+                                                                    <conditions>
+                                                                        <condition id="-8" name="Compare two values" sid="978708766207650" type="System">
+                                                                            <param id="0" name="First value">MapArray.At(loopindex(&quot;X_idx&quot;), loopindex(&quot;Y_idx&quot;))</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Second value">160</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-3" name="Create object" sid="552154614223597" type="System">
+                                                                            <param id="0" name="Object to create">Tornado</param>
+                                                                            <param id="1" name="Layer">0</param>
+                                                                            <param id="2" name="X">loopindex(&quot;X_idx&quot;) * TILESIZE + TILESIZE/2.0</param>
+                                                                            <param id="3" name="Y">loopindex(&quot;Y_idx&quot;) * TILESIZE + TILESIZE/2.0</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="595859992003590">
+                                                                    <conditions>
+                                                                        <condition id="-8" name="Compare two values" sid="740512122626750" type="System">
+                                                                            <param id="0" name="First value">MapArray.At(loopindex(&quot;X_idx&quot;), loopindex(&quot;Y_idx&quot;))</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Second value">161</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-3" name="Create object" sid="170365547285710" type="System">
+                                                                            <param id="0" name="Object to create">TornadoStop</param>
+                                                                            <param id="1" name="Layer">0</param>
+                                                                            <param id="2" name="X">loopindex(&quot;X_idx&quot;) * TILESIZE + TILESIZE/2.0</param>
+                                                                            <param id="3" name="Y">loopindex(&quot;Y_idx&quot;) * TILESIZE + TILESIZE/2.0</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
                                                             </sub-events>
                                                         </event-block>
                                                         <event-block sid="454505274185604">
@@ -3111,6 +3145,112 @@
                             <actions>
                                 <action behavior="Platform" id="9" name="Set vector Y" sid="192684753905325" type="Player">
                                     <param id="0" name="Vector Y">-700</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="780983602144760" title="Enemies">
+            <sub-events>
+                <event-group description="" sid="307130854658178" title="Tornado">
+                    <sub-events>
+                        <event-block sid="934127083985456">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="263519709706683" type="Tornado">
+                                    <param id="0" name="Instance variable">IsMoving</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="653313284614980" type="Tornado">
+                                    <param id="0" name="X">self.X + (self.Speed*dt*self.direction)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="943929093815557">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="531713829939600" type="Tornado">
+                                    <param id="0" name="Object">TornadoStop</param>
+                                </condition>
+                                <condition id="1" name="Is overlapping another object" sid="788831976142578" type="Tornado">
+                                    <param id="0" name="Object">Tile_earth</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="738362991093257">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="191990929950099" type="Tornado">
+                                            <param id="0" name="Instance variable">IsMoving</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="329278690012190" type="Tornado">
+                                            <param id="0" name="Instance variable">direction</param>
+                                            <param id="1" name="Value">self.direction * (-1)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="486833052746066">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="812183447527993" type="Tornado">
+                                    <param id="0" name="Object">Tile_earth</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="498095517179954">
+                                    <conditions>
+                                        <condition id="-2" name="Compare Y" sid="411588110463917" type="Tile_earth">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="Y co-ordinate">Tornado.Y - 20</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="477374231334229" type="Tornado">
+                                            <param id="0" name="Instance variable">IsMoving</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="6" name="Set speed" sid="464881467624333" type="Tornado">
+                                            <param id="0" name="Speed">0</param>
+                                        </action>
+                                        <action behavior="Fade" id="1" name="Start fade" sid="551228969496127" type="Tornado" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="886781290272999">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="296861443220895" type="Tornado">
+                                    <param id="0" name="Instance variable">direction</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="619786777316325" type="Tornado">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="398666950145927">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="685948582495717" type="Tornado">
+                                    <param id="0" name="Instance variable">direction</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="473335518770068" type="Tornado">
+                                    <param id="0" name="State">0</param>
                                 </action>
                             </actions>
                         </event-block>
