@@ -1929,6 +1929,10 @@
                                     <param id="0" name="Instance variable">pinnedInteraction</param>
                                     <param id="1" name="Value">PlayerRockInteraction.UID</param>
                                 </action>
+                                <action id="-10" name="Set value" sid="386368000143975" type="Tile_earth">
+                                    <param id="0" name="Instance variable">Type</param>
+                                    <param id="1" name="Value">&quot;Rock&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="924589148312141">
