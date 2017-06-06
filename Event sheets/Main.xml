@@ -1058,7 +1058,7 @@
                         </condition>
                         <condition id="3" name="Is button down" sid="425608551490808" type="Gamepad">
                             <param id="0" name="Gamepad">0</param>
-                            <param id="1" name="Button">5</param>
+                            <param id="1" name="Button">7</param>
                         </condition>
                         <condition id="-7" name="Compare instance variable" sid="622627091889059" type="Grigliainvisibile">
                             <param id="0" name="Instance variable">IsValid</param>
@@ -1154,7 +1154,7 @@
                     <conditions>
                         <condition id="6" name="On button pressed" sid="806933910355468" type="Gamepad">
                             <param id="0" name="Gamepad">0</param>
-                            <param id="1" name="Button">5</param>
+                            <param id="1" name="Button">7</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -1172,7 +1172,7 @@
                     <conditions>
                         <condition id="7" name="On button released" sid="984618640793061" type="Gamepad">
                             <param id="0" name="Gamepad">0</param>
-                            <param id="1" name="Button">5</param>
+                            <param id="1" name="Button">7</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -1191,7 +1191,7 @@
                     <conditions>
                         <condition id="3" name="Is button down" sid="123738409142675" type="Gamepad">
                             <param id="0" name="Gamepad">0</param>
-                            <param id="1" name="Button">5</param>
+                            <param id="1" name="Button">7</param>
                         </condition>
                         <condition id="-7" name="Compare instance variable" sid="702291755561865" type="Player">
                             <param id="0" name="Instance variable">TotalNumberOfTiles</param>
@@ -1797,61 +1797,110 @@
                                     <param id="0" name="Mode">0</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="212477921680739">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="996398206194416" type="PlayerRockInteraction">
+                                            <param id="0" name="Unique ID">Tile_earth.pinnedInteraction</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="551131900816421" type="PlayerRockInteraction">
+                                            <param id="0" name="Instance variable">isAbsorbing</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
-                        <event-block disabled="1" sid="773162312778098">
+                        <event-block sid="994548962348988">
                             <conditions>
-                                <condition id="1" name="Is overlapping another object" sid="507664091559793" type="PlayerSprite">
-                                    <param id="0" name="Object">Tile_earth</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="635316243525995" type="Tile_earth">
-                                    <param id="0" name="Instance variable">IsAbsorbing</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
+                                <condition id="-18" name="On created" sid="682038256333228" type="Tile_earth" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="417218196885058" type="Tile_earth">
+                                    <param id="0" name="Object">PlayerRockInteraction</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="322696072791273" type="PlayerRockInteraction">
+                                    <param id="0" name="Pin to">Tile_earth</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="678864485119390" type="Tile_earth">
+                                    <param id="0" name="Instance variable">pinnedInteraction</param>
+                                    <param id="1" name="Value">PlayerRockInteraction.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="924589148312141">
+                            <conditions>
+                                <condition id="-19" name="On destroyed" sid="797100076583977" type="Tile_earth" />
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block disabled="1" sid="279007105471733">
+                                <event-block sid="119848588187108">
                                     <conditions>
-                                        <condition id="-8" name="Compare two values" sid="671860335501695" type="System">
-                                            <param id="0" name="First value">abs(Player.X-Tile_earth.X)</param>
-                                            <param id="1" name="Comparison">3</param>
-                                            <param id="2" name="Second value">31</param>
+                                        <condition id="-14" name="Pick by unique ID" sid="995658663685561" type="PlayerRockInteraction">
+                                            <param id="0" name="Unique ID">Tile_earth.pinnedInteraction</param>
                                         </condition>
-                                        <condition id="-8" name="Compare two values" sid="654236345982368" type="System">
-                                            <param id="0" name="First value">abs(Player.X-Tile_earth.X)</param>
-                                            <param id="1" name="Comparison">5</param>
-                                            <param id="2" name="Second value">27</param>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="106135606103095" type="PlayerRockInteraction" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="724825383501027">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="745480139822648" type="Player">
+                                    <param id="0" name="Object">PlayerRockInteraction</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="556187742606860" type="Text">
+                                    <param id="0" name="Text">Player.Y - PlayerRockInteraction.Y</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="730344896462640">
+                                    <conditions>
+                                        <condition id="-2" name="Compare Y" sid="197703011326947" type="Player">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="Y co-ordinate">PlayerRockInteraction.Y-9</param>
+                                        </condition>
+                                        <condition id="-2" name="Compare Y" sid="251245420600200" type="Player">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="Y co-ordinate">PlayerRockInteraction.Y - 14</param>
                                         </condition>
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block disabled="1" sid="376743048108729">
+                                        <event-block sid="289479478529791">
                                             <conditions>
-                                                <condition id="-1" name="Compare X" sid="918797586158754" type="Player">
-                                                    <param id="0" name="Comparison">5</param>
-                                                    <param id="1" name="X co-ordinate">Tile_Earth.X</param>
+                                                <condition id="-1" name="Compare X" sid="446512510315719" type="PlayerRockInteraction">
+                                                    <param id="0" name="Comparison">3</param>
+                                                    <param id="1" name="X co-ordinate">Player.X</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-1" name="Set X" sid="643766157010852" type="Player">
-                                                    <param id="0" name="X">Tile_earth.X + 31</param>
+                                                <action id="-3" name="Set position" sid="558570242552903" type="Player">
+                                                    <param id="0" name="X">PlayerRockInteraction.X +30</param>
+                                                    <param id="1" name="Y">Player.Y</param>
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block disabled="1" sid="474962840737189">
+                                        <event-block sid="452029598388151">
                                             <conditions>
-                                                <condition id="-1" name="Compare X" sid="793574279022944" type="Player">
-                                                    <param id="0" name="Comparison">3</param>
-                                                    <param id="1" name="X co-ordinate">Tile_Earth.X</param>
+                                                <condition id="-1" name="Compare X" sid="415796016024315" type="PlayerRockInteraction">
+                                                    <param id="0" name="Comparison">5</param>
+                                                    <param id="1" name="X co-ordinate">Player.X</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-1" name="Set X" sid="356609757465260" type="Player">
-                                                    <param id="0" name="X">Tile_earth.X - 31</param>
-                                                </action>
-                                                <action id="0" name="Set text" sid="773847836842925" type="Text">
-                                                    <param id="0" name="Text">abs(Player.X-Tile_earth.X)</param>
+                                                <action id="-3" name="Set position" sid="816119972010912" type="Player">
+                                                    <param id="0" name="X">PlayerRockInteraction.X - 30</param>
+                                                    <param id="1" name="Y">Player.Y</param>
                                                 </action>
                                             </actions>
                                         </event-block>

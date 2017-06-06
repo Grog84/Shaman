@@ -44,6 +44,7 @@
                         <YSpeed>0</YSpeed>
                         <IsFalling>1</IsFalling>
                         <IsSolid>0</IsSolid>
+                        <pinnedInteraction>0</pinnedInteraction>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -488,7 +489,7 @@
                         <width>24</width>
                         <height>55</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
+                        <hotspotX>0.458333343</hotspotX>
                         <hotspotY>0.5090909</hotspotY>
                         <angle>0</angle>
                         <opacity>0.5</opacity>
