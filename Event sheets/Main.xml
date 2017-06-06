@@ -99,6 +99,9 @@
                                     <param id="0" name="Gamepad">0</param>
                                     <param id="1" name="Button">0</param>
                                 </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="339073312910848" type="Player">
+                                    <param id="0" name="Instance variable">TilePositioning</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action behavior="Platform" id="7" name="Simulate control" sid="758897528596363" type="Player">
@@ -523,11 +526,11 @@
                                 </action>
                                 <action id="-10" name="Set value" sid="482391484426471" type="Grigliainvisibile">
                                     <param id="0" name="Instance variable">SpawnPos_X</param>
-                                    <param id="1" name="Value">int(self.X/TILESIZE)*TILESIZE + TILESIZE/2.0</param>
+                                    <param id="1" name="Value">int(player.X/TILESIZE)*TILESIZE + TILESIZE/2.0</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="310771194118324" type="Grigliainvisibile">
                                     <param id="0" name="Instance variable">SpawnPos_Y</param>
-                                    <param id="1" name="Value">int(self.Y/TILESIZE)*TILESIZE + TILESIZE/2.0</param>
+                                    <param id="1" name="Value">int(player.Y/TILESIZE)*TILESIZE + TILESIZE/2.0</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="921497016426212" type="System">
                                     <param id="0" name="Seconds">0.05</param>
@@ -1541,6 +1544,16 @@
                                         </action>
                                     </actions>
                                     <sub-events>
+                                        <event-block sid="478570070497733">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="744019759425084" type="Player">
+                                                    <param id="0" name="Object">ValidArea</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Destroy" sid="427560738287653" type="ValidArea" />
+                                            </actions>
+                                        </event-block>
                                         <event-block sid="698938781896340">
                                             <conditions>
                                                 <condition behavior="LineOfSight" id="0" inverted="1" name="Has LOS to object" sid="732171394069985" type="Player">
@@ -1784,6 +1797,67 @@
                                     <param id="0" name="Mode">0</param>
                                 </action>
                             </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="773162312778098">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="507664091559793" type="PlayerSprite">
+                                    <param id="0" name="Object">Tile_earth</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="635316243525995" type="Tile_earth">
+                                    <param id="0" name="Instance variable">IsAbsorbing</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block disabled="1" sid="279007105471733">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="671860335501695" type="System">
+                                            <param id="0" name="First value">abs(Player.X-Tile_earth.X)</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Second value">31</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="654236345982368" type="System">
+                                            <param id="0" name="First value">abs(Player.X-Tile_earth.X)</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Second value">27</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block disabled="1" sid="376743048108729">
+                                            <conditions>
+                                                <condition id="-1" name="Compare X" sid="918797586158754" type="Player">
+                                                    <param id="0" name="Comparison">5</param>
+                                                    <param id="1" name="X co-ordinate">Tile_Earth.X</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-1" name="Set X" sid="643766157010852" type="Player">
+                                                    <param id="0" name="X">Tile_earth.X + 31</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block disabled="1" sid="474962840737189">
+                                            <conditions>
+                                                <condition id="-1" name="Compare X" sid="793574279022944" type="Player">
+                                                    <param id="0" name="Comparison">3</param>
+                                                    <param id="1" name="X co-ordinate">Tile_Earth.X</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-1" name="Set X" sid="356609757465260" type="Player">
+                                                    <param id="0" name="X">Tile_earth.X - 31</param>
+                                                </action>
+                                                <action id="0" name="Set text" sid="773847836842925" type="Text">
+                                                    <param id="0" name="Text">abs(Player.X-Tile_earth.X)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-group>

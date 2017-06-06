@@ -485,11 +485,11 @@
                         <x>-73</x>
                         <y>289</y>
                         <z>0</z>
-                        <width>28</width>
-                        <height>60</height>
+                        <width>24</width>
+                        <height>55</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0.5090909</hotspotY>
                         <angle>0</angle>
                         <opacity>0.5</opacity>
                     </world>
