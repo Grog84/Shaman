@@ -439,7 +439,7 @@
                         <Yspeed>0</Yspeed>
                         <OnTheGround>false</OnTheGround>
                         <LastAirTile>0</LastAirTile>
-                        <RockTileRange>2</RockTileRange>
+                        <RockTileRange>3</RockTileRange>
                         <AirTileRange>4</AirTileRange>
                         <WaterTileRange>1</WaterTileRange>
                         <ClimbingSpeed>100</ClimbingSpeed>
@@ -447,6 +447,7 @@
                         <TimeBeforeIdle>20</TimeBeforeIdle>
                         <CanPlaceTile>true</CanPlaceTile>
                         <TilePlacingTimer>0.5</TilePlacingTimer>
+                        <IsAbsorbing>false</IsAbsorbing>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="BoundToLayout">

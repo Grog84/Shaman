@@ -3,6 +3,9 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Main</name>
     <events>
+        <variable constant="1" name="MAX_NBR_OF_ROCKS" sid="227230604218490" static="0" type="number">4</variable>
+        <variable constant="1" name="MAX_NBR_OF_AIR" sid="391685697575585" static="0" type="number">6</variable>
+        <variable constant="1" name="MAX_NBR_OF_WATER" sid="578344294921874" static="0" type="number">2</variable>
         <variable constant="0" name="TreeTimerInterval" sid="881588116161554" static="0" type="number">0.1</variable>
         <variable constant="0" name="platformExisting" sid="877042634564734" static="0" type="number">1</variable>
         <variable constant="1" name="GRAVITY" sid="975299546861960" static="0" type="number">1500</variable>
@@ -1246,14 +1249,85 @@
                         <condition id="1" name="Is overlapping another object" sid="782192627402205" type="Interaction">
                             <param id="0" name="Object">Tile</param>
                         </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="806752666501008" type="Interaction" />
-                        <action id="-10" name="Set value" sid="585656484942374" type="Tile">
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="555776947525720" type="Player">
                             <param id="0" name="Instance variable">IsAbsorbing</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="967582943743617">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="259098228798202" type="Tile">
+                                    <param id="0" name="Instance variable">Type</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Rock&quot;</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="611533696716782" type="Player">
+                                    <param id="0" name="Instance variable">RockTiles</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">MAX_NBR_OF_ROCKS</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="715549100250970" type="Interaction" />
+                                <action id="-10" name="Set value" sid="733611037080090" type="Tile">
+                                    <param id="0" name="Instance variable">IsAbsorbing</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-14" name="Toggle boolean" sid="975853647786086" type="Player">
+                                    <param id="0" name="Instance variable">IsAbsorbing</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="594273847296667">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="146138162766481" type="Tile">
+                                    <param id="0" name="Instance variable">Type</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Air&quot;</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="394902929185647" type="Player">
+                                    <param id="0" name="Instance variable">AirTiles</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">MAX_NBR_OF_AIR</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="132406237518012" type="Interaction" />
+                                <action id="-10" name="Set value" sid="873750785468745" type="Tile">
+                                    <param id="0" name="Instance variable">IsAbsorbing</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-14" name="Toggle boolean" sid="368797695141744" type="Player">
+                                    <param id="0" name="Instance variable">IsAbsorbing</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="406192075943534">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="152743686208419" type="Tile">
+                                    <param id="0" name="Instance variable">Type</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Water&quot;</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="168510466268229" type="Player">
+                                    <param id="0" name="Instance variable">WaterTiles</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">MAX_NBR_OF_WATER</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="614120877622350" type="Interaction" />
+                                <action id="-10" name="Set value" sid="343808042132552" type="Tile">
+                                    <param id="0" name="Instance variable">IsAbsorbing</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-14" name="Toggle boolean" sid="201596245744814" type="Player">
+                                    <param id="0" name="Instance variable">IsAbsorbing</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="992053908044492">
                     <conditions>
@@ -2231,6 +2305,9 @@
                         <action id="-11" name="Add to" sid="556183241281827" type="Player">
                             <param id="0" name="Instance variable">TotalNumberOfTiles</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-14" name="Toggle boolean" sid="705633170684471" type="Player">
+                            <param id="0" name="Instance variable">IsAbsorbing</param>
                         </action>
                     </actions>
                     <sub-events>

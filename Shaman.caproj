@@ -114,6 +114,7 @@
                 <instance-variable name="TimeBeforeIdle" sid="298012101691421" type="number" />
                 <instance-variable name="CanPlaceTile" sid="679403734576728" type="boolean" />
                 <instance-variable name="TilePlacingTimer" sid="297833765453607" type="number" />
+                <instance-variable name="IsAbsorbing" sid="357602678760758" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="BoundToLayout" sid="603214758576246">
