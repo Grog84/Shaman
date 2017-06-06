@@ -1070,11 +1070,22 @@
                             <param id="1" name="Comparison">4</param>
                             <param id="2" name="Value">0</param>
                         </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="143375078185319" type="Player">
+                            <param id="0" name="Instance variable">CanPlaceTile</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-12" name="Subtract from" sid="609423153683964" type="Player">
                             <param id="0" name="Instance variable">TotalNumberOfTiles</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-14" name="Toggle boolean" sid="195125982454265" type="Player">
+                            <param id="0" name="Instance variable">CanPlaceTile</param>
+                        </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="102643412329400" type="Player">
+                            <param id="0" name="Duration">self.TilePlacingTimer</param>
+                            <param id="1" name="Type">1</param>
+                            <param id="2" name="Tag">&quot;waitTilePlacing&quot;</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -1148,6 +1159,18 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="550282514670572">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="560503349093505" type="Player">
+                            <param id="0" name="Tag">&quot;waitTilePlacing&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-14" name="Toggle boolean" sid="334537875614038" type="Player">
+                            <param id="0" name="Instance variable">CanPlaceTile</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <comment>Toggle Tile positioning</comment>
                 <event-block sid="847404313798073">

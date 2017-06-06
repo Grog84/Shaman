@@ -112,6 +112,8 @@
                 <instance-variable name="ClimbingSpeed" sid="928956671486717" type="number" />
                 <instance-variable name="IsClimbing" sid="425909979642388" type="number" />
                 <instance-variable name="TimeBeforeIdle" sid="298012101691421" type="number" />
+                <instance-variable name="CanPlaceTile" sid="679403734576728" type="boolean" />
+                <instance-variable name="TilePlacingTimer" sid="297833765453607" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="BoundToLayout" sid="603214758576246">
@@ -125,6 +127,9 @@
                 </behavior-type>
                 <behavior-type name="LineOfSight" sid="724624676139386">
                     <behavior id="LOS" />
+                </behavior-type>
+                <behavior-type name="Timer" sid="986617087925258">
+                    <behavior id="Timer" />
                 </behavior-type>
             </behaviors>
             <animation-folder>

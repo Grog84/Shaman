@@ -526,6 +526,8 @@
                         <ClimbingSpeed>100</ClimbingSpeed>
                         <IsClimbing>0</IsClimbing>
                         <TimeBeforeIdle>20</TimeBeforeIdle>
+                        <CanPlaceTile>true</CanPlaceTile>
+                        <TilePlacingTimer>0.5</TilePlacingTimer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="BoundToLayout">
@@ -560,6 +562,7 @@
                                 <use-collision-cells>Yes</use-collision-cells>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Timer" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
