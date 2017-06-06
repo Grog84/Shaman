@@ -37,7 +37,7 @@
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>1640</width>
+        <width>640</width>
         <height>480</height>
     </window-size>
     <pixel-rounding>1</pixel-rounding>
@@ -793,18 +793,18 @@
                 </animation>
                 <animation framecount="3" loop="0" name="Absorb" pingpong="0" repeatcount="1" repeatto="0" sid="722070004636471" speed="12">
                     <frame duration="1" hotspotX="0.390625" hotspotY="0.5">
-                        <image-point name="Skall" x="0.875" y="0.578125" />
+                        <image-point name="Skall" x="0.40625" y="0.28125" />
                     </frame>
                     <frame duration="1" hotspotX="0.390625" hotspotY="0.5">
-                        <image-point name="Skall" x="0.875" y="0.578125" />
+                        <image-point name="Skall" x="0.40625" y="0.421875" />
                     </frame>
                     <frame duration="1" hotspotX="0.390625" hotspotY="0.5">
-                        <image-point name="Skall" x="0.875" y="0.578125" />
+                        <image-point name="Skall" x="0.40625" y="0.421875" />
                     </frame>
                 </animation>
                 <animation framecount="3" loop="0" name="AbsorbDown" pingpong="0" repeatcount="1" repeatto="0" sid="731826813856121" speed="12">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Skall" x="0.84375" y="0.90625" />
+                        <image-point name="Skall" x="0.53125" y="0.859375" />
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <image-point name="Skall" x="0.84375" y="0.90625" />
@@ -1080,6 +1080,14 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="898321807681854" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="End" sid="846097558875341">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="997115893578267" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
                 </animation>
             </animation-folder>
         </object-type>
