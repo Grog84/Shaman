@@ -167,7 +167,7 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="836988256059087" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.6" hotspotY="0.6" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -318,6 +318,7 @@
                 <instance-variable name="LifeDuration" sid="520346529833041" type="number" />
                 <instance-variable name="IsSpawned" sid="945916784995656" type="number" />
                 <instance-variable name="SpawnOrder" sid="578634150750600" type="number" />
+                <instance-variable name="IsTimerOn" sid="520407123614159" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Timer" sid="771587443911991">
@@ -334,9 +335,9 @@
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="198815342489658" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_55\Downloads\WindTile_single2.png">
                         <collision-poly>
-                            <point x="0.09375" y="0.09375" />
-                            <point x="0.5" y="0" />
-                            <point x="0.9375" y="0.0625" />
+                            <point x="0.03125" y="0.09375" />
+                            <point x="0.5" y="0.09375" />
+                            <point x="0.96875" y="0.09375" />
                             <point x="0.75" y="0.5" />
                             <point x="0.5625" y="0.5625" />
                             <point x="0.5" y="0.59375" />

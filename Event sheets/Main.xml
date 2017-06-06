@@ -2093,18 +2093,34 @@
                                 <condition id="1" name="Is overlapping another object" sid="734747391485281" type="Player">
                                     <param id="0" name="Object">Tile_Air</param>
                                 </condition>
-                                <condition id="-2" name="Compare Y" sid="106239487229760" type="Player">
-                                    <param id="0" name="Comparison">2</param>
-                                    <param id="1" name="Y co-ordinate">Tile_Air.Y-14</param>
+                                <condition id="-7" name="Compare instance variable" sid="984521612467807" type="Tile_Air">
+                                    <param id="0" name="Instance variable">IsTimerOn</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action behavior="Timer" id="0" name="Start timer" sid="802423672117473" type="Tile_Air">
-                                    <param id="0" name="Duration">Self.LifeDuration</param>
-                                    <param id="1" name="Type">0</param>
-                                    <param id="2" name="Tag">&quot;cloud&quot;&amp;Self.UID</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="350867241481159">
+                                    <conditions>
+                                        <condition id="-2" name="Compare Y" sid="106239487229760" type="Player">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="Y co-ordinate">Tile_Air.Y-14</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Timer" id="0" name="Start timer" sid="802423672117473" type="Tile_Air">
+                                            <param id="0" name="Duration">Self.LifeDuration</param>
+                                            <param id="1" name="Type">0</param>
+                                            <param id="2" name="Tag">&quot;cloud&quot;&amp;Self.UID</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="421636509638005" type="Tile_Air">
+                                            <param id="0" name="Instance variable">IsTimerOn</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="358830497726301">
                             <conditions>

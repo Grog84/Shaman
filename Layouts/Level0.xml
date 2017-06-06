@@ -111,11 +111,11 @@
                         <x>302</x>
                         <y>-23</y>
                         <z>0</z>
-                        <width>10</width>
-                        <height>10</height>
+                        <width>5</width>
+                        <height>5</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.600000024</hotspotX>
+                        <hotspotY>0.600000024</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -236,9 +236,10 @@
                         <AbsorbSpeed>300</AbsorbSpeed>
                         <ShrinkSpeed>100</ShrinkSpeed>
                         <Type>&quot;Rock&quot;</Type>
-                        <LifeDuration>0</LifeDuration>
+                        <LifeDuration>5</LifeDuration>
                         <IsSpawned>0</IsSpawned>
                         <SpawnOrder>0</SpawnOrder>
+                        <IsTimerOn>0</IsTimerOn>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Timer" />
@@ -499,7 +500,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>59</x>
-                        <y>231</y>
+                        <y>229</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
