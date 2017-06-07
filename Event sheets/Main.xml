@@ -1798,9 +1798,6 @@
                                 <action behavior="Platform" id="9" name="Set vector Y" sid="269314557839935" type="Player">
                                     <param id="0" name="Vector Y">-250</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="979166950873689" type="System">
-                                    <param id="0" name="Seconds">0</param>
-                                </action>
                                 <action behavior="Platform" id="1" name="Set max speed" sid="833938511909480" type="Player">
                                     <param id="0" name="Max Speed">600</param>
                                 </action>
