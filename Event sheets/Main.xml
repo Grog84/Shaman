@@ -2032,6 +2032,84 @@
                 </event-group>
                 <event-group description="" sid="949320105067605" title="Air">
                     <sub-events>
+                        <event-group description="" sid="436853925164923" title="InfiniteCloud">
+                            <sub-events>
+                                <event-block sid="574692573620284">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="706010387066332" type="System">
+                                            <param id="0" name="Object">CloudInfinite</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="437450894658038">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="509641629110827" type="CloudInfinite">
+                                                    <param id="0" name="Instance variable">HasCloud</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="704198927648122" type="CloudInfinite">
+                                                    <param id="0" name="Instance variable">CanSpawn</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="363488604109482" type="CloudInfinite">
+                                                    <param id="0" name="Instance variable">HasCloud</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="963566163595821" type="CloudInfinite">
+                                                    <param id="0" name="Instance variable">CanSpawn</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="0" name="Spawn another object" sid="718402443104043" type="CloudInfinite">
+                                                    <param id="0" name="Object">Tile_Air</param>
+                                                    <param id="1" name="Layer">0</param>
+                                                    <param id="2" name="Image point">0</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="596402466043161" type="CloudInfinite">
+                                                    <param id="0" name="Instance variable">CloudUID</param>
+                                                    <param id="1" name="Value">Tile_Air.UID</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="302535619819740">
+                                            <conditions>
+                                                <condition id="-31" inverted="1" name="Object UID exists" sid="629040413976488" type="System">
+                                                    <param id="0" name="UID">CloudInfinite.CloudUID</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="556238979623597" type="CloudInfinite">
+                                                    <param id="0" name="Instance variable">HasCloud</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action behavior="Timer" id="0" name="Start timer" sid="786933900880701" type="CloudInfinite">
+                                                    <param id="0" name="Duration">self.TimerForRespawn</param>
+                                                    <param id="1" name="Type">0</param>
+                                                    <param id="2" name="Tag">&quot;respawn&quot;&amp;CloudInfinite.UID</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="772798558079853">
+                                            <conditions>
+                                                <condition behavior="Timer" id="0" name="On timer" sid="255783887764381" type="CloudInfinite">
+                                                    <param id="0" name="Tag">&quot;respawn&quot;&amp;CloudInfinite.UID</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="284777949437496" type="CloudInfinite">
+                                                    <param id="0" name="Instance variable">CanSpawn</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
                         <comment>Tile destroy timer</comment>
                         <event-block sid="390433581343326">
                             <conditions>
@@ -2613,6 +2691,11 @@
                                                                     <param id="1" name="Comparison">0</param>
                                                                     <param id="2" name="Second value">41</param>
                                                                 </condition>
+                                                                <condition id="-8" name="Compare two values" sid="597015552347701" type="System">
+                                                                    <param id="0" name="First value">MapArray.At(loopindex(&quot;X_idx&quot;), loopindex(&quot;Y_idx&quot;))</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Second value">54</param>
+                                                                </condition>
                                                                 <condition id="-8" name="Compare two values" sid="806607570478122" type="System">
                                                                     <param id="0" name="First value">MapArray.At(loopindex(&quot;X_idx&quot;), loopindex(&quot;Y_idx&quot;))</param>
                                                                     <param id="1" name="Comparison">0</param>
@@ -2669,6 +2752,23 @@
                                                                         <action id="-10" name="Set value" sid="386489920628734" type="Tile_Air">
                                                                             <param id="0" name="Instance variable">Type</param>
                                                                             <param id="1" name="Value">&quot;Air&quot;</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="448785916222687">
+                                                                    <conditions>
+                                                                        <condition id="-8" name="Compare two values" sid="848774578170571" type="System">
+                                                                            <param id="0" name="First value">MapArray.At(loopindex(&quot;X_idx&quot;), loopindex(&quot;Y_idx&quot;))</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Second value">54</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-3" name="Create object" sid="225935098942540" type="System">
+                                                                            <param id="0" name="Object to create">CloudInfinite</param>
+                                                                            <param id="1" name="Layer">0</param>
+                                                                            <param id="2" name="X">loopindex(&quot;X_idx&quot;) * TILESIZE + TILESIZE/2.0</param>
+                                                                            <param id="3" name="Y">loopindex(&quot;Y_idx&quot;) * TILESIZE + TILESIZE/2.0</param>
                                                                         </action>
                                                                     </actions>
                                                                 </event-block>
