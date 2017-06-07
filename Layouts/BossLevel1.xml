@@ -1916,18 +1916,11 @@
                     </properties>
                     <instance-variables>
                         <Speed>80</Speed>
+                        <direction>1</direction>
+                        <isMoving>1</isMoving>
+                        <spawnBlocks>0</spawnBlocks>
                     </instance-variables>
                     <behavior-instances>
-                        <behavior-instance type="Bullet">
-                            <properties>
-                                <speed>50</speed>
-                                <acceleration>0</acceleration>
-                                <gravity>0</gravity>
-                                <bounce-off-solids>No</bounce-off-solids>
-                                <set-angle>No</set-angle>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
                         <behavior-instance type="BoundToLayout">
                             <properties>
                                 <bound-by>Edge</bound-by>
@@ -2062,10 +2055,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>176</x>
+                        <x>160</x>
                         <y>272</y>
                         <z>0</z>
-                        <width>16</width>
+                        <width>48</width>
                         <height>304</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -2832,6 +2825,31 @@
                         <z>0</z>
                         <width>7.777526855</width>
                         <height>6.951080322</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="AnaHead" uid="150">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>48</x>
+                        <y>368</y>
+                        <z>0</z>
+                        <width>10</width>
+                        <height>10</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

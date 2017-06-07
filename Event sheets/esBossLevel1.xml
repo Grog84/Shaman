@@ -21,6 +21,10 @@
                     <param id="0" name="Pin to">Player</param>
                     <param id="1" name="Mode">1</param>
                 </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="439373569603597" type="AnaHead">
+                    <param id="0" name="Pin to">Player</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
             </actions>
             <sub-events>
                 <comment>Activates or deactivates tiles selection/absorption</comment>
@@ -66,6 +70,20 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block sid="155438753986501">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="843252166395914" type="Boss">
+                    <param id="0" name="Instance variable">isMoving</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="837001156163485" type="Boss">
+                    <param id="0" name="X">self.X + self.Speed*dt*self.direction</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="467393074305560">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="736503916411159" type="Boss">
@@ -73,12 +91,13 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Bullet" id="0" name="Set speed" sid="521965317770481" type="Boss">
-                    <param id="0" name="Speed">-self.Speed</param>
+                <action id="-10" name="Set value" sid="968939935760564" type="Boss">
+                    <param id="0" name="Instance variable">direction</param>
+                    <param id="1" name="Value">-1</param>
                 </action>
-                <action id="0" name="Call function" sid="404252218495080" type="Function">
-                    <param id="0" name="Name">&quot;Boss1GenerateTileDrop&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
+                <action id="-10" name="Set value" sid="844113915694782" type="Boss">
+                    <param id="0" name="Instance variable">spawnBlocks</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
@@ -89,8 +108,9 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Bullet" id="0" name="Set speed" sid="454175113733778" type="Boss">
-                    <param id="0" name="Speed">-self.Speed</param>
+                <action id="-10" name="Set value" sid="370176336299012" type="Boss">
+                    <param id="0" name="Instance variable">direction</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
@@ -110,15 +130,15 @@
                     <actions>
                         <action id="-9" name="Set value" sid="404031344623720" type="System">
                             <param id="0" name="Variable">spwnPoint1</param>
-                            <param id="1" name="Value">int(random(16))</param>
+                            <param id="1" name="Value">int(random(15))</param>
                         </action>
                         <action id="-9" name="Set value" sid="773019910633172" type="System">
                             <param id="0" name="Variable">spwnPoint2</param>
-                            <param id="1" name="Value">int(random(16))</param>
+                            <param id="1" name="Value">int(random(15))</param>
                         </action>
                         <action id="-9" name="Set value" sid="437858932310424" type="System">
                             <param id="0" name="Variable">spwnPoint3</param>
-                            <param id="1" name="Value">int(random(16))</param>
+                            <param id="1" name="Value">int(random(15))</param>
                         </action>
                         <action id="-3" name="Create object" sid="242448804291593" type="System">
                             <param id="0" name="Object to create">TileDrop</param>
@@ -209,7 +229,12 @@
                     <param id="0" name="Object">Boss</param>
                 </condition>
             </conditions>
-            <actions />
+            <actions>
+                <action id="-11" name="Subtract from" sid="635077402838283" type="System">
+                    <param id="0" name="Variable">PlayerHealth</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
             <sub-events>
                 <event-block sid="730279973493235">
                     <conditions>
@@ -219,20 +244,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Platform" id="9" name="Set vector Y" sid="953292461031142" type="Player">
-                            <param id="0" name="Vector Y">-150</param>
-                        </action>
-                        <action behavior="Platform" id="1" name="Set max speed" sid="605625073180108" type="Player">
-                            <param id="0" name="Max Speed">600</param>
-                        </action>
-                        <action behavior="Platform" id="8" name="Set vector X" sid="761404165610368" type="Player">
-                            <param id="0" name="Vector X">-600</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="492722327589714" type="System">
-                            <param id="0" name="Seconds">0.1</param>
-                        </action>
-                        <action behavior="Platform" id="1" name="Set max speed" sid="903777166850936" type="Player">
-                            <param id="0" name="Max Speed">100</param>
+                        <action id="0" name="Call function" sid="658958008740759" type="Function">
+                            <param id="0" name="Name">&quot;Knockback&quot;</param>
+                            <param id="1" name="Parameter {n}">-1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -244,20 +258,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Platform" id="9" name="Set vector Y" sid="106923434917599" type="Player">
-                            <param id="0" name="Vector Y">-150</param>
-                        </action>
-                        <action behavior="Platform" id="1" name="Set max speed" sid="201993849412536" type="Player">
-                            <param id="0" name="Max Speed">600</param>
-                        </action>
-                        <action behavior="Platform" id="8" name="Set vector X" sid="577240963022875" type="Player">
-                            <param id="0" name="Vector X">600</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="254504832727004" type="System">
-                            <param id="0" name="Seconds">0.1</param>
-                        </action>
-                        <action behavior="Platform" id="1" name="Set max speed" sid="882048356635050" type="Player">
-                            <param id="0" name="Max Speed">100</param>
+                        <action id="0" name="Call function" sid="803427930612386" type="Function">
+                            <param id="0" name="Name">&quot;Knockback&quot;</param>
+                            <param id="1" name="Parameter {n}">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -276,6 +279,42 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="197876024445610" type="Tile_earth" />
+            </actions>
+        </event-block>
+        <event-block sid="109489360367006">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="491524482735367" type="Boss">
+                    <param id="0" name="Instance variable">spawnBlocks</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="342121978930972" type="Boss">
+                    <param id="0" name="Instance variable">spawnBlocks</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Call function" sid="404252218495080" type="Function">
+                    <param id="0" name="Name">&quot;Boss1GenerateTileDrop&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="206197058306313">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="332946466073857" type="Tile_earth">
+                    <param id="0" name="Object">AnaHead</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="372856586081148" type="Function">
+                    <param id="0" name="Name">&quot;Knockback&quot;</param>
+                    <param id="1" name="Parameter {n}">-1</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="438590062054450" type="System">
+                    <param id="0" name="Variable">PlayerHealth</param>
+                    <param id="1" name="Value">1</param>
+                </action>
             </actions>
         </event-block>
     </events>

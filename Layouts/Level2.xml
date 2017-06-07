@@ -531,7 +531,7 @@
                         <IsMoving>1</IsMoving>
                         <Speed>80</Speed>
                         <direction>1</direction>
-                        <BouncingPower>-700</BouncingPower>
+                        <BouncingPower>-600</BouncingPower>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

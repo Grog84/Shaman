@@ -1796,7 +1796,10 @@
                             <conditions />
                             <actions>
                                 <action behavior="Platform" id="9" name="Set vector Y" sid="269314557839935" type="Player">
-                                    <param id="0" name="Vector Y">-150</param>
+                                    <param id="0" name="Vector Y">-250</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="979166950873689" type="System">
+                                    <param id="0" name="Seconds">0</param>
                                 </action>
                                 <action behavior="Platform" id="1" name="Set max speed" sid="833938511909480" type="Player">
                                     <param id="0" name="Max Speed">600</param>
@@ -1807,12 +1810,26 @@
                                 <action id="-16" name="Wait" sid="255146799289276" type="System">
                                     <param id="0" name="Seconds">0.1</param>
                                 </action>
-                                <action behavior="Platform" id="1" name="Set max speed" sid="180061081499338" type="Player">
-                                    <param id="0" name="Max Speed">100</param>
+                                <action behavior="Platform" id="1" name="Set max speed" sid="325760494795274" type="Player">
+                                    <param id="0" name="Max Speed">Player.BaseSpeed</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="987009857889705" type="Player">
+                                    <param id="0" name="Instance variable">IsHit</param>
+                                    <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="752415252571139">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="302279975924970" type="Player">
+                            <param id="0" name="Instance variable">IsHit</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
                 </event-block>
             </sub-events>
         </event-group>
@@ -3554,10 +3571,10 @@
                         </event-block>
                         <event-block any="1" sid="943929093815557">
                             <conditions>
-                                <condition id="1" name="Is overlapping another object" sid="531713829939600" type="Tornado">
+                                <condition id="0" name="On collision with another object" sid="531713829939600" type="Tornado">
                                     <param id="0" name="Object">TornadoStop</param>
                                 </condition>
-                                <condition id="1" name="Is overlapping another object" sid="788831976142578" type="Tornado">
+                                <condition id="0" name="On collision with another object" sid="788831976142578" type="Tornado">
                                     <param id="0" name="Object">Tile_earth</param>
                                 </condition>
                             </conditions>
@@ -3647,10 +3664,37 @@
                                     <param id="0" name="Variable">PlayerHealth</param>
                                     <param id="1" name="Value">PlayerHealth - 1</param>
                                 </action>
-                                <action behavior="Platform" id="9" name="Set vector Y" sid="486369589507177" type="Player">
-                                    <param id="0" name="Vector Y">-500</param>
-                                </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="755408851199963">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="258952421764523" type="Player">
+                                            <param id="0" name="Comparison">5</param>
+                                            <param id="1" name="X co-ordinate">Tornado.X</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="486369589507177" type="Function">
+                                            <param id="0" name="Name">&quot;Knockback&quot;</param>
+                                            <param id="1" name="Parameter {n}">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="767250424071331">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="408740375069228" type="Player">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="X co-ordinate">Tornado.X</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="422719053329110" type="Function">
+                                            <param id="0" name="Name">&quot;Knockback&quot;</param>
+                                            <param id="1" name="Parameter {n}">-1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-group>
