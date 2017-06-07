@@ -12,11 +12,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <open-tabs>
         <layout order="0">Level1</layout>
         <layout order="3">Menu</layout>
-        <layout active="1" order="4">BossLevel1</layout>
+        <layout order="4">BossLevel1</layout>
         <layout order="6">Level0</layout>
         <layout order="8">Level2</layout>
         <event-sheet order="1">esLevel1</event-sheet>
-        <event-sheet order="2">Main</event-sheet>
+        <event-sheet active="1" order="2">Main</event-sheet>
         <event-sheet order="5">esBossLevel1</event-sheet>
         <event-sheet order="7">esLevel0</event-sheet>
         <event-sheet order="9">esLevel2</event-sheet>
@@ -32,7 +32,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="1" name="Obstacle" />
     </families-expanded>
     <folders-expanded>
-        <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="object-folder/" />
         <folder expanded="0" path="layout-folder/" />
         <folder expanded="0" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />
@@ -73,6 +73,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/HUD_base/" />
         <folder expanded="1" path="animation-folder/Hearts/" />
         <folder expanded="1" path="animation-folder/HudTiles/" />
-        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/TileSelection/" />
     </folders-expanded>
 </c2uistate>

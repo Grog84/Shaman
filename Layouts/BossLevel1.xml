@@ -1877,7 +1877,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <TravelledDistance>300</TravelledDistance>
+                        <TravelledDistance>150</TravelledDistance>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -1898,7 +1898,7 @@
                         <x>864</x>
                         <y>-48</y>
                         <z>0</z>
-                        <width>5</width>
+                        <width>10</width>
                         <height>5</height>
                         <depth>0</depth>
                         <hotspotX>0.600000024</hotspotX>
@@ -2202,7 +2202,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <TravelledDistance>300</TravelledDistance>
+                        <TravelledDistance>150</TravelledDistance>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -2223,7 +2223,7 @@
                         <x>-416</x>
                         <y>32</y>
                         <z>0</z>
-                        <width>5</width>
+                        <width>10</width>
                         <height>5</height>
                         <depth>0</depth>
                         <hotspotX>0.600000024</hotspotX>

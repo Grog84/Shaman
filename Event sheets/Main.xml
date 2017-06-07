@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Main</name>
     <events>
+        <variable constant="0" name="SelectedTile" sid="812664699407104" static="0" type="number">0</variable>
         <variable constant="0" name="SpawnCloud" sid="370670833842856" static="0" type="number">0</variable>
         <variable comment="//Sum of clods on screen and inventory" constant="0" name="TotalSpawnCloud" sid="795776823806888" static="0" type="number">0</variable>
         <variable constant="0" name="PlayerHealth" sid="524176388535833" static="0" type="number">0</variable>
@@ -10,7 +11,6 @@
         <variable constant="1" name="MAX_NBR_OF_AIR" sid="391685697575585" static="0" type="number">6</variable>
         <variable constant="1" name="MAX_NBR_OF_WATER" sid="578344294921874" static="0" type="number">2</variable>
         <variable constant="0" name="TreeTimerInterval" sid="881588116161554" static="0" type="number">0.1</variable>
-        <variable constant="0" name="platformExisting" sid="877042634564734" static="0" type="number">1</variable>
         <variable constant="1" name="GRAVITY" sid="975299546861960" static="0" type="number">1500</variable>
         <variable constant="1" name="TILESIZE" sid="347572452409448" static="0" type="number">32</variable>
         <event-group description="" sid="869951646668483" title="PlayerMovement">
@@ -470,6 +470,206 @@
             <sub-events>
                 <event-group description="" sid="985899312053395" title="TilePositioning">
                     <sub-events>
+                        <event-block sid="271551093779641">
+                            <conditions>
+                                <condition id="3" name="Is button down" sid="123738409142675" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">7</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="702291755561865" type="Player">
+                                    <param id="0" name="Instance variable">TotalNumberOfTiles</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="956829810004332" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="816576787839454" type="Function">
+                                    <param id="0" name="Name">&quot;CreateGriglia&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Toggle Tile positioning</comment>
+                        <event-block sid="847404313798073">
+                            <conditions>
+                                <condition id="6" name="On button pressed" sid="806933910355468" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">7</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-14" name="Toggle boolean" sid="130140575078326" type="Player">
+                                    <param id="0" name="Instance variable">TilePositioning</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="306989166550179" type="PlayerSprite">
+                                    <param id="0" name="Animation">&quot;StartPos&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Toggle Tile positioning</comment>
+                        <event-block any="1" sid="987804746009848">
+                            <conditions>
+                                <condition id="7" name="On button released" sid="984618640793061" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">7</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="295704469330636" type="PlayerSprite">
+                                    <param id="0" name="Animation">&quot;EndPos&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-14" name="Toggle boolean" sid="897547489019937" type="Player">
+                                    <param id="0" name="Instance variable">TilePositioning</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="710928507332301" type="Grigliainvisibile" />
+                                <action id="-9" name="Destroy" sid="679527366807117" type="ValidArea" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="550282514670572">
+                            <conditions>
+                                <condition behavior="Timer" id="0" name="On timer" sid="560503349093505" type="Player">
+                                    <param id="0" name="Tag">&quot;waitTilePlacing&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-14" name="Toggle boolean" sid="334537875614038" type="Player">
+                                    <param id="0" name="Instance variable">CanPlaceTile</param>
+                                </action>
+                                <action behavior="Timer" id="1" name="Stop timer" sid="501093009262627" type="Player">
+                                    <param id="0" name="Tag">&quot;waitTilePlacing&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Tile Spawning</comment>
+                        <event-block sid="507882928577952">
+                            <conditions>
+                                <condition id="6" name="On button pressed" sid="276371348515619" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">2</param>
+                                </condition>
+                                <condition id="3" name="Is button down" sid="425608551490808" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">7</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="622627091889059" type="Grigliainvisibile">
+                                    <param id="0" name="Instance variable">IsValid</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="705793142842376" type="Player">
+                                    <param id="0" name="Instance variable">TotalNumberOfTiles</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="143375078185319" type="Player">
+                                    <param id="0" name="Instance variable">CanPlaceTile</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="609423153683964" type="Player">
+                                    <param id="0" name="Instance variable">TotalNumberOfTiles</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-14" name="Toggle boolean" sid="195125982454265" type="Player">
+                                    <param id="0" name="Instance variable">CanPlaceTile</param>
+                                </action>
+                                <action behavior="Timer" id="0" name="Start timer" sid="102643412329400" type="Player">
+                                    <param id="0" name="Duration">self.TilePlacingTimer</param>
+                                    <param id="1" name="Type">1</param>
+                                    <param id="2" name="Tag">&quot;waitTilePlacing&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="232702358614801">
+                                    <conditions>
+                                        <condition id="2" name="Is playing" sid="328138767835403" type="Grigliainvisibile">
+                                            <param id="0" name="Animation">&quot;Rock&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="884091968167927" type="Player">
+                                            <param id="0" name="Instance variable">RockTiles</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Spawn another object" sid="288388920159402" type="Grigliainvisibile">
+                                            <param id="0" name="Object">Tile_earth</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                        <action behavior="Physics" id="27" name="Set enabled" sid="823724315952586" type="Tile_earth">
+                                            <param id="0" name="Mode">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="399326515094108" type="Tile_earth">
+                                            <param id="0" name="Instance variable">Type</param>
+                                            <param id="1" name="Value">&quot;Rock&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="873429507426308">
+                                    <conditions>
+                                        <condition id="2" name="Is playing" sid="545026178746180" type="Grigliainvisibile">
+                                            <param id="0" name="Animation">&quot;Air&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="721072051021644" type="Player">
+                                            <param id="0" name="Instance variable">AirTiles</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Spawn another object" sid="501398407457307" type="Grigliainvisibile">
+                                            <param id="0" name="Object">Tile_Air</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="794151669325351" type="Tile_Air">
+                                            <param id="0" name="Instance variable">Type</param>
+                                            <param id="1" name="Value">&quot;Air&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="524365002193955" type="System">
+                                            <param id="0" name="Variable">SpawnCloud</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="954135225587946" type="Tile_Air">
+                                            <param id="0" name="Instance variable">IsSpawned</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="309799228683997" type="Tile_Air">
+                                            <param id="0" name="Instance variable">SpawnOrder</param>
+                                            <param id="1" name="Value">SpawnCloud</param>
+                                        </action>
+                                        <action id="2" name="Set at X" sid="966772120377033" type="CloudArray">
+                                            <param id="0" name="X">SpawnCloud - 1</param>
+                                            <param id="1" name="Value">Tile_Air.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="527151449165828">
+                                    <conditions>
+                                        <condition id="2" name="Is playing" sid="203413356029161" type="Grigliainvisibile">
+                                            <param id="0" name="Animation">&quot;Water&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="405273661101275" type="Player">
+                                            <param id="0" name="Instance variable">WaterTiles</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Spawn another object" sid="821068777506604" type="Grigliainvisibile">
+                                            <param id="0" name="Object">Tile_water</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="826951950643720" type="Tile_Air">
+                                            <param id="0" name="Instance variable">Type</param>
+                                            <param id="1" name="Value">&quot;Water&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                         <event-block sid="421433406694517">
                             <conditions>
                                 <condition id="5" name="Compare axis" sid="737165593147929" type="Gamepad">
@@ -526,6 +726,9 @@
                                     <param id="1" name="Layer">0</param>
                                     <param id="2" name="Image point">2</param>
                                 </action>
+                                <action id="5" name="Set frame" sid="760549469058062" type="Grigliainvisibile">
+                                    <param id="0" name="Frame number">SelectedTile</param>
+                                </action>
                                 <action id="-3" name="Set position" sid="792212817693423" type="Grigliainvisibile">
                                     <param id="0" name="X">int(self.X/TILESIZE)*TILESIZE + TILESIZE/2.0</param>
                                     <param id="1" name="Y">int(self.Y/TILESIZE)*TILESIZE + TILESIZE/2.0</param>
@@ -541,11 +744,54 @@
                                 <action id="-16" name="Wait" sid="921497016426212" type="System">
                                     <param id="0" name="Seconds">0.05</param>
                                 </action>
-                                <action id="0" name="Call function" sid="519006768141917" type="Function">
-                                    <param id="0" name="Name">&quot;GenerateValidArea&quot;</param>
-                                    <param id="1" name="Parameter {n}">Player.RockTileRange{###}&quot;Rock&quot;</param>
-                                </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="548388259402305">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="330666207527893" type="System">
+                                            <param id="0" name="Variable">SelectedTile</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="519006768141917" type="Function">
+                                            <param id="0" name="Name">&quot;GenerateValidArea&quot;</param>
+                                            <param id="1" name="Parameter {n}">Player.RockTileRange{###}&quot;Rock&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="425283187871738">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="211157107068873" type="System">
+                                            <param id="0" name="Variable">SelectedTile</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="986827536603453" type="Function">
+                                            <param id="0" name="Name">&quot;GenerateValidArea&quot;</param>
+                                            <param id="1" name="Parameter {n}">Player.AirTileRange{###}&quot;Air&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="415829401649383">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="378560516961985" type="System">
+                                            <param id="0" name="Variable">SelectedTile</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="255748079022772" type="Function">
+                                            <param id="0" name="Name">&quot;GenerateValidArea&quot;</param>
+                                            <param id="1" name="Parameter {n}">Player.WaterTileRange{###}&quot;Water&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="773067942213757">
                             <conditions>
@@ -1055,206 +1301,6 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <comment>Tile Spawning</comment>
-                <event-block sid="507882928577952">
-                    <conditions>
-                        <condition id="6" name="On button pressed" sid="276371348515619" type="Gamepad">
-                            <param id="0" name="Gamepad">0</param>
-                            <param id="1" name="Button">2</param>
-                        </condition>
-                        <condition id="3" name="Is button down" sid="425608551490808" type="Gamepad">
-                            <param id="0" name="Gamepad">0</param>
-                            <param id="1" name="Button">7</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="622627091889059" type="Grigliainvisibile">
-                            <param id="0" name="Instance variable">IsValid</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="705793142842376" type="Player">
-                            <param id="0" name="Instance variable">TotalNumberOfTiles</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="143375078185319" type="Player">
-                            <param id="0" name="Instance variable">CanPlaceTile</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-12" name="Subtract from" sid="609423153683964" type="Player">
-                            <param id="0" name="Instance variable">TotalNumberOfTiles</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-14" name="Toggle boolean" sid="195125982454265" type="Player">
-                            <param id="0" name="Instance variable">CanPlaceTile</param>
-                        </action>
-                        <action behavior="Timer" id="0" name="Start timer" sid="102643412329400" type="Player">
-                            <param id="0" name="Duration">self.TilePlacingTimer</param>
-                            <param id="1" name="Type">1</param>
-                            <param id="2" name="Tag">&quot;waitTilePlacing&quot;</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="232702358614801">
-                            <conditions>
-                                <condition id="2" name="Is playing" sid="328138767835403" type="Grigliainvisibile">
-                                    <param id="0" name="Animation">&quot;Rock&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-12" name="Subtract from" sid="884091968167927" type="Player">
-                                    <param id="0" name="Instance variable">RockTiles</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="0" name="Spawn another object" sid="288388920159402" type="Grigliainvisibile">
-                                    <param id="0" name="Object">Tile_earth</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="Image point">0</param>
-                                </action>
-                                <action behavior="Physics" id="27" name="Set enabled" sid="823724315952586" type="Tile_earth">
-                                    <param id="0" name="Mode">1</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="399326515094108" type="Tile_earth">
-                                    <param id="0" name="Instance variable">Type</param>
-                                    <param id="1" name="Value">&quot;Rock&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="873429507426308">
-                            <conditions>
-                                <condition id="2" name="Is playing" sid="545026178746180" type="Grigliainvisibile">
-                                    <param id="0" name="Animation">&quot;Air&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-12" name="Subtract from" sid="721072051021644" type="Player">
-                                    <param id="0" name="Instance variable">AirTiles</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="0" name="Spawn another object" sid="501398407457307" type="Grigliainvisibile">
-                                    <param id="0" name="Object">Tile_Air</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="Image point">0</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="794151669325351" type="Tile_Air">
-                                    <param id="0" name="Instance variable">Type</param>
-                                    <param id="1" name="Value">&quot;Air&quot;</param>
-                                </action>
-                                <action id="-10" name="Add to" sid="524365002193955" type="System">
-                                    <param id="0" name="Variable">SpawnCloud</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="954135225587946" type="Tile_Air">
-                                    <param id="0" name="Instance variable">IsSpawned</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="309799228683997" type="Tile_Air">
-                                    <param id="0" name="Instance variable">SpawnOrder</param>
-                                    <param id="1" name="Value">SpawnCloud</param>
-                                </action>
-                                <action id="2" name="Set at X" sid="966772120377033" type="CloudArray">
-                                    <param id="0" name="X">SpawnCloud - 1</param>
-                                    <param id="1" name="Value">Tile_Air.UID</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="527151449165828">
-                            <conditions>
-                                <condition id="2" name="Is playing" sid="203413356029161" type="Grigliainvisibile">
-                                    <param id="0" name="Animation">&quot;Water&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-12" name="Subtract from" sid="405273661101275" type="Player">
-                                    <param id="0" name="Instance variable">WaterTiles</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="0" name="Spawn another object" sid="821068777506604" type="Grigliainvisibile">
-                                    <param id="0" name="Object">Tile_water</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="Image point">0</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="826951950643720" type="Tile_Air">
-                                    <param id="0" name="Instance variable">Type</param>
-                                    <param id="1" name="Value">&quot;Water&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="550282514670572">
-                    <conditions>
-                        <condition behavior="Timer" id="0" name="On timer" sid="560503349093505" type="Player">
-                            <param id="0" name="Tag">&quot;waitTilePlacing&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-14" name="Toggle boolean" sid="334537875614038" type="Player">
-                            <param id="0" name="Instance variable">CanPlaceTile</param>
-                        </action>
-                        <action behavior="Timer" id="1" name="Stop timer" sid="501093009262627" type="Player">
-                            <param id="0" name="Tag">&quot;waitTilePlacing&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>Toggle Tile positioning</comment>
-                <event-block sid="847404313798073">
-                    <conditions>
-                        <condition id="6" name="On button pressed" sid="806933910355468" type="Gamepad">
-                            <param id="0" name="Gamepad">0</param>
-                            <param id="1" name="Button">7</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-14" name="Toggle boolean" sid="130140575078326" type="Player">
-                            <param id="0" name="Instance variable">TilePositioning</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="306989166550179" type="PlayerSprite">
-                            <param id="0" name="Animation">&quot;StartPos&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>Toggle Tile positioning</comment>
-                <event-block any="1" sid="987804746009848">
-                    <conditions>
-                        <condition id="7" name="On button released" sid="984618640793061" type="Gamepad">
-                            <param id="0" name="Gamepad">0</param>
-                            <param id="1" name="Button">7</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="295704469330636" type="PlayerSprite">
-                            <param id="0" name="Animation">&quot;EndPos&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-14" name="Toggle boolean" sid="897547489019937" type="Player">
-                            <param id="0" name="Instance variable">TilePositioning</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="710928507332301" type="Grigliainvisibile" />
-                        <action id="-9" name="Destroy" sid="679527366807117" type="ValidArea" />
-                    </actions>
-                </event-block>
-                <event-block sid="271551093779641">
-                    <conditions>
-                        <condition id="3" name="Is button down" sid="123738409142675" type="Gamepad">
-                            <param id="0" name="Gamepad">0</param>
-                            <param id="1" name="Button">7</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="702291755561865" type="Player">
-                            <param id="0" name="Instance variable">TotalNumberOfTiles</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                        <condition id="-4" name="Trigger once while true" sid="956829810004332" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="816576787839454" type="Function">
-                            <param id="0" name="Name">&quot;CreateGriglia&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="196558979530078">
                     <conditions>
                         <condition behavior="Bullet" id="1" name="Compare distance travelled" sid="666042706949471" type="Interaction">
@@ -1577,6 +1623,10 @@
                                         </action>
                                         <action id="-24" name="Stop loop" sid="911456310912995" type="System" />
                                         <action id="-9" name="Destroy" sid="159821605121296" type="ValidArea" />
+                                        <action id="-9" name="Set value" sid="874467718856696" type="System">
+                                            <param id="0" name="Variable">SelectedTile</param>
+                                            <param id="1" name="Value">index</param>
+                                        </action>
                                     </actions>
                                     <sub-events>
                                         <event-block sid="538830267091087">
@@ -1790,43 +1840,45 @@
                             <param id="0" name="Name">&quot;Knockback&quot;</param>
                         </condition>
                     </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="708217906521846">
-                            <conditions />
-                            <actions>
-                                <action behavior="Platform" id="9" name="Set vector Y" sid="269314557839935" type="Player">
-                                    <param id="0" name="Vector Y">-250</param>
-                                </action>
-                                <action behavior="Platform" id="1" name="Set max speed" sid="833938511909480" type="Player">
-                                    <param id="0" name="Max Speed">600</param>
-                                </action>
-                                <action behavior="Platform" id="8" name="Set vector X" sid="433716039548404" type="Player">
-                                    <param id="0" name="Vector X">600*Function.Param(0)</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="255146799289276" type="System">
-                                    <param id="0" name="Seconds">0.1</param>
-                                </action>
-                                <action behavior="Platform" id="1" name="Set max speed" sid="325760494795274" type="Player">
-                                    <param id="0" name="Max Speed">Player.BaseSpeed</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="987009857889705" type="Player">
-                                    <param id="0" name="Instance variable">IsHit</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="752415252571139">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="302279975924970" type="Player">
+                    <actions>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="269314557839935" type="Player">
+                            <param id="0" name="Vector Y">-250</param>
+                        </action>
+                        <action behavior="Platform" id="1" name="Set max speed" sid="833938511909480" type="Player">
+                            <param id="0" name="Max Speed">600</param>
+                        </action>
+                        <action behavior="Platform" id="8" name="Set vector X" sid="433716039548404" type="Player">
+                            <param id="0" name="Vector X">600*Function.Param(0)</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="255146799289276" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action behavior="Platform" id="1" name="Set max speed" sid="325760494795274" type="Player">
+                            <param id="0" name="Max Speed">Player.BaseSpeed</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="987009857889705" type="Player">
                             <param id="0" name="Instance variable">IsHit</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="676838211408633" type="Function">
+                            <param id="0" name="Name">&quot;SetHeartValue&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="438375220842326">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="724720581096469" type="System">
+                            <param id="0" name="Variable">PlayerHealth</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="896434008125048" type="System">
+                            <param id="0" name="Layout">Menu</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
@@ -3695,6 +3747,22 @@
                         </event-block>
                     </sub-events>
                 </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="457091225033948" title="HUD">
+            <sub-events>
+                <event-block sid="688686256734824">
+                    <conditions>
+                        <condition id="0" name="On function" sid="121690275324899" type="Function">
+                            <param id="0" name="Name">&quot;SetHearthValue&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="336677222659182" type="Hearts">
+                            <param id="0" name="Frame number">Hearts.AnimationFrameCount - PlayerHealth</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
     </events>

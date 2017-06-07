@@ -1448,12 +1448,22 @@
             <instance-variables>
                 <instance-variable name="ID" sid="545552248290208" type="number" />
             </instance-variables>
+            <behaviors>
+                <behavior-type name="Pin" sid="665121668450906">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
             <texture original-source="C:\Users\dbga_55\Downloads\alfabetariobianco.png" />
         </object-type>
         <object-type name="Hearts" sid="350596663947940">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="779461009386896">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
-                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="599836152892825" speed="5">
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="599836152892825" speed="0">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.533333" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.533333" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.533333" />
@@ -1463,8 +1473,13 @@
         </object-type>
         <object-type name="HudTiles" sid="594461294931834">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="869854863079361">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
-                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="488685823371353" speed="5">
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="488685823371353" speed="0">
                     <frame duration="1" hotspotX="0.52" hotspotY="0.52" original-source="C:\Users\dbga_55\Documents\Construct2 Projects\Shaman\Animations\Tile_earth\Default\000.png">
                         <collision-poly>
                             <point x="0.0625" y="0.0625" />
@@ -1504,8 +1519,13 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite" sid="681300719128140">
+        <object-type name="TileSelection" sid="681300719128140">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="208026350498205">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="262861658639573" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.511111" />

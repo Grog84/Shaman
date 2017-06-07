@@ -90,7 +90,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <TravelledDistance>300</TravelledDistance>
+                        <TravelledDistance>150</TravelledDistance>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -111,7 +111,7 @@
                         <x>-248.272735596</x>
                         <y>-156.454544067</y>
                         <z>0</z>
-                        <width>5</width>
+                        <width>10</width>
                         <height>5</height>
                         <depth>0</depth>
                         <hotspotX>0.600000024</hotspotX>
@@ -531,7 +531,7 @@
                         <IsMoving>1</IsMoving>
                         <Speed>80</Speed>
                         <direction>1</direction>
-                        <BouncingPower>-600</BouncingPower>
+                        <BouncingPower>-500</BouncingPower>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
