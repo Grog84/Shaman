@@ -756,6 +756,7 @@
                         <CanSpawn>1</CanSpawn>
                         <CloudUID>0</CloudUID>
                         <TimerForRespawn>3</TimerForRespawn>
+                        <TimerIsRunning>0</TimerIsRunning>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Timer" />

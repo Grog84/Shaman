@@ -2076,6 +2076,10 @@
                                                     <param id="0" name="Instance variable">CloudUID</param>
                                                     <param id="1" name="Value">Tile_Air.UID</param>
                                                 </action>
+                                                <action id="-10" name="Set value" sid="960753557782152" type="Tile_Air">
+                                                    <param id="0" name="Instance variable">Type</param>
+                                                    <param id="1" name="Value">&quot;Air&quot;</param>
+                                                </action>
                                             </actions>
                                         </event-block>
                                         <event-block sid="302535619819740">
@@ -2083,8 +2087,17 @@
                                                 <condition id="-31" inverted="1" name="Object UID exists" sid="629040413976488" type="System">
                                                     <param id="0" name="UID">CloudInfinite.CloudUID</param>
                                                 </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="956557978732177" type="CloudInfinite">
+                                                    <param id="0" name="Instance variable">TimerIsRunning</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
                                             </conditions>
                                             <actions>
+                                                <action id="-10" name="Set value" sid="230486875003166" type="CloudInfinite">
+                                                    <param id="0" name="Instance variable">TimerIsRunning</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
                                                 <action id="-10" name="Set value" sid="556238979623597" type="CloudInfinite">
                                                     <param id="0" name="Instance variable">HasCloud</param>
                                                     <param id="1" name="Value">0</param>
@@ -2106,6 +2119,13 @@
                                                 <action id="-10" name="Set value" sid="284777949437496" type="CloudInfinite">
                                                     <param id="0" name="Instance variable">CanSpawn</param>
                                                     <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action behavior="Timer" id="1" name="Stop timer" sid="293738336855389" type="CloudInfinite">
+                                                    <param id="0" name="Tag">&quot;respawn&quot;&amp;CloudInfinite.UID</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="892444415493818" type="CloudInfinite">
+                                                    <param id="0" name="Instance variable">TimerIsRunning</param>
+                                                    <param id="1" name="Value">0</param>
                                                 </action>
                                             </actions>
                                         </event-block>

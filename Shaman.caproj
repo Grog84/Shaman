@@ -1233,6 +1233,7 @@
                 <instance-variable name="CanSpawn" sid="383674454098375" type="number" />
                 <instance-variable name="CloudUID" sid="566083668965761" type="number" />
                 <instance-variable name="TimerForRespawn" sid="817098837882729" type="number" />
+                <instance-variable name="TimerIsRunning" sid="944032089723544" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Timer" sid="392441836897290">
@@ -1419,5 +1420,6 @@
         <file name="Test_map.json" />
         <file name="TestTree.json" />
         <file name="SQCavernaMap.json" />
+        <file name="SQLivelloMontagna.json" />
     </files-folder>
 </c2project>

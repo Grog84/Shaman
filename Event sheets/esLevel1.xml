@@ -13,9 +13,6 @@
                     <param id="0" name="Tag">&quot;level1&quot;</param>
                     <param id="1" name="File">SQCavernaMap.json</param>
                 </action>
-                <action id="0" name="Set text" sid="655381135296255" type="Text">
-                    <param id="0" name="Text">Gamepad.GamepadCount</param>
-                </action>
                 <action behavior="Pin" id="0" name="Pin to object" sid="361421843292268" type="PlayerSprite">
                     <param id="0" name="Pin to">Player</param>
                     <param id="1" name="Mode">0</param>

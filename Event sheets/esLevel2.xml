@@ -2,5 +2,90 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>esLevel2</name>
-    <events />
+    <events>
+        <include>Main</include>
+        <event-block sid="924907641071137">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="532386499839042" type="System" />
+            </conditions>
+            <actions>
+                <action id="1" name="Request project file" sid="374133335417766" type="AJAX">
+                    <param id="0" name="Tag">&quot;level2&quot;</param>
+                    <param id="1" name="File">SQLivelloMontagna.json</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="445184208927668" type="PlayerSprite">
+                    <param id="0" name="Pin to">Player</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <comment>Activates or deactivates tiles selection/absorption</comment>
+                <event-block sid="132259291133670">
+                    <conditions />
+                    <actions>
+                        <action id="3" name="Set at XY" sid="189275163651086" type="TilePosType">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">&quot;Rock&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="750533803665642" type="TilePosType">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">1</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="679742376205956" type="TilePosType">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">&quot;Air&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="934510948664335" type="TilePosType">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">1</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="615660400370561" type="TilePosType">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">&quot;Water&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="488456736026894" type="TilePosType">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">0</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="466538290503118" type="TilePosType">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">&quot;Fire&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="120552272780338">
+            <conditions>
+                <condition id="0" name="On completed" sid="223994888378169" type="AJAX">
+                    <param id="0" name="Tag">&quot;level2&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="302416837705182" type="Function">
+                    <param id="0" name="Name">&quot;CreateMap&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="743480328886426">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="245466605332829" type="Player">
+                    <param id="0" name="Object">End</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="795613450946377" type="System">
+                    <param id="0" name="Layout">BossLevel2</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>

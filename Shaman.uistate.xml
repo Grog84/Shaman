@@ -14,10 +14,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="3">Menu</layout>
         <layout order="4">BossLevel1</layout>
         <layout order="6">Level0</layout>
+        <layout order="8">Level2</layout>
         <event-sheet order="1">esLevel1</event-sheet>
         <event-sheet active="1" order="2">Main</event-sheet>
         <event-sheet order="5">esBossLevel1</event-sheet>
         <event-sheet order="7">esLevel0</event-sheet>
+        <event-sheet order="9">esLevel2</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -25,15 +27,15 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="0" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
-    <families-expanded root="1">
+    <families-expanded root="0">
         <family expanded="1" name="Tile" />
         <family expanded="1" name="Obstacle" />
     </families-expanded>
     <folders-expanded>
         <folder expanded="0" path="object-folder/" />
-        <folder expanded="0" path="layout-folder/" />
+        <folder expanded="1" path="layout-folder/" />
         <folder expanded="0" path="event-folder/" />
-        <folder expanded="0" path="file-folder/" />
+        <folder expanded="1" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
