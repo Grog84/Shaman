@@ -668,6 +668,15 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <event-block sid="460112293454339">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="718167218839037" type="Function">
+                                            <param id="0" name="Name">&quot;SetHUDTileNumber&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                             </sub-events>
                         </event-block>
                         <event-block sid="421433406694517">
@@ -726,9 +735,6 @@
                                     <param id="1" name="Layer">0</param>
                                     <param id="2" name="Image point">2</param>
                                 </action>
-                                <action id="5" name="Set frame" sid="760549469058062" type="Grigliainvisibile">
-                                    <param id="0" name="Frame number">SelectedTile</param>
-                                </action>
                                 <action id="-3" name="Set position" sid="792212817693423" type="Grigliainvisibile">
                                     <param id="0" name="X">int(self.X/TILESIZE)*TILESIZE + TILESIZE/2.0</param>
                                     <param id="1" name="Y">int(self.Y/TILESIZE)*TILESIZE + TILESIZE/2.0</param>
@@ -744,6 +750,10 @@
                                 <action id="-16" name="Wait" sid="921497016426212" type="System">
                                     <param id="0" name="Seconds">0.05</param>
                                 </action>
+                                <action id="-10" name="Set value" sid="945329455700035" type="Grigliainvisibile">
+                                    <param id="0" name="Instance variable">CurrSelectionIdx</param>
+                                    <param id="1" name="Value">SelectedTile+1</param>
+                                </action>
                             </actions>
                             <sub-events>
                                 <event-block sid="548388259402305">
@@ -755,6 +765,10 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="4" name="Set animation" sid="760549469058062" type="Grigliainvisibile">
+                                            <param id="0" name="Animation">&quot;Rock&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
                                         <action id="0" name="Call function" sid="519006768141917" type="Function">
                                             <param id="0" name="Name">&quot;GenerateValidArea&quot;</param>
                                             <param id="1" name="Parameter {n}">Player.RockTileRange{###}&quot;Rock&quot;</param>
@@ -770,6 +784,10 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="4" name="Set animation" sid="206503509576458" type="Grigliainvisibile">
+                                            <param id="0" name="Animation">&quot;Air&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
                                         <action id="0" name="Call function" sid="986827536603453" type="Function">
                                             <param id="0" name="Name">&quot;GenerateValidArea&quot;</param>
                                             <param id="1" name="Parameter {n}">Player.AirTileRange{###}&quot;Air&quot;</param>
@@ -785,6 +803,10 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="4" name="Set animation" sid="776986826375368" type="Grigliainvisibile">
+                                            <param id="0" name="Animation">&quot;Water&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
                                         <action id="0" name="Call function" sid="255748079022772" type="Function">
                                             <param id="0" name="Name">&quot;GenerateValidArea&quot;</param>
                                             <param id="1" name="Parameter {n}">Player.WaterTileRange{###}&quot;Water&quot;</param>
@@ -1727,6 +1749,16 @@
                                                 <action id="-9" name="Destroy" sid="427560738287653" type="ValidArea" />
                                             </actions>
                                         </event-block>
+                                        <event-block sid="524702325009176">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="611883439722154" type="Tile_Air">
+                                                    <param id="0" name="Object">ValidArea</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Destroy" sid="789618701067371" type="ValidArea" />
+                                            </actions>
+                                        </event-block>
                                         <event-block sid="698938781896340">
                                             <conditions>
                                                 <condition behavior="LineOfSight" id="0" inverted="1" name="Has LOS to object" sid="732171394069985" type="Player">
@@ -2641,6 +2673,15 @@
                             <actions>
                                 <action id="0" name="Call function" sid="861880916161665" type="Function">
                                     <param id="0" name="Name">&quot;ReplaceAirTile&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="649392706273625">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="466181611524590" type="Function">
+                                    <param id="0" name="Name">&quot;SetHUDTileNumber&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
@@ -3758,12 +3799,12 @@
                 <event-block sid="688686256734824">
                     <conditions>
                         <condition id="0" name="On function" sid="121690275324899" type="Function">
-                            <param id="0" name="Name">&quot;SetHearthValue&quot;</param>
+                            <param id="0" name="Name">&quot;SetHeartValue&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="5" name="Set frame" sid="336677222659182" type="Hearts">
-                            <param id="0" name="Frame number">Hearts.AnimationFrameCount - PlayerHealth</param>
+                            <param id="0" name="Frame number">Hearts.AnimationFrameCount - PlayerHealth - 1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -3837,6 +3878,36 @@
                                 </condition>
                             </conditions>
                             <actions />
+                            <sub-events>
+                                <event-block sid="471889839973175">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="381356489297451" type="Hud">
+                                            <param id="0" name="Instance variable">ID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Set opacity" sid="491460853929998" type="Hud">
+                                            <param id="0" name="Opacity">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="582234998723697">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="274573959301405" type="HudTiles">
+                                            <param id="0" name="Instance variable">ID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Set opacity" sid="678197014850009" type="HudTiles">
+                                            <param id="0" name="Opacity">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="151125737560172">
                             <conditions>
@@ -3848,17 +3919,129 @@
                                 </condition>
                             </conditions>
                             <actions />
+                            <sub-events>
+                                <event-block sid="631027701500226">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="876877143966189" type="Hud">
+                                            <param id="0" name="Instance variable">ID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Set opacity" sid="654537897856154" type="Hud">
+                                            <param id="0" name="Opacity">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="367148943678986">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="513523171099137" type="HudTiles">
+                                            <param id="0" name="Instance variable">ID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Set opacity" sid="666758829368561" type="HudTiles">
+                                            <param id="0" name="Opacity">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="708204957174967">
                             <conditions>
                                 <condition id="1" name="Compare at XY" sid="634138662196629" type="TilePosType">
-                                    <param id="0" name="X">1</param>
+                                    <param id="0" name="X">2</param>
                                     <param id="1" name="Y">1</param>
                                     <param id="2" name="Comparison">0</param>
                                     <param id="3" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions />
+                            <sub-events>
+                                <event-block sid="159081987669959">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="495874006265026" type="Hud">
+                                            <param id="0" name="Instance variable">ID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Set opacity" sid="962306920618410" type="Hud">
+                                            <param id="0" name="Opacity">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="626394333913096">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="828016719151557" type="HudTiles">
+                                            <param id="0" name="Instance variable">ID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Set opacity" sid="101896570349751" type="HudTiles">
+                                            <param id="0" name="Opacity">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="828511325910534">
+                    <conditions>
+                        <condition id="0" name="On function" sid="923849610645830" type="Function">
+                            <param id="0" name="Name">&quot;SetHUDTileNumber&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="664127801071829">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="340935124090463" type="Hud">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="719985972923801" type="Hud">
+                                    <param id="0" name="Text">Player.RockTiles&amp;&quot;:&quot;&amp;MAX_NBR_OF_ROCKS</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="965620498233499">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="458093284509877" type="Hud">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="692330786479129" type="Hud">
+                                    <param id="0" name="Text">Player.AirTiles&amp;&quot;:&quot;&amp;MAX_NBR_OF_AIR</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="991825147317292">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="700103327653538" type="Hud">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="963913596290900" type="Hud">
+                                    <param id="0" name="Text">Player.WaterTiles&amp;&quot;:&quot;&amp;MAX_NBR_OF_WATER</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>

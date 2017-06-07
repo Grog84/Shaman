@@ -79,6 +79,17 @@
                             <param id="2" name="Value">&quot;Fire&quot;</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="414658089761861">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="928430073042657" type="Function">
+                                    <param id="0" name="Name">&quot;SetHUDTileVisibility&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>

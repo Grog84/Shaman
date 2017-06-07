@@ -3,6 +3,14 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>esMenu</name>
     <events>
+        <event-block sid="135087973554618">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="380775646725133" type="System" />
+            </conditions>
+            <actions>
+                <action id="-21" name="Reset global variables" sid="737584582860349" type="System" />
+            </actions>
+        </event-block>
         <event-block sid="804661251306982">
             <conditions>
                 <condition id="0" name="On click" sid="638213036476043" type="Mouse">
@@ -40,6 +48,34 @@
                     <actions>
                         <action id="-2" name="Go to layout" sid="870725166487096" type="System">
                             <param id="0" name="Layout">Level1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="430038227456734">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="752212163216377" type="LevelSelect">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="199848174830999" type="System">
+                            <param id="0" name="Layout">BossLevel1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="955003551647446">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="322474719719024" type="LevelSelect">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="140155273253890" type="System">
+                            <param id="0" name="Layout">Level2</param>
                         </action>
                     </actions>
                 </event-block>

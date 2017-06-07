@@ -28,6 +28,7 @@
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
@@ -1109,6 +1110,9 @@
             <behaviors>
                 <behavior-type name="BoundToLayout" sid="397201736965793">
                     <behavior id="bound" />
+                </behavior-type>
+                <behavior-type name="Sine" sid="547410052068594">
+                    <behavior id="Sin" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
