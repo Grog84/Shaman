@@ -17,6 +17,10 @@
                     <param id="0" name="Pin to">Boss</param>
                     <param id="1" name="Mode">1</param>
                 </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="642923082623629" type="AnaFoot">
+                    <param id="0" name="Pin to">Player</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
             </actions>
             <sub-events>
                 <comment>Activates or deactivates tiles selection/absorption</comment>
@@ -187,40 +191,91 @@
                 <action id="-9" name="Destroy" sid="406599561321227" type="TileDrop" />
             </actions>
         </event-block>
-        <event-block sid="887898159017131">
+        <event-block sid="876761968465244">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="314854394482675" type="Player">
+                <condition id="0" name="On collision with another object" sid="313388107804154" type="AnaFoot">
                     <param id="0" name="Object">GlobeArea</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="813681713311876" type="Debugtext">
+                    <param id="0" name="Text">&quot;Yeee&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="770664239707310">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="629022483591253" type="Player">
+                    <param id="0" name="Object">Boss</param>
                 </condition>
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="719493130550280">
+                <event-block sid="730279973493235">
                     <conditions>
-                        <condition id="-2" name="Compare Y" sid="374094241754799" type="Player">
-                            <param id="0" name="Comparison">2</param>
-                            <param id="1" name="Y co-ordinate">GlobeArea.Y - 20</param>
+                        <condition id="-1" name="Compare X" sid="286005899130096" type="Player">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="X co-ordinate">Boss.X</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="716002862133495" type="Debugtext">
-                            <param id="0" name="Text">&quot;Yeee&quot;</param>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="953292461031142" type="Player">
+                            <param id="0" name="Vector Y">-150</param>
+                        </action>
+                        <action behavior="Platform" id="1" name="Set max speed" sid="605625073180108" type="Player">
+                            <param id="0" name="Max Speed">600</param>
+                        </action>
+                        <action behavior="Platform" id="8" name="Set vector X" sid="761404165610368" type="Player">
+                            <param id="0" name="Vector X">-600</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="492722327589714" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action behavior="Platform" id="1" name="Set max speed" sid="903777166850936" type="Player">
+                            <param id="0" name="Max Speed">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="774186579261854">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="612031757224549" type="Player">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="X co-ordinate">Boss.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="106923434917599" type="Player">
+                            <param id="0" name="Vector Y">-150</param>
+                        </action>
+                        <action behavior="Platform" id="1" name="Set max speed" sid="201993849412536" type="Player">
+                            <param id="0" name="Max Speed">600</param>
+                        </action>
+                        <action behavior="Platform" id="8" name="Set vector X" sid="577240963022875" type="Player">
+                            <param id="0" name="Vector X">600</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="254504832727004" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action behavior="Platform" id="1" name="Set max speed" sid="882048356635050" type="Player">
+                            <param id="0" name="Max Speed">100</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="339029374571354">
+        <event-block sid="981595736942276">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="839014985224443" type="Player">
-                    <param id="0" name="Object">Boss</param>
+                <condition id="0" name="On collision with another object" sid="299683366937153" type="Boss">
+                    <param id="0" name="Object">Tile_earth</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="884658785408639" type="Tile_earth">
+                    <param id="0" name="Instance variable">IsAbsorbing</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-3" name="Set position" sid="978976188352921" type="Player">
-                    <param id="0" name="X">Self.X - 150 * dt</param>
-                    <param id="1" name="Y">Self.Y</param>
-                </action>
+                <action id="-9" name="Destroy" sid="197876024445610" type="Tile_earth" />
             </actions>
         </event-block>
     </events>

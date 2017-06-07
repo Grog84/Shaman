@@ -119,6 +119,7 @@
                 <instance-variable name="CanPlaceTile" sid="679403734576728" type="boolean" />
                 <instance-variable name="TilePlacingTimer" sid="297833765453607" type="number" />
                 <instance-variable name="IsAbsorbing" sid="357602678760758" type="boolean" />
+                <instance-variable name="IsHit" sid="996875168129212" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="BoundToLayout" sid="603214758576246">
@@ -1334,16 +1335,25 @@
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="519632403740754" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_55\Downloads\nemico aria f.png">
                         <collision-poly>
-                            <point x="0.28125" y="0.28125" />
-                            <point x="0.5" y="0.21875" />
-                            <point x="0.78125" y="0.21875" />
-                            <point x="0.90625" y="0.5" />
-                            <point x="0.75" y="0.75" />
-                            <point x="0.5" y="0.78125" />
-                            <point x="0.28125" y="0.71875" />
-                            <point x="0.125" y="0.5" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
                         </collision-poly>
                     </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="AnaFoot" sid="909150381067540">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="841800894927872">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="987669353885723" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>

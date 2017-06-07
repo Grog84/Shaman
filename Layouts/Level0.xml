@@ -435,6 +435,7 @@
                         <CanPlaceTile>true</CanPlaceTile>
                         <TilePlacingTimer>0.5</TilePlacingTimer>
                         <IsAbsorbing>false</IsAbsorbing>
+                        <IsHit>0</IsHit>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="BoundToLayout">

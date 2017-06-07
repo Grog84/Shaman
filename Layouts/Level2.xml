@@ -529,8 +529,8 @@
                     </properties>
                     <instance-variables>
                         <IsMoving>1</IsMoving>
-                        <Speed>100</Speed>
-                        <direction>0</direction>
+                        <Speed>80</Speed>
+                        <direction>1</direction>
                         <BouncingPower>-700</BouncingPower>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -782,6 +782,7 @@
                         <CanPlaceTile>true</CanPlaceTile>
                         <TilePlacingTimer>0.5</TilePlacingTimer>
                         <IsAbsorbing>false</IsAbsorbing>
+                        <IsHit>0</IsHit>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="BoundToLayout">
