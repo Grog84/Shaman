@@ -17,19 +17,19 @@
                     <param id="0" name="Pin to">Player</param>
                     <param id="1" name="Mode">0</param>
                 </action>
-                <action behavior="Pin" id="0" name="Pin to object" sid="238031943620754" type="HudTiles">
+                <action behavior="Pin" disabled="1" id="0" name="Pin to object" sid="238031943620754" type="HudTiles">
                     <param id="0" name="Pin to">HUD_base</param>
                     <param id="1" name="Mode">0</param>
                 </action>
-                <action behavior="Pin" id="0" name="Pin to object" sid="477237903768552" type="Hearts">
+                <action behavior="Pin" disabled="1" id="0" name="Pin to object" sid="477237903768552" type="Hearts">
                     <param id="0" name="Pin to">HUD_base</param>
                     <param id="1" name="Mode">0</param>
                 </action>
-                <action behavior="Pin" id="0" name="Pin to object" sid="335723049024090" type="Hud">
+                <action behavior="Pin" disabled="1" id="0" name="Pin to object" sid="335723049024090" type="Hud">
                     <param id="0" name="Pin to">HUD_base</param>
                     <param id="1" name="Mode">0</param>
                 </action>
-                <action behavior="Pin" id="0" name="Pin to object" sid="825222803397929" type="TileSelection">
+                <action behavior="Pin" disabled="1" id="0" name="Pin to object" sid="825222803397929" type="TileSelection">
                     <param id="0" name="Pin to">HUD_base</param>
                     <param id="1" name="Mode">0</param>
                 </action>

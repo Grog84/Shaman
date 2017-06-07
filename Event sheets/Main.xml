@@ -6,7 +6,7 @@
         <variable constant="0" name="SelectedTile" sid="812664699407104" static="0" type="number">0</variable>
         <variable constant="0" name="SpawnCloud" sid="370670833842856" static="0" type="number">0</variable>
         <variable comment="//Sum of clods on screen and inventory" constant="0" name="TotalSpawnCloud" sid="795776823806888" static="0" type="number">0</variable>
-        <variable constant="0" name="PlayerHealth" sid="524176388535833" static="0" type="number">0</variable>
+        <variable constant="0" name="PlayerHealth" sid="524176388535833" static="0" type="number">3</variable>
         <variable constant="1" name="MAX_NBR_OF_ROCKS" sid="227230604218490" static="0" type="number">4</variable>
         <variable constant="1" name="MAX_NBR_OF_AIR" sid="391685697575585" static="0" type="number">6</variable>
         <variable constant="1" name="MAX_NBR_OF_WATER" sid="578344294921874" static="0" type="number">2</variable>
@@ -3762,6 +3762,58 @@
                             <param id="0" name="Frame number">Hearts.AnimationFrameCount - PlayerHealth</param>
                         </action>
                     </actions>
+                </event-block>
+                <event-block sid="164063283380599">
+                    <conditions>
+                        <condition id="0" name="On function" sid="532556532122796" type="Function">
+                            <param id="0" name="Name">&quot;SetSelection&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="153136839142053">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="716418802981362" type="System">
+                                    <param id="0" name="Variable">SelectedTile</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="694446029051636" type="TileSelection">
+                                    <param id="0" name="X">216</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="401087153018326">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="726721007302385" type="System">
+                                    <param id="0" name="Variable">SelectedTile</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="813307582694635" type="TileSelection">
+                                    <param id="0" name="X">216</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="350181718704558">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="975387821311177" type="System">
+                                    <param id="0" name="Variable">SelectedTile</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="550683564412936" type="TileSelection">
+                                    <param id="0" name="X">216</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
