@@ -1627,6 +1627,10 @@
                                             <param id="0" name="Variable">SelectedTile</param>
                                             <param id="1" name="Value">index</param>
                                         </action>
+                                        <action id="0" name="Call function" sid="742025199522238" type="Function">
+                                            <param id="0" name="Name">&quot;SetHUDTileSelection&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
                                     </actions>
                                     <sub-events>
                                         <event-block sid="538830267091087">
@@ -3766,7 +3770,7 @@
                 <event-block sid="164063283380599">
                     <conditions>
                         <condition id="0" name="On function" sid="532556532122796" type="Function">
-                            <param id="0" name="Name">&quot;SetSelection&quot;</param>
+                            <param id="0" name="Name">&quot;SetHUDTileSelection&quot;</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -3795,7 +3799,7 @@
                             </conditions>
                             <actions>
                                 <action id="-1" name="Set X" sid="813307582694635" type="TileSelection">
-                                    <param id="0" name="X">216</param>
+                                    <param id="0" name="X">376</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -3809,9 +3813,52 @@
                             </conditions>
                             <actions>
                                 <action id="-1" name="Set X" sid="550683564412936" type="TileSelection">
-                                    <param id="0" name="X">216</param>
+                                    <param id="0" name="X">536</param>
                                 </action>
                             </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="399705687210443">
+                    <conditions>
+                        <condition id="0" name="On function" sid="863839598479241" type="Function">
+                            <param id="0" name="Name">&quot;SetHUDTileVisibility&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="990454612342847">
+                            <conditions>
+                                <condition id="1" name="Compare at XY" sid="226338341116743" type="TilePosType">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">1</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
+                        <event-block sid="151125737560172">
+                            <conditions>
+                                <condition id="1" name="Compare at XY" sid="805677322265796" type="TilePosType">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Y">1</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
+                        <event-block sid="708204957174967">
+                            <conditions>
+                                <condition id="1" name="Compare at XY" sid="634138662196629" type="TilePosType">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Y">1</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
                         </event-block>
                     </sub-events>
                 </event-block>

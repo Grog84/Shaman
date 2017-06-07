@@ -1473,6 +1473,9 @@
         </object-type>
         <object-type name="HudTiles" sid="594461294931834">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="ID" sid="527265887745148" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Pin" sid="869854863079361">
                     <behavior id="Pin" />
