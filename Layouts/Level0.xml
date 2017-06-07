@@ -70,8 +70,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>631</x>
-                        <y>-31</y>
+                        <x>877.505737305</x>
+                        <y>-36.588439941</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -135,8 +135,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>693</x>
-                        <y>-195</y>
+                        <x>137.895050049</x>
+                        <y>212.324203491</y>
                         <z>0</z>
                         <width>416</width>
                         <height>192</height>
@@ -168,8 +168,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>550</x>
-                        <y>-33</y>
+                        <x>796.505737305</x>
+                        <y>-38.588439941</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -212,8 +212,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>462</x>
-                        <y>-32</y>
+                        <x>708.505737305</x>
+                        <y>-37.588439941</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -236,7 +236,7 @@
                         <AbsorbSpeed>300</AbsorbSpeed>
                         <ShrinkSpeed>100</ShrinkSpeed>
                         <Type>&quot;Rock&quot;</Type>
-                        <LifeDuration>5</LifeDuration>
+                        <LifeDuration>2</LifeDuration>
                         <IsSpawned>0</IsSpawned>
                         <SpawnOrder>0</SpawnOrder>
                         <IsTimerOn>0</IsTimerOn>

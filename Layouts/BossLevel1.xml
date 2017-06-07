@@ -2309,7 +2309,7 @@
                         <AbsorbSpeed>300</AbsorbSpeed>
                         <ShrinkSpeed>100</ShrinkSpeed>
                         <Type>&quot;Rock&quot;</Type>
-                        <LifeDuration>5</LifeDuration>
+                        <LifeDuration>2</LifeDuration>
                         <IsSpawned>0</IsSpawned>
                         <SpawnOrder>0</SpawnOrder>
                         <IsTimerOn>0</IsTimerOn>
