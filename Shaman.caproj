@@ -396,30 +396,8 @@
                         <collision-poly>
                             <point x="0" y="0" />
                             <point x="1" y="0" />
-                            <point x="0.398438" y="0.966797" />
-                            <point x="0" y="0.96875" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0" y="0" />
-                            <point x="0.3125" y="0" />
-                            <point x="0.015625" y="0.742188" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
                             <point x="1" y="0.96875" />
-                            <point x="0.609375" y="0.96875" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.65625" y="0" />
-                            <point x="1" y="0" />
-                            <point x="1" y="0.8125" />
+                            <point x="0" y="0.96875" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
@@ -434,16 +412,38 @@
                         <collision-poly>
                             <point x="0" y="0" />
                             <point x="1" y="0" />
-                            <point x="0.691406" y="0.746094" />
-                            <point x="0.417969" y="0.546875" />
-                            <point x="0.195313" y="0.992188" />
+                            <point x="1" y="0.96875" />
+                            <point x="0" y="0.96875" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0.324219" y="0.195313" />
-                            <point x="0.574219" y="0.464844" />
-                            <point x="0.816406" y="0" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.96875" />
+                            <point x="0" y="0.96875" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.96875" />
+                            <point x="0" y="0.96875" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.96875" />
+                            <point x="0" y="0.96875" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
                             <point x="1" y="0.96875" />
                             <point x="0" y="0.96875" />
                         </collision-poly>
@@ -1332,19 +1332,11 @@
                 <instance-variable name="BouncingPower" sid="362439604677508" type="number" />
             </instance-variables>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="394596511543529" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_55\Downloads\nemico aria f.png">
-                        <collision-poly>
-                            <point x="0.28125" y="0.28125" />
-                            <point x="0.5" y="0.21875" />
-                            <point x="0.78125" y="0.21875" />
-                            <point x="0.90625" y="0.5" />
-                            <point x="0.75" y="0.75" />
-                            <point x="0.5" y="0.78125" />
-                            <point x="0.28125" y="0.71875" />
-                            <point x="0.125" y="0.5" />
-                        </collision-poly>
-                    </frame>
+                <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="394596511543529" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
                 <animation framecount="4" loop="0" name="Explode" pingpong="0" repeatcount="1" repeatto="0" sid="189447713165423" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
