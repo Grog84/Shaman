@@ -1985,6 +1985,8 @@
                         <TilePlacingTimer>0.5</TilePlacingTimer>
                         <IsAbsorbing>false</IsAbsorbing>
                         <IsHit>0</IsHit>
+                        <AbsorbWait>0.5</AbsorbWait>
+                        <CanAbsorb>1</CanAbsorb>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="BoundToLayout">
@@ -2151,7 +2153,7 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0</opacity>
                     </world>
                 </instance>
                 <instance type="Tile_earth" uid="99">
@@ -2842,7 +2844,7 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0</opacity>
                     </world>
                 </instance>
                 <instance type="AnaHead" uid="150">
@@ -2867,7 +2869,7 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0</opacity>
                     </world>
                 </instance>
             </instances>

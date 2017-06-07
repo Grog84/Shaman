@@ -436,6 +436,8 @@
                         <TilePlacingTimer>0.5</TilePlacingTimer>
                         <IsAbsorbing>false</IsAbsorbing>
                         <IsHit>0</IsHit>
+                        <AbsorbWait>0.5</AbsorbWait>
+                        <CanAbsorb>1</CanAbsorb>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="BoundToLayout">

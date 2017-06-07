@@ -121,6 +121,8 @@
                 <instance-variable name="TilePlacingTimer" sid="297833765453607" type="number" />
                 <instance-variable name="IsAbsorbing" sid="357602678760758" type="boolean" />
                 <instance-variable name="IsHit" sid="996875168129212" type="number" />
+                <instance-variable name="AbsorbWait" sid="462310476167915" type="number" />
+                <instance-variable name="CanAbsorb" sid="285615018212801" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="BoundToLayout" sid="603214758576246">

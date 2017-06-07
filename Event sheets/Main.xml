@@ -1438,6 +1438,11 @@
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="313941430699848" type="Player">
                             <param id="0" name="Instance variable">TilePositioning</param>
                         </condition>
+                        <condition id="-7" name="Compare instance variable" sid="775916356757528" type="Player">
+                            <param id="0" name="Instance variable">CanAbsorb</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
@@ -1582,7 +1587,34 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <event-block sid="196245258430083">
+                            <conditions />
+                            <actions>
+                                <action behavior="Timer" id="0" name="Start timer" sid="993316786941722" type="Player">
+                                    <param id="0" name="Duration">self.AbsorbWait</param>
+                                    <param id="1" name="Type">0</param>
+                                    <param id="2" name="Tag">&quot;absorbWait&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="906340336860290" type="Player">
+                                    <param id="0" name="Instance variable">CanAbsorb</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="239785781087535">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="130240432275564" type="Player">
+                            <param id="0" name="Tag">&quot;absorbWait&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="538520882145127" type="Player">
+                            <param id="0" name="Instance variable">CanAbsorb</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <comment>Tile positioner selection [Note: when an instance variable referred to a specif tile type is set to -1, the power of moving that kind of tile is not active]</comment>
                 <event-block sid="100412388772528">
@@ -1852,6 +1884,9 @@
                                 </action>
                                 <action id="5" name="Set frame" sid="263998924276606" type="PlayerSprite">
                                     <param id="0" name="Frame number">old_frame</param>
+                                </action>
+                                <action behavior="Timer" id="1" name="Stop timer" sid="860551819752797" type="PlayerSprite">
+                                    <param id="0" name="Tag">&quot;Waiting&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
