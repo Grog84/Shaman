@@ -1192,6 +1192,9 @@
                         <action id="-14" name="Toggle boolean" sid="334537875614038" type="Player">
                             <param id="0" name="Instance variable">CanPlaceTile</param>
                         </action>
+                        <action behavior="Timer" id="1" name="Stop timer" sid="501093009262627" type="Player">
+                            <param id="0" name="Tag">&quot;waitTilePlacing&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <comment>Toggle Tile positioning</comment>
@@ -3367,7 +3370,7 @@
                             </conditions>
                             <actions>
                                 <action behavior="Platform" id="9" name="Set vector Y" sid="192684753905325" type="Player">
-                                    <param id="0" name="Vector Y">-700</param>
+                                    <param id="0" name="Vector Y">BouncingPlant.BouncingPower</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -3377,6 +3380,66 @@
         </event-group>
         <event-group description="" sid="780983602144760" title="Enemies">
             <sub-events>
+                <event-group description="" sid="430089000841700" title="Bird">
+                    <sub-events>
+                        <event-block sid="929417074988018">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="665439559201334" type="Bird">
+                                    <param id="0" name="Instance variable">IsMoving</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="576305458314895" type="Bird">
+                                    <param id="0" name="Y">self.Y + (self.Speed*dt*self.direction)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="520696641951928">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="601723843387475" type="Bird">
+                                    <param id="0" name="Object">BirdStop</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="130387892071569" type="Bird">
+                                    <param id="0" name="Y">self.Y + (self.Speed*dt*self.direction)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="776925548830632">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="244498927325009" type="Bird">
+                                            <param id="0" name="Instance variable">IsMoving</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="965242120765729" type="Bird">
+                                            <param id="0" name="Instance variable">direction</param>
+                                            <param id="1" name="Value">self.direction*(-1)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="517792068979697">
+                            <conditions>
+                                <condition behavior="Platform" id="4" name="Is falling" sid="568245274642821" type="Player" />
+                                <condition id="1" name="Is overlapping another object" sid="400071509138156" type="Player">
+                                    <param id="0" name="Object">Bird</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="960530418900067" type="Player">
+                                    <param id="0" name="Vector Y">Bird.BouncingPower</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
                 <event-group description="" sid="307130854658178" title="Tornado">
                     <sub-events>
                         <event-block sid="934127083985456">
