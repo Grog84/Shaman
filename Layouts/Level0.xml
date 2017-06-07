@@ -413,10 +413,10 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <TotalNumberOfTiles>102</TotalNumberOfTiles>
+                        <TotalNumberOfTiles>0</TotalNumberOfTiles>
                         <RockTiles>0</RockTiles>
-                        <AirTiles>100</AirTiles>
-                        <WaterTiles>2</WaterTiles>
+                        <AirTiles>0</AirTiles>
+                        <WaterTiles>0</WaterTiles>
                         <TilePositioning>false</TilePositioning>
                         <Speed>200</Speed>
                         <BaseSpeed>100</BaseSpeed>
