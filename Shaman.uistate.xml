@@ -13,11 +13,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="0">Level1</layout>
         <layout order="3">Menu</layout>
         <layout order="4">BossLevel1</layout>
-        <layout active="1" order="6">Level0</layout>
+        <layout order="6">Level0</layout>
         <event-sheet order="1">esLevel1</event-sheet>
         <event-sheet order="2">Main</event-sheet>
         <event-sheet order="5">esBossLevel1</event-sheet>
         <event-sheet order="7">esLevel0</event-sheet>
+        <event-sheet active="1" order="8">esDialogs</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -61,5 +62,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/TriggerLeft/" />
         <folder expanded="1" path="animation-folder/TileDrop/" />
         <folder expanded="1" path="animation-folder/GlobeArea/" />
+        <folder expanded="1" path="animation-folder/Undertext1/" />
+        <folder expanded="1" path="animation-folder/Portrait2/" />
     </folders-expanded>
 </c2uistate>

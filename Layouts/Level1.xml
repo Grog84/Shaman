@@ -617,6 +617,135 @@
             </instances>
             <effects />
         </layer>
+        <layer name="TextBox" sid="742940680900697">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>0</x>
+                <y>0</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="Undertext1" uid="1">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>784</x>
+                        <y>-160</y>
+                        <z>0</z>
+                        <width>640</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.5</opacity>
+                    </world>
+                </instance>
+                <instance type="AnaFont" uid="23">
+                    <properties>
+                        <character-width>32</character-width>
+                        <character-height>32</character-height>
+                        <character-set>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,:;&apos;?!=-_()</character-set>
+                        <text>Text</text>
+                        <scale>0.4</scale>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <character-spacing>-1</character-spacing>
+                        <line-height>0</line-height>
+                    </properties>
+                    <instance-variables>
+                        <isVisible>false</isVisible>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1136</x>
+                        <y>-192</y>
+                        <z>0</z>
+                        <width>540</width>
+                        <height>55</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="SkullFont" uid="105">
+                    <properties>
+                        <character-width>32</character-width>
+                        <character-height>32</character-height>
+                        <character-set>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,:;&apos;?!=-_()</character-set>
+                        <text>Text</text>
+                        <scale>0.4</scale>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <character-spacing>-1</character-spacing>
+                        <line-height>0</line-height>
+                    </properties>
+                    <instance-variables>
+                        <isVisible>false</isVisible>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1136</x>
+                        <y>-288</y>
+                        <z>0</z>
+                        <width>531</width>
+                        <height>56</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Portrait2" uid="118">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>496</x>
+                        <y>-272</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
         <layer name="Hud" sid="263925931255524">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
@@ -812,6 +941,7 @@
                 <depth>1</depth>
             </properties>
         </instance>
+        <instance type="XML" uid="119" />
     </nonworld-instances>
     <effects />
 </c2layout>

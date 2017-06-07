@@ -16,7 +16,9 @@
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="XML" version="1">XML</plugin>
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
     </used-plugins>
     <used-behaviors>
@@ -1175,6 +1177,54 @@
         <object-type global="1" name="CloudArray" sid="416207606981829">
             <plugin id="Arr" />
         </object-type>
+        <object-type name="Undertext1" sid="410031228196748">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="896197320757767" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.059375" y="0.5" />
+                        <image-point name="Imagepoint 2" x="0.951563" y="0.5" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="AnaFont" sid="780000736212333">
+            <plugin id="Spritefont2" />
+            <instance-variables>
+                <instance-variable name="isVisible" sid="775120147873212" type="boolean" />
+            </instance-variables>
+            <texture original-source="C:\Users\dbga_51\Downloads\alfabetariobianco.png" />
+        </object-type>
+        <object-type name="SkullFont" sid="574860478158727">
+            <plugin id="Spritefont2" />
+            <instance-variables>
+                <instance-variable name="isVisible" sid="233618636769360" type="boolean" />
+            </instance-variables>
+            <texture original-source="C:\Users\dbga_51\Downloads\alfabetariobianco.png" />
+        </object-type>
+        <object-type name="Portrait2" sid="466732616491070">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="816883212373294" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="SkallHappy" pingpong="0" repeatcount="1" repeatto="0" sid="679471467052085" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="SkallSad" pingpong="0" repeatcount="1" repeatto="0" sid="840533674984398" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="AnaHappy" pingpong="0" repeatcount="1" repeatto="0" sid="512257597442837" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="AnaSad" pingpong="0" repeatcount="1" repeatto="0" sid="470804974397683" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type global="1" name="XML" sid="220367558935199">
+            <plugin id="XML" />
+        </object-type>
     </object-folder>
     <families>
         <family name="Tile" plugin-id="Sprite" sid="792340356286362">
@@ -1221,6 +1271,7 @@
         <event-sheet>esBossLevel3.xml</event-sheet>
         <event-sheet>esBossLevel4.xml</event-sheet>
         <event-sheet>esLevel0.xml</event-sheet>
+        <event-sheet>esDialogs.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="31" />
