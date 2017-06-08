@@ -1627,7 +1627,7 @@
                             <param id="0" name="Gamepad">0</param>
                             <param id="1" name="Button">1</param>
                         </condition>
-                        <condition id="-3" name="Is on-screen" sid="477484043332816" type="Grigliainvisibile" />
+                        <condition disabled="1" id="-3" name="Is on-screen" sid="477484043332816" type="Grigliainvisibile" />
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="329066912946465" type="Function">

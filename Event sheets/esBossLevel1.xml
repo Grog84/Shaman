@@ -68,6 +68,15 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="886360239308592">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Call function" sid="692467680792278" type="Function">
+                            <param id="0" name="Name">&quot;SetHUDTileVisibility&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-block>
         <event-block sid="155438753986501">
@@ -130,15 +139,15 @@
                     <actions>
                         <action id="-9" name="Set value" sid="404031344623720" type="System">
                             <param id="0" name="Variable">spwnPoint1</param>
-                            <param id="1" name="Value">int(random(15))</param>
+                            <param id="1" name="Value">int(random(2, 13))</param>
                         </action>
                         <action id="-9" name="Set value" sid="773019910633172" type="System">
                             <param id="0" name="Variable">spwnPoint2</param>
-                            <param id="1" name="Value">int(random(15))</param>
+                            <param id="1" name="Value">int(random(2,13))</param>
                         </action>
                         <action id="-9" name="Set value" sid="437858932310424" type="System">
                             <param id="0" name="Variable">spwnPoint3</param>
-                            <param id="1" name="Value">int(random(15))</param>
+                            <param id="1" name="Value">int(random(2,13))</param>
                         </action>
                         <action id="-3" name="Create object" sid="242448804291593" type="System">
                             <param id="0" name="Object to create">TileDrop</param>
