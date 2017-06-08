@@ -14,9 +14,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="3">Menu</layout>
         <layout order="5">Level0</layout>
         <layout order="6">BossLevel1</layout>
-        <layout order="8">Level2</layout>
+        <layout active="1" order="8">Level2</layout>
         <event-sheet order="1">esLevel1</event-sheet>
-        <event-sheet active="1" order="2">Main</event-sheet>
+        <event-sheet order="2">Main</event-sheet>
         <event-sheet order="4">esMenu</event-sheet>
         <event-sheet order="7">esBossLevel1</event-sheet>
         <event-sheet order="9">esLevel2</event-sheet>

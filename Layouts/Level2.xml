@@ -803,7 +803,7 @@
                                 <max-speed>100</max-speed>
                                 <acceleration>1500</acceleration>
                                 <deceleration>1500</deceleration>
-                                <jump-strength>350</jump-strength>
+                                <jump-strength>370</jump-strength>
                                 <gravity>1500</gravity>
                                 <max-fall-speed>300</max-fall-speed>
                                 <double-jump>Disabled</double-jump>
@@ -834,7 +834,7 @@
                         <hotspotX>0.449999988</hotspotX>
                         <hotspotY>0.5090909</hotspotY>
                         <angle>0</angle>
-                        <opacity>0.5</opacity>
+                        <opacity>0</opacity>
                     </world>
                 </instance>
                 <instance type="PlayerSprite" uid="146">

@@ -2342,8 +2342,10 @@
                         </event-block>
                         <event-block sid="731359863769163">
                             <conditions>
-                                <condition id="1" name="Is overlapping another object" sid="469240484596772" type="Tile_earth">
+                                <condition id="9" name="Is overlapping at offset" sid="469240484596772" type="Tile_earth">
                                     <param id="0" name="Object">Spikes</param>
+                                    <param id="1" name="Offset X">0</param>
+                                    <param id="2" name="Offset Y">3</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -2427,7 +2429,7 @@
                                     <actions>
                                         <action id="-9" name="Set value" sid="904059468865734" type="System">
                                             <param id="0" name="Variable">genPointUID</param>
-                                            <param id="1" name="Value">Function.Call(&quot;PickClosestRockGenPoint&quot;)</param>
+                                            <param id="1" name="Value">Function.Call(&quot;PickClosesestRockGenPoint&quot;)</param>
                                         </action>
                                     </actions>
                                 </event-block>
