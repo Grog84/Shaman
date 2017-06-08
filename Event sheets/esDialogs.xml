@@ -86,6 +86,10 @@
                                     <param id="0" name="Variable">CurrentDialogue</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="544769675048824" type="System">
+                                    <param id="0" name="Variable">CurrentLine</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -138,6 +142,10 @@
                                 </action>
                                 <action id="-10" name="Add to" sid="713221190797658" type="System">
                                     <param id="0" name="Variable">CurrentDialogue</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="534184428078191" type="System">
+                                    <param id="0" name="Variable">CurrentLine</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
@@ -221,6 +229,7 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">0</param>
                 </condition>
+                <condition id="-4" name="Trigger once while true" sid="872651406509414" type="System" />
             </conditions>
             <actions>
                 <action id="-4" name="Set layer visible" sid="558053836674933" type="System">

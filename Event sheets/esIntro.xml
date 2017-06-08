@@ -39,18 +39,136 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="540363746643298">
+        <event-block sid="992653577408414">
             <conditions>
-                <condition id="-14" name="Compare variable" sid="669735021028528" type="System">
+                <condition id="-14" name="Compare variable" sid="139499476643996" type="System">
                     <param id="0" name="Variable">CurrentDialogue</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">2</param>
                 </condition>
-                <condition id="-4" name="Trigger once while true" sid="675383485917511" type="System" />
+                <condition id="-4" name="Trigger once while true" sid="496275863559939" type="System" />
             </conditions>
             <actions>
-                <action id="-1" name="Set X" sid="482193509344128" type="PlayerSprite">
+                <action id="-15" name="Set visible" sid="772391222963346" type="FadeEffect">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="147751442198794" type="FadeEffect" />
+                <action id="-15" name="Set visible" sid="745294056633159" type="FadeFont">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="0" name="Set text" sid="848049485711036" type="FadeFont">
+                    <param id="0" name="Text">&quot;Qualche istante dopo...&quot;</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="882683388365158" type="FadeFont" />
+            </actions>
+        </event-block>
+        <event-block sid="743275604063892">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="956935923338876" type="FadeEffect" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="233864741227602" type="System">
+                    <param id="0" name="Variable">IsDialogues</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Call function" sid="245939578668823" type="Function">
+                    <param id="0" name="Name">&quot;StartDialogue&quot;</param>
+                    <param id="1" name="Parameter {n}">CurrentDialogue</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="950469534885897">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="208266027020193" type="System">
+                    <param id="0" name="Variable">CurrentDialogue</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+                <condition behavior="Pin" id="0" name="Is pinned" sid="772886917190496" type="CinematicCamera" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="213680091184930" type="PlayerSprite">
+                    <param id="0" name="X">Self.X +80 * dt</param>
+                    <param id="1" name="Y">Self.Y</param>
+                </action>
+                <action id="4" name="Set animation" sid="937791970920427" type="PlayerSprite">
+                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="261891281688714">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="557506021613381" type="PlayerSprite">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="X co-ordinate">TriggerZone.X</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="713500236397192" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="1" name="Unpin" sid="741130417185166" type="CinematicCamera" />
+                <action id="4" name="Set animation" sid="937618637418209" type="PlayerSprite">
+                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="921458206077812">
+            <conditions>
+                <condition behavior="Pin" id="0" inverted="1" name="Is pinned" sid="137500253481615" type="CinematicCamera" />
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="892423369625488" type="CinematicCamera">
                     <param id="0" name="X">self.X+100*dt</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="816777248849942">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="927227849716518" type="CinematicCamera">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="X co-ordinate">960</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="755125350885266" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="833811113294864" type="CinematicCamera">
+                    <param id="0" name="Pin to">CaveBkg</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="835786989064846" type="System">
+                    <param id="0" name="Variable">IsDialogues</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Call function" sid="728159852485659" type="Function">
+                    <param id="0" name="Name">&quot;StartDialogue&quot;</param>
+                    <param id="1" name="Parameter {n}">CurrentDialogue</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="826861585734772">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="863963885341112" type="System">
+                    <param id="0" name="Variable">CurrentDialogue</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="392724775598629" type="Golem">
+                    <param id="0" name="Animation">&quot;GolemSenzaCristallo&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action disabled="1" id="-16" name="Wait" sid="320979346379734" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="4" name="Set animation" sid="316381208916632" type="PlayerSprite">
+                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="373866076962926" type="PlayerSprite">
+                    <param id="0" name="X">Self.X + 80 * dt</param>
+                    <param id="1" name="Y">Self.Y</param>
                 </action>
             </actions>
         </event-block>
