@@ -1360,7 +1360,13 @@
                 <instance-variable name="Speed" sid="721967385885030" type="number" />
                 <instance-variable name="direction" sid="927163989265004" type="number" />
                 <instance-variable name="BouncingPower" sid="362439604677508" type="number" />
+                <instance-variable name="RecomposeTimer" sid="887720716507458" type="number" />
             </instance-variables>
+            <behaviors>
+                <behavior-type name="Timer" sid="835535092168856">
+                    <behavior id="Timer" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="394596511543529" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -1369,6 +1375,56 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
                 <animation framecount="4" loop="0" name="Explode" pingpong="0" repeatcount="1" repeatto="0" sid="189447713165423" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.28125" y="0.28125" />
+                            <point x="0.5" y="0.21875" />
+                            <point x="0.78125" y="0.21875" />
+                            <point x="0.90625" y="0.5" />
+                            <point x="0.75" y="0.75" />
+                            <point x="0.5" y="0.78125" />
+                            <point x="0.28125" y="0.71875" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.28125" y="0.28125" />
+                            <point x="0.5" y="0.21875" />
+                            <point x="0.78125" y="0.21875" />
+                            <point x="0.90625" y="0.5" />
+                            <point x="0.75" y="0.75" />
+                            <point x="0.5" y="0.78125" />
+                            <point x="0.28125" y="0.71875" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.28125" y="0.28125" />
+                            <point x="0.5" y="0.21875" />
+                            <point x="0.78125" y="0.21875" />
+                            <point x="0.90625" y="0.5" />
+                            <point x="0.75" y="0.75" />
+                            <point x="0.5" y="0.78125" />
+                            <point x="0.28125" y="0.71875" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.28125" y="0.28125" />
+                            <point x="0.5" y="0.21875" />
+                            <point x="0.78125" y="0.21875" />
+                            <point x="0.90625" y="0.5" />
+                            <point x="0.75" y="0.75" />
+                            <point x="0.5" y="0.78125" />
+                            <point x="0.28125" y="0.71875" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="0" name="Recompose" pingpong="0" repeatcount="1" repeatto="0" sid="719583208932421" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
                             <point x="0.28125" y="0.28125" />

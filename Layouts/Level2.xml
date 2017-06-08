@@ -532,7 +532,11 @@
                         <Speed>80</Speed>
                         <direction>1</direction>
                         <BouncingPower>-550</BouncingPower>
+                        <RecomposeTimer>5</RecomposeTimer>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Timer" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>

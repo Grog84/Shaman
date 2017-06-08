@@ -580,6 +580,98 @@
                 </event-group>
                 <event-group description="" sid="985899312053395" title="TilePositioning">
                     <sub-events>
+                        <event-block sid="594737619885325">
+                            <conditions>
+                                <condition id="0" name="On function" sid="988369244274681" type="Function">
+                                    <param id="0" name="Name">&quot;GenerateValidArea&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="150493393433243">
+                                    <conditions>
+                                        <condition id="-10" name="For" sid="293134710958274" type="System">
+                                            <param id="0" name="Name">&quot;x_idx&quot;</param>
+                                            <param id="1" name="Start index">0</param>
+                                            <param id="2" name="End index">Function.Param(0) * 2.0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="883829168980813">
+                                            <conditions>
+                                                <condition id="-10" name="For" sid="211397777919609" type="System">
+                                                    <param id="0" name="Name">&quot;y_idx&quot;</param>
+                                                    <param id="1" name="Start index">0</param>
+                                                    <param id="2" name="End index">Function.Param(0) * 2.0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="266429767093441" type="System">
+                                                    <param id="0" name="Object to create">ValidArea</param>
+                                                    <param id="1" name="Layer">0</param>
+                                                    <param id="2" name="X">Grigliainvisibile.SpawnPos_X + (loopindex(&quot;x_idx&quot;) - Function.Param(0))* TILESIZE</param>
+                                                    <param id="3" name="Y">Grigliainvisibile.SpawnPos_Y + (loopindex(&quot;y_idx&quot;) - Function.Param(0))* TILESIZE</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="729221638560113" type="ValidArea">
+                                                    <param id="0" name="Animation">Function.Param(1)</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="478570070497733">
+                                                    <conditions>
+                                                        <condition id="1" name="Is overlapping another object" sid="744019759425084" type="Player">
+                                                            <param id="0" name="Object">ValidArea</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Destroy" sid="427560738287653" type="ValidArea" />
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="524702325009176">
+                                                    <conditions>
+                                                        <condition id="1" name="Is overlapping another object" sid="611883439722154" type="Tile_Air">
+                                                            <param id="0" name="Object">ValidArea</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Destroy" sid="789618701067371" type="ValidArea" />
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="698938781896340">
+                                                    <conditions>
+                                                        <condition behavior="LineOfSight" id="0" inverted="1" name="Has LOS to object" sid="732171394069985" type="Player">
+                                                            <param id="0" name="Object">ValidArea</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Destroy" sid="488194293591668" type="ValidArea" />
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="302350419864140">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="296715204873245" type="System">
+                                                            <param id="0" name="First value">abs(Player.X-ValidArea.X)</param>
+                                                            <param id="1" name="Comparison">2</param>
+                                                            <param id="2" name="Second value">14</param>
+                                                        </condition>
+                                                        <condition id="-8" name="Compare two values" sid="625032586993166" type="System">
+                                                            <param id="0" name="First value">Function.Param(1)</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">&quot;Rock&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Destroy" sid="459248520141875" type="ValidArea" />
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                         <event-block sid="271551093779641">
                             <conditions>
                                 <condition id="3" name="Is button down" sid="123738409142675" type="Gamepad">
@@ -1627,7 +1719,6 @@
                             <param id="0" name="Gamepad">0</param>
                             <param id="1" name="Button">1</param>
                         </condition>
-                        <condition disabled="1" id="-3" name="Is on-screen" sid="477484043332816" type="Grigliainvisibile" />
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="329066912946465" type="Function">
@@ -1657,7 +1748,7 @@
                             <actions>
                                 <action id="-9" name="Set value" sid="506523213634100" type="System">
                                     <param id="0" name="Variable">index</param>
-                                    <param id="1" name="Value">(Grigliainvisibile.CurrSelectionIdx + loopindex(&quot;TypeIdx&quot;)) % 4</param>
+                                    <param id="1" name="Value">(SelectedTile + loopindex(&quot;TypeIdx&quot;)) % 4</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -1728,81 +1819,6 @@
                                                     <param id="0" name="Name">&quot;GenerateValidArea&quot;</param>
                                                     <param id="1" name="Parameter {n}">Player.WaterTileRange{###}&quot;Water&quot;</param>
                                                 </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="594737619885325">
-                    <conditions>
-                        <condition id="0" name="On function" sid="988369244274681" type="Function">
-                            <param id="0" name="Name">&quot;GenerateValidArea&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="150493393433243">
-                            <conditions>
-                                <condition id="-10" name="For" sid="293134710958274" type="System">
-                                    <param id="0" name="Name">&quot;x_idx&quot;</param>
-                                    <param id="1" name="Start index">0</param>
-                                    <param id="2" name="End index">Function.Param(0) * 2.0</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="883829168980813">
-                                    <conditions>
-                                        <condition id="-10" name="For" sid="211397777919609" type="System">
-                                            <param id="0" name="Name">&quot;y_idx&quot;</param>
-                                            <param id="1" name="Start index">0</param>
-                                            <param id="2" name="End index">Function.Param(0) * 2.0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-3" name="Create object" sid="266429767093441" type="System">
-                                            <param id="0" name="Object to create">ValidArea</param>
-                                            <param id="1" name="Layer">0</param>
-                                            <param id="2" name="X">Grigliainvisibile.SpawnPos_X + (loopindex(&quot;x_idx&quot;) - Function.Param(0))* TILESIZE</param>
-                                            <param id="3" name="Y">Grigliainvisibile.SpawnPos_Y + (loopindex(&quot;y_idx&quot;) - Function.Param(0))* TILESIZE</param>
-                                        </action>
-                                        <action id="4" name="Set animation" sid="729221638560113" type="ValidArea">
-                                            <param id="0" name="Animation">Function.Param(1)</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                    </actions>
-                                    <sub-events>
-                                        <event-block sid="478570070497733">
-                                            <conditions>
-                                                <condition id="1" name="Is overlapping another object" sid="744019759425084" type="Player">
-                                                    <param id="0" name="Object">ValidArea</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-9" name="Destroy" sid="427560738287653" type="ValidArea" />
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="524702325009176">
-                                            <conditions>
-                                                <condition id="1" name="Is overlapping another object" sid="611883439722154" type="Tile_Air">
-                                                    <param id="0" name="Object">ValidArea</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-9" name="Destroy" sid="789618701067371" type="ValidArea" />
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="698938781896340">
-                                            <conditions>
-                                                <condition behavior="LineOfSight" id="0" inverted="1" name="Has LOS to object" sid="732171394069985" type="Player">
-                                                    <param id="0" name="Object">ValidArea</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-9" name="Destroy" sid="488194293591668" type="ValidArea" />
                                             </actions>
                                         </event-block>
                                     </sub-events>
@@ -3214,6 +3230,16 @@
                                                                     <param id="1" name="Comparison">0</param>
                                                                     <param id="2" name="Second value">54</param>
                                                                 </condition>
+                                                                <condition id="-8" name="Compare two values" sid="768074622276157" type="System">
+                                                                    <param id="0" name="First value">MapArray.At(loopindex(&quot;X_idx&quot;), loopindex(&quot;Y_idx&quot;))</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Second value">55</param>
+                                                                </condition>
+                                                                <condition id="-8" name="Compare two values" sid="946426575736109" type="System">
+                                                                    <param id="0" name="First value">MapArray.At(loopindex(&quot;X_idx&quot;), loopindex(&quot;Y_idx&quot;))</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Second value">141</param>
+                                                                </condition>
                                                                 <condition id="-8" name="Compare two values" sid="806607570478122" type="System">
                                                                     <param id="0" name="First value">MapArray.At(loopindex(&quot;X_idx&quot;), loopindex(&quot;Y_idx&quot;))</param>
                                                                     <param id="1" name="Comparison">0</param>
@@ -3284,6 +3310,40 @@
                                                                     <actions>
                                                                         <action id="-3" name="Create object" sid="225935098942540" type="System">
                                                                             <param id="0" name="Object to create">CloudInfinite</param>
+                                                                            <param id="1" name="Layer">0</param>
+                                                                            <param id="2" name="X">loopindex(&quot;X_idx&quot;) * TILESIZE + TILESIZE/2.0</param>
+                                                                            <param id="3" name="Y">loopindex(&quot;Y_idx&quot;) * TILESIZE + TILESIZE/2.0</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="575320252450259">
+                                                                    <conditions>
+                                                                        <condition id="-8" name="Compare two values" sid="955184325209221" type="System">
+                                                                            <param id="0" name="First value">MapArray.At(loopindex(&quot;X_idx&quot;), loopindex(&quot;Y_idx&quot;))</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Second value">55</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-3" name="Create object" sid="789609017838563" type="System">
+                                                                            <param id="0" name="Object to create">RockInfinite</param>
+                                                                            <param id="1" name="Layer">0</param>
+                                                                            <param id="2" name="X">loopindex(&quot;X_idx&quot;) * TILESIZE + TILESIZE/2.0</param>
+                                                                            <param id="3" name="Y">loopindex(&quot;Y_idx&quot;) * TILESIZE + TILESIZE/2.0</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="737459257813225">
+                                                                    <conditions>
+                                                                        <condition id="-8" name="Compare two values" sid="889242299134140" type="System">
+                                                                            <param id="0" name="First value">MapArray.At(loopindex(&quot;X_idx&quot;), loopindex(&quot;Y_idx&quot;))</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Second value">141</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-3" name="Create object" sid="451991708930614" type="System">
+                                                                            <param id="0" name="Object to create">CheckPoint</param>
                                                                             <param id="1" name="Layer">0</param>
                                                                             <param id="2" name="X">loopindex(&quot;X_idx&quot;) * TILESIZE + TILESIZE/2.0</param>
                                                                             <param id="3" name="Y">loopindex(&quot;Y_idx&quot;) * TILESIZE + TILESIZE/2.0</param>
@@ -3975,10 +4035,73 @@
                                 <condition id="1" name="Is overlapping another object" sid="400071509138156" type="Player">
                                     <param id="0" name="Object">Bird</param>
                                 </condition>
+                                <condition id="-7" name="Compare instance variable" sid="967762392261927" type="Bird">
+                                    <param id="0" name="Instance variable">IsMoving</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action behavior="Platform" id="9" name="Set vector Y" sid="960530418900067" type="Player">
                                     <param id="0" name="Vector Y">Bird.BouncingPower</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="484946575243525" type="Bird">
+                                    <param id="0" name="Instance variable">IsMoving</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="970140473204063" type="Bird">
+                                    <param id="0" name="Animation">&quot;Explode&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action behavior="Timer" id="0" name="Start timer" sid="224463497823131" type="Bird">
+                                    <param id="0" name="Duration">Bird.RecomposeTimer</param>
+                                    <param id="1" name="Type">0</param>
+                                    <param id="2" name="Tag">&quot;exploded&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="607065564207459">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="126773673414261" type="Bird">
+                                    <param id="0" name="Instance variable">IsMoving</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="914161672058481">
+                                    <conditions>
+                                        <condition behavior="Timer" id="0" name="On timer" sid="636149279146080" type="Bird">
+                                            <param id="0" name="Tag">&quot;exploded&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="541931071043254" type="Bird">
+                                            <param id="0" name="Animation">&quot;Recompose&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action behavior="Timer" id="1" name="Stop timer" sid="715311917460370" type="Bird">
+                                            <param id="0" name="Tag">&quot;exploded&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="214507406784142">
+                            <conditions>
+                                <condition id="4" name="On finished" sid="103205614439162" type="Bird">
+                                    <param id="0" name="Animation">&quot;Recompose&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="577098729794130" type="Bird">
+                                    <param id="0" name="Instance variable">IsMoving</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="842660583145874" type="Bird">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>
