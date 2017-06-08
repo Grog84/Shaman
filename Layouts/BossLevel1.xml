@@ -1916,7 +1916,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Speed>80</Speed>
+                        <Speed>50</Speed>
                         <direction>1</direction>
                         <isMoving>1</isMoving>
                         <spawnBlocks>0</spawnBlocks>
@@ -3164,6 +3164,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <orderID>0</orderID>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>

@@ -445,8 +445,8 @@
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0.246094" y="0.232422" />
-                            <point x="0.867188" y="0.390625" />
+                            <point x="0.101563" y="0.638672" />
+                            <point x="0.929688" y="0.644531" />
                             <point x="1" y="0.96875" />
                             <point x="0" y="0.96875" />
                         </collision-poly>
@@ -461,8 +461,8 @@
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0.402344" y="0.0195313" />
-                            <point x="0.832031" y="0.359375" />
+                            <point x="0.132813" y="0.511719" />
+                            <point x="0.878906" y="0.515625" />
                             <point x="1" y="0.96875" />
                             <point x="0" y="0.96875" />
                         </collision-poly>
@@ -507,18 +507,16 @@
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0.09375" y="0.332031" />
-                            <point x="0.472656" y="0.00390625" />
-                            <point x="1" y="0" />
+                            <point x="0.113281" y="0.792969" />
+                            <point x="1" y="0.34375" />
                             <point x="1" y="0.96875" />
                             <point x="0" y="0.96875" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0" y="0" />
-                            <point x="0.5" y="0" />
-                            <point x="1" y="0.429688" />
+                            <point x="0" y="0.238281" />
+                            <point x="0.890625" y="0.746094" />
                             <point x="1" y="0.96875" />
                             <point x="0" y="0.96875" />
                         </collision-poly>
@@ -905,14 +903,7 @@
             </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="902800068665733" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\PU\Downloads\Shaman\SQPiantinaRimbalzante.png">
-                        <collision-poly>
-                            <point x="0.164063" y="0.585938" />
-                            <point x="0.847656" y="0.589844" />
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                        </collision-poly>
-                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -1619,6 +1610,9 @@
         </object-type>
         <object-type name="CheckPoint" sid="485775153251499">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="orderID" sid="230816163280246" type="number" />
+            </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="160092287804066" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
@@ -1629,6 +1623,9 @@
         </object-type>
         <object-type name="RockInfinite" sid="425190191086423">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="orderID" sid="490873790636945" type="number" />
+            </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="931597519194950" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Game_Development\Construct 2\Shaman\Animations\Tile_earth\Default\000.png">
