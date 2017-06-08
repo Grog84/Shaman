@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>esIntro</name>
+    <events>
+        <include>esDialogs</include>
+        <event-block sid="387329492378371">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="385998718079259" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="658260853259526" type="CinematicCamera">
+                    <param id="0" name="Pin to">PlayerSprite</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="1" name="Request project file" sid="513964831469909" type="AJAX">
+                    <param id="0" name="Tag">&quot;Intro&quot;</param>
+                    <param id="1" name="File">Intro.xml</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="695437803237284">
+            <conditions>
+                <condition id="0" name="On completed" sid="364932334640112" type="AJAX">
+                    <param id="0" name="Tag">&quot;Intro&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Load" sid="348432893475528" type="XML">
+                    <param id="0" name="XML">AJAX.LastData</param>
+                </action>
+                <action id="-9" name="Set value" sid="121711869142432" type="System">
+                    <param id="0" name="Variable">IsDialogues</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Call function" sid="759382792627202" type="Function">
+                    <param id="0" name="Name">&quot;StartDialogue&quot;</param>
+                    <param id="1" name="Parameter {n}">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="540363746643298">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="669735021028528" type="System">
+                    <param id="0" name="Variable">CurrentDialogue</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="675383485917511" type="System" />
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="482193509344128" type="PlayerSprite">
+                    <param id="0" name="X">self.X+100*dt</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

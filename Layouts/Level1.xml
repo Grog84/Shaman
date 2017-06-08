@@ -683,7 +683,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Undertext1" uid="1">
+                <instance type="Undertext" uid="1">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -712,7 +712,7 @@
                         <character-set>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,:;&apos;?!=-_()</character-set>
                         <text>Text</text>
                         <scale>0.4</scale>
-                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
@@ -738,14 +738,14 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SkullFont" uid="105">
+                <instance type="SkallFont" uid="105">
                     <properties>
                         <character-width>32</character-width>
                         <character-height>32</character-height>
                         <character-set>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,:;&apos;?!=-_()</character-set>
                         <text>Text</text>
                         <scale>0.4</scale>
-                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
@@ -771,7 +771,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Portrait2" uid="118">
+                <instance type="Portrait" uid="118">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

@@ -444,7 +444,7 @@
                         <opacity>0</opacity>
                     </world>
                 </instance>
-                <instance type="Undertext1" uid="135">
+                <instance type="Undertext" uid="135">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -466,7 +466,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="Portrait2" uid="136">
+                <instance type="Portrait" uid="136">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

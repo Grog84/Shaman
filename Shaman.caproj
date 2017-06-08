@@ -18,6 +18,7 @@
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
         <plugin author="Scirra" id="XML" version="1">XML</plugin>
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
     </used-plugins>
@@ -1249,7 +1250,7 @@
         <object-type global="1" name="CloudArray" sid="416207606981829">
             <plugin id="Arr" />
         </object-type>
-        <object-type name="Undertext1" sid="410031228196748">
+        <object-type name="Undertext" sid="410031228196748">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="896197320757767" speed="5">
@@ -1267,14 +1268,14 @@
             </instance-variables>
             <texture original-source="C:\Users\dbga_51\Downloads\alfabetariobianco.png" />
         </object-type>
-        <object-type name="SkullFont" sid="574860478158727">
+        <object-type name="SkallFont" sid="574860478158727">
             <plugin id="Spritefont2" />
             <instance-variables>
                 <instance-variable name="isVisible" sid="233618636769360" type="boolean" />
             </instance-variables>
             <texture original-source="C:\Users\dbga_51\Downloads\alfabetariobianco.png" />
         </object-type>
-        <object-type name="Portrait2" sid="466732616491070">
+        <object-type name="Portrait" sid="466732616491070">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="816883212373294" speed="5">
@@ -1283,13 +1284,41 @@
                 <animation framecount="1" loop="0" name="SkallHappy" pingpong="0" repeatcount="1" repeatto="0" sid="679471467052085" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
-                <animation framecount="1" loop="0" name="SkallSad" pingpong="0" repeatcount="1" repeatto="0" sid="840533674984398" speed="5">
+                <animation framecount="1" loop="0" name="SkallWorried" pingpong="0" repeatcount="1" repeatto="0" sid="840533674984398" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_55\Downloads\skullsad.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.25" />
+                            <point x="0.5" y="0.0078125" />
+                            <point x="0.75" y="0.25" />
+                            <point x="0.789063" y="0.5" />
+                            <point x="0.734375" y="0.734375" />
+                            <point x="0.5" y="0.992188" />
+                            <point x="0.28125" y="0.71875" />
+                            <point x="0.242188" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="SkallNormal" pingpong="0" repeatcount="1" repeatto="0" sid="514286317459825" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.25" y="0.25" />
+                            <point x="0.5" y="0.0078125" />
+                            <point x="0.75" y="0.25" />
+                            <point x="0.789063" y="0.5" />
+                            <point x="0.734375" y="0.734375" />
+                            <point x="0.5" y="0.992188" />
+                            <point x="0.28125" y="0.71875" />
+                            <point x="0.242188" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="AnaNormal" pingpong="0" repeatcount="1" repeatto="0" sid="512257597442837" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
-                <animation framecount="1" loop="0" name="AnaHappy" pingpong="0" repeatcount="1" repeatto="0" sid="512257597442837" speed="5">
+                <animation framecount="1" loop="0" name="AnaConfused" pingpong="0" repeatcount="1" repeatto="0" sid="470804974397683" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
-                <animation framecount="1" loop="0" name="AnaSad" pingpong="0" repeatcount="1" repeatto="0" sid="470804974397683" speed="5">
+                <animation framecount="1" loop="0" name="AnaAngry" pingpong="0" repeatcount="1" repeatto="0" sid="316573740341059" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
@@ -1569,6 +1598,70 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Tilemap" sid="204987669977099">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\dbga_51\Downloads\tile2.0.png" />
+            <tiles />
+        </object-type>
+        <object-type name="IntroBkg" sid="760029287313111">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="803944513534211" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\dbga_51\Downloads\livello 0.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CaveBkg" sid="733837195775676">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="890776465790871" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\dbga_51\Downloads\livello 1N.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Golem" sid="418291930268862">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="6" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="489353363323845" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="GolemSenzaCristallo" pingpong="0" repeatcount="1" repeatto="0" sid="714589064762078" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_51\Downloads\boss terra solo.png">
+                        <collision-poly>
+                            <point x="0.214844" y="0.859375" />
+                            <point x="0.5" y="0.171875" />
+                            <point x="0.894531" y="0.421875" />
+                            <point x="0.945313" y="0.5" />
+                            <point x="0.96875" y="0.875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0625" y="0.75" />
+                            <point x="0.453125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CinematicCamera" sid="939528119890877">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="870237354751454">
+                    <behavior id="Pin" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="579822296734249">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="172648357151737" speed="5">
+                    <frame duration="1" hotspotX="0.52" hotspotY="0.52" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Tile" plugin-id="Sprite" sid="792340356286362">
@@ -1602,6 +1695,7 @@
         <layout>BossLevel2.xml</layout>
         <layout>BossLevel3.xml</layout>
         <layout>BossLevel4.xml</layout>
+        <layout>Intro.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>esLevel1.xml</event-sheet>
@@ -1616,6 +1710,7 @@
         <event-sheet>esBossLevel4.xml</event-sheet>
         <event-sheet>esLevel0.xml</event-sheet>
         <event-sheet>esDialogs.xml</event-sheet>
+        <event-sheet>esIntro.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="31" />
@@ -1643,5 +1738,6 @@
         <file name="TestTree.json" />
         <file name="SQCavernaMap.json" />
         <file name="SQLivelloMontagna.json" />
+        <file name="Intro.xml" />
     </files-folder>
 </c2project>
