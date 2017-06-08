@@ -14,10 +14,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="4">BossLevel1</layout>
         <layout order="5">Level2</layout>
         <layout order="6">Level1</layout>
+        <layout active="1" order="8">Level3</layout>
         <event-sheet order="0">Main</event-sheet>
-        <event-sheet active="1" order="2">esIntro</event-sheet>
+        <event-sheet order="2">esIntro</event-sheet>
         <event-sheet order="3">esDialogs</event-sheet>
         <event-sheet order="7">esBossLevel1</event-sheet>
+        <event-sheet order="9">esLevel3</event-sheet>
+        <event-sheet order="10">esLevel2</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -30,7 +33,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="1" name="Obstacle" />
     </families-expanded>
     <folders-expanded>
-        <folder expanded="0" path="object-folder/" />
+        <folder expanded="1" path="object-folder/" />
         <folder expanded="0" path="layout-folder/" />
         <folder expanded="0" path="event-folder/" />
         <folder expanded="0" path="file-folder/" />

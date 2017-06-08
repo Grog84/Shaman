@@ -2,5 +2,103 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>esLevel3</name>
-    <events />
+    <events>
+        <event-block sid="340481393066261">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="782628916428487" type="System" />
+            </conditions>
+            <actions>
+                <action id="1" name="Request project file" sid="191031901674579" type="AJAX">
+                    <param id="0" name="Tag">&quot;level3&quot;</param>
+                    <param id="1" name="File">SQLivelloForesta.json</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="860114729454007" type="PlayerSprite">
+                    <param id="0" name="Pin to">Player</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <comment>Activates or deactivates tiles selection/absorption</comment>
+                <event-block sid="662738271249706">
+                    <conditions />
+                    <actions>
+                        <action id="3" name="Set at XY" sid="725498651216405" type="TilePosType">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">&quot;Rock&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="683694344767124" type="TilePosType">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">1</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="211308443174033" type="TilePosType">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">&quot;Air&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="900645965499143" type="TilePosType">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">1</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="197222145206318" type="TilePosType">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">&quot;Water&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="891220196826643" type="TilePosType">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">1</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="385372411005603" type="TilePosType">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">&quot;Fire&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="419789558996540">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="606361309822629" type="Function">
+                                    <param id="0" name="Name">&quot;SetHUDTileVisibility&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="834353739708026">
+            <conditions>
+                <condition id="0" name="On completed" sid="281280848903179" type="AJAX">
+                    <param id="0" name="Tag">&quot;level3&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="961819918270409" type="Debugtext">
+                    <param id="0" name="Text">AJAX.LastData</param>
+                </action>
+                <action id="0" name="Call function" sid="111420740387103" type="Function">
+                    <param id="0" name="Name">&quot;CreateMap&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="308670034378035">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="313010253628815" type="Player">
+                    <param id="0" name="Object">End</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="605278065064944" type="System">
+                    <param id="0" name="Layout">BossLevel3</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>

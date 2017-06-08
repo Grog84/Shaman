@@ -1982,8 +1982,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-2" name="Go to layout" sid="896434008125048" type="System">
-                            <param id="0" name="Layout">Menu</param>
+                        <action id="0" name="Call function" sid="540875095041081" type="Function">
+                            <param id="0" name="Name">&quot;RespawnAtChkPoint&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
@@ -4418,6 +4419,14 @@
                                 <action id="-3" name="Set position" sid="945982043401733" type="Player">
                                     <param id="0" name="X">CheckPoint.X</param>
                                     <param id="1" name="Y">CheckPoint.Y</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="287987068699533" type="System">
+                                    <param id="0" name="Variable">PlayerHealth</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                                <action id="0" name="Call function" sid="826203012862999" type="Function">
+                                    <param id="0" name="Name">&quot;SetHeartValue&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
