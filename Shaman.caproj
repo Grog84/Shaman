@@ -1828,5 +1828,7 @@
         <file name="SQCavernaMap.json" />
         <file name="SQLivelloMontagna.json" />
         <file name="Intro.xml" />
+        <file name="SQLivelloForesta.json" />
+        <file name="Albero1.json" />
     </files-folder>
 </c2project>
