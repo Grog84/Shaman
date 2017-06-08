@@ -1982,6 +1982,109 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="515422669063158">
+                    <conditions>
+                        <condition id="0" name="On function" sid="796478945230027" type="Function">
+                            <param id="0" name="Name">&quot;PickClosestChkPoint&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="closestChk" sid="713738401862708" static="0" type="number">0</variable>
+                        <variable constant="0" name="minDist" sid="898616052943740" static="0" type="number">10000000</variable>
+                        <variable constant="0" name="currDist" sid="399663913214724" static="0" type="number">0</variable>
+                        <event-block sid="831955332895081">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="333855783523850" type="System">
+                                    <param id="0" name="Object">CheckPoint</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="986469203223704" type="System">
+                                    <param id="0" name="Variable">currDist</param>
+                                    <param id="1" name="Value">distance(Player.X, Player.Y, CheckPoint.X, CheckPoint.Y)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="864032582842316">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="237614854029052" type="System">
+                                            <param id="0" name="First value">currDist</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">minDist</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="861723363383318" type="System">
+                                            <param id="0" name="Variable">minDist</param>
+                                            <param id="1" name="Value">currDist</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="702934321262599" type="System">
+                                            <param id="0" name="Variable">closestChk</param>
+                                            <param id="1" name="Value">CheckPoint.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="230682764409294">
+                            <conditions />
+                            <actions>
+                                <action id="1" name="Set return value" sid="331301145658787" type="Function">
+                                    <param id="0" name="Value">closestChk</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="618651915553094">
+                    <conditions>
+                        <condition id="0" name="On function" sid="847052679003686" type="Function">
+                            <param id="0" name="Name">&quot;RespawnAtChkPoint&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="489306098391244">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="607641043527224" type="CheckPoint">
+                                    <param id="0" name="Unique ID">Function.Call(&quot;PickClosestChkPoint&quot;)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="945982043401733" type="Player">
+                                    <param id="0" name="X">CheckPoint.X</param>
+                                    <param id="1" name="Y">CheckPoint.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="674107656782967">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="815539832569278" type="Player">
+                            <param id="0" name="Object">Spikes</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="484385818226953" type="Player">
+                            <param id="0" name="Instance variable">IsImmune</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="852186320226346" type="Function">
+                            <param id="0" name="Name">&quot;Knockback&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="207712328363763" type="System">
+                            <param id="0" name="Seconds">0.3</param>
+                        </action>
+                        <action id="0" name="Call function" sid="356133421551886" type="Function">
+                            <param id="0" name="Name">&quot;RespawnAtChkPoint&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="325068717324314" title="Tiles">
@@ -2222,6 +2325,121 @@
                                                 <action id="-3" name="Set position" sid="816119972010912" type="Player">
                                                     <param id="0" name="X">PlayerRockInteraction.X - 30</param>
                                                     <param id="1" name="Y">Player.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="731359863769163">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="469240484596772" type="Tile_earth">
+                                    <param id="0" name="Object">Spikes</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="790104646635613" type="Tile_earth" />
+                                <action id="0" name="Call function" sid="358266027913729" type="Function">
+                                    <param id="0" name="Name">&quot;RespawnRockTile&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="526322463334920">
+                            <conditions>
+                                <condition id="0" name="On function" sid="303694887381220" type="Function">
+                                    <param id="0" name="Name">&quot;PickClosesestRockGenPoint&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="minDist" sid="959016331548615" static="0" type="number">1000000</variable>
+                                <variable constant="0" name="currDist" sid="190474978943179" static="0" type="number">0</variable>
+                                <variable constant="0" name="currGenPoint" sid="224800503389387" static="0" type="number">0</variable>
+                                <event-block sid="202841152917382">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="472142003149243" type="System">
+                                            <param id="0" name="Object">RockInfinite</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="541373623246690" type="System">
+                                            <param id="0" name="Variable">currDist</param>
+                                            <param id="1" name="Value">distance(Player.X,Player.Y, RockInfinite.X, RockInfinite.Y)</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="345855489529886">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="167820909271055" type="System">
+                                                    <param id="0" name="First value">currDist</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Second value">minDist</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="759701564960418" type="System">
+                                                    <param id="0" name="Variable">minDist</param>
+                                                    <param id="1" name="Value">currDist</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="377373574020097" type="System">
+                                                    <param id="0" name="Variable">currGenPoint</param>
+                                                    <param id="1" name="Value">RockInfinite.UID</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="533025474362095">
+                                            <conditions />
+                                            <actions>
+                                                <action id="1" name="Set return value" sid="534897253632973" type="Function">
+                                                    <param id="0" name="Value">currGenPoint</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="497290315357693">
+                            <conditions>
+                                <condition id="0" name="On function" sid="619700773174165" type="Function">
+                                    <param id="0" name="Name">&quot;RespawnRockTile&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="genPointUID" sid="891987164108230" static="0" type="number">0</variable>
+                                <event-block sid="399210274670769">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="904059468865734" type="System">
+                                            <param id="0" name="Variable">genPointUID</param>
+                                            <param id="1" name="Value">Function.Call(&quot;PickClosestRockGenPoint&quot;)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="742711904706336">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="897553700722997" type="System">
+                                            <param id="0" name="Variable">genPointUID</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="812886041031621">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="684749671706571" type="RockInfinite">
+                                                    <param id="0" name="Unique ID">genPointUID</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Spawn another object" sid="123245422081011" type="RockInfinite">
+                                                    <param id="0" name="Object">Tile_earth</param>
+                                                    <param id="1" name="Layer">0</param>
+                                                    <param id="2" name="Image point">0</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -3103,6 +3321,35 @@
                                                                             <param id="0" name="Frame number">MapArray.At(loopindex(&quot;X_idx&quot;), loopindex(&quot;Y_idx&quot;))</param>
                                                                         </action>
                                                                     </actions>
+                                                                    <sub-events>
+                                                                        <event-block any="1" sid="889525047288201">
+                                                                            <conditions>
+                                                                                <condition id="3" name="Compare frame" sid="953272998426206" type="BkgTile">
+                                                                                    <param id="0" name="Comparison">0</param>
+                                                                                    <param id="1" name="Number">9</param>
+                                                                                </condition>
+                                                                                <condition id="3" name="Compare frame" sid="566929330407849" type="BkgTile">
+                                                                                    <param id="0" name="Comparison">0</param>
+                                                                                    <param id="1" name="Number">11</param>
+                                                                                </condition>
+                                                                                <condition id="3" name="Compare frame" sid="203906317975854" type="BkgTile">
+                                                                                    <param id="0" name="Comparison">0</param>
+                                                                                    <param id="1" name="Number">17</param>
+                                                                                </condition>
+                                                                                <condition id="3" name="Compare frame" sid="586803539288261" type="BkgTile">
+                                                                                    <param id="0" name="Comparison">0</param>
+                                                                                    <param id="1" name="Number">18</param>
+                                                                                </condition>
+                                                                            </conditions>
+                                                                            <actions>
+                                                                                <action id="0" name="Spawn another object" sid="907657546818862" type="BkgTile">
+                                                                                    <param id="0" name="Object">Spikes</param>
+                                                                                    <param id="1" name="Layer">0</param>
+                                                                                    <param id="2" name="Image point">0</param>
+                                                                                </action>
+                                                                            </actions>
+                                                                        </event-block>
+                                                                    </sub-events>
                                                                 </event-block>
                                                             </sub-events>
                                                         </event-block>
