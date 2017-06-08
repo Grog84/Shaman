@@ -24,6 +24,7 @@
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
@@ -120,9 +121,10 @@
                 <instance-variable name="CanPlaceTile" sid="679403734576728" type="boolean" />
                 <instance-variable name="TilePlacingTimer" sid="297833765453607" type="number" />
                 <instance-variable name="IsAbsorbing" sid="357602678760758" type="boolean" />
-                <instance-variable name="IsHit" sid="996875168129212" type="number" />
+                <instance-variable name="IsImmune" sid="996875168129212" type="number" />
                 <instance-variable name="AbsorbWait" sid="462310476167915" type="number" />
                 <instance-variable name="CanAbsorb" sid="285615018212801" type="number" />
+                <instance-variable name="ImmunityWindow" sid="615395390032730" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="BoundToLayout" sid="603214758576246">
@@ -698,6 +700,9 @@
                 </behavior-type>
                 <behavior-type name="Timer" sid="372929860315840">
                     <behavior id="Timer" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="922663211416678">
+                    <behavior id="Flash" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
