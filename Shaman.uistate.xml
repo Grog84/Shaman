@@ -10,13 +10,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="1">Intro</layout>
+        <layout order="1">Intro</layout>
         <layout order="4">BossLevel1</layout>
         <layout order="5">Level2</layout>
         <layout order="6">Level1</layout>
         <event-sheet order="0">Main</event-sheet>
         <event-sheet order="2">esIntro</event-sheet>
-        <event-sheet order="3">esDialogs</event-sheet>
+        <event-sheet active="1" order="3">esDialogs</event-sheet>
         <event-sheet order="7">esBossLevel1</event-sheet>
     </open-tabs>
     <properties>

@@ -1273,10 +1273,10 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
                 <animation framecount="1" loop="0" name="SkallHappy" pingpong="0" repeatcount="1" repeatto="0" sid="679471467052085" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_55\Downloads\Happy.png" />
                 </animation>
                 <animation framecount="1" loop="0" name="SkallWorried" pingpong="0" repeatcount="1" repeatto="0" sid="840533674984398" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_55\Downloads\skullsad.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_55\Downloads\Cry.png">
                         <collision-poly>
                             <point x="0.25" y="0.25" />
                             <point x="0.5" y="0.0078125" />
@@ -1290,7 +1290,7 @@
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="SkallNormal" pingpong="0" repeatcount="1" repeatto="0" sid="514286317459825" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_55\Downloads\Neutral.png">
                         <collision-poly>
                             <point x="0.25" y="0.25" />
                             <point x="0.5" y="0.0078125" />
@@ -1302,6 +1302,9 @@
                             <point x="0.242188" y="0.5" />
                         </collision-poly>
                     </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="SkallSad" pingpong="0" repeatcount="1" repeatto="0" sid="202072979680763" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_55\Downloads\Sad.png" />
                 </animation>
                 <animation framecount="1" loop="0" name="AnaNormal" pingpong="0" repeatcount="1" repeatto="0" sid="512257597442837" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -1660,7 +1663,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="803944513534211" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\dbga_55\Downloads\livello 0-entrata caverna.png" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\dbga_55\Downloads\livello 0-entrata caverna 2.png" />
                 </animation>
             </animation-folder>
         </object-type>
