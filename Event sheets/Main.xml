@@ -2459,6 +2459,16 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <event-block sid="875007086066481">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="801332638274136" type="Tile_earth">
+                                    <param id="0" name="Object">Tile_Air</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="748072957502525" type="Tile_Air" />
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-group>
                 <event-group description="" sid="949320105067605" title="Air">
