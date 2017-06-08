@@ -111,7 +111,7 @@
                         <x>64</x>
                         <y>-112</y>
                         <z>0</z>
-                        <width>10</width>
+                        <width>15</width>
                         <height>5</height>
                         <depth>0</depth>
                         <hotspotX>0.600000024</hotspotX>
@@ -872,7 +872,7 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0</opacity>
                     </world>
                 </instance>
             </instances>
@@ -1037,7 +1037,7 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>0.300000012</opacity>
+                        <opacity>0</opacity>
                     </world>
                 </instance>
                 <instance type="HUD_base" uid="151">

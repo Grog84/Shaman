@@ -1998,6 +1998,10 @@
                                 <condition id="-11" name="For Each" sid="333855783523850" type="System">
                                     <param id="0" name="Object">CheckPoint</param>
                                 </condition>
+                                <condition id="-1" name="Compare X" sid="377933656861381" type="CheckPoint">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="X co-ordinate">Player.X</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-9" name="Set value" sid="986469203223704" type="System">
@@ -2365,6 +2369,10 @@
                                     <conditions>
                                         <condition id="-11" name="For Each" sid="472142003149243" type="System">
                                             <param id="0" name="Object">RockInfinite</param>
+                                        </condition>
+                                        <condition id="-1" name="Compare X" sid="991386135753780" type="RockInfinite">
+                                            <param id="0" name="Comparison">3</param>
+                                            <param id="1" name="X co-ordinate">Player.X</param>
                                         </condition>
                                     </conditions>
                                     <actions>
