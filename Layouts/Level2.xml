@@ -828,10 +828,10 @@
                         <x>81</x>
                         <y>710</y>
                         <z>0</z>
-                        <width>24</width>
+                        <width>20</width>
                         <height>55</height>
                         <depth>0</depth>
-                        <hotspotX>0.458333343</hotspotX>
+                        <hotspotX>0.449999988</hotspotX>
                         <hotspotY>0.5090909</hotspotY>
                         <angle>0</angle>
                         <opacity>0.5</opacity>
