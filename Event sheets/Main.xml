@@ -2132,9 +2132,6 @@
                                         <event-block sid="528645007590653">
                                             <conditions />
                                             <actions>
-                                                <action id="0" name="Set text" sid="372953075500711" type="Debugtext">
-                                                    <param id="0" name="Text">yminBark</param>
-                                                </action>
                                                 <action id="-16" name="Wait" sid="276488856373872" type="System">
                                                     <param id="0" name="Seconds">0.2</param>
                                                 </action>
