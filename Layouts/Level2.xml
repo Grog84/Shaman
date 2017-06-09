@@ -410,7 +410,7 @@
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
                         <behavior-instance type="Timer" />
-                        <behavior-instance type="Solid">
+                        <behavior-instance type="Jumpthru">
                             <properties>
                                 <initial-state>Enabled</initial-state>
                             </properties>

@@ -265,9 +265,6 @@
                                                             <param id="1" name="Type">0</param>
                                                             <param id="2" name="Tag">&quot;bark_&quot;&amp;Bark.UID</param>
                                                         </action>
-                                                        <action behavior="Solid" id="0" name="Set enabled" sid="268330035703871" type="Bark">
-                                                            <param id="0" name="State">0</param>
-                                                        </action>
                                                     </actions>
                                                 </event-block>
                                                 <event-block sid="467270099122067">
@@ -290,9 +287,6 @@
                                                         </action>
                                                         <action id="5" name="Set frame" sid="145760130844927" type="Bark">
                                                             <param id="0" name="Frame number">(tileMid%100) -1</param>
-                                                        </action>
-                                                        <action behavior="Solid" id="0" name="Set enabled" sid="174272480417756" type="Bark">
-                                                            <param id="0" name="State">0</param>
                                                         </action>
                                                         <action id="-3" name="Create object" sid="910891090527107" type="System">
                                                             <param id="0" name="Object to create">Liane</param>
@@ -410,9 +404,6 @@
                                                             <param id="1" name="Type">0</param>
                                                             <param id="2" name="Tag">&quot;bark_&quot;&amp;Bark.UID</param>
                                                         </action>
-                                                        <action behavior="Solid" id="0" name="Set enabled" sid="816016736727060" type="Bark">
-                                                            <param id="0" name="State">0</param>
-                                                        </action>
                                                         <action id="-3" name="Create object" sid="698527291424954" type="System">
                                                             <param id="0" name="Object to create">Liane</param>
                                                             <param id="1" name="Layer">0</param>
@@ -503,9 +494,6 @@
                                                             <param id="1" name="Type">0</param>
                                                             <param id="2" name="Tag">&quot;bark_&quot;&amp;Bark.UID</param>
                                                         </action>
-                                                        <action behavior="Solid" id="0" name="Set enabled" sid="960789382147536" type="Bark">
-                                                            <param id="0" name="State">0</param>
-                                                        </action>
                                                         <action id="-3" name="Create object" sid="108255817737492" type="System">
                                                             <param id="0" name="Object to create">Liane</param>
                                                             <param id="1" name="Layer">&quot;Tiles&quot;</param>
@@ -589,6 +577,51 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="609460183505926">
+                    <conditions>
+                        <condition id="0" name="On function" sid="150518172185006" type="Function">
+                            <param id="0" name="Name">&quot;SetTreeSolidBehaviour&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="774899448299622">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="360912136552418" type="System">
+                                    <param id="0" name="Object">Bark</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="198434391257447">
+                                    <conditions>
+                                        <condition id="3" name="Compare frame" sid="555185575283605" type="Bark">
+                                            <param id="0" name="Comparison">1</param>
+                                            <param id="1" name="Number">4</param>
+                                        </condition>
+                                        <condition id="3" name="Compare frame" sid="254766719344637" type="Bark">
+                                            <param id="0" name="Comparison">1</param>
+                                            <param id="1" name="Number">5</param>
+                                        </condition>
+                                        <condition id="3" name="Compare frame" sid="188210214143170" type="Bark">
+                                            <param id="0" name="Comparison">1</param>
+                                            <param id="1" name="Number">6</param>
+                                        </condition>
+                                        <condition id="3" name="Compare frame" sid="321473554647536" type="Bark">
+                                            <param id="0" name="Comparison">1</param>
+                                            <param id="1" name="Number">7</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Jumpthru" id="0" name="Set enabled" sid="774072327851759" type="Bark">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="730590268797186" title="BouncingPlant">
@@ -608,5 +641,27 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="620156321707894">
+            <conditions>
+                <condition id="5" name="Compare axis" sid="895746794601406" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Axis">1</param>
+                    <param id="2" name="Comparison">4</param>
+                    <param id="3" name="Value">40</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="228578056467424" type="Player">
+                    <param id="0" name="Instance variable">TilePositioning</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="461684907300498" type="System" />
+                <condition id="9" name="Is overlapping at offset" sid="457561022056239" type="Player">
+                    <param id="0" name="Object">Liane</param>
+                    <param id="1" name="Offset X">0</param>
+                    <param id="2" name="Offset Y">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="12" name="Fall through" sid="735859680626149" type="Player" />
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

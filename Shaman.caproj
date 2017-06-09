@@ -886,8 +886,8 @@
                 <behavior-type name="Timer" sid="519251120417412">
                     <behavior id="Timer" />
                 </behavior-type>
-                <behavior-type name="Solid" sid="138647343010448">
-                    <behavior id="solid" />
+                <behavior-type name="Jumpthru" sid="218055474172437">
+                    <behavior id="jumpthru" />
                 </behavior-type>
             </behaviors>
             <animation-folder>

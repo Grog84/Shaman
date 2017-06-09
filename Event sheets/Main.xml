@@ -384,11 +384,7 @@
                                     <param id="0" name="Object">Bark</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action behavior="Solid" id="0" name="Set enabled" sid="879061394906713" type="Bark">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                            </actions>
+                            <actions />
                         </event-block>
                         <event-block sid="686151909085850">
                             <conditions>
@@ -411,11 +407,7 @@
                                             <param id="2" name="Value">0</param>
                                         </condition>
                                     </conditions>
-                                    <actions>
-                                        <action behavior="Solid" id="0" name="Set enabled" sid="191971032936383" type="Bark">
-                                            <param id="0" name="State">1</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -454,11 +446,7 @@
                                                     <param id="2" name="Second value">20</param>
                                                 </condition>
                                             </conditions>
-                                            <actions>
-                                                <action behavior="Solid" id="0" name="Set enabled" sid="988795927099868" type="Bark">
-                                                    <param id="0" name="State">0</param>
-                                                </action>
-                                            </actions>
+                                            <actions />
                                         </event-block>
                                     </sub-events>
                                 </event-block>
@@ -2139,6 +2127,10 @@
                                                     <param id="0" name="Name">&quot;displayLiane&quot;</param>
                                                     <param id="1" name="Parameter {n}">yminBark</param>
                                                 </action>
+                                                <action id="0" name="Call function" sid="887522675539408" type="Function">
+                                                    <param id="0" name="Name">&quot;SetTreeSolidBehaviour&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
                                             </actions>
                                         </event-block>
                                     </sub-events>
@@ -3182,6 +3174,11 @@
                                                                     <param id="1" name="Comparison">0</param>
                                                                     <param id="2" name="Second value">41</param>
                                                                 </condition>
+                                                                <condition id="-8" name="Compare two values" sid="596109642042632" type="System">
+                                                                    <param id="0" name="First value">MapArray.At(loopindex(&quot;X_idx&quot;), loopindex(&quot;Y_idx&quot;))</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Second value">48</param>
+                                                                </condition>
                                                                 <condition id="-8" name="Compare two values" sid="597015552347701" type="System">
                                                                     <param id="0" name="First value">MapArray.At(loopindex(&quot;X_idx&quot;), loopindex(&quot;Y_idx&quot;))</param>
                                                                     <param id="1" name="Comparison">0</param>
@@ -3243,6 +3240,23 @@
                                                                         <action id="-10" name="Set value" sid="386489920628734" type="Tile_Air">
                                                                             <param id="0" name="Instance variable">Type</param>
                                                                             <param id="1" name="Value">&quot;Air&quot;</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="197089847013658">
+                                                                    <conditions>
+                                                                        <condition id="-8" name="Compare two values" sid="278610292455274" type="System">
+                                                                            <param id="0" name="First value">MapArray.At(loopindex(&quot;X_idx&quot;), loopindex(&quot;Y_idx&quot;))</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Second value">48</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-3" name="Create object" sid="787494888393372" type="System">
+                                                                            <param id="0" name="Object to create">Flower</param>
+                                                                            <param id="1" name="Layer">&quot;Tiles&quot;</param>
+                                                                            <param id="2" name="X">loopindex(&quot;X_idx&quot;) * TILESIZE + TILESIZE/2.0</param>
+                                                                            <param id="3" name="Y">loopindex(&quot;Y_idx&quot;) * TILESIZE + TILESIZE/2.0</param>
                                                                         </action>
                                                                     </actions>
                                                                 </event-block>
