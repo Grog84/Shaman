@@ -1048,6 +1048,7 @@
                 <instance-variable name="Speed" sid="792078965235641" type="number" />
                 <instance-variable name="IsMoving" sid="254006714627400" type="number" />
                 <instance-variable name="direction" sid="372589072317342" type="number" />
+                <instance-variable name="hasJustChangedDirection" sid="338535952765588" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="DestroyOutsideLayout" sid="538976094470177">
@@ -1055,6 +1056,9 @@
                 </behavior-type>
                 <behavior-type name="Fade" sid="943707526604252">
                     <behavior id="Fade" />
+                </behavior-type>
+                <behavior-type name="Timer" sid="408987510943776">
+                    <behavior id="Timer" />
                 </behavior-type>
             </behaviors>
             <animation-folder>

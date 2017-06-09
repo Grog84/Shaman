@@ -22,9 +22,6 @@
                 <condition id="0" name="On collision with another object" sid="460993323962739" type="Tornado">
                     <param id="0" name="Object">TornadoStop</param>
                 </condition>
-                <condition id="0" name="On collision with another object" sid="860400099556271" type="Tornado">
-                    <param id="0" name="Object">Tile_earth</param>
-                </condition>
             </conditions>
             <actions />
             <sub-events>
@@ -45,38 +42,58 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="243457478261931">
+        <event-block sid="733225407021397">
             <conditions>
-                <condition id="1" name="Is overlapping another object" sid="155041029427291" type="Tornado">
-                    <param id="0" name="Object">Tile_earth</param>
+                <condition id="0" name="On collision with another object" sid="302345606581018" type="Tornado">
+                    <param id="0" name="Object">PlayerRockInteraction</param>
+                </condition>
+                <condition id="-2" name="Compare Y" sid="716153576313238" type="PlayerRockInteraction">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="Y co-ordinate">Tornado.Y - 40</param>
                 </condition>
             </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="243547712942939">
-                    <conditions>
-                        <condition id="-2" name="Compare Y" sid="742558968243092" type="Tile_earth">
-                            <param id="0" name="Comparison">2</param>
-                            <param id="1" name="Y co-ordinate">Tornado.Y - 20</param>
-                        </condition>
-                        <condition id="-8" name="Compare two values" sid="826157575190676" type="System">
-                            <param id="0" name="First value">abs(Tile_earth.X - Tornado.X)</param>
-                            <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Second value">14</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="445745624856324" type="Tornado">
-                            <param id="0" name="Instance variable">IsMoving</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="6" name="Set speed" sid="358282312028274" type="Tornado">
-                            <param id="0" name="Speed">0</param>
-                        </action>
-                        <action behavior="Fade" id="1" name="Start fade" sid="181349557038644" type="Tornado" />
-                    </actions>
-                </event-block>
-            </sub-events>
+            <actions>
+                <action id="-10" name="Set value" sid="316551505280006" type="Tornado">
+                    <param id="0" name="Instance variable">IsMoving</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="6" name="Set speed" sid="923707903655531" type="Tornado">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="521342770647473" type="Tornado" />
+            </actions>
+        </event-block>
+        <event-block sid="243457478261931">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="155041029427291" type="Tornado">
+                    <param id="0" name="Object">PlayerRockInteraction</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="553992360323840" type="Tornado">
+                    <param id="0" name="Instance variable">IsMoving</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="483022098576708" type="Tornado">
+                    <param id="0" name="Instance variable">hasJustChangedDirection</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="793441694590960" type="Tornado">
+                    <param id="0" name="Instance variable">hasJustChangedDirection</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="704840880233551" type="Tornado">
+                    <param id="0" name="Instance variable">direction</param>
+                    <param id="1" name="Value">self.direction * (-1)</param>
+                </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="623994413877662" type="Tornado">
+                    <param id="0" name="Duration">0.1</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;collisions&quot;</param>
+                </action>
+            </actions>
         </event-block>
         <event-block sid="670819126366243">
             <conditions>
@@ -153,6 +170,19 @@
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="506407207599960">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="245708741538463" type="Tornado">
+                    <param id="0" name="Tag">&quot;collisions&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="306357627650324" type="Tornado">
+                    <param id="0" name="Instance variable">hasJustChangedDirection</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

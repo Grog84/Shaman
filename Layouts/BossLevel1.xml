@@ -2664,6 +2664,7 @@
                         <Speed>50</Speed>
                         <IsMoving>1</IsMoving>
                         <direction>1</direction>
+                        <hasJustChangedDirection>0</hasJustChangedDirection>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -2676,6 +2677,7 @@
                                 <destroy>After fade out</destroy>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Timer" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
