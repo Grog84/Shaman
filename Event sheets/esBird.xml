@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>esBird</name>
+    <events>
+        <event-block sid="712422029675439">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="931954866388366" type="Bird">
+                    <param id="0" name="Instance variable">IsMoving</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="394775741941220" type="Bird">
+                    <param id="0" name="Y">self.Y + (self.Speed*dt*self.direction)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="163404346164200">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="436409265127935" type="Bird">
+                    <param id="0" name="Object">BirdStop</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="657675664029104" type="Bird">
+                    <param id="0" name="Y">self.Y + (self.Speed*dt*self.direction)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="349002033926938">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="150747791484747" type="Bird">
+                            <param id="0" name="Instance variable">IsMoving</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="203322069473898" type="Bird">
+                            <param id="0" name="Instance variable">direction</param>
+                            <param id="1" name="Value">self.direction*(-1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="999291843801318">
+            <conditions>
+                <condition behavior="Platform" id="4" name="Is falling" sid="904100401939125" type="Player" />
+                <condition id="1" name="Is overlapping another object" sid="456507575498780" type="Player">
+                    <param id="0" name="Object">Bird</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="897494997850734" type="Bird">
+                    <param id="0" name="Instance variable">IsMoving</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="9" name="Set vector Y" sid="498008835133505" type="Player">
+                    <param id="0" name="Vector Y">Bird.BouncingPower</param>
+                </action>
+                <action id="-10" name="Set value" sid="261663761400535" type="Bird">
+                    <param id="0" name="Instance variable">IsMoving</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="623487421936249" type="Bird">
+                    <param id="0" name="Animation">&quot;Explode&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="429886297827031" type="Bird">
+                    <param id="0" name="Duration">Bird.RecomposeTimer</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;exploded&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="236466115777244">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="267756585143846" type="Bird">
+                    <param id="0" name="Instance variable">IsMoving</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="310802056451770">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="550602567133518" type="Bird">
+                            <param id="0" name="Tag">&quot;exploded&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="662552378797039" type="Bird">
+                            <param id="0" name="Animation">&quot;Recompose&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Timer" id="1" name="Stop timer" sid="283512505468242" type="Bird">
+                            <param id="0" name="Tag">&quot;exploded&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="424956283557900">
+            <conditions>
+                <condition id="4" name="On finished" sid="986250039800144" type="Bird">
+                    <param id="0" name="Animation">&quot;Recompose&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="506127099567942" type="Bird">
+                    <param id="0" name="Instance variable">IsMoving</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="895471236006734" type="Bird">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

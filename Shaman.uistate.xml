@@ -10,17 +10,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="1">Intro</layout>
-        <layout order="4">BossLevel1</layout>
-        <layout order="5">Level2</layout>
-        <layout order="6">Level1</layout>
-        <layout active="1" order="8">Level3</layout>
+        <layout active="1" order="1">Intro</layout>
         <event-sheet order="0">Main</event-sheet>
-        <event-sheet order="2">esIntro</event-sheet>
-        <event-sheet order="3">esDialogs</event-sheet>
-        <event-sheet order="7">esBossLevel1</event-sheet>
-        <event-sheet order="9">esLevel3</event-sheet>
-        <event-sheet order="10">esLevel2</event-sheet>
+        <event-sheet order="2">esDialogs</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -33,9 +25,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="1" name="Obstacle" />
     </families-expanded>
     <folders-expanded>
-        <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="object-folder/" />
         <folder expanded="0" path="layout-folder/" />
-        <folder expanded="0" path="event-folder/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="0" path="event-folder/Enemies/" />
+        <folder expanded="0" path="event-folder/Levels/" />
+        <folder expanded="0" path="event-folder/BossFights/" />
+        <folder expanded="0" path="event-folder/Environment/" />
         <folder expanded="0" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
@@ -58,7 +54,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Tornado/" />
         <folder expanded="1" path="animation-folder/TornadoStop/" />
         <folder expanded="1" path="animation-folder/End/" />
-        <folder expanded="1" path="animation-folder/Bkg/" />
         <folder expanded="1" path="animation-folder/Boss/" />
         <folder expanded="1" path="animation-folder/TriggerRight/" />
         <folder expanded="1" path="animation-folder/TriggerLeft/" />
@@ -79,7 +74,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/RockInfinite/" />
         <folder expanded="1" path="animation-folder/Spikes/" />
         <folder expanded="1" path="animation-folder/IntroBkg/" />
-        <folder expanded="1" path="animation-folder/CaveBkg/" />
         <folder expanded="1" path="animation-folder/Golem/" />
         <folder expanded="1" path="animation-folder/CinematicCamera/" />
         <folder expanded="1" path="animation-folder/FadeEffect/" />

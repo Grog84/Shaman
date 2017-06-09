@@ -4,6 +4,7 @@
     <name>esLevel2</name>
     <events>
         <include>Main</include>
+        <include>esBird</include>
         <event-block sid="924907641071137">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="532386499839042" type="System" />

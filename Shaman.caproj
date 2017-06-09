@@ -18,6 +18,7 @@
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
         <plugin author="Scirra" id="XML" version="1">XML</plugin>
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
@@ -1084,14 +1085,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Bkg" sid="902731301050238">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="643968819666611" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_51\Downloads\livello 1N.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="Boss" sid="853371820687502">
             <plugin id="Sprite" />
             <instance-variables>
@@ -1667,14 +1660,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="CaveBkg" sid="733837195775676">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="890776465790871" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\dbga_51\Downloads\livello 1N.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="Golem" sid="418291930268862">
             <plugin id="Sprite" />
             <animation-folder>
@@ -1751,6 +1736,10 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="CaveBkg" sid="783847985092914">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\grolg\Documents\Construct2 Projects\Shaman\Animations\CaveBkg\Default\000.png" />
+        </object-type>
     </object-folder>
     <families>
         <family name="Tile" plugin-id="Sprite" sid="792340356286362">
@@ -1787,19 +1776,30 @@
         <layout>Intro.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>esLevel1.xml</event-sheet>
+        <event-folder name="Enemies">
+            <event-sheet>esTornado.xml</event-sheet>
+            <event-sheet>esBird.xml</event-sheet>
+        </event-folder>
+        <event-folder name="Levels">
+            <event-sheet>esLevel1.xml</event-sheet>
+            <event-sheet>esLevel2.xml</event-sheet>
+            <event-sheet>esLevel3.xml</event-sheet>
+            <event-sheet>esLevel4.xml</event-sheet>
+            <event-sheet>esIntro.xml</event-sheet>
+        </event-folder>
+        <event-folder name="BossFights">
+            <event-sheet>esBossLevel1.xml</event-sheet>
+            <event-sheet>esBossLevel2.xml</event-sheet>
+            <event-sheet>esBossLevel3.xml</event-sheet>
+            <event-sheet>esBossLevel4.xml</event-sheet>
+        </event-folder>
+        <event-folder name="Environment">
+            <event-sheet>SpecialTies.xml</event-sheet>
+        </event-folder>
         <event-sheet>esMenu.xml</event-sheet>
         <event-sheet>Main.xml</event-sheet>
-        <event-sheet>esLevel2.xml</event-sheet>
-        <event-sheet>esLevel3.xml</event-sheet>
-        <event-sheet>esLevel4.xml</event-sheet>
-        <event-sheet>esBossLevel1.xml</event-sheet>
-        <event-sheet>esBossLevel2.xml</event-sheet>
-        <event-sheet>esBossLevel3.xml</event-sheet>
-        <event-sheet>esBossLevel4.xml</event-sheet>
         <event-sheet>esLevel0.xml</event-sheet>
         <event-sheet>esDialogs.xml</event-sheet>
-        <event-sheet>esIntro.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="31" />
