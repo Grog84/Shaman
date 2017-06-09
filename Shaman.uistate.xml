@@ -12,10 +12,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <open-tabs>
         <layout order="1">Intro</layout>
         <layout order="3">Level3</layout>
-        <event-sheet order="0">Main</event-sheet>
+        <event-sheet active="1" order="0">Main</event-sheet>
         <event-sheet order="2">esDialogs</event-sheet>
         <event-sheet order="4">esLevel3</event-sheet>
-        <event-sheet active="1" order="5">SpecialTies</event-sheet>
+        <event-sheet order="5">SpecialTies</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />

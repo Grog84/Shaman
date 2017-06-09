@@ -303,9 +303,6 @@
                                                         <action id="-16" name="Set opacity" sid="208581857230083" type="Liane">
                                                             <param id="0" name="Opacity">0</param>
                                                         </action>
-                                                        <action id="5" name="Set frame" sid="584914145326798" type="Liane">
-                                                            <param id="0" name="Frame number">5</param>
-                                                        </action>
                                                         <action behavior="Timer" id="0" name="Start timer" sid="743266908183785" type="Bark">
                                                             <param id="0" name="Duration">float(loopindex(&quot;yIDX&quot;)) * TreeTimerInterval</param>
                                                             <param id="1" name="Type">0</param>
@@ -334,9 +331,6 @@
                                                         </action>
                                                         <action id="-16" name="Set opacity" sid="956954052612237" type="Liane">
                                                             <param id="0" name="Opacity">0</param>
-                                                        </action>
-                                                        <action id="5" name="Set frame" sid="972429057369752" type="Liane">
-                                                            <param id="0" name="Frame number">5</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -428,9 +422,6 @@
                                                         <action id="-16" name="Set opacity" sid="894861716465838" type="Liane">
                                                             <param id="0" name="Opacity">0</param>
                                                         </action>
-                                                        <action id="5" name="Set frame" sid="216593556440739" type="Liane">
-                                                            <param id="0" name="Frame number">5</param>
-                                                        </action>
                                                     </actions>
                                                 </event-block>
                                                 <event-block sid="275229547035380">
@@ -450,9 +441,6 @@
                                                         </action>
                                                         <action id="-16" name="Set opacity" sid="365733000247928" type="Liane">
                                                             <param id="0" name="Opacity">0</param>
-                                                        </action>
-                                                        <action id="5" name="Set frame" sid="222787691820165" type="Liane">
-                                                            <param id="0" name="Frame number">5</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -527,9 +515,6 @@
                                                         <action id="-16" name="Set opacity" sid="300607493681616" type="Liane">
                                                             <param id="0" name="Opacity">0</param>
                                                         </action>
-                                                        <action id="5" name="Set frame" sid="632701932742883" type="Liane">
-                                                            <param id="0" name="Frame number">5</param>
-                                                        </action>
                                                     </actions>
                                                 </event-block>
                                                 <event-block sid="816886004076322">
@@ -549,9 +534,6 @@
                                                         </action>
                                                         <action id="-16" name="Set opacity" sid="793055536003456" type="Liane">
                                                             <param id="0" name="Opacity">0</param>
-                                                        </action>
-                                                        <action id="5" name="Set frame" sid="943743921770708" type="Liane">
-                                                            <param id="0" name="Frame number">5</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
