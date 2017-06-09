@@ -59,6 +59,11 @@
                             <param id="0" name="Comparison">2</param>
                             <param id="1" name="Y co-ordinate">Tornado.Y - 20</param>
                         </condition>
+                        <condition id="-8" name="Compare two values" sid="826157575190676" type="System">
+                            <param id="0" name="First value">abs(Tile_earth.X - Tornado.X)</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">14</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-10" name="Set value" sid="445745624856324" type="Tornado">
