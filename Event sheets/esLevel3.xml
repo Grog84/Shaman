@@ -3,18 +3,19 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>esLevel3</name>
     <events>
+        <include>Main</include>
         <event-block sid="340481393066261">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="782628916428487" type="System" />
             </conditions>
             <actions>
-                <action id="1" name="Request project file" sid="191031901674579" type="AJAX">
-                    <param id="0" name="Tag">&quot;level3&quot;</param>
-                    <param id="1" name="File">SQLivelloForesta.json</param>
-                </action>
                 <action behavior="Pin" id="0" name="Pin to object" sid="860114729454007" type="PlayerSprite">
                     <param id="0" name="Pin to">Player</param>
                     <param id="1" name="Mode">0</param>
+                </action>
+                <action id="1" name="Request project file" sid="155903229976185" type="AJAX">
+                    <param id="0" name="Tag">&quot;map&quot;</param>
+                    <param id="1" name="File">SQLivelloForesta.json</param>
                 </action>
             </actions>
             <sub-events>
@@ -75,11 +76,11 @@
         <event-block sid="834353739708026">
             <conditions>
                 <condition id="0" name="On completed" sid="281280848903179" type="AJAX">
-                    <param id="0" name="Tag">&quot;level3&quot;</param>
+                    <param id="0" name="Tag">&quot;map&quot;</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Set text" sid="961819918270409" type="Debugtext">
+                <action disabled="1" id="0" name="Set text" sid="609754030768100" type="Debugtext">
                     <param id="0" name="Text">AJAX.LastData</param>
                 </action>
                 <action id="0" name="Call function" sid="111420740387103" type="Function">
