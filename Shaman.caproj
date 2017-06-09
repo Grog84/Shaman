@@ -81,6 +81,9 @@
                 <behavior-type name="Physics" sid="177584512020578">
                     <behavior id="Physics" />
                 </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="759097303356742">
+                    <behavior id="destroy" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="741028054155919" speed="0">
@@ -223,40 +226,12 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
                 <animation framecount="2" loop="0" name="Air" pingpong="0" repeatcount="1" repeatto="0" sid="817036940760608" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.0625" y="0.0625" />
-                            <point x="0.9375" y="0.0625" />
-                            <point x="0.9375" y="0.9375" />
-                            <point x="0.0625" y="0.9375" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.0625" y="0.0625" />
-                            <point x="0.9375" y="0.0625" />
-                            <point x="0.9375" y="0.9375" />
-                            <point x="0.0625" y="0.9375" />
-                        </collision-poly>
-                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
                 <animation framecount="2" loop="0" name="Water" pingpong="0" repeatcount="1" repeatto="0" sid="151562239735877" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.0625" y="0.0625" />
-                            <point x="0.9375" y="0.0625" />
-                            <point x="0.9375" y="0.9375" />
-                            <point x="0.0625" y="0.9375" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.0625" y="0.0625" />
-                            <point x="0.9375" y="0.0625" />
-                            <point x="0.9375" y="0.9375" />
-                            <point x="0.0625" y="0.9375" />
-                        </collision-poly>
-                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -266,33 +241,15 @@
                 <behavior-type name="Physics" sid="667200972996565">
                     <behavior id="Physics" />
                 </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="655279068196703">
+                    <behavior id="destroy" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="118206503403046" speed="6">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.0625" y="0.0625" />
-                            <point x="0.9375" y="0.0625" />
-                            <point x="0.9375" y="0.9375" />
-                            <point x="0.0625" y="0.9375" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.0625" y="0.0625" />
-                            <point x="0.9375" y="0.0625" />
-                            <point x="0.9375" y="0.9375" />
-                            <point x="0.0625" y="0.9375" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.0625" y="0.0625" />
-                            <point x="0.9375" y="0.0625" />
-                            <point x="0.9375" y="0.9375" />
-                            <point x="0.0625" y="0.9375" />
-                        </collision-poly>
-                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
                 <animation framecount="3" loop="0" name="Splash" pingpong="1" repeatcount="1" repeatto="0" sid="282218622794916" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
@@ -339,6 +296,9 @@
                 </behavior-type>
                 <behavior-type name="Fade" sid="845401175359974">
                     <behavior id="Fade" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="882474628842635">
+                    <behavior id="destroy" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
@@ -889,6 +849,11 @@
             <instance-variables>
                 <instance-variable name="TreeType" sid="713498294035754" type="number" />
             </instance-variables>
+            <behaviors>
+                <behavior-type name="DestroyOutsideLayout" sid="147345812402992">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="577455409373782" speed="0">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -926,7 +891,17 @@
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="8" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="490968078150578" speed="0">
+                <animation framecount="18" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="490968078150578" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -952,55 +927,9 @@
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="6" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="860145942358361" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.0625" y="0" />
-                            <point x="0.9375" y="0" />
-                            <point x="0.9375" y="1" />
-                            <point x="0.0625" y="1" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.0625" y="0" />
-                            <point x="0.9375" y="0" />
-                            <point x="0.9375" y="1" />
-                            <point x="0.0625" y="1" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.0625" y="0" />
-                            <point x="0.9375" y="0" />
-                            <point x="0.9375" y="1" />
-                            <point x="0.0625" y="1" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.0625" y="0" />
-                            <point x="0.9375" y="0" />
-                            <point x="0.9375" y="1" />
-                            <point x="0.0625" y="1" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.0625" y="0" />
-                            <point x="0.9375" y="0" />
-                            <point x="0.9375" y="1" />
-                            <point x="0.0625" y="1" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.0625" y="0" />
-                            <point x="0.9375" y="0" />
-                            <point x="0.9375" y="1" />
-                            <point x="0.0625" y="1" />
-                        </collision-poly>
-                    </frame>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="860145942358361" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -1357,6 +1286,9 @@
                 <behavior-type name="Timer" sid="835535092168856">
                     <behavior id="Timer" />
                 </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="631396856181084">
+                    <behavior id="destroy" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="394596511543529" speed="5">
@@ -1613,6 +1545,11 @@
             <instance-variables>
                 <instance-variable name="orderID" sid="230816163280246" type="number" />
             </instance-variables>
+            <behaviors>
+                <behavior-type name="DestroyOutsideLayout" sid="616580916650938">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="160092287804066" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
@@ -1626,6 +1563,11 @@
             <instance-variables>
                 <instance-variable name="orderID" sid="490873790636945" type="number" />
             </instance-variables>
+            <behaviors>
+                <behavior-type name="DestroyOutsideLayout" sid="873263633728106">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="931597519194950" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Game_Development\Construct 2\Shaman\Animations\Tile_earth\Default\000.png">
@@ -1744,6 +1686,24 @@
             <plugin id="TiledBg" />
             <texture original-source="C:\Users\grolg\Documents\Construct2 Projects\Shaman\Animations\CaveBkg\Default\000.png" />
         </object-type>
+        <object-type name="WaterBkg" sid="521031059214176">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="271893812819207" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0.0625" />
+                            <point x="1" y="0.0625" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Tile" plugin-id="Sprite" sid="792340356286362">
@@ -1832,7 +1792,13 @@
         <file name="SQCavernaMap.json" />
         <file name="SQLivelloMontagna.json" />
         <file name="Intro.xml" />
-        <file name="Albero1.json" />
         <file name="SQLivelloForesta.json" />
+        <file name="Albero1.json" />
+        <file name="Albero2.json" />
+        <file name="Albero3.json" />
+        <file name="Albero4.json" />
+        <file name="Albero5.json" />
+        <file name="Albero6.json" />
+        <file name="Albero7.json" />
     </files-folder>
 </c2project>

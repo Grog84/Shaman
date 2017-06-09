@@ -66,6 +66,7 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="DestroyOutsideLayout" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -181,6 +182,7 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="DestroyOutsideLayout" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -230,6 +232,7 @@
                                 <destroy>After fade out</destroy>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="DestroyOutsideLayout" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -321,6 +324,9 @@
                     <instance-variables>
                         <TreeType>0</TreeType>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -372,6 +378,9 @@
                     <instance-variables>
                         <TreeType>0</TreeType>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -454,6 +463,9 @@
                     <instance-variables>
                         <orderID>0</orderID>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -479,6 +491,9 @@
                     <instance-variables>
                         <orderID>0</orderID>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -586,6 +601,7 @@
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Timer" />
+                        <behavior-instance type="DestroyOutsideLayout" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -770,6 +786,262 @@
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>0</opacity>
+                    </world>
+                </instance>
+                <instance type="Spikes" uid="232">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>963</x>
+                        <y>-363</y>
+                        <z>0</z>
+                        <width>30</width>
+                        <height>30</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
+        <layer name="Tiles" sid="196890367701388">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances />
+            <effects />
+        </layer>
+        <layer name="Main" sid="412739979074654">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="Player" uid="233">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <TotalNumberOfTiles>0</TotalNumberOfTiles>
+                        <RockTiles>0</RockTiles>
+                        <AirTiles>0</AirTiles>
+                        <WaterTiles>0</WaterTiles>
+                        <TilePositioning>false</TilePositioning>
+                        <Speed>200</Speed>
+                        <BaseSpeed>100</BaseSpeed>
+                        <JumpSpeed>300</JumpSpeed>
+                        <MaxSpeed>0</MaxSpeed>
+                        <Yspeed>0</Yspeed>
+                        <OnTheGround>false</OnTheGround>
+                        <LastAirTile>0</LastAirTile>
+                        <RockTileRange>3</RockTileRange>
+                        <AirTileRange>4</AirTileRange>
+                        <WaterTileRange>2</WaterTileRange>
+                        <ClimbingSpeed>100</ClimbingSpeed>
+                        <IsClimbing>0</IsClimbing>
+                        <TimeBeforeIdle>20</TimeBeforeIdle>
+                        <CanPlaceTile>true</CanPlaceTile>
+                        <TilePlacingTimer>0.5</TilePlacingTimer>
+                        <IsAbsorbing>false</IsAbsorbing>
+                        <IsImmune>0</IsImmune>
+                        <AbsorbWait>0.5</AbsorbWait>
+                        <CanAbsorb>1</CanAbsorb>
+                        <ImmunityWindow>1</ImmunityWindow>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="BoundToLayout">
+                            <properties>
+                                <bound-by>Edge</bound-by>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ScrollTo">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>100</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>370</jump-strength>
+                                <gravity>1500</gravity>
+                                <max-fall-speed>300</max-fall-speed>
+                                <double-jump>Disabled</double-jump>
+                                <jump-sustain>0</jump-sustain>
+                                <default-controls>Yes</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Solids</obstacles>
+                                <range>10000</range>
+                                <cone-of-view>360</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Timer" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>67</x>
+                        <y>1320</y>
+                        <z>0</z>
+                        <width>20</width>
+                        <height>55</height>
+                        <depth>0</depth>
+                        <hotspotX>0.449999988</hotspotX>
+                        <hotspotY>0.5090909</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0</opacity>
+                    </world>
+                </instance>
+                <instance type="PlayerSprite" uid="234">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                        <behavior-instance type="Timer" />
+                        <behavior-instance type="Flash" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>67</x>
+                        <y>1316</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
+        <layer name="TextBox" sid="564201602398002">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>0</x>
+                <y>0</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances />
+            <effects />
+        </layer>
+        <layer name="Hud" sid="661579006692194">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>0</x>
+                <y>0</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="Debugtext" uid="235">
+                    <properties>
+                        <text>Text</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-16</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Character</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>94.924285889</x>
+                        <y>87.619857788</y>
+                        <z>0</z>
+                        <width>506.670257568</width>
+                        <height>359.895874023</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="WaterBkg" uid="237">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1290</x>
+                        <y>-201</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
                     </world>
                 </instance>
                 <instance type="HUD_base" uid="223">
@@ -1029,239 +1301,6 @@
                         <z>0</z>
                         <width>64</width>
                         <height>32</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Spikes" uid="232">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>963</x>
-                        <y>-363</y>
-                        <z>0</z>
-                        <width>30</width>
-                        <height>30</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>0</opacity>
-                    </world>
-                </instance>
-                <instance type="Player" uid="233">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <TotalNumberOfTiles>0</TotalNumberOfTiles>
-                        <RockTiles>0</RockTiles>
-                        <AirTiles>0</AirTiles>
-                        <WaterTiles>0</WaterTiles>
-                        <TilePositioning>false</TilePositioning>
-                        <Speed>200</Speed>
-                        <BaseSpeed>100</BaseSpeed>
-                        <JumpSpeed>300</JumpSpeed>
-                        <MaxSpeed>0</MaxSpeed>
-                        <Yspeed>0</Yspeed>
-                        <OnTheGround>false</OnTheGround>
-                        <LastAirTile>0</LastAirTile>
-                        <RockTileRange>3</RockTileRange>
-                        <AirTileRange>4</AirTileRange>
-                        <WaterTileRange>1</WaterTileRange>
-                        <ClimbingSpeed>100</ClimbingSpeed>
-                        <IsClimbing>0</IsClimbing>
-                        <TimeBeforeIdle>20</TimeBeforeIdle>
-                        <CanPlaceTile>true</CanPlaceTile>
-                        <TilePlacingTimer>0.5</TilePlacingTimer>
-                        <IsAbsorbing>false</IsAbsorbing>
-                        <IsImmune>0</IsImmune>
-                        <AbsorbWait>0.5</AbsorbWait>
-                        <CanAbsorb>1</CanAbsorb>
-                        <ImmunityWindow>1</ImmunityWindow>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="BoundToLayout">
-                            <properties>
-                                <bound-by>Edge</bound-by>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="ScrollTo">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Platform">
-                            <properties>
-                                <max-speed>100</max-speed>
-                                <acceleration>1500</acceleration>
-                                <deceleration>1500</deceleration>
-                                <jump-strength>370</jump-strength>
-                                <gravity>1500</gravity>
-                                <max-fall-speed>300</max-fall-speed>
-                                <double-jump>Disabled</double-jump>
-                                <jump-sustain>0</jump-sustain>
-                                <default-controls>Yes</default-controls>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="LineOfSight">
-                            <properties>
-                                <obstacles>Solids</obstacles>
-                                <range>10000</range>
-                                <cone-of-view>360</cone-of-view>
-                                <use-collision-cells>Yes</use-collision-cells>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Timer" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>67</x>
-                        <y>1320</y>
-                        <z>0</z>
-                        <width>20</width>
-                        <height>55</height>
-                        <depth>0</depth>
-                        <hotspotX>0.449999988</hotspotX>
-                        <hotspotY>0.5090909</hotspotY>
-                        <angle>0</angle>
-                        <opacity>0</opacity>
-                    </world>
-                </instance>
-                <instance type="PlayerSprite" uid="234">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Pin" />
-                        <behavior-instance type="Timer" />
-                        <behavior-instance type="Flash" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>67</x>
-                        <y>1316</y>
-                        <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-            </instances>
-            <effects />
-        </layer>
-        <layer name="Tiles" sid="196890367701388">
-            <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
-            <transparent>1</transparent>
-            <parallax>
-                <x>1</x>
-                <y>1</y>
-            </parallax>
-            <zoom-rate>1</zoom-rate>
-            <opacity>1</opacity>
-            <force-own-texture>0</force-own-texture>
-            <global>0</global>
-            <use-render-cells>0</use-render-cells>
-            <blend-mode>0</blend-mode>
-            <effect-fallback>0</effect-fallback>
-            <instances />
-            <effects />
-        </layer>
-        <layer name="Main" sid="412739979074654">
-            <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
-            <transparent>1</transparent>
-            <parallax>
-                <x>1</x>
-                <y>1</y>
-            </parallax>
-            <zoom-rate>1</zoom-rate>
-            <opacity>1</opacity>
-            <force-own-texture>0</force-own-texture>
-            <global>0</global>
-            <use-render-cells>0</use-render-cells>
-            <blend-mode>0</blend-mode>
-            <effect-fallback>0</effect-fallback>
-            <instances />
-            <effects />
-        </layer>
-        <layer name="TextBox" sid="564201602398002">
-            <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
-            <transparent>1</transparent>
-            <parallax>
-                <x>0</x>
-                <y>0</y>
-            </parallax>
-            <zoom-rate>1</zoom-rate>
-            <opacity>1</opacity>
-            <force-own-texture>0</force-own-texture>
-            <global>0</global>
-            <use-render-cells>0</use-render-cells>
-            <blend-mode>0</blend-mode>
-            <effect-fallback>0</effect-fallback>
-            <instances />
-            <effects />
-        </layer>
-        <layer name="Hud" sid="661579006692194">
-            <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
-            <transparent>1</transparent>
-            <parallax>
-                <x>0</x>
-                <y>0</y>
-            </parallax>
-            <zoom-rate>1</zoom-rate>
-            <opacity>1</opacity>
-            <force-own-texture>0</force-own-texture>
-            <global>0</global>
-            <use-render-cells>0</use-render-cells>
-            <blend-mode>0</blend-mode>
-            <effect-fallback>0</effect-fallback>
-            <instances>
-                <instance type="Debugtext" uid="235">
-                    <properties>
-                        <text>Text</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-16</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Character</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>94.924285889</x>
-                        <y>87.619857788</y>
-                        <z>0</z>
-                        <width>506.670257568</width>
-                        <height>359.895874023</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>

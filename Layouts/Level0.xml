@@ -66,6 +66,7 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="DestroyOutsideLayout" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -208,6 +209,7 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="DestroyOutsideLayout" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -257,6 +259,7 @@
                                 <destroy>After fade out</destroy>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="DestroyOutsideLayout" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -305,6 +308,9 @@
                     <instance-variables>
                         <TreeType>0</TreeType>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -356,6 +362,9 @@
                     <instance-variables>
                         <TreeType>0</TreeType>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -428,7 +437,7 @@
                         <LastAirTile>0</LastAirTile>
                         <RockTileRange>3</RockTileRange>
                         <AirTileRange>4</AirTileRange>
-                        <WaterTileRange>1</WaterTileRange>
+                        <WaterTileRange>2</WaterTileRange>
                         <ClimbingSpeed>100</ClimbingSpeed>
                         <IsClimbing>0</IsClimbing>
                         <TimeBeforeIdle>20</TimeBeforeIdle>

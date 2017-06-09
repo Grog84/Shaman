@@ -86,6 +86,116 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <event-block sid="209112611465208">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="978970162201240" type="System">
+                                    <param id="0" name="First value">Function.Param(2)</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="328644763111132">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="962430626983338" type="System">
+                                            <param id="0" name="First value">Function.Param(2)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="11" name="Load" sid="738612045606805" type="TreeModel">
+                                            <param id="0" name="JSON">Albero1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="270714265180514">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="762609885876265" type="System">
+                                            <param id="0" name="First value">Function.Param(2)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="11" name="Load" sid="246736574021460" type="TreeModel">
+                                            <param id="0" name="JSON">Albero2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="691654159942640">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="256651284111182" type="System">
+                                            <param id="0" name="First value">Function.Param(2)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="11" name="Load" sid="144654220927862" type="TreeModel">
+                                            <param id="0" name="JSON">Albero3</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="851068127854111">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="415785494392184" type="System">
+                                            <param id="0" name="First value">Function.Param(2)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">4</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="11" name="Load" sid="877237695755860" type="TreeModel">
+                                            <param id="0" name="JSON">Albero4</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="195622168794717">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="692152038578038" type="System">
+                                            <param id="0" name="First value">Function.Param(2)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="11" name="Load" sid="150917507382436" type="TreeModel">
+                                            <param id="0" name="JSON">Albero5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="526437071643828">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="465922528512755" type="System">
+                                            <param id="0" name="First value">Function.Param(2)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">6</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="11" name="Load" sid="737237122983232" type="TreeModel">
+                                            <param id="0" name="JSON">Albero6</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="529245600747021">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="150155766441007" type="System">
+                                            <param id="0" name="First value">Function.Param(2)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">7</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="11" name="Load" sid="528968673754905" type="TreeModel">
+                                            <param id="0" name="JSON">Albero7</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                         <event-block sid="568996845803776">
                             <conditions>
                                 <condition id="-10" name="For" sid="582077508641551" type="System">

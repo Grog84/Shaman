@@ -66,6 +66,7 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="DestroyOutsideLayout" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -135,8 +136,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-449</x>
-                        <y>93</y>
+                        <x>-496</x>
+                        <y>-208</y>
                         <z>0</z>
                         <width>416</width>
                         <height>192</height>
@@ -208,6 +209,7 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="DestroyOutsideLayout" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -257,6 +259,7 @@
                                 <destroy>After fade out</destroy>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="DestroyOutsideLayout" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -387,6 +390,9 @@
                     <instance-variables>
                         <TreeType>0</TreeType>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -438,6 +444,9 @@
                     <instance-variables>
                         <TreeType>0</TreeType>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -520,6 +529,9 @@
                     <instance-variables>
                         <orderID>0</orderID>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -545,6 +557,9 @@
                     <instance-variables>
                         <orderID>0</orderID>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -601,7 +616,7 @@
                         <LastAirTile>0</LastAirTile>
                         <RockTileRange>3</RockTileRange>
                         <AirTileRange>4</AirTileRange>
-                        <WaterTileRange>1</WaterTileRange>
+                        <WaterTileRange>2</WaterTileRange>
                         <ClimbingSpeed>100</ClimbingSpeed>
                         <IsClimbing>0</IsClimbing>
                         <TimeBeforeIdle>20</TimeBeforeIdle>
@@ -867,6 +882,7 @@
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Timer" />
+                        <behavior-instance type="DestroyOutsideLayout" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

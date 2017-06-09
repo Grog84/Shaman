@@ -11,13 +11,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="1">Intro</layout>
-        <layout active="1" order="4">Level3</layout>
-        <layout order="6">Level1</layout>
+        <layout order="3">Level3</layout>
         <event-sheet order="0">Main</event-sheet>
         <event-sheet order="2">esDialogs</event-sheet>
-        <event-sheet order="3">esTornado</event-sheet>
-        <event-sheet order="5">esLevel3</event-sheet>
-        <event-sheet order="7">esLevel1</event-sheet>
+        <event-sheet order="4">esLevel3</event-sheet>
+        <event-sheet active="1" order="5">SpecialTies</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -31,13 +29,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </families-expanded>
     <folders-expanded>
         <folder expanded="0" path="object-folder/" />
-        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="0" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="0" path="event-folder/Enemies/" />
-        <folder expanded="1" path="event-folder/Levels/" />
+        <folder expanded="0" path="event-folder/Levels/" />
         <folder expanded="0" path="event-folder/BossFights/" />
-        <folder expanded="0" path="event-folder/Environment/" />
-        <folder expanded="1" path="file-folder/" />
+        <folder expanded="1" path="event-folder/Environment/" />
+        <folder expanded="0" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
@@ -83,5 +81,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/CinematicCamera/" />
         <folder expanded="1" path="animation-folder/FadeEffect/" />
         <folder expanded="1" path="animation-folder/TriggerZone/" />
+        <folder expanded="1" path="animation-folder/WaterBkg/" />
     </folders-expanded>
 </c2uistate>
