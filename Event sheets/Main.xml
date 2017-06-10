@@ -264,11 +264,219 @@
             <sub-events>
                 <event-group description="" sid="782740981766335" title="Interaction">
                     <sub-events>
+                        <event-block sid="950863527711756">
+                            <conditions>
+                                <condition id="6" name="On button pressed" sid="270687570661861" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">2</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="262008157140564" type="Player">
+                                    <param id="0" name="Instance variable">TilePositioning</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="262933898656451" type="Player">
+                                    <param id="0" name="Instance variable">CanAbsorb</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="975847734399246">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="925510951145719" type="Player">
+                                            <param id="0" name="Object">WaterBkg</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="274423230080941" type="Player">
+                                            <param id="0" name="Instance variable">WaterTiles</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">MAX_NBR_OF_WATER</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-11" name="Add to" sid="249149988270841" type="Player">
+                                            <param id="0" name="Instance variable">WaterTiles</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="487036295168034" type="Player">
+                                            <param id="0" name="Instance variable">TotalNumberOfTiles</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="783285318331620" type="Function">
+                                            <param id="0" name="Name">&quot;SetHUDTileNumber&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="103744680333934">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="578595703391647" type="System" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block any="1" sid="857984218708702">
+                                            <conditions>
+                                                <condition id="2" name="Is playing" sid="538512511860495" type="PlayerSprite">
+                                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                                </condition>
+                                                <condition id="2" name="Is playing" sid="851284476727155" type="PlayerSprite">
+                                                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="621229549688501">
+                                                    <conditions>
+                                                        <condition id="7" name="Is mirrored" sid="834766783796516" type="PlayerSprite" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="121554608855506" type="PlayerSprite">
+                                                            <param id="0" name="Animation">&quot;Absorb&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="0" name="Spawn another object" sid="607926991876729" type="PlayerSprite">
+                                                            <param id="0" name="Object">Interaction</param>
+                                                            <param id="1" name="Layer">&quot;Main&quot;</param>
+                                                            <param id="2" name="Image point">1</param>
+                                                        </action>
+                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="357542150052093" type="Interaction">
+                                                            <param id="0" name="Angle">180</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="973081619344318">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="984819613949132" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="960966661911113" type="PlayerSprite">
+                                                            <param id="0" name="Animation">&quot;Absorb&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="0" name="Spawn another object" sid="618539182996607" type="PlayerSprite">
+                                                            <param id="0" name="Object">Interaction</param>
+                                                            <param id="1" name="Layer">&quot;Main&quot;</param>
+                                                            <param id="2" name="Image point">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="941172088334195">
+                                            <conditions>
+                                                <condition id="2" name="Is playing" sid="633452934500291" type="PlayerSprite">
+                                                    <param id="0" name="Animation">&quot;Crouch&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="350341695225711">
+                                                    <conditions>
+                                                        <condition id="7" name="Is mirrored" sid="904147294863870" type="PlayerSprite" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="848806578373387" type="PlayerSprite">
+                                                            <param id="0" name="Animation">&quot;AbsorbDown&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="0" name="Spawn another object" sid="896369648401615" type="PlayerSprite">
+                                                            <param id="0" name="Object">Interaction</param>
+                                                            <param id="1" name="Layer">&quot;Main&quot;</param>
+                                                            <param id="2" name="Image point">1</param>
+                                                        </action>
+                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="148502043203818" type="Interaction">
+                                                            <param id="0" name="Angle">180</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="433519756317570">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="986882566292589" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="231929482849835" type="PlayerSprite">
+                                                            <param id="0" name="Animation">&quot;AbsorbDown&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="0" name="Spawn another object" sid="488005253827898" type="PlayerSprite">
+                                                            <param id="0" name="Object">Interaction</param>
+                                                            <param id="1" name="Layer">&quot;Main&quot;</param>
+                                                            <param id="2" name="Image point">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block any="1" sid="605894693384735">
+                                            <conditions>
+                                                <condition id="2" name="Is playing" sid="538114758082712" type="PlayerSprite">
+                                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                                </condition>
+                                                <condition id="2" name="Is playing" sid="683956271270173" type="PlayerSprite">
+                                                    <param id="0" name="Animation">&quot;Falling&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="818188369166597">
+                                                    <conditions>
+                                                        <condition id="7" name="Is mirrored" sid="109843778476805" type="PlayerSprite" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="490476642589579" type="PlayerSprite">
+                                                            <param id="0" name="Animation">&quot;AbsorbUp&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="0" name="Spawn another object" sid="946403566083640" type="PlayerSprite">
+                                                            <param id="0" name="Object">Interaction</param>
+                                                            <param id="1" name="Layer">&quot;Main&quot;</param>
+                                                            <param id="2" name="Image point">1</param>
+                                                        </action>
+                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="409713801005396" type="Interaction">
+                                                            <param id="0" name="Angle">180</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="681471770526695">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="224324045277522" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="581821096208319" type="PlayerSprite">
+                                                            <param id="0" name="Animation">&quot;AbsorbJump&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="0" name="Spawn another object" sid="824674168900002" type="PlayerSprite">
+                                                            <param id="0" name="Object">Interaction</param>
+                                                            <param id="1" name="Layer">0</param>
+                                                            <param id="2" name="Image point">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="567621626215063">
+                                    <conditions />
+                                    <actions>
+                                        <action behavior="Timer" id="0" name="Start timer" sid="716984641864836" type="Player">
+                                            <param id="0" name="Duration">self.AbsorbWait</param>
+                                            <param id="1" name="Type">0</param>
+                                            <param id="2" name="Tag">&quot;absorbWait&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="338705816894257" type="Player">
+                                            <param id="0" name="Instance variable">CanAbsorb</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                         <event-block sid="686649006340794">
                             <conditions>
                                 <condition id="6" name="On button pressed" sid="814261484145004" type="Gamepad">
                                     <param id="0" name="Gamepad">0</param>
-                                    <param id="1" name="Button">2</param>
+                                    <param id="1" name="Button">1</param>
                                 </condition>
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="313941430699848" type="Player">
                                     <param id="0" name="Instance variable">TilePositioning</param>
@@ -313,146 +521,26 @@
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block any="1" sid="514546912079927">
-                                            <conditions>
-                                                <condition id="2" name="Is playing" sid="551971350226080" type="PlayerSprite">
-                                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
-                                                </condition>
-                                                <condition id="2" name="Is playing" sid="761403955115325" type="PlayerSprite">
-                                                    <param id="0" name="Animation">&quot;Walk&quot;</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions />
-                                            <sub-events>
-                                                <event-block sid="353666271748790">
-                                                    <conditions>
-                                                        <condition id="7" name="Is mirrored" sid="671970017710904" type="PlayerSprite" />
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="4" name="Set animation" sid="571885312601002" type="PlayerSprite">
-                                                            <param id="0" name="Animation">&quot;Absorb&quot;</param>
-                                                            <param id="1" name="From">1</param>
-                                                        </action>
-                                                        <action id="0" name="Spawn another object" sid="758791574444221" type="PlayerSprite">
-                                                            <param id="0" name="Object">Interaction</param>
-                                                            <param id="1" name="Layer">&quot;Main&quot;</param>
-                                                            <param id="2" name="Image point">1</param>
-                                                        </action>
-                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="659288271897757" type="Interaction">
-                                                            <param id="0" name="Angle">180</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="803118687707084">
-                                                    <conditions>
-                                                        <condition id="-22" name="Else" sid="348257805530100" type="System" />
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="4" name="Set animation" sid="935161592166362" type="PlayerSprite">
-                                                            <param id="0" name="Animation">&quot;Absorb&quot;</param>
-                                                            <param id="1" name="From">1</param>
-                                                        </action>
-                                                        <action id="0" name="Spawn another object" sid="180429204385809" type="PlayerSprite">
-                                                            <param id="0" name="Object">Interaction</param>
-                                                            <param id="1" name="Layer">&quot;Main&quot;</param>
-                                                            <param id="2" name="Image point">1</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                            </sub-events>
-                                        </event-block>
                                         <event-block sid="530081069495736">
                                             <conditions>
                                                 <condition id="2" name="Is playing" sid="431712475392005" type="PlayerSprite">
                                                     <param id="0" name="Animation">&quot;Crouch&quot;</param>
                                                 </condition>
                                             </conditions>
-                                            <actions />
-                                            <sub-events>
-                                                <event-block sid="636075204176882">
-                                                    <conditions>
-                                                        <condition id="7" name="Is mirrored" sid="752488141718269" type="PlayerSprite" />
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="4" name="Set animation" sid="866567865891578" type="PlayerSprite">
-                                                            <param id="0" name="Animation">&quot;AbsorbDown&quot;</param>
-                                                            <param id="1" name="From">1</param>
-                                                        </action>
-                                                        <action id="0" name="Spawn another object" sid="525500099883599" type="PlayerSprite">
-                                                            <param id="0" name="Object">Interaction</param>
-                                                            <param id="1" name="Layer">&quot;Main&quot;</param>
-                                                            <param id="2" name="Image point">1</param>
-                                                        </action>
-                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="419146652149874" type="Interaction">
-                                                            <param id="0" name="Angle">180</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="897945189612434">
-                                                    <conditions>
-                                                        <condition id="-22" name="Else" sid="783663387214810" type="System" />
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="4" name="Set animation" sid="305019047311255" type="PlayerSprite">
-                                                            <param id="0" name="Animation">&quot;AbsorbDown&quot;</param>
-                                                            <param id="1" name="From">1</param>
-                                                        </action>
-                                                        <action id="0" name="Spawn another object" sid="469089094834918" type="PlayerSprite">
-                                                            <param id="0" name="Object">Interaction</param>
-                                                            <param id="1" name="Layer">&quot;Main&quot;</param>
-                                                            <param id="2" name="Image point">1</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                            </sub-events>
-                                        </event-block>
-                                        <event-block any="1" sid="310284150078954">
-                                            <conditions>
-                                                <condition id="2" name="Is playing" sid="735406194595826" type="PlayerSprite">
-                                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
-                                                </condition>
-                                                <condition id="2" name="Is playing" sid="147243473780215" type="PlayerSprite">
-                                                    <param id="0" name="Animation">&quot;Falling&quot;</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions />
-                                            <sub-events>
-                                                <event-block sid="641469777175487">
-                                                    <conditions>
-                                                        <condition id="7" name="Is mirrored" sid="921266672667317" type="PlayerSprite" />
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="4" name="Set animation" sid="992852135634742" type="PlayerSprite">
-                                                            <param id="0" name="Animation">&quot;AbsorbUp&quot;</param>
-                                                            <param id="1" name="From">1</param>
-                                                        </action>
-                                                        <action id="0" name="Spawn another object" sid="124811000736317" type="PlayerSprite">
-                                                            <param id="0" name="Object">Interaction</param>
-                                                            <param id="1" name="Layer">&quot;Main&quot;</param>
-                                                            <param id="2" name="Image point">1</param>
-                                                        </action>
-                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="109835850244551" type="Interaction">
-                                                            <param id="0" name="Angle">180</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="304249529597685">
-                                                    <conditions>
-                                                        <condition id="-22" name="Else" sid="503170024496791" type="System" />
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="4" name="Set animation" sid="672543991491999" type="PlayerSprite">
-                                                            <param id="0" name="Animation">&quot;AbsorbJump&quot;</param>
-                                                            <param id="1" name="From">1</param>
-                                                        </action>
-                                                        <action id="0" name="Spawn another object" sid="806281832142732" type="PlayerSprite">
-                                                            <param id="0" name="Object">Interaction</param>
-                                                            <param id="1" name="Layer">0</param>
-                                                            <param id="2" name="Image point">1</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                            </sub-events>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="866567865891578" type="PlayerSprite">
+                                                    <param id="0" name="Animation">&quot;AbsorbDown&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="0" name="Spawn another object" sid="525500099883599" type="PlayerSprite">
+                                                    <param id="0" name="Object">Interaction</param>
+                                                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                                                    <param id="2" name="Image point">1</param>
+                                                </action>
+                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="419146652149874" type="Interaction">
+                                                    <param id="0" name="Angle">90</param>
+                                                </action>
+                                            </actions>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
@@ -1550,7 +1638,7 @@
                     <conditions>
                         <condition id="6" name="On button pressed" sid="737608412361250" type="Gamepad">
                             <param id="0" name="Gamepad">0</param>
-                            <param id="1" name="Button">1</param>
+                            <param id="1" name="Button">3</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -1879,14 +1967,9 @@
                             <param id="0" name="Animation">&quot;Absorb&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="707088441323875" type="PlayerSprite">
-                            <param id="0" name="Animation">&quot;Idle&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
-                        <event-block sid="803838823156422">
+                        <event-block any="1" sid="803838823156422">
                             <conditions>
                                 <condition id="5" name="Compare axis" sid="602502751994937" type="Gamepad">
                                     <param id="0" name="Gamepad">0</param>
@@ -1894,32 +1977,27 @@
                                     <param id="2" name="Comparison">4</param>
                                     <param id="3" name="Value">20</param>
                                 </condition>
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="231807148068828" type="Player">
-                                    <param id="0" name="Instance variable">TilePositioning</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="546522635404656" type="PlayerSprite">
-                                    <param id="0" name="Animation">&quot;Walking&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="554854505003779">
-                            <conditions>
                                 <condition id="5" name="Compare axis" sid="434744473892142" type="Gamepad">
                                     <param id="0" name="Gamepad">0</param>
                                     <param id="1" name="Axis">0</param>
                                     <param id="2" name="Comparison">2</param>
                                     <param id="3" name="Value">-20</param>
                                 </condition>
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="267570622152347" type="Player">
-                                    <param id="0" name="Instance variable">TilePositioning</param>
-                                </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="963131504170839" type="PlayerSprite">
-                                    <param id="0" name="Animation">&quot;Walking&quot;</param>
+                                <action id="4" name="Set animation" sid="546522635404656" type="PlayerSprite">
+                                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="870382095288378">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="575363584280018" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="707088441323875" type="PlayerSprite">
+                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>
