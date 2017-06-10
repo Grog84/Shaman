@@ -3205,6 +3205,16 @@
                                                                     <param id="1" name="Comparison">0</param>
                                                                     <param id="2" name="Second value">161</param>
                                                                 </condition>
+                                                                <condition id="-8" name="Compare two values" sid="436944503334953" type="System">
+                                                                    <param id="0" name="First value">MapArray.At(loopindex(&quot;X_idx&quot;), loopindex(&quot;Y_idx&quot;))</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Second value">168</param>
+                                                                </condition>
+                                                                <condition id="-8" name="Compare two values" sid="916953894468014" type="System">
+                                                                    <param id="0" name="First value">MapArray.At(loopindex(&quot;X_idx&quot;), loopindex(&quot;Y_idx&quot;))</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Second value">169</param>
+                                                                </condition>
                                                             </conditions>
                                                             <actions />
                                                             <sub-events>
@@ -3305,17 +3315,51 @@
                                                                         </action>
                                                                     </actions>
                                                                 </event-block>
-                                                                <event-block sid="595859992003590">
+                                                                <event-block sid="625316650424658">
                                                                     <conditions>
-                                                                        <condition id="-8" name="Compare two values" sid="740512122626750" type="System">
+                                                                        <condition id="-8" name="Compare two values" sid="621256540660105" type="System">
                                                                             <param id="0" name="First value">MapArray.At(loopindex(&quot;X_idx&quot;), loopindex(&quot;Y_idx&quot;))</param>
                                                                             <param id="1" name="Comparison">0</param>
                                                                             <param id="2" name="Second value">161</param>
                                                                         </condition>
                                                                     </conditions>
                                                                     <actions>
-                                                                        <action id="-3" name="Create object" sid="170365547285710" type="System">
+                                                                        <action id="-3" name="Create object" sid="155381634534833" type="System">
                                                                             <param id="0" name="Object to create">TornadoStop</param>
+                                                                            <param id="1" name="Layer">&quot;Tiles&quot;</param>
+                                                                            <param id="2" name="X">loopindex(&quot;X_idx&quot;) * TILESIZE + TILESIZE/2.0</param>
+                                                                            <param id="3" name="Y">loopindex(&quot;Y_idx&quot;) * TILESIZE + TILESIZE/2.0</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="348882644266017">
+                                                                    <conditions>
+                                                                        <condition id="-8" name="Compare two values" sid="199921663095009" type="System">
+                                                                            <param id="0" name="First value">MapArray.At(loopindex(&quot;X_idx&quot;), loopindex(&quot;Y_idx&quot;))</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Second value">168</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-3" name="Create object" sid="314948275623658" type="System">
+                                                                            <param id="0" name="Object to create">Flame</param>
+                                                                            <param id="1" name="Layer">&quot;Tiles&quot;</param>
+                                                                            <param id="2" name="X">loopindex(&quot;X_idx&quot;) * TILESIZE + TILESIZE/2.0</param>
+                                                                            <param id="3" name="Y">loopindex(&quot;Y_idx&quot;) * TILESIZE + TILESIZE/2.0</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="595859992003590">
+                                                                    <conditions>
+                                                                        <condition id="-8" name="Compare two values" sid="740512122626750" type="System">
+                                                                            <param id="0" name="First value">MapArray.At(loopindex(&quot;X_idx&quot;), loopindex(&quot;Y_idx&quot;))</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Second value">169</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-3" name="Create object" sid="170365547285710" type="System">
+                                                                            <param id="0" name="Object to create">FlameStop</param>
                                                                             <param id="1" name="Layer">&quot;Tiles&quot;</param>
                                                                             <param id="2" name="X">loopindex(&quot;X_idx&quot;) * TILESIZE + TILESIZE/2.0</param>
                                                                             <param id="3" name="Y">loopindex(&quot;Y_idx&quot;) * TILESIZE + TILESIZE/2.0</param>

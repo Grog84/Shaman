@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>esFlame</name>
+    <events>
+        <event-block sid="342783361914765">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="473582161437706" type="Flame">
+                    <param id="0" name="Instance variable">IsMoving</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="243282046364021" type="Flame">
+                    <param id="0" name="X">self.X + (self.Speed*dt*self.direction)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="721779899144691">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="899108190277548" type="Flame">
+                    <param id="0" name="Object">FlameStop</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="748864519010756">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="938697254575716" type="Flame">
+                            <param id="0" name="Instance variable">IsMoving</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="393535100148436" type="Flame">
+                            <param id="0" name="Instance variable">direction</param>
+                            <param id="1" name="Value">self.direction * (-1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="108128937951642">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="523976598603132" type="Flame">
+                    <param id="0" name="Object">Tile_water</param>
+                </condition>
+                <condition id="-2" name="Compare Y" sid="146903265662676" type="Tile_water">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="Y co-ordinate">Flame.Y - 40</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="230156713936785" type="Flame">
+                    <param id="0" name="Instance variable">IsMoving</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="6" name="Set speed" sid="573052407828605" type="Flame">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="693608470303539" type="Flame" />
+            </actions>
+        </event-block>
+        <event-block sid="204393972402304">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="383828909505964" type="Flame">
+                    <param id="0" name="Object">PlayerRockInteraction</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="594596443433797" type="Flame">
+                    <param id="0" name="Instance variable">IsMoving</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="697763932603939" type="Flame">
+                    <param id="0" name="Instance variable">hasJustChangedDirection</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="993095663477280" type="Flame">
+                    <param id="0" name="Instance variable">hasJustChangedDirection</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="956017330684171" type="Flame">
+                    <param id="0" name="Instance variable">direction</param>
+                    <param id="1" name="Value">self.direction * (-1)</param>
+                </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="714809291608626" type="Flame">
+                    <param id="0" name="Duration">0.1</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;collisions&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="668457583468078">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="621131850610442" type="Flame">
+                    <param id="0" name="Instance variable">direction</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="621716168955589" type="Flame">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="534585377370899">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="612789028712837" type="Flame">
+                    <param id="0" name="Instance variable">direction</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">-1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="519312872567748" type="Flame">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="965638279537821">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="907595775356970" type="Flame">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="174598762202502" type="Player">
+                    <param id="0" name="Instance variable">IsImmune</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="503423240550384" type="System">
+                    <param id="0" name="Variable">PlayerHealth</param>
+                    <param id="1" name="Value">PlayerHealth - 1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="817234782443245">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="797646897109988" type="Player">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="X co-ordinate">Flame.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="247109767058576" type="Function">
+                            <param id="0" name="Name">&quot;Knockback&quot;</param>
+                            <param id="1" name="Parameter {n}">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="202914650870543">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="392995993850752" type="Player">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">Flame.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="304434934977191" type="Function">
+                            <param id="0" name="Name">&quot;Knockback&quot;</param>
+                            <param id="1" name="Parameter {n}">-1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="925585549073185">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="399222957860701" type="Flame">
+                    <param id="0" name="Tag">&quot;collisions&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="125768083294695" type="Flame">
+                    <param id="0" name="Instance variable">hasJustChangedDirection</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
