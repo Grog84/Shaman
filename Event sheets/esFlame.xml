@@ -47,10 +47,6 @@
                 <condition id="0" name="On collision with another object" sid="523976598603132" type="Flame">
                     <param id="0" name="Object">Tile_water</param>
                 </condition>
-                <condition id="-2" name="Compare Y" sid="146903265662676" type="Tile_water">
-                    <param id="0" name="Comparison">2</param>
-                    <param id="1" name="Y co-ordinate">Flame.Y - 40</param>
-                </condition>
             </conditions>
             <actions>
                 <action id="-10" name="Set value" sid="230156713936785" type="Flame">
@@ -132,6 +128,10 @@
                     <param id="0" name="Instance variable">IsImmune</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-10" name="Compare opacity" sid="215801537835990" type="Flame">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Opacity">90</param>
                 </condition>
             </conditions>
             <actions>

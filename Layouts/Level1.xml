@@ -478,7 +478,7 @@
                         <behavior-instance type="Timer" />
                         <behavior-instance type="Jumpthru">
                             <properties>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>

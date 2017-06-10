@@ -133,6 +133,10 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">0</param>
                 </condition>
+                <condition id="-10" name="Compare opacity" sid="545309952590372" type="Tornado">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Opacity">90</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-9" name="Set value" sid="336320827542181" type="System">
