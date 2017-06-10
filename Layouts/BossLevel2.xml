@@ -228,10 +228,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>128</x>
-                        <y>144</y>
+                        <x>-368</x>
+                        <y>-16</y>
                         <z>0</z>
-                        <width>448</width>
+                        <width>128</width>
                         <height>176</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>

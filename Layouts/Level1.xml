@@ -784,7 +784,7 @@
                         <character-width>32</character-width>
                         <character-height>32</character-height>
                         <character-set>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,:;&apos;?!=-_()</character-set>
-                        <text>Text</text>
+                        <text></text>
                         <scale>0.4</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Left</horizontal-alignment>
