@@ -117,131 +117,6 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="413620257946245">
-                            <conditions>
-                                <condition id="5" name="Compare axis" sid="370616708356988" type="Gamepad">
-                                    <param id="0" name="Gamepad">0</param>
-                                    <param id="1" name="Axis">1</param>
-                                    <param id="2" name="Comparison">4</param>
-                                    <param id="3" name="Value">40</param>
-                                </condition>
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="786025038583362" type="Player">
-                                    <param id="0" name="Instance variable">TilePositioning</param>
-                                </condition>
-                                <condition id="-4" name="Trigger once while true" sid="324839163675720" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="743683850526417" type="PlayerSprite">
-                                    <param id="0" name="Animation">&quot;Crouch&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="258425404801822">
-                            <conditions>
-                                <condition id="5" name="Compare axis" sid="572073580763086" type="Gamepad">
-                                    <param id="0" name="Gamepad">0</param>
-                                    <param id="1" name="Axis">1</param>
-                                    <param id="2" name="Comparison">2</param>
-                                    <param id="3" name="Value">40</param>
-                                </condition>
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="182070911323669" type="Player">
-                                    <param id="0" name="Instance variable">TilePositioning</param>
-                                </condition>
-                                <condition id="-4" name="Trigger once while true" sid="323139708783395" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="654786601341081" type="PlayerSprite">
-                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="676776467412259">
-                            <conditions>
-                                <condition behavior="Platform" id="5" name="On jump" sid="414204377345082" type="Player" />
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="138936002409790" type="PlayerSprite">
-                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="886988617201983">
-                            <conditions>
-                                <condition behavior="Platform" id="9" name="On landed" sid="824523426774036" type="Player" />
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block any="1" sid="564650627895457">
-                                    <conditions>
-                                        <condition id="5" name="Compare axis" sid="859962941649554" type="Gamepad">
-                                            <param id="0" name="Gamepad">0</param>
-                                            <param id="1" name="Axis">0</param>
-                                            <param id="2" name="Comparison">2</param>
-                                            <param id="3" name="Value">-20</param>
-                                        </condition>
-                                        <condition id="5" name="Compare axis" sid="399145821956348" type="Gamepad">
-                                            <param id="0" name="Gamepad">0</param>
-                                            <param id="1" name="Axis">0</param>
-                                            <param id="2" name="Comparison">4</param>
-                                            <param id="3" name="Value">20</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="4" name="Set animation" sid="345366122343062" type="PlayerSprite">
-                                            <param id="0" name="Animation">&quot;Walk&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="624281716419807">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="401120947348399" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="4" name="Set animation" sid="793234187044593" type="PlayerSprite">
-                                            <param id="0" name="Animation">&quot;Idle&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="337248611635637">
-                            <conditions>
-                                <condition behavior="Platform" id="8" name="On moved" sid="996633395635323" type="Player" />
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="844029478402030" type="PlayerSprite">
-                                    <param id="0" name="Animation">&quot;Walk&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="107344224047921">
-                            <conditions>
-                                <condition behavior="Platform" id="7" name="On stopped" sid="173894388675618" type="Player" />
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="881063628113799" type="PlayerSprite">
-                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="913373027642798">
-                            <conditions>
-                                <condition behavior="Platform" id="4" name="Is falling" sid="503510404328847" type="Player" />
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="899199250238094" type="PlayerSprite">
-                                    <param id="0" name="Animation">&quot;Falling&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
                     </sub-events>
                 </event-group>
                 <event-group description="" sid="669756896306352" title="LianeClimbing">
@@ -370,85 +245,6 @@
                                             <param id="0" name="X">self.X + (self.Speed/2.0)*dt</param>
                                         </action>
                                     </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="737430147705844">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="458826037664273" type="Player">
-                                    <param id="0" name="Instance variable">IsClimbing</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                                <condition id="1" name="Is overlapping another object" sid="634562996938231" type="Liane">
-                                    <param id="0" name="Object">Bark</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                        </event-block>
-                        <event-block sid="686151909085850">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="232711530221757" type="Player">
-                                    <param id="0" name="Instance variable">IsClimbing</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                                <condition id="-11" name="For Each" sid="452113656763731" type="System">
-                                    <param id="0" name="Object">Bark</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="853243194639623">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="921294375422050" type="Bark">
-                                            <param id="0" name="Instance variable">isPassage</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions />
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="659464304825102">
-                            <conditions>
-                                <condition id="5" name="Compare axis" sid="353459012970576" type="Gamepad">
-                                    <param id="0" name="Gamepad">0</param>
-                                    <param id="1" name="Axis">1</param>
-                                    <param id="2" name="Comparison">4</param>
-                                    <param id="3" name="Value">40</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="355904057000804" type="Player">
-                                    <param id="0" name="Instance variable">IsClimbing</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="574233762795185">
-                                    <conditions>
-                                        <condition id="-11" name="For Each" sid="617427237508129" type="System">
-                                            <param id="0" name="Object">Liane</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block sid="290845944421567">
-                                            <conditions>
-                                                <condition id="1" name="Is overlapping another object" sid="170834906334388" type="Liane">
-                                                    <param id="0" name="Object">Bark</param>
-                                                </condition>
-                                                <condition id="-8" name="Compare two values" sid="929582494983836" type="System">
-                                                    <param id="0" name="First value">abs(Liane.x-Player.x)</param>
-                                                    <param id="1" name="Comparison">2</param>
-                                                    <param id="2" name="Second value">20</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions />
-                                        </event-block>
-                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -1856,6 +1652,219 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="899069223297631">
+                    <conditions>
+                        <condition id="0" name="On function" sid="324587970379314" type="Function">
+                            <param id="0" name="Name">&quot;Knockback&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="134395523191810" type="Player">
+                            <param id="0" name="Instance variable">IsImmune</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="123949057041329" type="Player">
+                            <param id="0" name="Duration">self.ImmunityWindow</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;Immune&quot;</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" sid="707244265387817" type="PlayerSprite">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">Player.ImmunityWindow</param>
+                        </action>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="269314557839935" type="Player">
+                            <param id="0" name="Vector Y">-250</param>
+                        </action>
+                        <action behavior="Platform" id="1" name="Set max speed" sid="833938511909480" type="Player">
+                            <param id="0" name="Max Speed">600</param>
+                        </action>
+                        <action behavior="Platform" id="8" name="Set vector X" sid="433716039548404" type="Player">
+                            <param id="0" name="Vector X">600*Function.Param(0)</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="255146799289276" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action behavior="Platform" id="1" name="Set max speed" sid="325760494795274" type="Player">
+                            <param id="0" name="Max Speed">Player.BaseSpeed</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="987009857889705" type="Player">
+                            <param id="0" name="Instance variable">IsImmune</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="676838211408633" type="Function">
+                            <param id="0" name="Name">&quot;SetHeartValue&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="438375220842326">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="724720581096469" type="System">
+                            <param id="0" name="Variable">PlayerHealth</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="540875095041081" type="Function">
+                            <param id="0" name="Name">&quot;RespawnAtChkPoint&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="135056836675114">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="845432499426440" type="Player">
+                            <param id="0" name="Tag">&quot;Immune&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="687490598106525" type="Player">
+                            <param id="0" name="Instance variable">IsImmune</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="651682976413849" title="PlayerAnimations">
+            <sub-events>
+                <event-block sid="413620257946245">
+                    <conditions>
+                        <condition id="5" name="Compare axis" sid="370616708356988" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Axis">1</param>
+                            <param id="2" name="Comparison">4</param>
+                            <param id="3" name="Value">40</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="786025038583362" type="Player">
+                            <param id="0" name="Instance variable">TilePositioning</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="324839163675720" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="984956204457752" type="Player">
+                            <param id="0" name="Instance variable">IsClimbing</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="743683850526417" type="PlayerSprite">
+                            <param id="0" name="Animation">&quot;Crouch&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="258425404801822">
+                    <conditions>
+                        <condition id="5" name="Compare axis" sid="572073580763086" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Axis">1</param>
+                            <param id="2" name="Comparison">2</param>
+                            <param id="3" name="Value">40</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="182070911323669" type="Player">
+                            <param id="0" name="Instance variable">TilePositioning</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="323139708783395" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="948169081102898" type="Player">
+                            <param id="0" name="Instance variable">IsClimbing</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="654786601341081" type="PlayerSprite">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="676776467412259">
+                    <conditions>
+                        <condition behavior="Platform" id="5" name="On jump" sid="414204377345082" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="138936002409790" type="PlayerSprite">
+                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="886988617201983">
+                    <conditions>
+                        <condition behavior="Platform" id="9" name="On landed" sid="824523426774036" type="Player" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="564650627895457">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="859962941649554" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">-20</param>
+                                </condition>
+                                <condition id="5" name="Compare axis" sid="399145821956348" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">4</param>
+                                    <param id="3" name="Value">20</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="345366122343062" type="PlayerSprite">
+                                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="624281716419807">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="401120947348399" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="793234187044593" type="PlayerSprite">
+                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="337248611635637">
+                    <conditions>
+                        <condition behavior="Platform" id="8" name="On moved" sid="996633395635323" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="844029478402030" type="PlayerSprite">
+                            <param id="0" name="Animation">&quot;Walk&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="107344224047921">
+                    <conditions>
+                        <condition behavior="Platform" id="7" name="On stopped" sid="173894388675618" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="881063628113799" type="PlayerSprite">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="913373027642798">
+                    <conditions>
+                        <condition behavior="Platform" id="4" name="Is falling" sid="503510404328847" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="899199250238094" type="PlayerSprite">
+                            <param id="0" name="Animation">&quot;Falling&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="974834793966357">
                     <conditions>
                         <condition id="4" name="On finished" sid="601042899515384" type="PlayerSprite">
@@ -1954,77 +1963,73 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="899069223297631">
+                <event-block sid="790267241236794">
                     <conditions>
-                        <condition id="0" name="On function" sid="324587970379314" type="Function">
-                            <param id="0" name="Name">&quot;Knockback&quot;</param>
+                        <condition id="4" name="On finished" sid="994219067605716" type="PlayerSprite">
+                            <param id="0" name="Animation">&quot;EndPos&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="134395523191810" type="Player">
-                            <param id="0" name="Instance variable">IsImmune</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action behavior="Timer" id="0" name="Start timer" sid="123949057041329" type="Player">
-                            <param id="0" name="Duration">self.ImmunityWindow</param>
-                            <param id="1" name="Type">0</param>
-                            <param id="2" name="Tag">&quot;Immune&quot;</param>
-                        </action>
-                        <action behavior="Flash" id="0" name="Flash" sid="707244265387817" type="PlayerSprite">
-                            <param id="0" name="&apos;On&apos; time">0.1</param>
-                            <param id="1" name="&apos;Off&apos; time">0.1</param>
-                            <param id="2" name="Duration">Player.ImmunityWindow</param>
-                        </action>
-                        <action behavior="Platform" id="9" name="Set vector Y" sid="269314557839935" type="Player">
-                            <param id="0" name="Vector Y">-250</param>
-                        </action>
-                        <action behavior="Platform" id="1" name="Set max speed" sid="833938511909480" type="Player">
-                            <param id="0" name="Max Speed">600</param>
-                        </action>
-                        <action behavior="Platform" id="8" name="Set vector X" sid="433716039548404" type="Player">
-                            <param id="0" name="Vector X">600*Function.Param(0)</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="255146799289276" type="System">
-                            <param id="0" name="Seconds">0.1</param>
-                        </action>
-                        <action behavior="Platform" id="1" name="Set max speed" sid="325760494795274" type="Player">
-                            <param id="0" name="Max Speed">Player.BaseSpeed</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="987009857889705" type="Player">
-                            <param id="0" name="Instance variable">IsImmune</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="0" name="Call function" sid="676838211408633" type="Function">
-                            <param id="0" name="Name">&quot;SetHeartValue&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="197855614918379">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="805688168348576" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">4</param>
+                                    <param id="3" name="Value">20</param>
+                                </condition>
+                                <condition id="5" name="Compare axis" sid="313507335399214" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">-20</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="940375473336106">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="578247242939716" type="Player">
+                                            <param id="0" name="Instance variable">TilePositioning</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="585033270302415" type="PlayerSprite">
+                                            <param id="0" name="Animation">&quot;Walk&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
                 </event-block>
-                <event-block sid="438375220842326">
+                <event-block sid="170706201206082">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="724720581096469" type="System">
-                            <param id="0" name="Variable">PlayerHealth</param>
+                        <condition id="-7" name="Compare instance variable" sid="309681367411040" type="Player">
+                            <param id="0" name="Instance variable">IsClimbing</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
+                            <param id="2" name="Value">1</param>
                         </condition>
+                        <condition id="-4" name="Trigger once while true" sid="341550022741609" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="540875095041081" type="Function">
-                            <param id="0" name="Name">&quot;RespawnAtChkPoint&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
+                        <action id="4" name="Set animation" sid="221107535203427" type="PlayerSprite">
+                            <param id="0" name="Animation">&quot;Climb&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="135056836675114">
+                <event-block sid="436317817390933">
                     <conditions>
-                        <condition behavior="Timer" id="0" name="On timer" sid="845432499426440" type="Player">
-                            <param id="0" name="Tag">&quot;Immune&quot;</param>
+                        <condition id="2" name="Is playing" sid="778567247186994" type="PlayerSprite">
+                            <param id="0" name="Animation">&quot;Climb&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-10" name="Set value" sid="687490598106525" type="Player">
-                            <param id="0" name="Instance variable">IsImmune</param>
-                            <param id="1" name="Value">0</param>
+                        <action id="5" name="Set frame" sid="471383748646549" type="PlayerSprite">
+                            <param id="0" name="Frame number">int((Player.Y%32)/8)</param>
                         </action>
                     </actions>
                 </event-block>
