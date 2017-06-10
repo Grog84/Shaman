@@ -938,6 +938,7 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="DialogID" sid="298249946005239" type="number" />
+                <instance-variable name="HasBeenRead" sid="330124629513265" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="DestroyOutsideLayout" sid="192178884967852">
@@ -1234,13 +1235,13 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_55\Downloads\Sad.png" />
                 </animation>
                 <animation framecount="1" loop="0" name="AnaNormal" pingpong="0" repeatcount="1" repeatto="0" sid="512257597442837" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\PU\Downloads\Neutral.png" />
                 </animation>
                 <animation framecount="1" loop="0" name="AnaConfused" pingpong="0" repeatcount="1" repeatto="0" sid="470804974397683" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\PU\Downloads\Confuse.png" />
                 </animation>
                 <animation framecount="1" loop="0" name="AnaAngry" pingpong="0" repeatcount="1" repeatto="0" sid="316573740341059" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\PU\Downloads\Angry.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -1858,5 +1859,17 @@
         <file name="Albero5.json" />
         <file name="Albero6.json" />
         <file name="Albero7.json" />
+        <file name="Boss1.xml" />
+        <file name="Boss2.xml" />
+        <file name="Boss3.xml" />
+        <file name="Foresta.xml" />
+        <file name="GrottaAcqua.xml" />
+        <file name="GrottaRoccia.xml" />
+        <file name="GrottaVento.xml" />
+        <file name="Livello1.xml" />
+        <file name="Livello2.xml" />
+        <file name="Livello3.xml" />
+        <file name="Outro1.xml" />
+        <file name="Outro2.xml" />
     </files-folder>
 </c2project>

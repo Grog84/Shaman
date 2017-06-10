@@ -675,6 +675,7 @@
                     </properties>
                     <instance-variables>
                         <DialogID>0</DialogID>
+                        <HasBeenRead>0</HasBeenRead>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -807,7 +808,7 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0</opacity>
                     </world>
                 </instance>
             </instances>

@@ -174,20 +174,36 @@
                 </condition>
                 <condition id="-4" name="Trigger once while true" sid="177592474728013" type="System" />
             </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="428520925557819" type="DialogTrigger">
-                    <param id="0" name="Instance variable">DialogID</param>
-                    <param id="1" name="Value">DialogTrigger.UID</param>
-                </action>
-                <action id="-9" name="Set value" sid="990858113177057" type="System">
-                    <param id="0" name="Variable">IsDialogues</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="0" name="Call function" sid="331065323786735" type="Function">
-                    <param id="0" name="Name">&quot;StartDialogue&quot;</param>
-                    <param id="1" name="Parameter {n}">DialogTrigger.DialogID</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="971287198405315">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="268465004107479" type="DialogTrigger">
+                            <param id="0" name="Instance variable">HasBeenRead</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="428520925557819" type="DialogTrigger">
+                            <param id="0" name="Instance variable">DialogID</param>
+                            <param id="1" name="Value">DialogTrigger.UID</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="990858113177057" type="System">
+                            <param id="0" name="Variable">IsDialogues</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="331065323786735" type="Function">
+                            <param id="0" name="Name">&quot;StartDialogue&quot;</param>
+                            <param id="1" name="Parameter {n}">DialogTrigger.DialogID</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="197501298185014" type="DialogTrigger">
+                            <param id="0" name="Instance variable">HasBeenRead</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="391813578448551">
             <conditions>

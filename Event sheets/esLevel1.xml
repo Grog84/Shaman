@@ -4,6 +4,7 @@
     <name>esLevel1</name>
     <events>
         <include>Main</include>
+        <include>esDialogs</include>
         <include>esTornado</include>
         <event-block sid="683128595895657">
             <conditions>
@@ -21,6 +22,10 @@
                 <action id="-7" name="Set size" sid="180969593624727" type="CaveBkg">
                     <param id="0" name="Width">LayoutWidth</param>
                     <param id="1" name="Height">LayoutHeight</param>
+                </action>
+                <action id="1" name="Request project file" sid="289061580703783" type="AJAX">
+                    <param id="0" name="Tag">&quot;DialoghiLv1&quot;</param>
+                    <param id="1" name="File">Livello1.xml</param>
                 </action>
             </actions>
             <sub-events>
@@ -88,6 +93,18 @@
                 <action id="0" name="Call function" sid="120965073928919" type="Function">
                     <param id="0" name="Name">&quot;CreateMap&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="682192712170257">
+            <conditions>
+                <condition id="0" name="On completed" sid="635922699255761" type="AJAX">
+                    <param id="0" name="Tag">&quot;DialoghiLv1&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Load" sid="475140186893450" type="XML">
+                    <param id="0" name="XML">AJAX.LastData</param>
                 </action>
             </actions>
         </event-block>
