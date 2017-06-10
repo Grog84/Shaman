@@ -2,5 +2,347 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>esBossLevel2</name>
-    <events />
+    <events>
+        <include>Main</include>
+        <variable constant="0" name="RandomValue" sid="417282165063224" static="0" type="number">0</variable>
+        <variable constant="0" name="IsBeached" sid="115734178349646" static="0" type="number">0</variable>
+        <event-block sid="608847691396930">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="684763870926235" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="429655714218252" type="PlayerSprite">
+                    <param id="0" name="Pin to">Player</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <comment>Activates or deactivates tiles selection/absorption</comment>
+                <event-block sid="736797436112329">
+                    <conditions />
+                    <actions>
+                        <action id="3" name="Set at XY" sid="199715824260558" type="TilePosType">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">&quot;Rock&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="886764297390666" type="TilePosType">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">1</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="850793068113606" type="TilePosType">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">&quot;Air&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="522139972550021" type="TilePosType">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">1</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="536250543604505" type="TilePosType">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">&quot;Water&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="673121293233049" type="TilePosType">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">0</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="974493568313108" type="TilePosType">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">&quot;Fire&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="380570379173762">
+            <conditions>
+                <condition id="0" name="On function" sid="606118121355933" type="Function">
+                    <param id="0" name="Name">&quot;SpawnShark&quot;</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="355587287216204" type="SpawnPoints">
+                    <param id="0" name="Instance variable">ID</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">Function.Param(0)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="371396132352879" type="SpawnPoints">
+                    <param id="0" name="Object">Shark</param>
+                    <param id="1" name="Layer">&quot;Tiles&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="343264885059619">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="879614223120142" type="SpawnPoints">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="439142388242684" type="Shark">
+                            <param id="0" name="Angle">SpawnPoints.Angle1</param>
+                        </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="506495979454211" type="Shark">
+                            <param id="0" name="Speed">350</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="267891088816901" type="Shark">
+                            <param id="0" name="Angle">285</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="359779439493705" type="Shark">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="489332618143104" type="Debugtext">
+                            <param id="0" name="Text">Shark.Angle</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="176394544383285">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="432427711830183" type="SpawnPoints">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="324885863722699" type="Shark">
+                            <param id="0" name="Angle">SpawnPoints.Angle1</param>
+                        </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="946554748143864" type="Shark">
+                            <param id="0" name="Speed">350</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="163150125334040" type="Shark">
+                            <param id="0" name="Angle">283</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="734468862729446" type="Shark">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="365438494074214">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="878133876784833" type="SpawnPoints">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="590656307415588" type="Shark">
+                            <param id="0" name="Angle">SpawnPoints.Angle2</param>
+                        </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="840528274369314" type="Shark">
+                            <param id="0" name="Speed">350</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="217947768416152" type="Shark">
+                            <param id="0" name="Angle">257</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="525888302538074" type="Shark">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="8" name="Set flipped" sid="809294056244017" type="Shark">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="309243738923354">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="214861295325675" type="SpawnPoints">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="858525471608056" type="Shark">
+                            <param id="0" name="Angle">360</param>
+                        </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="390576152277291" type="Shark">
+                            <param id="0" name="Speed">350</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="190078004599845" type="Shark">
+                            <param id="0" name="Angle">255</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="830987257975017" type="Shark">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="8" name="Set flipped" sid="473431836613123" type="Shark">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="162100919751541">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="509874609865929" type="Shark" />
+                <condition id="-14" name="Compare variable" sid="852117341911246" type="System">
+                    <param id="0" name="Variable">IsBeached</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="395380856736223" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="0" name="Call function" sid="848434489300248" type="Function">
+                    <param id="0" name="Name">&quot;SpawnShark&quot;</param>
+                    <param id="1" name="Parameter {n}">int(random(4))</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="569686041689098">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="292766601667012" type="Shark">
+                    <param id="0" name="Object">Tile_Air</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="272826934482357">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="949703849375198" type="System">
+                            <param id="0" name="First value">Shark.ImagepointY(1)</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">Tile_Air.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="929380182787152" type="Tile_Air" />
+                    </actions>
+                </event-block>
+                <event-block sid="863249246512275">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="551092556306086" type="System">
+                            <param id="0" name="First value">Shark.ImagepointY(1)</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">Tile_Air.Y</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="291012787164694" type="System">
+                            <param id="0" name="First value">Shark.Bullet.AngleOfMotion</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="802923631974709" type="Shark">
+                            <param id="0" name="Speed">0</param>
+                        </action>
+                        <action behavior="Bullet" id="2" name="Set gravity" sid="644876600707376" type="Shark">
+                            <param id="0" name="Gravity">0</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="107026819932244" type="Shark">
+                            <param id="0" name="Object">Tile_Air</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="366779174768074" type="System">
+                            <param id="0" name="Variable">IsBeached</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="421402587983779" type="Shark">
+                            <param id="0" name="Angle">360</param>
+                        </action>
+                        <action id="0" name="Call function" sid="848426522581485" type="Function">
+                            <param id="0" name="Name">&quot;WaterAnimation&quot;</param>
+                            <param id="1" name="Parameter {n}">Tile_Air.UID</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="187967296362884" type="Shark">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="518273431847172" type="System">
+                            <param id="0" name="Seconds">5</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="693238131379699" type="Tile_Air" />
+                        <action behavior="Bullet" id="2" name="Set gravity" sid="833063971071349" type="Crystal">
+                            <param id="0" name="Gravity">200</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="374253215420235" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="292170613159984" type="Shark">
+                            <param id="0" name="Collisions">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="165988322924215" type="System">
+                            <param id="0" name="Variable">IsBeached</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="648369821742932" type="Shark" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="164610458373142">
+            <conditions>
+                <condition id="0" name="On function" sid="262538769413746" type="Function">
+                    <param id="0" name="Name">&quot;WaterAnimation&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="683788317334490" type="Tile_Air">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="191525549226720">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="853268289817116" type="System">
+                            <param id="0" name="Variable">IsBeached</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="693415239597282" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="350231246709362" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="511767503647562" type="Tile_Air">
+                            <param id="0" name="Object">Crystal</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="664777533424391" type="Crystal">
+                            <param id="0" name="X">Tile_Air.X</param>
+                            <param id="1" name="Y">Tile_Air.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="848081713076281">
+            <conditions>
+                <condition id="3" name="Compare frame" sid="240086195131164" type="BkgTile">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">31</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Solid" id="0" name="Set enabled" sid="735619862087048" type="BkgTile">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="568745157441884">
+            <conditions>
+                <condition id="3" name="Compare frame" sid="476627987491121" type="BkgTile">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">32</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Solid" id="0" name="Set enabled" sid="822953666023781" type="BkgTile">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>
