@@ -1762,6 +1762,24 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Sprite" sid="942953430047124">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="320274653322389" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\PU\Downloads\drive-download-20170610T132120Z-001\livello 2 piano 2.png">
+                        <collision-poly>
+                            <point x="0.5375" y="0.716667" />
+                            <point x="0.5" y="0.73125" />
+                            <point x="0.81875" y="0.241667" />
+                            <point x="0.923437" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0.5" y="1" />
+                            <point x="0.665625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Tile" plugin-id="Sprite" sid="792340356286362">

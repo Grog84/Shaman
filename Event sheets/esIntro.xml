@@ -165,5 +165,17 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="814438644573021">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="718679800597714" type="PlayerSprite">
+                    <param id="0" name="Object">End</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="240363773512972" type="System">
+                    <param id="0" name="Layout">Level1</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

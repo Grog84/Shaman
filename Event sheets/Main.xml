@@ -734,6 +734,16 @@
                                                         <action id="-9" name="Destroy" sid="789618701067371" type="ValidArea" />
                                                     </actions>
                                                 </event-block>
+                                                <event-block sid="641696396533851">
+                                                    <conditions>
+                                                        <condition id="1" name="Is overlapping another object" sid="381715843121016" type="Tile_Air">
+                                                            <param id="0" name="Object">Bark</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Destroy" sid="875696114683131" type="ValidArea" />
+                                                    </actions>
+                                                </event-block>
                                                 <event-block sid="698938781896340">
                                                     <conditions>
                                                         <condition behavior="LineOfSight" id="0" inverted="1" name="Has LOS to object" sid="732171394069985" type="Player">
@@ -1029,7 +1039,7 @@
                             <actions>
                                 <action id="0" name="Spawn another object" sid="143414130309011" type="PlayerSprite">
                                     <param id="0" name="Object">Grigliainvisibile</param>
-                                    <param id="1" name="Layer">0</param>
+                                    <param id="1" name="Layer">&quot;Tiles&quot;</param>
                                     <param id="2" name="Image point">2</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="792212817693423" type="Grigliainvisibile">
