@@ -740,9 +740,38 @@
                                                             <param id="0" name="Object">Bark</param>
                                                         </condition>
                                                     </conditions>
-                                                    <actions>
-                                                        <action id="-9" name="Destroy" sid="875696114683131" type="ValidArea" />
-                                                    </actions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block any="1" sid="815214055152756">
+                                                            <conditions>
+                                                                <condition id="3" name="Compare frame" sid="941609264570605" type="Bark">
+                                                                    <param id="0" name="Comparison">0</param>
+                                                                    <param id="1" name="Number">6</param>
+                                                                </condition>
+                                                                <condition id="3" name="Compare frame" sid="416361471113194" type="Bark">
+                                                                    <param id="0" name="Comparison">0</param>
+                                                                    <param id="1" name="Number">5</param>
+                                                                </condition>
+                                                                <condition id="3" name="Compare frame" sid="737671973200364" type="Bark">
+                                                                    <param id="0" name="Comparison">0</param>
+                                                                    <param id="1" name="Number">4</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-9" name="Destroy" sid="875696114683131" type="ValidArea" />
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="655407836517376">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="711006753760078" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-26" name="Move to layer" sid="166647788832039" type="ValidArea">
+                                                                    <param id="0" name="Layer">&quot;Tiles&quot;</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                                 <event-block sid="698938781896340">
                                                     <conditions>
