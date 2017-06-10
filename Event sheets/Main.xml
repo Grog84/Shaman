@@ -135,6 +135,10 @@
                                     <param id="2" name="Comparison">2</param>
                                     <param id="3" name="Value">-40</param>
                                 </condition>
+                                <condition id="-10" name="Compare opacity" sid="247102365558762" type="Liane">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Opacity">90</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action behavior="Platform" id="6" name="Set max fall speed" sid="273388384244175" type="Player">
@@ -162,6 +166,10 @@
                                     <param id="1" name="Axis">1</param>
                                     <param id="2" name="Comparison">4</param>
                                     <param id="3" name="Value">40</param>
+                                </condition>
+                                <condition id="-10" name="Compare opacity" sid="622006315744780" type="Liane">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Opacity">90</param>
                                 </condition>
                             </conditions>
                             <actions>
