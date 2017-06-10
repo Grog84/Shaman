@@ -1762,23 +1762,108 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite" sid="942953430047124">
+        <object-type name="FlameBoss" sid="250910704923842">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="320274653322389" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\PU\Downloads\drive-download-20170610T132120Z-001\livello 2 piano 2.png">
+                <animation framecount="6" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="450486287549958" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0.5375" y="0.716667" />
-                            <point x="0.5" y="0.73125" />
-                            <point x="0.81875" y="0.241667" />
-                            <point x="0.923437" y="0.5" />
-                            <point x="1" y="1" />
-                            <point x="0.5" y="1" />
-                            <point x="0.665625" y="0.5" />
+                            <point x="0.0625" y="0.105469" />
+                            <point x="0.9375" y="0.105469" />
+                            <point x="0.942708" y="0.960938" />
+                            <point x="0.09375" y="0.960938" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0625" y="0.105469" />
+                            <point x="0.9375" y="0.105469" />
+                            <point x="0.942708" y="0.960938" />
+                            <point x="0.09375" y="0.960938" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0625" y="0.105469" />
+                            <point x="0.9375" y="0.105469" />
+                            <point x="0.942708" y="0.960938" />
+                            <point x="0.09375" y="0.960938" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0625" y="0.105469" />
+                            <point x="0.9375" y="0.105469" />
+                            <point x="0.942708" y="0.960938" />
+                            <point x="0.09375" y="0.960938" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0625" y="0.105469" />
+                            <point x="0.9375" y="0.105469" />
+                            <point x="0.942708" y="0.960938" />
+                            <point x="0.09375" y="0.960938" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0625" y="0.105469" />
+                            <point x="0.9375" y="0.105469" />
+                            <point x="0.942708" y="0.960938" />
+                            <point x="0.09375" y="0.960938" />
                         </collision-poly>
                     </frame>
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="FireCrystal" sid="739309200623561">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="10" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="762036863906227" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="FireBall" sid="726273404059515">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="304573170300352" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\PU\Downloads\SQPallaDiFuoco.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.25" />
+                            <point x="0.5" y="0.15625" />
+                            <point x="0.78125" y="0.21875" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.78125" y="0.78125" />
+                            <point x="0.5" y="0.84375" />
+                            <point x="0.28125" y="0.71875" />
+                            <point x="0.09375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="FireEffect" sid="669924110948438">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="650072353203141" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\PU\Downloads\SQAlbero-PiantaRimbalzanteInFiamme.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground" sid="915863574556289">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\PU\Downloads\livello 4 FINALE.png" />
         </object-type>
     </object-folder>
     <families>

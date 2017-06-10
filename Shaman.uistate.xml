@@ -13,7 +13,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="1">Intro</layout>
         <layout order="2">Level1</layout>
         <layout order="3">Level2</layout>
-        <event-sheet active="1" order="0">Main</event-sheet>
+        <layout active="1" order="9">BossLevel3</layout>
+        <event-sheet order="0">Main</event-sheet>
         <event-sheet order="5">esDialogs</event-sheet>
         <event-sheet order="4">esLevel1</event-sheet>
         <event-sheet order="6">esLevel3</event-sheet>
@@ -31,13 +32,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="0" name="Obstacle" />
     </families-expanded>
     <folders-expanded>
-        <folder expanded="0" path="object-folder/" />
+        <folder expanded="1" path="object-folder/" />
         <folder expanded="0" path="layout-folder/" />
-        <folder expanded="1" path="event-folder/" />
+        <folder expanded="0" path="event-folder/" />
         <folder expanded="0" path="event-folder/Enemies/" />
         <folder expanded="0" path="event-folder/Levels/" />
         <folder expanded="0" path="event-folder/BossFights/" />
-        <folder expanded="1" path="event-folder/Environment/" />
+        <folder expanded="0" path="event-folder/Environment/" />
         <folder expanded="0" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
@@ -87,6 +88,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/WaterBkg/" />
         <folder expanded="1" path="animation-folder/Flame/" />
         <folder expanded="1" path="animation-folder/FlameStop/" />
-        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/FlameBoss/" />
+        <folder expanded="1" path="animation-folder/FireCrystal/" />
+        <folder expanded="1" path="animation-folder/FireBall/" />
+        <folder expanded="1" path="animation-folder/FireEffect/" />
     </folders-expanded>
 </c2uistate>
