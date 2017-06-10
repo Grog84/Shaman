@@ -684,8 +684,10 @@
                                 <condition id="1" name="Is overlapping another object" sid="782192627402205" type="Interaction">
                                     <param id="0" name="Object">Tile</param>
                                 </condition>
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="555776947525720" type="Player">
-                                    <param id="0" name="Instance variable">IsAbsorbing</param>
+                                <condition id="-7" name="Compare instance variable" sid="845390715410295" type="Player">
+                                    <param id="0" name="Instance variable">IsAbsorbingNbr</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -709,8 +711,9 @@
                                             <param id="0" name="Instance variable">IsAbsorbing</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
-                                        <action id="-14" name="Toggle boolean" sid="975853647786086" type="Player">
-                                            <param id="0" name="Instance variable">IsAbsorbing</param>
+                                        <action id="-10" name="Set value" sid="833695089161258" type="Player">
+                                            <param id="0" name="Instance variable">IsAbsorbingNbr</param>
+                                            <param id="1" name="Value">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -733,8 +736,9 @@
                                             <param id="0" name="Instance variable">IsAbsorbing</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
-                                        <action id="-14" name="Toggle boolean" sid="368797695141744" type="Player">
-                                            <param id="0" name="Instance variable">IsAbsorbing</param>
+                                        <action id="-10" name="Set value" sid="336463312057644" type="Player">
+                                            <param id="0" name="Instance variable">IsAbsorbingNbr</param>
+                                            <param id="1" name="Value">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -757,8 +761,9 @@
                                             <param id="0" name="Instance variable">IsAbsorbing</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
-                                        <action id="-14" name="Toggle boolean" sid="201596245744814" type="Player">
-                                            <param id="0" name="Instance variable">IsAbsorbing</param>
+                                        <action id="-10" name="Set value" sid="648145950245472" type="Player">
+                                            <param id="0" name="Instance variable">IsAbsorbingNbr</param>
+                                            <param id="1" name="Value">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -2815,8 +2820,9 @@
                             <param id="0" name="Instance variable">TotalNumberOfTiles</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-14" name="Toggle boolean" sid="705633170684471" type="Player">
-                            <param id="0" name="Instance variable">IsAbsorbing</param>
+                        <action id="-10" name="Set value" sid="705633170684471" type="Player">
+                            <param id="0" name="Instance variable">IsAbsorbingNbr</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                     <sub-events>

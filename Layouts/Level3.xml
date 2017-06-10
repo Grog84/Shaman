@@ -880,6 +880,7 @@
                         <AbsorbWait>0.5</AbsorbWait>
                         <CanAbsorb>1</CanAbsorb>
                         <ImmunityWindow>1</ImmunityWindow>
+                        <IsAbsorbingNbr>0</IsAbsorbingNbr>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="BoundToLayout">
