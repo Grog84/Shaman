@@ -1885,6 +1885,46 @@
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="803838823156422">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="602502751994937" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">4</param>
+                                    <param id="3" name="Value">20</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="231807148068828" type="Player">
+                                    <param id="0" name="Instance variable">TilePositioning</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="546522635404656" type="PlayerSprite">
+                                    <param id="0" name="Animation">&quot;Walking&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="554854505003779">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="434744473892142" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">-20</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="267570622152347" type="Player">
+                                    <param id="0" name="Instance variable">TilePositioning</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="963131504170839" type="PlayerSprite">
+                                    <param id="0" name="Animation">&quot;Walking&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="225359534080658">
                     <conditions>
@@ -3900,5 +3940,18 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="671362720713452">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="600158643999130" type="Keyboard">
+                    <param id="0" name="Key">32 (Barra Spaziatrice)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="654526324840183" type="Function">
+                    <param id="0" name="Name">&quot;RespawnAtChkPoint&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
