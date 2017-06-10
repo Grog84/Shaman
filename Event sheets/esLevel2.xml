@@ -4,6 +4,7 @@
     <name>esLevel2</name>
     <events>
         <include>Main</include>
+        <include>esDialogs</include>
         <include>esBird</include>
         <event-block sid="924907641071137">
             <conditions>
@@ -17,6 +18,10 @@
                 <action behavior="Pin" id="0" name="Pin to object" sid="445184208927668" type="PlayerSprite">
                     <param id="0" name="Pin to">Player</param>
                     <param id="1" name="Mode">0</param>
+                </action>
+                <action id="1" name="Request project file" sid="757193755272578" type="AJAX">
+                    <param id="0" name="Tag">&quot;DialoghiLv2&quot;</param>
+                    <param id="1" name="File">Livello2.xml</param>
                 </action>
             </actions>
             <sub-events>
@@ -100,6 +105,18 @@
             <actions>
                 <action id="-2" name="Go to layout" sid="795613450946377" type="System">
                     <param id="0" name="Layout">BossLevel2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="827770894666344">
+            <conditions>
+                <condition id="0" name="On completed" sid="832292148289379" type="AJAX">
+                    <param id="0" name="Tag">&quot;DialoghiLv2&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Load" sid="944220240210453" type="XML">
+                    <param id="0" name="XML">AJAX.LastData</param>
                 </action>
             </actions>
         </event-block>

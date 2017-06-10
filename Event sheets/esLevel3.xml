@@ -12,6 +12,7 @@
         <variable constant="0" name="Albero7" sid="479397688880823" static="0" type="text"></variable>
         <include>Main</include>
         <include>esFlame</include>
+        <include>esDialogs</include>
         <include>SpecialTies</include>
         <event-block sid="340481393066261">
             <conditions>
@@ -53,6 +54,10 @@
                 <action id="1" name="Request project file" sid="174078523972457" type="AJAX">
                     <param id="0" name="Tag">&quot;albero7&quot;</param>
                     <param id="1" name="File">Albero7.json</param>
+                </action>
+                <action id="1" name="Request project file" sid="955165279534546" type="AJAX">
+                    <param id="0" name="Tag">&quot;DialoghiLv3&quot;</param>
+                    <param id="1" name="File">Livello3.xml</param>
                 </action>
             </actions>
             <sub-events>
@@ -227,6 +232,18 @@
             <actions>
                 <action id="-2" name="Go to layout" sid="605278065064944" type="System">
                     <param id="0" name="Layout">BossLevel3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="349769805254342">
+            <conditions>
+                <condition id="0" name="On completed" sid="886905316123139" type="AJAX">
+                    <param id="0" name="Tag">&quot;DialoghiLv3&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Load" sid="400227425766193" type="XML">
+                    <param id="0" name="XML">AJAX.LastData</param>
                 </action>
             </actions>
         </event-block>
