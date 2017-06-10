@@ -1537,7 +1537,7 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="262861658639573" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.511111" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.511111" original-source="C:\Users\PU\Downloads\SQSelezionatoreElemento.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -1552,10 +1552,31 @@
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="160092287804066" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="PlayerSpawn" x="0.5" y="0" />
-                    </frame>
+                <animation framecount="11" loop="0" name="Activate" pingpong="0" repeatcount="1" repeatto="0" sid="160092287804066" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.833333" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.833333" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.833333" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.833333" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.833333" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.833333" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.833333" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.833333" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.833333" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.833333" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.833333" />
+                </animation>
+                <animation framecount="11" loop="0" name="Deactivate" pingpong="0" repeatcount="1" repeatto="0" sid="485548524288624" speed="6">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>

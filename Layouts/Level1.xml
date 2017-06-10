@@ -538,11 +538,11 @@
                         <x>16</x>
                         <y>-112</y>
                         <z>0</z>
-                        <width>32</width>
-                        <height>32</height>
+                        <width>96</width>
+                        <height>96</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0.833333313</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1152,7 +1152,7 @@
                         <x>216</x>
                         <y>24</y>
                         <z>0</z>
-                        <width>150</width>
+                        <width>140</width>
                         <height>45</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
