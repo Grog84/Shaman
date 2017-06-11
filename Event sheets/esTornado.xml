@@ -17,10 +17,15 @@
                 </action>
             </actions>
         </event-block>
-        <event-block any="1" sid="699830608027138">
+        <event-block sid="699830608027138">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="460993323962739" type="Tornado">
                     <param id="0" name="Object">TornadoStop</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="953672836435669" type="Tornado">
+                    <param id="0" name="Instance variable">hasJustChangedDirection</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions />
@@ -37,6 +42,15 @@
                         <action id="-10" name="Set value" sid="578496947232346" type="Tornado">
                             <param id="0" name="Instance variable">direction</param>
                             <param id="1" name="Value">self.direction * (-1)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="961874489929902" type="Tornado">
+                            <param id="0" name="Instance variable">hasJustChangedDirection</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="941795091230649" type="Tornado">
+                            <param id="0" name="Duration">0.1</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;collisions&quot;</param>
                         </action>
                     </actions>
                 </event-block>

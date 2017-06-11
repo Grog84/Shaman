@@ -530,7 +530,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <orderID>0</orderID>
+                        <orderID>1</orderID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />

@@ -20,6 +20,10 @@
                     <param id="0" name="Tag">&quot;albero&quot;</param>
                     <param id="1" name="File">AlberoBoss.json</param>
                 </action>
+                <action id="-9" name="Set value" sid="247154524930262" type="System">
+                    <param id="0" name="Variable">LastCheckPoint</param>
+                    <param id="1" name="Value">1</param>
+                </action>
             </actions>
             <sub-events>
                 <comment>Activates or deactivates tiles selection/absorption</comment>
@@ -60,6 +64,15 @@
                             <param id="0" name="X">3</param>
                             <param id="1" name="Y">0</param>
                             <param id="2" name="Value">&quot;Fire&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="286274803910422">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Call function" sid="401695631440912" type="Function">
+                            <param id="0" name="Name">&quot;SetHUDTileVisibility&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
@@ -159,6 +172,7 @@
                     <param id="0" name="Name">&quot;Knockback&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
+                <action id="-9" name="Destroy" sid="525599586757896" type="FireBall" />
             </actions>
         </event-block>
         <event-block sid="172743038033899">
@@ -384,6 +398,136 @@
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="103405276391568">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="156031454857882" type="Tile_water">
+                    <param id="0" name="Object">FlameBossHitbox</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="542192899963031" type="System" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="415761131049396" type="FlameBoss">
+                    <param id="0" name="Instance variable">Health</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Call function" sid="930531177479655" type="Function">
+                    <param id="0" name="Name">&quot;SetFlameBossAnimation&quot;</param>
+                    <param id="1" name="Parameter {n}">FlameBoss.Health</param>
+                </action>
+                <action id="-9" name="Destroy" sid="775631912574058" type="Tile_water" />
+            </actions>
+        </event-block>
+        <event-block sid="397236255556725">
+            <conditions>
+                <condition id="0" name="On function" sid="444174310902527" type="Function">
+                    <param id="0" name="Name">&quot;SetFlameBossAnimation&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="819505489600892">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="235581877422658" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="310777594465964" type="FlameBoss">
+                            <param id="0" name="Animation">&quot;3Lives&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="672319938638259">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="436292297663815" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="153705617710625" type="FlameBoss">
+                            <param id="0" name="Animation">&quot;2Lives&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="899826162528787">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="498368129136275" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="581359051142340" type="FlameBoss">
+                            <param id="0" name="Animation">&quot;1Lives&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="149917664043818">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="877190681124301" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="791979704165456" type="FlameBoss">
+                            <param id="0" name="Animation">&quot;0Lives&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="651218374469977">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="259960227743079" type="Player">
+                    <param id="0" name="Object">FlameBoss</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="881458230750175" type="System">
+                    <param id="0" name="Variable">PlayerHealth</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Call function" sid="667012733230591" type="Function">
+                    <param id="0" name="Name">&quot;Knockback&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="278284250258321">
+            <conditions>
+                <condition id="9" name="Is overlapping at offset" sid="905025559013262" type="Player">
+                    <param id="0" name="Object">BkgTile</param>
+                    <param id="1" name="Offset X">0</param>
+                    <param id="2" name="Offset Y">2</param>
+                </condition>
+                <condition id="3" name="Compare frame" sid="107668308886463" type="BkgTile">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">35</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="537105210727088" type="System" />
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="489750378538422" type="System">
+                    <param id="0" name="Variable">PlayerHealth</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Call function" sid="584227038456192" type="Function">
+                    <param id="0" name="Name">&quot;Knockback&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>
