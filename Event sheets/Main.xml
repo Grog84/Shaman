@@ -3285,6 +3285,9 @@
                                                                     <param id="0" name="Instance variable">DialogID</param>
                                                                     <param id="1" name="Value">MapArray.At(loopindex(&quot;X_idx&quot;), loopindex(&quot;Y_idx&quot;))%2000</param>
                                                                 </action>
+                                                                <action id="-16" name="Set opacity" sid="962572967787109" type="DialogTrigger">
+                                                                    <param id="0" name="Opacity">0</param>
+                                                                </action>
                                                             </actions>
                                                         </event-block>
                                                         <event-block sid="857478981245911">
@@ -3376,6 +3379,9 @@
                                                                 <action id="-10" name="Set value" sid="685167512372749" type="RockInfinite">
                                                                     <param id="0" name="Instance variable">orderID</param>
                                                                     <param id="1" name="Value">MapArray.At(loopindex(&quot;X_idx&quot;), loopindex(&quot;Y_idx&quot;))%6000</param>
+                                                                </action>
+                                                                <action id="-16" name="Set opacity" sid="771599781060746" type="RockInfinite">
+                                                                    <param id="0" name="Opacity">0</param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>

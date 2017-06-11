@@ -366,7 +366,7 @@
                     <conditions>
                         <condition id="6" name="On button pressed" sid="527746564496504" type="Gamepad">
                             <param id="0" name="Gamepad">0</param>
-                            <param id="1" name="Button">2</param>
+                            <param id="1" name="Button">0</param>
                         </condition>
                     </conditions>
                     <actions />

@@ -1861,7 +1861,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="TiledBackground" sid="915863574556289">
+        <object-type name="Vulcano" sid="915863574556289">
             <plugin id="TiledBg" />
             <texture original-source="C:\Users\PU\Downloads\livello 4 FINALE.png" />
         </object-type>
@@ -2220,6 +2220,14 @@
         <object-type name="SpriteFont2" sid="359177019930205">
             <plugin id="Spritefont2" />
             <texture original-source="C:\Users\Cristina\Documents\Downloads\alfabetario_nuovo_pixeled.png" />
+        </object-type>
+        <object-type name="Mountains" sid="815422173822380">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\PU\Downloads\livello 2 FINALE.png" />
+        </object-type>
+        <object-type name="MountainsBkg" sid="873907198670335">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\PU\Downloads\livello 2 sfondo.png" />
         </object-type>
     </object-folder>
     <families>

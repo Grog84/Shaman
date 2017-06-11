@@ -23,6 +23,13 @@
                     <param id="0" name="Tag">&quot;DialoghiLv2&quot;</param>
                     <param id="1" name="File">Livello2.xml</param>
                 </action>
+                <action id="-7" name="Set size" sid="209814339995878" type="MountainsBkg">
+                    <param id="0" name="Width">LayoutWidth</param>
+                    <param id="1" name="Height">LayoutHeight</param>
+                </action>
+                <action id="-5" name="Set width" sid="398574342835615" type="Mountains">
+                    <param id="0" name="Width">LayoutWidth</param>
+                </action>
             </actions>
             <sub-events>
                 <comment>Activates or deactivates tiles selection/absorption</comment>
