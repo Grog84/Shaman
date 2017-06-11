@@ -3050,7 +3050,7 @@
                 </event-block>
                 <event-block sid="297472952697575">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="935000722686062" type="Tile">
+                        <condition id="1" name="Is overlapping another object" sid="935000722686062" type="Tile">
                             <param id="0" name="Object">Player</param>
                         </condition>
                         <condition id="-7" name="Compare instance variable" sid="582045001322111" type="Tile">

@@ -2277,6 +2277,28 @@
             <plugin id="TiledBg" />
             <texture original-source="C:\Users\PU\Downloads\livello 2 FINALE.png" />
         </object-type>
+        <object-type name="Tend" sid="115450203267592">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="765200632184591">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="786426318699987" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cristina\Documents\Downloads\Tend.png">
+                        <collision-poly>
+                            <point x="0.3375" y="0.391304" />
+                            <point x="0.5" y="0.0652174" />
+                            <point x="0.79375" y="0.23913" />
+                            <point x="0.775" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Tile" plugin-id="Sprite" sid="792340356286362">

@@ -10,15 +10,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="2">BossLevel3</layout>
+        <layout order="1">Intro</layout>
         <event-sheet order="0">Main</event-sheet>
-        <event-sheet order="1">esTornado</event-sheet>
-        <event-sheet order="3">esBossLevel1</event-sheet>
-        <event-sheet order="4">esBossLevel2</event-sheet>
-        <event-sheet order="5">esBossLevel3</event-sheet>
-        <event-sheet order="6">esLevel1</event-sheet>
-        <event-sheet order="7">esLevel2</event-sheet>
-        <event-sheet active="1" order="8">esLevel3</event-sheet>
+        <event-sheet active="1" order="2">esIntro</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -103,5 +97,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Sprite4/" />
         <folder expanded="1" path="animation-folder/FlameBossHitbox/" />
         <folder expanded="1" path="animation-folder/Cristallo/" />
+        <folder expanded="1" path="animation-folder/Tend/" />
     </folders-expanded>
 </c2uistate>

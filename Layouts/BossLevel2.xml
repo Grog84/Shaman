@@ -3084,7 +3084,7 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0</opacity>
                     </world>
                 </instance>
                 <instance type="Player" uid="401">
@@ -3169,7 +3169,7 @@
                         <hotspotX>0.449999988</hotspotX>
                         <hotspotY>0.5090909</hotspotY>
                         <angle>0</angle>
-                        <opacity>0.5</opacity>
+                        <opacity>0</opacity>
                     </world>
                 </instance>
             </instances>
