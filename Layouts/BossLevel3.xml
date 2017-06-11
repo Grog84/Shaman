@@ -508,7 +508,7 @@
                     <behavior-instances>
                         <behavior-instance type="Solid">
                             <properties>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Physics">
@@ -551,7 +551,7 @@
                     <behavior-instances>
                         <behavior-instance type="Solid">
                             <properties>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Physics">
@@ -1824,7 +1824,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <TreeType>0</TreeType>
+                        <TreeType>1</TreeType>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -1914,6 +1914,18 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>50</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1980,126 +1992,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <FireSpreadSpeed>40</FireSpreadSpeed>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>448</x>
-                        <y>296</y>
+                        <y>304</y>
                         <z>0</z>
                         <width>192</width>
                         <height>256</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Player" uid="252">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <TotalNumberOfTiles>0</TotalNumberOfTiles>
-                        <RockTiles>0</RockTiles>
-                        <AirTiles>0</AirTiles>
-                        <WaterTiles>0</WaterTiles>
-                        <TilePositioning>false</TilePositioning>
-                        <Speed>200</Speed>
-                        <BaseSpeed>100</BaseSpeed>
-                        <JumpSpeed>300</JumpSpeed>
-                        <MaxSpeed>0</MaxSpeed>
-                        <Yspeed>0</Yspeed>
-                        <OnTheGround>false</OnTheGround>
-                        <LastAirTile>0</LastAirTile>
-                        <RockTileRange>3</RockTileRange>
-                        <AirTileRange>4</AirTileRange>
-                        <WaterTileRange>2</WaterTileRange>
-                        <ClimbingSpeed>100</ClimbingSpeed>
-                        <IsClimbing>0</IsClimbing>
-                        <TimeBeforeIdle>20</TimeBeforeIdle>
-                        <CanPlaceTile>true</CanPlaceTile>
-                        <TilePlacingTimer>0.5</TilePlacingTimer>
-                        <IsAbsorbing>false</IsAbsorbing>
-                        <IsImmune>0</IsImmune>
-                        <AbsorbWait>0.5</AbsorbWait>
-                        <CanAbsorb>1</CanAbsorb>
-                        <ImmunityWindow>1</ImmunityWindow>
-                        <IsAbsorbingNbr>0</IsAbsorbingNbr>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="BoundToLayout">
-                            <properties>
-                                <bound-by>Edge</bound-by>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="ScrollTo">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Platform">
-                            <properties>
-                                <max-speed>100</max-speed>
-                                <acceleration>1500</acceleration>
-                                <deceleration>1500</deceleration>
-                                <jump-strength>370</jump-strength>
-                                <gravity>1500</gravity>
-                                <max-fall-speed>300</max-fall-speed>
-                                <double-jump>Disabled</double-jump>
-                                <jump-sustain>0</jump-sustain>
-                                <default-controls>Yes</default-controls>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="LineOfSight">
-                            <properties>
-                                <obstacles>Solids</obstacles>
-                                <range>10000</range>
-                                <cone-of-view>360</cone-of-view>
-                                <use-collision-cells>Yes</use-collision-cells>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Timer" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-96</x>
-                        <y>384</y>
-                        <z>0</z>
-                        <width>20</width>
-                        <height>55</height>
-                        <depth>0</depth>
-                        <hotspotX>0.449999988</hotspotX>
-                        <hotspotY>0.5090909</hotspotY>
-                        <angle>0</angle>
-                        <opacity>0</opacity>
-                    </world>
-                </instance>
-                <instance type="PlayerSprite" uid="253">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Pin" />
-                        <behavior-instance type="Timer" />
-                        <behavior-instance type="Flash" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-96</x>
-                        <y>384</y>
-                        <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -2406,6 +2309,195 @@
                         <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="CheckPoint" uid="238">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <orderID>0</orderID>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>16</x>
+                        <y>400</y>
+                        <z>0</z>
+                        <width>96</width>
+                        <height>96</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.833333313</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0</opacity>
+                    </world>
+                </instance>
+                <instance type="Player" uid="252">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <TotalNumberOfTiles>0</TotalNumberOfTiles>
+                        <RockTiles>0</RockTiles>
+                        <AirTiles>0</AirTiles>
+                        <WaterTiles>0</WaterTiles>
+                        <TilePositioning>false</TilePositioning>
+                        <Speed>200</Speed>
+                        <BaseSpeed>100</BaseSpeed>
+                        <JumpSpeed>300</JumpSpeed>
+                        <MaxSpeed>0</MaxSpeed>
+                        <Yspeed>0</Yspeed>
+                        <OnTheGround>false</OnTheGround>
+                        <LastAirTile>0</LastAirTile>
+                        <RockTileRange>3</RockTileRange>
+                        <AirTileRange>4</AirTileRange>
+                        <WaterTileRange>2</WaterTileRange>
+                        <ClimbingSpeed>100</ClimbingSpeed>
+                        <IsClimbing>0</IsClimbing>
+                        <TimeBeforeIdle>20</TimeBeforeIdle>
+                        <CanPlaceTile>true</CanPlaceTile>
+                        <TilePlacingTimer>0.5</TilePlacingTimer>
+                        <IsAbsorbing>false</IsAbsorbing>
+                        <IsImmune>0</IsImmune>
+                        <AbsorbWait>0.5</AbsorbWait>
+                        <CanAbsorb>1</CanAbsorb>
+                        <ImmunityWindow>1</ImmunityWindow>
+                        <IsAbsorbingNbr>0</IsAbsorbingNbr>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="BoundToLayout">
+                            <properties>
+                                <bound-by>Edge</bound-by>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ScrollTo">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>100</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>370</jump-strength>
+                                <gravity>1500</gravity>
+                                <max-fall-speed>300</max-fall-speed>
+                                <double-jump>Disabled</double-jump>
+                                <jump-sustain>0</jump-sustain>
+                                <default-controls>Yes</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Solids</obstacles>
+                                <range>10000</range>
+                                <cone-of-view>360</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Timer" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>17</x>
+                        <y>387</y>
+                        <z>0</z>
+                        <width>20</width>
+                        <height>55</height>
+                        <depth>0</depth>
+                        <hotspotX>0.449999988</hotspotX>
+                        <hotspotY>0.5090909</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.5</opacity>
+                    </world>
+                </instance>
+                <instance type="PlayerSprite" uid="253">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                        <behavior-instance type="Timer" />
+                        <behavior-instance type="Flash" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>17</x>
+                        <y>383</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Debugtext" uid="430">
+                    <properties>
+                        <text>Text</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-16</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Character</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>330.142883301</x>
+                        <y>71.109207153</y>
+                        <z>0</z>
+                        <width>273.327911377</width>
+                        <height>129.017120361</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="FlameBossHitbox" uid="431">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>395.649230957</x>
+                        <y>264.215942383</y>
+                        <z>0</z>
+                        <width>54.672271729</width>
+                        <height>124.706512451</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.5</opacity>
                     </world>
                 </instance>
             </instances>

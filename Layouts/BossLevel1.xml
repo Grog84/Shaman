@@ -2038,7 +2038,7 @@
                         <hotspotX>0.449999988</hotspotX>
                         <hotspotY>0.5090909</hotspotY>
                         <angle>0</angle>
-                        <opacity>0</opacity>
+                        <opacity>0.5</opacity>
                     </world>
                 </instance>
                 <instance type="TriggerRight" uid="94">
@@ -2536,6 +2536,9 @@
                     <instance-variables>
                         <TreeID>0</TreeID>
                         <isPassage>0</isPassage>
+                        <fireTimer>3</fireTimer>
+                        <isOnFire>0</isOnFire>
+                        <fireUID>0</fireUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -3216,6 +3219,34 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0</opacity>
+                    </world>
+                </instance>
+                <instance type="CheckPoint" uid="412">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <orderID>0</orderID>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>16</x>
+                        <y>400</y>
+                        <z>0</z>
+                        <width>96</width>
+                        <height>96</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.833333313</hotspotY>
                         <angle>0</angle>
                         <opacity>0</opacity>
                     </world>

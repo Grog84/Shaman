@@ -2,5 +2,388 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>esBossLevel3</name>
-    <events />
+    <events>
+        <variable constant="0" name="TreeOnFire" sid="865318697326016" static="0" type="number">0</variable>
+        <variable constant="0" name="TreeDestroyed" sid="613080021648169" static="0" type="number">0</variable>
+        <include>SpecialTies</include>
+        <include>Main</include>
+        <event-block sid="410667233912931">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="220500137104699" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="170805316337561" type="PlayerSprite">
+                    <param id="0" name="Pin to">Player</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="1" name="Request project file" sid="398723193525571" type="AJAX">
+                    <param id="0" name="Tag">&quot;albero&quot;</param>
+                    <param id="1" name="File">AlberoBoss.json</param>
+                </action>
+            </actions>
+            <sub-events>
+                <comment>Activates or deactivates tiles selection/absorption</comment>
+                <event-block sid="417968737029988">
+                    <conditions />
+                    <actions>
+                        <action id="3" name="Set at XY" sid="415141259991803" type="TilePosType">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">&quot;Rock&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="888420866445631" type="TilePosType">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">1</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="825307349151965" type="TilePosType">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">&quot;Air&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="317258862797794" type="TilePosType">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">1</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="183924963008282" type="TilePosType">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">&quot;Water&quot;</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="492992869521785" type="TilePosType">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">1</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="512194498448503" type="TilePosType">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Value">&quot;Fire&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="335690968621727">
+            <conditions>
+                <condition id="0" name="On completed" sid="805182943113105" type="AJAX">
+                    <param id="0" name="Tag">&quot;albero&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="797237620370784" type="System">
+                    <param id="0" name="Variable">Albero1</param>
+                    <param id="1" name="Value">AJAX.LastData</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="393275128047984">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="964626175338140" type="System">
+                    <param id="0" name="Variable">TreeDestroyed</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="654149719770270" type="System">
+                    <param id="0" name="Variable">TreeOnFire</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="959714338091047" type="System">
+                    <param id="0" name="Object to create">Flower</param>
+                    <param id="1" name="Layer">&quot;Tiles&quot;</param>
+                    <param id="2" name="X">208</param>
+                    <param id="3" name="Y">400</param>
+                </action>
+                <action id="5" name="Set frame" sid="709928189898144" type="Flower">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="197459153455079" type="Flower">
+                    <param id="0" name="Instance variable">TreeType</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="618768015249119" type="System">
+                    <param id="0" name="Variable">TreeDestroyed</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="461892145380939" type="System">
+                    <param id="0" name="Variable">TreeOnFire</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="721670734156442">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="432099620888738" type="System">
+                    <param id="0" name="Interval (seconds)">5</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="position" sid="490161197630590" static="0" type="number">0</variable>
+                <event-block sid="118719846448019">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="543326879859873" type="System">
+                            <param id="0" name="Variable">position</param>
+                            <param id="1" name="Value">random(290, 390)</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="554990966307800" type="System">
+                            <param id="0" name="Object to create">FireBall</param>
+                            <param id="1" name="Layer">&quot;Main&quot;</param>
+                            <param id="2" name="X">350</param>
+                            <param id="3" name="Y">int(position/TILESIZE)*TILESIZE + 16</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="268055585687462" type="FireBall">
+                            <param id="0" name="Angle">180</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="217631165748608">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="619661115076256" type="FireBall">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="174391057112622" type="System">
+                    <param id="0" name="Variable">PlayerHealth</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Call function" sid="775629863482217" type="Function">
+                    <param id="0" name="Name">&quot;Knockback&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="172743038033899">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="460995335947280" type="FireBall">
+                    <param id="0" name="Object">Bark</param>
+                </condition>
+                <condition id="-10" name="Compare opacity" sid="501375842906903" type="Bark">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Opacity">90</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="405758827731586" type="System">
+                    <param id="0" name="Variable">TreeOnFire</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="151195163362803" type="FireBall" />
+            </actions>
+            <sub-events>
+                <variable constant="0" name="startFire_X" sid="175611446255515" static="0" type="number">0</variable>
+                <variable constant="0" name="startFire_Y" sid="879452231438789" static="0" type="number">0</variable>
+                <variable constant="0" name="maxdist" sid="492569573389794" static="0" type="number">0</variable>
+                <event-block sid="744846495384460">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="806000764330241" type="System">
+                            <param id="0" name="Variable">startFire_X</param>
+                            <param id="1" name="Value">Bark.X</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="411436301366380" type="System">
+                            <param id="0" name="Variable">startFire_Y</param>
+                            <param id="1" name="Value">Bark.Y</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="914097546882028" type="System">
+                            <param id="0" name="Variable">TreeOnFire</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="998732959153770" type="System">
+                            <param id="0" name="Variable">maxdist</param>
+                            <param id="1" name="Value">Function.Call(&quot;CalcMaxDist&quot;, startFire_X, startFire_Y)</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="140463418523555" type="System">
+                            <param id="0" name="Seconds">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="790683596454016" type="Function">
+                            <param id="0" name="Name">&quot;BurnTree&quot;</param>
+                            <param id="1" name="Parameter {n}">startFire_X{###}startFire_Y{###}maxdist</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="596690402104172">
+            <conditions>
+                <condition id="0" name="On function" sid="668539979461233" type="Function">
+                    <param id="0" name="Name">&quot;BurnTree&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="fireRange" sid="940366516970748" static="0" type="number">0</variable>
+                <event-block sid="827414662475370">
+                    <conditions>
+                        <condition id="-24" name="For Each (ordered)" sid="524167435540172" type="System">
+                            <param id="0" name="Object">Bark</param>
+                            <param id="1" name="Expression">Bark.Y</param>
+                            <param id="2" name="Order">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="323935488353807">
+                            <conditions />
+                            <actions>
+                                <action behavior="Timer" id="0" name="Start timer" sid="605294063237370" type="Bark">
+                                    <param id="0" name="Duration">loopindex * 0.1</param>
+                                    <param id="1" name="Type">0</param>
+                                    <param id="2" name="Tag">&quot;startFire&quot;&amp;Bark.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="152665772858783">
+            <conditions>
+                <condition id="-11" name="For Each" sid="518072569733768" type="System">
+                    <param id="0" name="Object">Bark</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="122185159207346">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="738966868673456" type="Bark">
+                            <param id="0" name="Tag">&quot;fireTimer&quot;&amp;Bark.UID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="162721265991822" type="Bark" />
+                    </actions>
+                </event-block>
+                <event-block sid="345902766391883">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="947509236952747" type="Bark">
+                            <param id="0" name="Tag">&quot;startFire&quot;&amp;Bark.UID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="479715795441377" type="Bark">
+                            <param id="0" name="Object">FireEffect</param>
+                            <param id="1" name="Layer">&quot;Tiles&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="585883365460514" type="Bark">
+                            <param id="0" name="Instance variable">fireUID</param>
+                            <param id="1" name="Value">FireEffect.UID</param>
+                        </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="181142401186286" type="Bark">
+                            <param id="0" name="Duration">self.fireTimer</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;fireTimer&quot;&amp;Bark.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="172729593119262">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="408735770438386" type="System">
+                    <param id="0" name="Variable">TreeOnFire</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="733508074919956" type="System">
+                    <param id="0" name="First value">Bark.Count</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="998951161638806" type="System">
+                    <param id="0" name="Variable">TreeDestroyed</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="391207067039612">
+            <conditions>
+                <condition id="2" name="Is playing" sid="345775574833012" type="PlayerSprite">
+                    <param id="0" name="Animation">&quot;Crouch&quot;</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="566900311128848" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="105347678731516" type="Player">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="628833432202140">
+            <conditions>
+                <condition id="2" inverted="1" name="Is playing" sid="929177838293947" type="PlayerSprite">
+                    <param id="0" name="Animation">&quot;Crouch&quot;</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="750217172332984" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="398716720311091" type="Player">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="642803705784989">
+            <conditions>
+                <condition id="0" name="On function" sid="317295590799550" type="Function">
+                    <param id="0" name="Name">&quot;CalcMaxDist&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="maxdist" sid="843402749176423" static="0" type="number">0</variable>
+                <event-block sid="438376026615246">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="859829366675600" type="System">
+                            <param id="0" name="Object">Bark</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="474759260196274" type="System">
+                            <param id="0" name="Variable">maxdist</param>
+                            <param id="1" name="Value">max(maxdist, distance(Bark.X, Bark.Y, Function.Param(0), Function.Param(1)))</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="199708496592193">
+                    <conditions />
+                    <actions>
+                        <action id="1" name="Set return value" sid="359672682804372" type="Function">
+                            <param id="0" name="Value">maxdist</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="774820417732646">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="604394341875862" type="Bark" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="453840968501683">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="237975647329087" type="FireEffect">
+                            <param id="0" name="Unique ID">Bark.fireUID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="371045449612354" type="FireEffect" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
 </c2eventsheet>
