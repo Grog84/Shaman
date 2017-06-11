@@ -9,6 +9,9 @@
                 <condition id="-2" name="On start of layout" sid="385998718079259" type="System" />
             </conditions>
             <actions>
+                <action id="-16" name="Set opacity" sid="175805791624712" type="PlayerSprite">
+                    <param id="0" name="Opacity">0</param>
+                </action>
                 <action id="-3" name="Set position" sid="513887415964934" type="FadeEffect">
                     <param id="0" name="X">320</param>
                     <param id="1" name="Y">240</param>

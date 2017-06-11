@@ -14,7 +14,7 @@
 	</Dialogo>
 	
 	
-	<Dialogo id = "2"
+	<Dialogo id = "2">
 	
 		<linea id ="1" charachter = "Skall" mood = "Worried" type ="">Mia signora, lo vede anche lei il fumo in lontananza?</linea>
 		<linea id ="2" charachter = "Ana" mood = "Normal" type ="">Sì, spero proprio non sia quello che penso...</linea>
