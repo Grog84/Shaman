@@ -317,6 +317,7 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="198815342489658" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_55\Downloads\WindTile_single2.png">
+                        <image-point name="Top" x="0.5" y="0" />
                         <collision-poly>
                             <point x="0.03125" y="0.09375" />
                             <point x="0.5" y="0.09375" />
@@ -1559,14 +1560,6 @@
         <object-type name="Golem" sid="418291930268862">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="6" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="489353363323845" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
                 <animation framecount="1" loop="0" name="GolemSenzaCristallo" pingpong="0" repeatcount="1" repeatto="0" sid="714589064762078" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_51\Downloads\boss terra solo.png">
                         <collision-poly>
@@ -1880,7 +1873,7 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="4" loop="1" name="SharkWithGem" pingpong="1" repeatcount="1" repeatto="0" sid="206585460926339" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.796875">
                         <image-point name="Imagepoint 1" x="0.286458" y="0.53125" />
                         <image-point name="Imagepoint 2" x="0.119792" y="0.546875" />
                         <collision-poly>
@@ -1892,7 +1885,7 @@
                             <point x="0.0729167" y="0.578125" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.796875">
                         <image-point name="Imagepoint 1" x="0.109375" y="0.5" />
                         <image-point name="Imagepoint 2" x="0.119792" y="0.546875" />
                         <collision-poly>
@@ -1904,7 +1897,7 @@
                             <point x="0.0729167" y="0.578125" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.796875">
                         <image-point name="Imagepoint 1" x="0.109375" y="0.5" />
                         <image-point name="Imagepoint 2" x="0.119792" y="0.546875" />
                         <collision-poly>
@@ -1916,7 +1909,7 @@
                             <point x="0.0729167" y="0.578125" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.796875">
                         <image-point name="Imagepoint 1" x="0.109375" y="0.5" />
                         <image-point name="Imagepoint 2" x="0.119792" y="0.546875" />
                         <collision-poly>
@@ -1930,7 +1923,7 @@
                     </frame>
                 </animation>
                 <animation framecount="4" loop="0" name="SharkWithoutGem" pingpong="0" repeatcount="1" repeatto="0" sid="636464542623117" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.796875">
                         <image-point name="Imagepoint 1" x="0.109375" y="0.5" />
                         <image-point name="Imagepoint 2" x="0.119792" y="0.546875" />
                         <collision-poly>
@@ -1942,7 +1935,7 @@
                             <point x="0.0729167" y="0.578125" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.796875">
                         <image-point name="Imagepoint 1" x="0.109375" y="0.5" />
                         <image-point name="Imagepoint 2" x="0.119792" y="0.546875" />
                         <collision-poly>
@@ -1954,7 +1947,7 @@
                             <point x="0.0729167" y="0.578125" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.796875">
                         <image-point name="Imagepoint 1" x="0.109375" y="0.5" />
                         <image-point name="Imagepoint 2" x="0.119792" y="0.546875" />
                         <collision-poly>
@@ -1966,7 +1959,7 @@
                             <point x="0.0729167" y="0.578125" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.796875">
                         <image-point name="Imagepoint 1" x="0.109375" y="0.5" />
                         <image-point name="Imagepoint 2" x="0.119792" y="0.546875" />
                         <collision-poly>
@@ -1979,80 +1972,17 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="7" loop="0" name="SharkInWater" pingpong="0" repeatcount="1" repeatto="0" sid="742784347295137" speed="10">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 2" x="0.119792" y="0.546875" />
-                        <collision-poly>
-                            <point x="0.276042" y="0.3125" />
-                            <point x="0.65625" y="0.265625" />
-                            <point x="0.802083" y="0.421875" />
-                            <point x="0.796875" y="0.578125" />
-                            <point x="0.46875" y="0.890625" />
-                            <point x="0.0729167" y="0.578125" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 2" x="0.119792" y="0.546875" />
-                        <collision-poly>
-                            <point x="0.276042" y="0.3125" />
-                            <point x="0.65625" y="0.265625" />
-                            <point x="0.802083" y="0.421875" />
-                            <point x="0.796875" y="0.578125" />
-                            <point x="0.46875" y="0.890625" />
-                            <point x="0.0729167" y="0.578125" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 2" x="0.119792" y="0.546875" />
-                        <collision-poly>
-                            <point x="0.276042" y="0.3125" />
-                            <point x="0.65625" y="0.265625" />
-                            <point x="0.802083" y="0.421875" />
-                            <point x="0.796875" y="0.578125" />
-                            <point x="0.46875" y="0.890625" />
-                            <point x="0.0729167" y="0.578125" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 2" x="0.119792" y="0.546875" />
-                        <collision-poly>
-                            <point x="0.276042" y="0.3125" />
-                            <point x="0.65625" y="0.265625" />
-                            <point x="0.802083" y="0.421875" />
-                            <point x="0.796875" y="0.578125" />
-                            <point x="0.46875" y="0.890625" />
-                            <point x="0.0729167" y="0.578125" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 2" x="0.119792" y="0.546875" />
-                        <collision-poly>
-                            <point x="0.276042" y="0.3125" />
-                            <point x="0.65625" y="0.265625" />
-                            <point x="0.802083" y="0.421875" />
-                            <point x="0.796875" y="0.578125" />
-                            <point x="0.46875" y="0.890625" />
-                            <point x="0.0729167" y="0.578125" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 2" x="0.119792" y="0.546875" />
-                        <collision-poly>
-                            <point x="0.276042" y="0.3125" />
-                            <point x="0.65625" y="0.265625" />
-                            <point x="0.802083" y="0.421875" />
-                            <point x="0.796875" y="0.578125" />
-                            <point x="0.46875" y="0.890625" />
-                            <point x="0.0729167" y="0.578125" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 2" x="0.119792" y="0.546875" />
-                    </frame>
+                <animation framecount="6" loop="0" name="DesolvingShark" pingpong="0" repeatcount="1" repeatto="0" sid="742784347295137" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.796875" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.796875" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.796875" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.796875" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.796875" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.796875" />
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Crystal" sid="706646051927504">
+        <object-type name="WaterCrystal" sid="706646051927504">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Solid" sid="622702195035106">
@@ -2175,6 +2105,26 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="Cristallo" sid="195104315972855">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="IsDestroyed" sid="251160637294554" type="boolean" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="6" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="447433105103253" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground" sid="724267075733332">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\PU\Downloads\livello 2 FINALE.png" />
         </object-type>
     </object-folder>
     <families>

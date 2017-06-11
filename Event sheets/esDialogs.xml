@@ -185,8 +185,8 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-10" name="Set value" sid="428520925557819" type="DialogTrigger">
-                            <param id="0" name="Instance variable">DialogID</param>
+                        <action id="-9" name="Set value" sid="428520925557819" type="System">
+                            <param id="0" name="Variable">CurrentDialogue</param>
                             <param id="1" name="Value">DialogTrigger.DialogID</param>
                         </action>
                         <action id="-9" name="Set value" sid="990858113177057" type="System">

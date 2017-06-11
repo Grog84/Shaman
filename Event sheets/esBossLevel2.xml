@@ -58,6 +58,15 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="538460640669873">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Call function" sid="797650080449073" type="Function">
+                            <param id="0" name="Name">&quot;SetHUDTileVisibility&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-block>
         <event-block sid="380570379173762">
@@ -182,25 +191,6 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="162100919751541">
-            <conditions>
-                <condition id="-19" name="On destroyed" sid="509874609865929" type="Shark" />
-                <condition id="-14" name="Compare variable" sid="852117341911246" type="System">
-                    <param id="0" name="Variable">IsBeached</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-16" name="Wait" sid="395380856736223" type="System">
-                    <param id="0" name="Seconds">1</param>
-                </action>
-                <action id="0" name="Call function" sid="848434489300248" type="Function">
-                    <param id="0" name="Name">&quot;SpawnShark&quot;</param>
-                    <param id="1" name="Parameter {n}">int(random(4))</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="569686041689098">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="292766601667012" type="Shark">
@@ -250,7 +240,7 @@
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="-8" name="Set angle" sid="421402587983779" type="Shark">
-                            <param id="0" name="Angle">360</param>
+                            <param id="0" name="Angle">180</param>
                         </action>
                         <action id="0" name="Call function" sid="848426522581485" type="Function">
                             <param id="0" name="Name">&quot;WaterAnimation&quot;</param>
@@ -263,7 +253,7 @@
                             <param id="0" name="Seconds">5</param>
                         </action>
                         <action id="-9" name="Destroy" sid="693238131379699" type="Tile_Air" />
-                        <action behavior="Bullet" id="2" name="Set gravity" sid="833063971071349" type="Crystal">
+                        <action behavior="Bullet" id="2" name="Set gravity" sid="833063971071349" type="WaterCrystal">
                             <param id="0" name="Gravity">200</param>
                         </action>
                         <action id="-16" name="Wait" sid="374253215420235" type="System">
@@ -276,7 +266,6 @@
                             <param id="0" name="Variable">IsBeached</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="648369821742932" type="Shark" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -306,13 +295,17 @@
                             <param id="0" name="Seconds">1</param>
                         </action>
                         <action id="0" name="Spawn another object" sid="511767503647562" type="Tile_Air">
-                            <param id="0" name="Object">Crystal</param>
-                            <param id="1" name="Layer">0</param>
+                            <param id="0" name="Object">WaterCrystal</param>
+                            <param id="1" name="Layer">&quot;Tiles&quot;</param>
                             <param id="2" name="Image point">1</param>
                         </action>
-                        <action id="-3" name="Set position" sid="664777533424391" type="Crystal">
+                        <action id="-3" name="Set position" sid="664777533424391" type="WaterCrystal">
                             <param id="0" name="X">Tile_Air.X</param>
                             <param id="1" name="Y">Tile_Air.Y</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="688422630177614" type="Shark">
+                            <param id="0" name="Animation">&quot;DesolvingShark&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -341,6 +334,69 @@
             <actions>
                 <action behavior="Solid" id="0" name="Set enabled" sid="822953666023781" type="BkgTile">
                     <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="162100919751541">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="509874609865929" type="System">
+                    <param id="0" name="First value">Shark.Count</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="852117341911246" type="System">
+                    <param id="0" name="Variable">IsBeached</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="530659711709595" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="395380856736223" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="0" name="Call function" sid="848434489300248" type="Function">
+                    <param id="0" name="Name">&quot;SpawnShark&quot;</param>
+                    <param id="1" name="Parameter {n}">int(random(4))</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="113405882667911">
+            <conditions>
+                <condition id="4" name="On finished" sid="954546271247325" type="Shark">
+                    <param id="0" name="Animation">&quot;DesolvingShark&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="194351859610824" type="Shark" />
+            </actions>
+        </event-block>
+        <event-block sid="205179049200297">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="778562103391020" type="Player">
+                    <param id="0" name="Object">WaterBkg</param>
+                </condition>
+                <condition id="3" name="Compare frame" sid="809635411619109" type="WaterBkg">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="316188457502124" type="Function">
+                    <param id="0" name="Name">&quot;RespawnAtChkPoint&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="760136108722414">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="275817705935347" type="Player">
+                    <param id="0" name="Object">WaterCrystal</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="575303720573259" type="System">
+                    <param id="0" name="Layout">Level3</param>
                 </action>
             </actions>
         </event-block>

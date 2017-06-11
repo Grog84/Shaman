@@ -11,13 +11,19 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="1">Menu</layout>
-        <layout active="1" order="3">BossLevel3</layout>
+        <layout order="3">BossLevel3</layout>
         <layout order="6">Level1</layout>
         <layout order="7">Level3</layout>
+        <layout order="9">Intro</layout>
+        <layout order="11">BossLevel2</layout>
         <event-sheet order="0">Main</event-sheet>
         <event-sheet order="2">esMenu</event-sheet>
         <event-sheet order="4">esBossLevel3</event-sheet>
         <event-sheet order="5">SpecialTies</event-sheet>
+        <event-sheet order="8">esDialogs</event-sheet>
+        <event-sheet order="10">esIntro</event-sheet>
+        <event-sheet active="1" order="12">esBossLevel2</event-sheet>
+        <event-sheet order="13">esLevel1</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -30,11 +36,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="0" name="Obstacle" />
     </families-expanded>
     <folders-expanded>
-        <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="object-folder/" />
         <folder expanded="0" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="0" path="event-folder/Enemies/" />
-        <folder expanded="0" path="event-folder/Levels/" />
+        <folder expanded="1" path="event-folder/Levels/" />
         <folder expanded="0" path="event-folder/BossFights/" />
         <folder expanded="0" path="event-folder/Environment/" />
         <folder expanded="0" path="file-folder/" />
@@ -94,12 +100,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Cursor/" />
         <folder expanded="1" path="animation-folder/SpawnPoints/" />
         <folder expanded="1" path="animation-folder/Shark/" />
-        <folder expanded="1" path="animation-folder/Crystal/" />
+        <folder expanded="1" path="animation-folder/WaterCrystal/" />
         <folder expanded="1" path="animation-folder/MenuBkg/" />
         <folder expanded="1" path="animation-folder/ButtonA/" />
         <folder expanded="1" path="animation-folder/ButtonB/" />
         <folder expanded="1" path="animation-folder/MenuControls/" />
         <folder expanded="1" path="animation-folder/Sprite4/" />
         <folder expanded="1" path="animation-folder/FlameBossHitbox/" />
+        <folder expanded="1" path="animation-folder/Cristallo/" />
     </folders-expanded>
 </c2uistate>
