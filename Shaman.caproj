@@ -1878,6 +1878,7 @@
             <instance-variables>
                 <instance-variable name="MoveTimer" sid="715053669892408" type="number" />
                 <instance-variable name="CanMove" sid="588020861626478" type="number" />
+                <instance-variable name="CanSelect" sid="545249245355004" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Flash" sid="395699885481602">
@@ -2228,6 +2229,10 @@
         <object-type name="MountainsBkg" sid="873907198670335">
             <plugin id="TiledBg" />
             <texture original-source="C:\Users\PU\Downloads\livello 2 sfondo.png" />
+        </object-type>
+        <object-type name="Forest" sid="424484997269346">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\PU\Downloads\livello 3 FINALE.png" />
         </object-type>
     </object-folder>
     <families>

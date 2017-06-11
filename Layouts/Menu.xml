@@ -193,6 +193,7 @@
                     <instance-variables>
                         <MoveTimer>0.2</MoveTimer>
                         <CanMove>1</CanMove>
+                        <CanSelect>1</CanSelect>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Flash" />

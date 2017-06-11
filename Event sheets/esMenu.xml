@@ -48,6 +48,19 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="816401571874668">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="220850740551598" type="Cursor">
+                    <param id="0" name="Tag">&quot;waitingSelect&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="701300028414101" type="Cursor">
+                    <param id="0" name="Instance variable">CanSelect</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
         <event-group description="" sid="747196013994790" title="MainLayer">
             <sub-events>
                 <event-block sid="353121469228856">
@@ -368,8 +381,26 @@
                             <param id="0" name="Gamepad">0</param>
                             <param id="1" name="Button">0</param>
                         </condition>
+                        <condition id="-7" name="Compare instance variable" sid="261103028411045" type="Cursor">
+                            <param id="0" name="Instance variable">CanSelect</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-9" inverted="1" name="Layer is visible" sid="949232779915477" type="System">
+                            <param id="0" name="Layer">&quot;Levels&quot;</param>
+                        </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-10" name="Set value" sid="365787930538844" type="Cursor">
+                            <param id="0" name="Instance variable">CanSelect</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="876167583203620" type="Cursor">
+                            <param id="0" name="Duration">0.5</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;waitingSelect&quot;</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="234952797564036">
                             <conditions>
@@ -986,6 +1017,14 @@
                         <condition id="6" name="On button pressed" sid="613921927383546" type="Gamepad">
                             <param id="0" name="Gamepad">0</param>
                             <param id="1" name="Button">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="810394718588554" type="Cursor">
+                            <param id="0" name="Instance variable">CanSelect</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-9" name="Layer is visible" sid="162597224065992" type="System">
+                            <param id="0" name="Layer">&quot;Levels&quot;</param>
                         </condition>
                     </conditions>
                     <actions />
