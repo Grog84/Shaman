@@ -3,7 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>esMenu</name>
     <events>
-        <variable constant="0" name="SelectionPosition" sid="540917142245477" static="0" type="number">0</variable>
+        <variable constant="0" name="SelectionPositionMain" sid="540917142245477" static="0" type="number">0</variable>
+        <variable constant="0" name="SelectionPositionLevels" sid="440209003099723" static="0" type="number">0</variable>
         <event-block sid="135087973554618">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="380775646725133" type="System" />
@@ -17,342 +18,1158 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="353121469228856">
+        <event-block sid="630818255288843">
             <conditions>
-                <condition id="-14" name="Compare variable" sid="415127211992489" type="System">
-                    <param id="0" name="Variable">SelectionPosition</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">0</param>
+                <condition id="-9" name="Layer is visible" sid="532987036749539" type="System">
+                    <param id="0" name="Layer">&quot;Levels&quot;</param>
                 </condition>
             </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="305830303576083">
-                    <conditions>
-                        <condition id="5" name="Compare axis" sid="679612366585108" type="Gamepad">
-                            <param id="0" name="Gamepad">0</param>
-                            <param id="1" name="Axis">0</param>
-                            <param id="2" name="Comparison">4</param>
-                            <param id="3" name="Value">50</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="897588179904683" type="System">
-                            <param id="0" name="Variable">SelectionPosition</param>
-                            <param id="1" name="Value">2</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="158626268104361">
-                    <conditions>
-                        <condition id="5" name="Compare axis" sid="786538418816275" type="Gamepad">
-                            <param id="0" name="Gamepad">0</param>
-                            <param id="1" name="Axis">1</param>
-                            <param id="2" name="Comparison">4</param>
-                            <param id="3" name="Value">50</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="640636117288943" type="System">
-                            <param id="0" name="Variable">SelectionPosition</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="792186644158012">
-                    <conditions />
-                    <actions>
-                        <action id="0" name="Call function" sid="622968385024369" type="Function">
-                            <param id="0" name="Name">&quot;SetCursorPosition&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
+            <actions>
+                <action id="-12" name="Set group active" sid="275491377715379" type="System">
+                    <param id="0" name="Group name">&quot;MainLayer&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="0" name="Call function" sid="895498336023990" type="Function">
+                    <param id="0" name="Name">&quot;SetCursorPosition1&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
         </event-block>
-        <event-block sid="395625240706731">
+        <event-block sid="832185929943035">
             <conditions>
-                <condition id="-14" name="Compare variable" sid="297083183181045" type="System">
-                    <param id="0" name="Variable">SelectionPosition</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">1</param>
+                <condition behavior="Timer" id="0" name="On timer" sid="510880230765689" type="Cursor">
+                    <param id="0" name="Tag">&quot;waiting&quot;</param>
                 </condition>
             </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="618598006463189">
-                    <conditions>
-                        <condition id="5" name="Compare axis" sid="484650551231543" type="Gamepad">
-                            <param id="0" name="Gamepad">0</param>
-                            <param id="1" name="Axis">0</param>
-                            <param id="2" name="Comparison">4</param>
-                            <param id="3" name="Value">50</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="820524057663246" type="System">
-                            <param id="0" name="Variable">SelectionPosition</param>
-                            <param id="1" name="Value">3</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="828637198847153">
-                    <conditions>
-                        <condition id="5" name="Compare axis" sid="283547389461987" type="Gamepad">
-                            <param id="0" name="Gamepad">0</param>
-                            <param id="1" name="Axis">1</param>
-                            <param id="2" name="Comparison">2</param>
-                            <param id="3" name="Value">-50</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="829862642683728" type="System">
-                            <param id="0" name="Variable">SelectionPosition</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="656877153108771">
-                    <conditions />
-                    <actions>
-                        <action id="0" name="Call function" sid="176958247187939" type="Function">
-                            <param id="0" name="Name">&quot;SetCursorPosition&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
+            <actions>
+                <action id="-10" name="Set value" sid="448247625033251" type="Cursor">
+                    <param id="0" name="Instance variable">CanMove</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
         </event-block>
-        <event-block sid="648016323095171">
-            <conditions>
-                <condition id="-14" name="Compare variable" sid="255218531850983" type="System">
-                    <param id="0" name="Variable">SelectionPosition</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">2</param>
-                </condition>
-            </conditions>
-            <actions />
+        <event-group description="" sid="747196013994790" title="MainLayer">
             <sub-events>
-                <event-block sid="384091708934500">
+                <event-block sid="353121469228856">
                     <conditions>
-                        <condition id="5" name="Compare axis" sid="418917295053675" type="Gamepad">
-                            <param id="0" name="Gamepad">0</param>
-                            <param id="1" name="Axis">0</param>
-                            <param id="2" name="Comparison">2</param>
-                            <param id="3" name="Value">-50</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="205137466372038" type="System">
-                            <param id="0" name="Variable">SelectionPosition</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="757363667638466">
-                    <conditions>
-                        <condition id="5" name="Compare axis" sid="839333320794755" type="Gamepad">
-                            <param id="0" name="Gamepad">0</param>
-                            <param id="1" name="Axis">1</param>
-                            <param id="2" name="Comparison">4</param>
-                            <param id="3" name="Value">50</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="458822249129475" type="System">
-                            <param id="0" name="Variable">SelectionPosition</param>
-                            <param id="1" name="Value">3</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="578853808602695">
-                    <conditions />
-                    <actions>
-                        <action id="0" name="Call function" sid="632830222556324" type="Function">
-                            <param id="0" name="Name">&quot;SetCursorPosition&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="134539241987712">
-            <conditions>
-                <condition id="-14" name="Compare variable" sid="232347461270431" type="System">
-                    <param id="0" name="Variable">SelectionPosition</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">3</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="894687356001087">
-                    <conditions>
-                        <condition id="5" name="Compare axis" sid="870980049139089" type="Gamepad">
-                            <param id="0" name="Gamepad">0</param>
-                            <param id="1" name="Axis">0</param>
-                            <param id="2" name="Comparison">2</param>
-                            <param id="3" name="Value">-50</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="797374918676430" type="System">
-                            <param id="0" name="Variable">SelectionPosition</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="960656742332282">
-                    <conditions>
-                        <condition id="5" name="Compare axis" sid="114653047615694" type="Gamepad">
-                            <param id="0" name="Gamepad">0</param>
-                            <param id="1" name="Axis">1</param>
-                            <param id="2" name="Comparison">2</param>
-                            <param id="3" name="Value">-50</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="947245666200917" type="System">
-                            <param id="0" name="Variable">SelectionPosition</param>
-                            <param id="1" name="Value">2</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="955812131789142">
-                    <conditions />
-                    <actions>
-                        <action id="0" name="Call function" sid="569325641818756" type="Function">
-                            <param id="0" name="Name">&quot;SetCursorPosition&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="169729072844193">
-            <conditions>
-                <condition id="0" name="On function" sid="210443543230604" type="Function">
-                    <param id="0" name="Name">&quot;SetCursorPosition&quot;</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="719798561511843">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="788274937663609" type="System">
-                            <param id="0" name="Variable">SelectionPosition</param>
+                        <condition id="-14" name="Compare variable" sid="415127211992489" type="System">
+                            <param id="0" name="Variable">SelectionPositionMain</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Set position" sid="826544172733308" type="Cursor">
-                            <param id="0" name="X">139</param>
-                            <param id="1" name="Y">357</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="768567616383328">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="517003161558343" type="System">
-                            <param id="0" name="Variable">SelectionPosition</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Set position" sid="516559776011967" type="Cursor">
-                            <param id="0" name="X">139</param>
-                            <param id="1" name="Y">421</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="918997243209771">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="447929815188700" type="System">
-                            <param id="0" name="Variable">SelectionPosition</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">2</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Set position" sid="110817094669717" type="Cursor">
-                            <param id="0" name="X">344</param>
-                            <param id="1" name="Y">357</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="579248727065304">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="823761967238716" type="System">
-                            <param id="0" name="Variable">SelectionPosition</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">3</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Set position" sid="914862792912298" type="Cursor">
-                            <param id="0" name="X">344</param>
-                            <param id="1" name="Y">421</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="549868880849236">
-            <conditions>
-                <condition id="6" name="On button pressed" sid="527746564496504" type="Gamepad">
-                    <param id="0" name="Gamepad">0</param>
-                    <param id="1" name="Button">2</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="234952797564036">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="881283040953242" type="System">
-                            <param id="0" name="Variable">SelectionPosition</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-2" name="Go to layout" sid="713976945571097" type="System">
-                            <param id="0" name="Layout">Intro</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="621765566287710">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="638105480906569" type="System">
-                            <param id="0" name="Variable">SelectionPosition</param>
+                        <condition id="-7" name="Compare instance variable" sid="299189434496806" type="Cursor">
+                            <param id="0" name="Instance variable">CanMove</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions />
+                    <sub-events>
+                        <event-block sid="305830303576083">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="679612366585108" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">4</param>
+                                    <param id="3" name="Value">50</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="897588179904683" type="System">
+                                    <param id="0" name="Variable">SelectionPositionMain</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="158626268104361">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="786538418816275" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">1</param>
+                                    <param id="2" name="Comparison">4</param>
+                                    <param id="3" name="Value">50</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="640636117288943" type="System">
+                                    <param id="0" name="Variable">SelectionPositionMain</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="792186644158012">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="622968385024369" type="Function">
+                                    <param id="0" name="Name">&quot;SetCursorPosition&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
-                <event-block sid="347282351887811">
+                <event-block sid="395625240706731">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="954561748210597" type="System">
-                            <param id="0" name="Variable">SelectionPosition</param>
+                        <condition id="-14" name="Compare variable" sid="297083183181045" type="System">
+                            <param id="0" name="Variable">SelectionPositionMain</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="858257533538784" type="Cursor">
+                            <param id="0" name="Instance variable">CanMove</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="618598006463189">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="484650551231543" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">4</param>
+                                    <param id="3" name="Value">50</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="820524057663246" type="System">
+                                    <param id="0" name="Variable">SelectionPositionMain</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="828637198847153">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="283547389461987" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">1</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">-50</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="829862642683728" type="System">
+                                    <param id="0" name="Variable">SelectionPositionMain</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="656877153108771">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="176958247187939" type="Function">
+                                    <param id="0" name="Name">&quot;SetCursorPosition&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="648016323095171">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="255218531850983" type="System">
+                            <param id="0" name="Variable">SelectionPositionMain</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">2</param>
                         </condition>
-                    </conditions>
-                    <actions />
-                </event-block>
-                <event-block sid="667683143332975">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="350190224575898" type="System">
-                            <param id="0" name="Variable">SelectionPosition</param>
+                        <condition id="-7" name="Compare instance variable" sid="496165255040651" type="Cursor">
+                            <param id="0" name="Instance variable">CanMove</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">3</param>
+                            <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions />
+                    <sub-events>
+                        <event-block sid="384091708934500">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="418917295053675" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">-50</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="205137466372038" type="System">
+                                    <param id="0" name="Variable">SelectionPositionMain</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="757363667638466">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="839333320794755" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">1</param>
+                                    <param id="2" name="Comparison">4</param>
+                                    <param id="3" name="Value">50</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="458822249129475" type="System">
+                                    <param id="0" name="Variable">SelectionPositionMain</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="578853808602695">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="632830222556324" type="Function">
+                                    <param id="0" name="Name">&quot;SetCursorPosition&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="134539241987712">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="232347461270431" type="System">
+                            <param id="0" name="Variable">SelectionPositionMain</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="106151939481564" type="Cursor">
+                            <param id="0" name="Instance variable">CanMove</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="894687356001087">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="870980049139089" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">-50</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="797374918676430" type="System">
+                                    <param id="0" name="Variable">SelectionPositionMain</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="960656742332282">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="114653047615694" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">1</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">-50</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="947245666200917" type="System">
+                                    <param id="0" name="Variable">SelectionPositionMain</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="955812131789142">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="569325641818756" type="Function">
+                                    <param id="0" name="Name">&quot;SetCursorPosition&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="169729072844193">
+                    <conditions>
+                        <condition id="0" name="On function" sid="210443543230604" type="Function">
+                            <param id="0" name="Name">&quot;SetCursorPosition&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="833723866940710" type="Cursor">
+                            <param id="0" name="Instance variable">CanMove</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="243236176767372" type="Cursor">
+                            <param id="0" name="Duration">self.MoveTimer</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;waiting&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="719798561511843">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="788274937663609" type="System">
+                                    <param id="0" name="Variable">SelectionPositionMain</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="826544172733308" type="Cursor">
+                                    <param id="0" name="X">139</param>
+                                    <param id="1" name="Y">357</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="768567616383328">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="517003161558343" type="System">
+                                    <param id="0" name="Variable">SelectionPositionMain</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="516559776011967" type="Cursor">
+                                    <param id="0" name="X">139</param>
+                                    <param id="1" name="Y">421</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="918997243209771">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="447929815188700" type="System">
+                                    <param id="0" name="Variable">SelectionPositionMain</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="110817094669717" type="Cursor">
+                                    <param id="0" name="X">344</param>
+                                    <param id="1" name="Y">357</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="579248727065304">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="823761967238716" type="System">
+                                    <param id="0" name="Variable">SelectionPositionMain</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="914862792912298" type="Cursor">
+                                    <param id="0" name="X">344</param>
+                                    <param id="1" name="Y">421</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="549868880849236">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="527746564496504" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="234952797564036">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="881283040953242" type="System">
+                                    <param id="0" name="Variable">SelectionPositionMain</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="713976945571097" type="System">
+                                    <param id="0" name="Layout">Intro</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="621765566287710">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="638105480906569" type="System">
+                                    <param id="0" name="Variable">SelectionPositionMain</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-26" name="Move to layer" sid="702541084391299" type="Cursor">
+                                    <param id="0" name="Layer">&quot;Levels&quot;</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="493156842739636" type="Cursor">
+                                    <param id="0" name="X">134</param>
+                                    <param id="1" name="Y">366</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="968159864892012" type="System">
+                                    <param id="0" name="Layer">&quot;Levels&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="390447165800981" type="System">
+                                    <param id="0" name="Group name">&quot;LevelsLayer&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="609076471395799" type="System">
+                                    <param id="0" name="Group name">&quot;MainLayer&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="347282351887811">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="954561748210597" type="System">
+                                    <param id="0" name="Variable">SelectionPositionMain</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="729803734854792" type="System">
+                                    <param id="0" name="Layer">&quot;Comandi&quot;&#x0D;&#x0A;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="732927850648063" type="System">
+                                    <param id="0" name="Group name">&quot;MainLayer&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="667683143332975">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="350190224575898" type="System">
+                                    <param id="0" name="Variable">SelectionPositionMain</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="476626215848474" type="System">
+                                    <param id="0" name="Layer">&quot;Crediti&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="960166801484685" type="System">
+                                    <param id="0" name="Group name">&quot;MainLayer&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
-        </event-block>
+        </event-group>
+        <event-group description="" inactive="1" sid="155651933081977" title="LevelsLayer">
+            <sub-events>
+                <event-block sid="163994298066428">
+                    <conditions>
+                        <condition id="0" name="On function" sid="193523613545003" type="Function">
+                            <param id="0" name="Name">&quot;SetCursorPositionLevels&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="104850440132104" type="Cursor">
+                            <param id="0" name="Instance variable">CanMove</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="346270186099339" type="Cursor">
+                            <param id="0" name="Duration">self.MoveTimer</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;waiting&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="858048702115062">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="499404007979163" type="System">
+                                    <param id="0" name="Variable">SelectionPositionLevels</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="386021799589018" type="Cursor">
+                                    <param id="0" name="X">134</param>
+                                    <param id="1" name="Y">366</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="275799896556025">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="182763800870035" type="System">
+                                    <param id="0" name="Variable">SelectionPositionLevels</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="264222054012411" type="Cursor">
+                                    <param id="0" name="X">134</param>
+                                    <param id="1" name="Y">402</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="594593075193899">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="160152341688992" type="System">
+                                    <param id="0" name="Variable">SelectionPositionLevels</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="681207745294880" type="Cursor">
+                                    <param id="0" name="X">134</param>
+                                    <param id="1" name="Y">440</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="495496391883900">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="410158916753202" type="System">
+                                    <param id="0" name="Variable">SelectionPositionLevels</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="956493259237080" type="Cursor">
+                                    <param id="0" name="X">365</param>
+                                    <param id="1" name="Y">366</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="693764743029433">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="129084178450901" type="System">
+                                    <param id="0" name="Variable">SelectionPositionLevels</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="249279999891771" type="Cursor">
+                                    <param id="0" name="X">365</param>
+                                    <param id="1" name="Y">402</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="277850315811220">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="648604014174432" type="System">
+                                    <param id="0" name="Variable">SelectionPositionLevels</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="744610229880055" type="Cursor">
+                                    <param id="0" name="X">365</param>
+                                    <param id="1" name="Y">440</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="663022134375679">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="241892643288790" type="System">
+                            <param id="0" name="Variable">SelectionPositionLevels</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="513672606393358" type="Cursor">
+                            <param id="0" name="Instance variable">CanMove</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="769289206177183">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="214486439561876" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">1</param>
+                                    <param id="2" name="Comparison">4</param>
+                                    <param id="3" name="Value">50</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="770034938267678" type="System">
+                                    <param id="0" name="Variable">SelectionPositionLevels</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="229062462475647">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="606972254095726" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">4</param>
+                                    <param id="3" name="Value">50</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="724146281667627" type="System">
+                                    <param id="0" name="Variable">SelectionPositionLevels</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="769466641598396">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="148380254551296" type="Function">
+                                    <param id="0" name="Name">&quot;SetCursorPositionLevels&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="632712659506141">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="159016620989504" type="System">
+                            <param id="0" name="Variable">SelectionPositionLevels</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="838359242862458" type="Cursor">
+                            <param id="0" name="Instance variable">CanMove</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="812125125452091">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="788674482284011" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">1</param>
+                                    <param id="2" name="Comparison">4</param>
+                                    <param id="3" name="Value">50</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="375340309438719" type="System">
+                                    <param id="0" name="Variable">SelectionPositionLevels</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="788790845360755">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="458668358657684" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">1</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">-50</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="138571473973460" type="System">
+                                    <param id="0" name="Variable">SelectionPositionLevels</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="570226963164873">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="962893528423226" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">4</param>
+                                    <param id="3" name="Value">50</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="257300049186324" type="System">
+                                    <param id="0" name="Variable">SelectionPositionLevels</param>
+                                    <param id="1" name="Value">4</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="640063745339255">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="253468581644649" type="Function">
+                                    <param id="0" name="Name">&quot;SetCursorPositionLevels&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="540615635028817">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="656853254079099" type="System">
+                            <param id="0" name="Variable">SelectionPositionLevels</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="284151857936253" type="Cursor">
+                            <param id="0" name="Instance variable">CanMove</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="897947518607724">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="891056050658918" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">1</param>
+                                    <param id="2" name="Comparison">4</param>
+                                    <param id="3" name="Value">50</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="458068957278089" type="System">
+                                    <param id="0" name="Variable">SelectionPositionLevels</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="945689628324118">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="833911437444231" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">1</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">-50</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="576684796522082" type="System">
+                                    <param id="0" name="Variable">SelectionPositionLevels</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="658663999352904">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="319711559709227" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">4</param>
+                                    <param id="3" name="Value">50</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="587863578578894" type="System">
+                                    <param id="0" name="Variable">SelectionPositionLevels</param>
+                                    <param id="1" name="Value">5</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="953104981397643">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="515515703247417" type="Function">
+                                    <param id="0" name="Name">&quot;SetCursorPositionLevels&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="291072843563929">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="815509097514171" type="System">
+                            <param id="0" name="Variable">SelectionPositionLevels</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="288352857498327" type="Cursor">
+                            <param id="0" name="Instance variable">CanMove</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="464648617216542">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="215576479343294" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">1</param>
+                                    <param id="2" name="Comparison">4</param>
+                                    <param id="3" name="Value">50</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="918832283333705" type="System">
+                                    <param id="0" name="Variable">SelectionPositionLevels</param>
+                                    <param id="1" name="Value">4</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="989501331624447">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="468224851897489" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">1</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">-50</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="440993139277855" type="System">
+                                    <param id="0" name="Variable">SelectionPositionLevels</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="711295379353774">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="631218902074214" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">-50</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="756397879021758" type="System">
+                                    <param id="0" name="Variable">SelectionPositionLevels</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="912575263267308">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="143872551625756" type="Function">
+                                    <param id="0" name="Name">&quot;SetCursorPositionLevels&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="147576651650273">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="637452243681657" type="System">
+                            <param id="0" name="Variable">SelectionPositionLevels</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="820576666486852" type="Cursor">
+                            <param id="0" name="Instance variable">CanMove</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="197133036737532">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="572671500334357" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">1</param>
+                                    <param id="2" name="Comparison">4</param>
+                                    <param id="3" name="Value">50</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="189736092261898" type="System">
+                                    <param id="0" name="Variable">SelectionPositionLevels</param>
+                                    <param id="1" name="Value">5</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="379777710042202">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="669630926252716" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">1</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">-50</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="156472896057821" type="System">
+                                    <param id="0" name="Variable">SelectionPositionLevels</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="827650570852036">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="351230956188637" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">-50</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="909440537644652" type="System">
+                                    <param id="0" name="Variable">SelectionPositionLevels</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="929222323346471">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="743997798271518" type="Function">
+                                    <param id="0" name="Name">&quot;SetCursorPositionLevels&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="998079208969454">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="247026922176574" type="System">
+                            <param id="0" name="Variable">SelectionPositionLevels</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="639927388633994" type="Cursor">
+                            <param id="0" name="Instance variable">CanMove</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="260425235535508">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="348409013920786" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">1</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">-50</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="908758395472613" type="System">
+                                    <param id="0" name="Variable">SelectionPositionLevels</param>
+                                    <param id="1" name="Value">4</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="932685045877536">
+                            <conditions>
+                                <condition id="5" name="Compare axis" sid="409238664466487" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">-50</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="389780777530779" type="System">
+                                    <param id="0" name="Variable">SelectionPositionLevels</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="575977007413070">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="709215333351865" type="Function">
+                                    <param id="0" name="Name">&quot;SetCursorPositionLevels&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="347339221790391">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="613921927383546" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="243075388497466">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="576517823115084" type="System">
+                                    <param id="0" name="Variable">SelectionPositionLevels</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="406813372686530" type="System">
+                                    <param id="0" name="Layout">Level1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="701903145554661">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="549970799956418" type="System">
+                                    <param id="0" name="Variable">SelectionPositionLevels</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="149278704156461" type="System">
+                                    <param id="0" name="Layout">Level2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="538639995244898">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="526060047567808" type="System">
+                                    <param id="0" name="Variable">SelectionPositionLevels</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="445656423660943" type="System">
+                                    <param id="0" name="Layout">Level3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="722523390594073">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="258334563284140" type="System">
+                                    <param id="0" name="Variable">SelectionPositionLevels</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="209125203211959" type="System">
+                                    <param id="0" name="Layout">BossLevel1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="558576982979354">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="334615907502479" type="System">
+                                    <param id="0" name="Variable">SelectionPositionLevels</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="859066584946967" type="System">
+                                    <param id="0" name="Layout">BossLevel2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="430985685345434">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="934539188908954" type="System">
+                                    <param id="0" name="Variable">SelectionPositionLevels</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="744133396030139" type="System">
+                                    <param id="0" name="Layout">BossLevel3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="244164234787813">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="457937737854686" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Move to layer" sid="348090255740748" type="Cursor">
+                            <param id="0" name="Layer">&quot;Main&quot;</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="168701203323030" type="Cursor">
+                            <param id="0" name="X">139</param>
+                            <param id="1" name="Y">421</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="528191668306633" type="System">
+                            <param id="0" name="Layer">&quot;Levels&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="360986144305754" type="System">
+                            <param id="0" name="Group name">&quot;LevelsLayer&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="636845289145938" type="System">
+                            <param id="0" name="Group name">&quot;MainLayer&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="493174982616144" title="LayerComandi">
+            <sub-events>
+                <event-block sid="410008631802941">
+                    <conditions>
+                        <condition id="-9" name="Layer is visible" sid="587342199357534" type="System">
+                            <param id="0" name="Layer">&quot;Comandi&quot;&#x0D;&#x0A;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="937850137047561">
+                            <conditions>
+                                <condition id="6" name="On button pressed" sid="232720871295993" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="643917360217782" type="System">
+                                    <param id="0" name="Layer">&quot;Comandi&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="351552866239521" type="System">
+                                    <param id="0" name="Group name">&quot;MainLayer&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="673288982277530" title="Crediti">
+            <sub-events>
+                <event-block sid="439721608825907">
+                    <conditions>
+                        <condition id="-9" name="Layer is visible" sid="755853553372176" type="System">
+                            <param id="0" name="Layer">&quot;Crediti&quot;&#x0D;&#x0A;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="970621761108831">
+                            <conditions>
+                                <condition id="6" name="On button pressed" sid="730381644352311" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="888021882800345" type="System">
+                                    <param id="0" name="Layer">&quot;Crediti&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="158153769009531" type="System">
+                                    <param id="0" name="Group name">&quot;MainLayer&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

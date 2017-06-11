@@ -1875,9 +1875,16 @@
         </object-type>
         <object-type name="Cursor" sid="183145742558107">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="MoveTimer" sid="715053669892408" type="number" />
+                <instance-variable name="CanMove" sid="588020861626478" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Flash" sid="395699885481602">
                     <behavior id="Flash" />
+                </behavior-type>
+                <behavior-type name="Timer" sid="678130120098397">
+                    <behavior id="Timer" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
@@ -2139,6 +2146,80 @@
                     </frame>
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="512752723802224">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="553302843027738" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cristina\Documents\Downloads\SQStartSCreen2.0.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Levels" sid="941480576220022">
+            <plugin id="Spritefont2" />
+            <instance-variables>
+                <instance-variable name="ID" sid="926458154271599" type="number" />
+                <instance-variable name="IsSelect" sid="741250517297565" type="boolean" />
+            </instance-variables>
+            <texture original-source="C:\Users\Cristina\Documents\Downloads\alfabetario_nuovo_pixeled.png" />
+        </object-type>
+        <object-type name="ButtonA" sid="412591805627095">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="402827131782687" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cristina\Documents\Downloads\SQButtonA.png">
+                        <collision-poly>
+                            <point x="0.32" y="0.32" />
+                            <point x="0.5" y="0.24" />
+                            <point x="0.68" y="0.32" />
+                            <point x="0.78" y="0.5" />
+                            <point x="0.68" y="0.68" />
+                            <point x="0.5" y="0.76" />
+                            <point x="0.32" y="0.68" />
+                            <point x="0.24" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ButtonB" sid="791248189970608">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="699330871669310" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cristina\Documents\Downloads\SQButtonB.png">
+                        <collision-poly>
+                            <point x="0.34" y="0.34" />
+                            <point x="0.5" y="0.26" />
+                            <point x="0.66" y="0.34" />
+                            <point x="0.76" y="0.5" />
+                            <point x="0.68" y="0.68" />
+                            <point x="0.5" y="0.78" />
+                            <point x="0.3" y="0.7" />
+                            <point x="0.22" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="115541549343872">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="435288435919231" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cristina\Documents\Downloads\comandibindietro.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite4" sid="457252545369317">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="418342258124858" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Cristina\Documents\Downloads\SQStartSCreen2.0.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpriteFont2" sid="359177019930205">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\Cristina\Documents\Downloads\alfabetario_nuovo_pixeled.png" />
         </object-type>
     </object-folder>
     <families>
