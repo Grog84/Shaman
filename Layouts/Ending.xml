@@ -1833,7 +1833,7 @@
                     <properties>
                         <character-width>32</character-width>
                         <character-height>32</character-height>
-                        <character-set>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZàèìòùÀÈÌÒÙ0123456789.,:;&apos;?!=-_()</character-set>
+                        <character-set>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZàèìòùÀÈÌÒÙ0123456789.,:;&apos;?!=-_()/+</character-set>
                         <text>FINE !</text>
                         <scale>2</scale>
                         <initial-visibility>Visible</initial-visibility>

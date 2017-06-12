@@ -1441,7 +1441,7 @@
                     <behavior id="Pin" />
                 </behavior-type>
             </behaviors>
-            <texture original-source="C:\Users\dbga_55\Downloads\alfabetariobianco.png" />
+            <texture original-source="C:\Users\dbga_55\Downloads\alfabetario_nuovo_pixeled.png" />
         </object-type>
         <object-type name="Hearts" sid="350596663947940">
             <plugin id="Sprite" />

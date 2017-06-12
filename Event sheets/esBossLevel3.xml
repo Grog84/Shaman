@@ -142,7 +142,7 @@
         <event-block sid="721670734156442">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="432099620888738" type="System">
-                    <param id="0" name="Interval (seconds)">5</param>
+                    <param id="0" name="Interval (seconds)">10</param>
                 </condition>
             </conditions>
             <actions />
@@ -153,7 +153,7 @@
                     <actions>
                         <action id="-9" name="Set value" sid="543326879859873" type="System">
                             <param id="0" name="Variable">position</param>
-                            <param id="1" name="Value">random(290, 390)</param>
+                            <param id="1" name="Value">random(310, 390)</param>
                         </action>
                         <action id="-3" name="Create object" sid="554990966307800" type="System">
                             <param id="0" name="Object to create">FireBall</param>

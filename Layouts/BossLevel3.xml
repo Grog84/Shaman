@@ -2320,9 +2320,9 @@
                     <properties>
                         <character-width>32</character-width>
                         <character-height>32</character-height>
-                        <character-set>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,:;&apos;?!=-_()</character-set>
+                        <character-set>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZàèìòùÀÈÌÒÙ0123456789.,:;&apos;?!=-_()/+</character-set>
                         <text>0:4</text>
-                        <scale>0.6</scale>
+                        <scale>0.7</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -2356,9 +2356,9 @@
                     <properties>
                         <character-width>32</character-width>
                         <character-height>32</character-height>
-                        <character-set>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,:;&apos;?!=-_()</character-set>
+                        <character-set>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZàèìòùÀÈÌÒÙ0123456789.,:;&apos;?!=-_()/+</character-set>
                         <text>0:4</text>
-                        <scale>0.6</scale>
+                        <scale>0.7</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -2392,9 +2392,9 @@
                     <properties>
                         <character-width>32</character-width>
                         <character-height>32</character-height>
-                        <character-set>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,:;&apos;?!=-_()</character-set>
+                        <character-set>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZàèìòùÀÈÌÒÙ0123456789.,:;&apos;?!=-_()/+</character-set>
                         <text>0:4</text>
-                        <scale>0.6</scale>
+                        <scale>0.7</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>

@@ -4167,7 +4167,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="719985972923801" type="Hud">
-                                    <param id="0" name="Text">Player.RockTiles&amp;&quot;:&quot;&amp;MAX_NBR_OF_ROCKS</param>
+                                    <param id="0" name="Text">Player.RockTiles&amp;&quot;/&quot;&amp;MAX_NBR_OF_ROCKS</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -4181,7 +4181,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="692330786479129" type="Hud">
-                                    <param id="0" name="Text">Player.AirTiles&amp;&quot;:&quot;&amp;MAX_NBR_OF_AIR</param>
+                                    <param id="0" name="Text">Player.AirTiles&amp;&quot;/&quot;&amp;MAX_NBR_OF_AIR</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -4195,7 +4195,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="963913596290900" type="Hud">
-                                    <param id="0" name="Text">Player.WaterTiles&amp;&quot;:&quot;&amp;MAX_NBR_OF_WATER</param>
+                                    <param id="0" name="Text">Player.WaterTiles&amp;&quot;/&quot;&amp;MAX_NBR_OF_WATER</param>
                                 </action>
                             </actions>
                         </event-block>
