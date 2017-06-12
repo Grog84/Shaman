@@ -10,15 +10,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="1">Level1</layout>
-        <layout order="2">Level2</layout>
-        <layout order="3">Level3</layout>
-        <layout order="4">BossLevel1</layout>
-        <layout order="5">BossLevel2</layout>
-        <layout order="6">BossLevel3</layout>
-        <layout order="8">Menu</layout>
+        <layout order="1">BossLevel1</layout>
+        <layout order="3">Level1</layout>
         <event-sheet order="0">Main</event-sheet>
-        <event-sheet active="1" order="7">esMenu</event-sheet>
+        <event-sheet active="1" order="2">esBossLevel1</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -32,11 +27,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </families-expanded>
     <folders-expanded>
         <folder expanded="0" path="object-folder/" />
-        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="0" path="layout-folder/" />
         <folder expanded="0" path="event-folder/" />
         <folder expanded="0" path="event-folder/Enemies/" />
         <folder expanded="0" path="event-folder/Levels/" />
-        <folder expanded="0" path="event-folder/BossFights/" />
+        <folder expanded="1" path="event-folder/BossFights/" />
         <folder expanded="0" path="event-folder/Environment/" />
         <folder expanded="0" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />

@@ -346,6 +346,25 @@
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
                     </properties>
+                    <instance-variables>
+                        <shakeDuration>0.3</shakeDuration>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Horizontal</movement>
+                                <wave>Sine</wave>
+                                <period>4</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>50</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Timer" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1435,8 +1454,8 @@
                         <width>213</width>
                         <height>61</height>
                         <depth>0</depth>
-                        <hotspotX>0.502346992</hotspotX>
-                        <hotspotY>0.50819701</hotspotY>
+                        <hotspotX>0.50234741</hotspotX>
+                        <hotspotY>0.508196712</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1458,7 +1477,7 @@
                         <height>39</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.512821019</hotspotY>
+                        <hotspotY>0.512820542</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1479,7 +1498,7 @@
                         <width>457</width>
                         <height>48</height>
                         <depth>0</depth>
-                        <hotspotX>0.501093984</hotspotX>
+                        <hotspotX>0.501094103</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -1501,8 +1520,8 @@
                         <width>235</width>
                         <height>41</height>
                         <depth>0</depth>
-                        <hotspotX>0.502128005</hotspotX>
-                        <hotspotY>0.512194991</hotspotY>
+                        <hotspotX>0.502127647</hotspotX>
+                        <hotspotY>0.51219511</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

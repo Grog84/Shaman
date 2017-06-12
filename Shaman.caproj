@@ -1057,10 +1057,10 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <image-point name="Imagepoint 1" x="0.46875" y="0.242188" />
                         <collision-poly>
-                            <point x="0.03125" y="0.164063" />
-                            <point x="0.289062" y="0.345703" />
-                            <point x="0.703125" y="0.324219" />
-                            <point x="0.90625" y="0.171875" />
+                            <point x="0.03125" y="0.125001" />
+                            <point x="0.289062" y="0.330078" />
+                            <point x="0.703125" y="0.308594" />
+                            <point x="0.90625" y="0.140625" />
                             <point x="0.75" y="0.578125" />
                             <point x="0.604166" y="1" />
                             <point x="0.375" y="1" />
@@ -1069,10 +1069,10 @@
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0.03125" y="0.164063" />
-                            <point x="0.289062" y="0.345703" />
-                            <point x="0.703125" y="0.324219" />
-                            <point x="0.90625" y="0.171875" />
+                            <point x="0.03125" y="0.125001" />
+                            <point x="0.289062" y="0.330078" />
+                            <point x="0.703125" y="0.308594" />
+                            <point x="0.90625" y="0.140625" />
                             <point x="0.75" y="0.578125" />
                             <point x="0.604166" y="1" />
                             <point x="0.375" y="1" />
@@ -1081,10 +1081,10 @@
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0.03125" y="0.164063" />
-                            <point x="0.289062" y="0.345703" />
-                            <point x="0.703125" y="0.324219" />
-                            <point x="0.90625" y="0.171875" />
+                            <point x="0.03125" y="0.125001" />
+                            <point x="0.289062" y="0.330078" />
+                            <point x="0.703125" y="0.308594" />
+                            <point x="0.90625" y="0.140625" />
                             <point x="0.75" y="0.578125" />
                             <point x="0.604166" y="1" />
                             <point x="0.375" y="1" />
@@ -1093,10 +1093,10 @@
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0.03125" y="0.164063" />
-                            <point x="0.289062" y="0.345703" />
-                            <point x="0.703125" y="0.324219" />
-                            <point x="0.90625" y="0.171875" />
+                            <point x="0.03125" y="0.125001" />
+                            <point x="0.289062" y="0.330078" />
+                            <point x="0.703125" y="0.308594" />
+                            <point x="0.90625" y="0.140625" />
                             <point x="0.75" y="0.578125" />
                             <point x="0.604166" y="1" />
                             <point x="0.375" y="1" />
@@ -1105,10 +1105,10 @@
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0.03125" y="0.164063" />
-                            <point x="0.289062" y="0.345703" />
-                            <point x="0.703125" y="0.324219" />
-                            <point x="0.90625" y="0.171875" />
+                            <point x="0.03125" y="0.125001" />
+                            <point x="0.289062" y="0.330078" />
+                            <point x="0.703125" y="0.308594" />
+                            <point x="0.90625" y="0.140625" />
                             <point x="0.75" y="0.578125" />
                             <point x="0.604166" y="1" />
                             <point x="0.375" y="1" />
@@ -1117,10 +1117,10 @@
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0.03125" y="0.164063" />
-                            <point x="0.289062" y="0.345703" />
-                            <point x="0.703125" y="0.324219" />
-                            <point x="0.90625" y="0.171875" />
+                            <point x="0.03125" y="0.125001" />
+                            <point x="0.289062" y="0.330078" />
+                            <point x="0.703125" y="0.308594" />
+                            <point x="0.90625" y="0.140625" />
                             <point x="0.75" y="0.578125" />
                             <point x="0.604166" y="1" />
                             <point x="0.375" y="1" />
@@ -1627,6 +1627,17 @@
         </object-type>
         <object-type name="CaveBkg" sid="783847985092914">
             <plugin id="TiledBg" />
+            <instance-variables>
+                <instance-variable name="shakeDuration" sid="647205265335000" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Sine" sid="592230336819077">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Timer" sid="366352929445694">
+                    <behavior id="Timer" />
+                </behavior-type>
+            </behaviors>
             <texture original-source="C:\Users\grolg\Documents\Construct2 Projects\Shaman\Animations\CaveBkg\Default\000.png" />
         </object-type>
         <object-type name="WaterBkg" sid="521031059214176">
@@ -2405,6 +2416,9 @@
                     </frame>
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type global="1" name="BossTileSpwn" sid="839182804758256">
+            <plugin id="Arr" />
         </object-type>
     </object-folder>
     <families>

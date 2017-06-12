@@ -112,6 +112,14 @@
                     <param id="0" name="Instance variable">spawnBlocks</param>
                     <param id="1" name="Value">1</param>
                 </action>
+                <action behavior="Sine" id="0" name="Set active" sid="871343022485526" type="CaveBkg">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="325599110314876" type="CaveBkg">
+                    <param id="0" name="Duration">self.shakeDuration</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;shake&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="692938258909780">
@@ -135,40 +143,59 @@
             </conditions>
             <actions />
             <sub-events>
-                <variable constant="0" name="spwnPoint1" sid="391553927629757" static="0" type="number">0</variable>
-                <variable constant="0" name="spwnPoint2" sid="851571907901123" static="0" type="number">0</variable>
-                <variable constant="0" name="spwnPoint3" sid="754357623371225" static="0" type="number">0</variable>
-                <event-block sid="281935698225010">
-                    <conditions />
+                <variable constant="0" name="randomNumber" sid="313593220654228" static="0" type="number">0</variable>
+                <variable constant="0" name="tries" sid="438982194280158" static="0" type="number">0</variable>
+                <variable constant="0" name="i" sid="794744345193212" static="0" type="number">0</variable>
+                <event-block sid="994004179702867">
+                    <conditions>
+                        <condition id="-23" name="While" sid="432414688691589" type="System" />
+                        <condition id="-14" name="Compare variable" sid="412250085701097" type="System">
+                            <param id="0" name="Variable">i</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">BossTileSpwn.Width</param>
+                        </condition>
+                    </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="404031344623720" type="System">
-                            <param id="0" name="Variable">spwnPoint1</param>
-                            <param id="1" name="Value">int(random(2, 13))</param>
+                        <action id="-9" name="Set value" sid="989182705352196" type="System">
+                            <param id="0" name="Variable">randomNumber</param>
+                            <param id="1" name="Value">int(random(9, 14))</param>
                         </action>
-                        <action id="-9" name="Set value" sid="773019910633172" type="System">
-                            <param id="0" name="Variable">spwnPoint2</param>
-                            <param id="1" name="Value">int(random(2,13))</param>
+                        <action id="-10" name="Add to" sid="649569479702817" type="System">
+                            <param id="0" name="Variable">tries</param>
+                            <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-9" name="Set value" sid="437858932310424" type="System">
-                            <param id="0" name="Variable">spwnPoint3</param>
-                            <param id="1" name="Value">int(random(2,13))</param>
-                        </action>
-                        <action id="-3" name="Create object" sid="242448804291593" type="System">
+                    </actions>
+                    <sub-events>
+                        <event-block sid="954112793072982">
+                            <conditions>
+                                <condition id="5" inverted="1" name="Contains value" sid="738081674843760" type="BossTileSpwn">
+                                    <param id="0" name="Value">randomNumber</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Set at X" sid="984568098163260" type="BossTileSpwn">
+                                    <param id="0" name="X">i</param>
+                                    <param id="1" name="Value">randomNumber</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="988770716384372" type="System">
+                                    <param id="0" name="Variable">i</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="506705210548189">
+                    <conditions>
+                        <condition id="3" name="For each element" sid="960108578969017" type="BossTileSpwn">
+                            <param id="0" name="Axes">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="234552482081667" type="System">
                             <param id="0" name="Object to create">TileDrop</param>
-                            <param id="1" name="Layer">0</param>
-                            <param id="2" name="X">128 + spwnPoint1*32 +16</param>
-                            <param id="3" name="Y">32</param>
-                        </action>
-                        <action id="-3" name="Create object" sid="820481625430213" type="System">
-                            <param id="0" name="Object to create">TileDrop</param>
-                            <param id="1" name="Layer">0</param>
-                            <param id="2" name="X">128 + spwnPoint2*32 +16</param>
-                            <param id="3" name="Y">32</param>
-                        </action>
-                        <action id="-3" name="Create object" sid="231678609030835" type="System">
-                            <param id="0" name="Object to create">TileDrop</param>
-                            <param id="1" name="Layer">0</param>
-                            <param id="2" name="X">128 + spwnPoint3*32 +16</param>
+                            <param id="1" name="Layer">&quot;Tiles&quot;</param>
+                            <param id="2" name="X">BossTileSpwn.CurValue*32 -16</param>
                             <param id="3" name="Y">32</param>
                         </action>
                     </actions>
@@ -328,6 +355,18 @@
                 <action id="-11" name="Subtract from" sid="438590062054450" type="System">
                     <param id="0" name="Variable">PlayerHealth</param>
                     <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="769168613065320">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="448518188118210" type="CaveBkg">
+                    <param id="0" name="Tag">&quot;shake&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Sine" id="0" name="Set active" sid="110258644458671" type="CaveBkg">
+                    <param id="0" name="State">0</param>
                 </action>
             </actions>
         </event-block>
