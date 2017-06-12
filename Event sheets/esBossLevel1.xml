@@ -48,6 +48,9 @@
                     <param id="0" name="Fade-in time">0</param>
                 </action>
                 <action behavior="Fade" id="1" name="Start fade" sid="752254264240398" type="FadeEffect" />
+                <action behavior="Platform" id="1" name="Set max speed" sid="793137966090841" type="Player">
+                    <param id="0" name="Max Speed">0</param>
+                </action>
             </actions>
             <sub-events>
                 <comment>Activates or deactivates tiles selection/absorption</comment>

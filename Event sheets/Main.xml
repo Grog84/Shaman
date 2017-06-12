@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Main</name>
     <events>
+        <variable constant="0" name="IsDeathAnimation" sid="612383450051302" static="0" type="number">0</variable>
         <variable constant="0" name="SelectionPositionPause" sid="994354346244039" static="0" type="number">0</variable>
         <variable constant="0" name="LastCheckPoint" sid="892873940625470" static="0" type="number">-1</variable>
         <variable constant="0" name="LastRockSpawn" sid="262164579340656" static="0" type="number">-1</variable>
@@ -747,6 +748,30 @@
                                     </actions>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                        <event-block sid="296177830856188">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="261700024569082" type="Interaction" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="775581793371022" type="Interaction">
+                                    <param id="0" name="Object">AbsorbingSphere</param>
+                                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="890916610239916" type="AbsorbingSphere">
+                                    <param id="0" name="Pin to">Interaction</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="572162040558233">
+                            <conditions>
+                                <condition id="-19" name="On destroyed" sid="445766299449449" type="Interaction" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="990956458054919" type="AbsorbingSphere" />
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-group>
@@ -1946,10 +1971,6 @@
                         <action behavior="Platform" id="1" name="Set max speed" sid="325760494795274" type="Player">
                             <param id="0" name="Max Speed">Player.BaseSpeed</param>
                         </action>
-                        <action id="-10" name="Set value" sid="987009857889705" type="Player">
-                            <param id="0" name="Instance variable">IsImmune</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
                         <action id="0" name="Call function" sid="676838211408633" type="Function">
                             <param id="0" name="Name">&quot;SetHeartValue&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
@@ -1963,9 +1984,59 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
+                        <condition id="-4" name="Trigger once while true" sid="176801786573284" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="540875095041081" type="Function">
+                        <action behavior="Fade" id="2" name="Set fade-in time" sid="499027848256291" type="FadeEffect">
+                            <param id="0" name="Fade-in time">0.5</param>
+                        </action>
+                        <action behavior="Fade" id="4" name="Set fade-out time" sid="577443747944100" type="FadeEffect">
+                            <param id="0" name="Fade-out time">0</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="457984376048892" type="FadeEffect" />
+                        <action behavior="Pin" id="1" name="Unpin" sid="513350342238426" type="PlayerSprite" />
+                        <action behavior="Flash" id="1" name="Stop flashing" sid="442495447433067" type="PlayerSprite" />
+                        <action id="-16" name="Set opacity" sid="645893311959364" type="PlayerSprite">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="292785210233028" type="PlayerSprite">
+                            <param id="0" name="Layer">&quot;Fade&quot;</param>
+                        </action>
+                        <action id="-24" name="Move to top" sid="924991188433808" type="PlayerSprite" />
+                        <action id="-3" name="Set position" sid="671824094415207" type="PlayerSprite">
+                            <param id="0" name="X">320</param>
+                            <param id="1" name="Y">240</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="100811195240571" type="System">
+                            <param id="0" name="Variable">IsDeathAnimation</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="264375363285699">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="674846600830596" type="System">
+                            <param id="0" name="Variable">PlayerHealth</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-10" name="Compare opacity" sid="392672950754350" type="FadeEffect">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Opacity">50</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="829732644415828" type="FadeEffect">
+                            <param id="0" name="Opacity">50</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="990083575221377" type="PlayerSprite">
+                            <param id="0" name="Animation">&quot;Death&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="416895562180423" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="0" name="Call function" sid="855723927262470" type="Function">
                             <param id="0" name="Name">&quot;RespawnAtChkPoint&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>

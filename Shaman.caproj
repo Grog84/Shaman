@@ -713,7 +713,7 @@
                 </animation>
                 <animation framecount="1" loop="0" name="Crouch" pingpong="0" repeatcount="1" repeatto="0" sid="532840097984556" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\PU\Downloads\Shaman\AnaCrouch.png">
-                        <image-point name="Skall" x="0.890625" y="0.84375" />
+                        <image-point name="Skall" x="0.890625" y="0.75" />
                         <image-point name="SpawnTile" x="0.609375" y="0.65625" />
                         <collision-poly>
                             <point x="0.25" y="0.25" />
@@ -796,7 +796,7 @@
                 </animation>
                 <animation framecount="3" loop="0" name="AbsorbDown" pingpong="0" repeatcount="1" repeatto="0" sid="731826813856121" speed="12">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Skall" x="0.53125" y="0.859375" />
+                        <image-point name="Skall" x="0.53125" y="0.75" />
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <image-point name="Skall" x="0.84375" y="0.90625" />
@@ -817,6 +817,16 @@
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <image-point name="Skall" x="0.671875" y="0.515625" />
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Death" pingpong="0" repeatcount="1" repeatto="0" sid="690878192304227" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_55\Downloads\Dead.png">
+                        <collision-poly>
+                            <point x="0.609375" y="0.609375" />
+                            <point x="0.5" y="0.75" />
+                            <point x="0.96875" y="0.96875" />
+                            <point x="0.5" y="1" />
+                        </collision-poly>
                     </frame>
                 </animation>
             </animation-folder>
@@ -2463,6 +2473,25 @@
             </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="919596479276932" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="AbsorbingSphere" sid="783278424718266">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="836634289511662">
+                    <behavior id="Fade" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="388903562573519">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="964186549026361" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>

@@ -166,6 +166,11 @@
                 <condition id="0" name="On collision with another object" sid="619661115076256" type="FireBall">
                     <param id="0" name="Object">Player</param>
                 </condition>
+                <condition id="-14" name="Compare variable" sid="441185883049690" type="System">
+                    <param id="0" name="Variable">IsDeathAnimation</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-11" name="Subtract from" sid="174391057112622" type="System">

@@ -87,6 +87,9 @@
                     <param id="0" name="Fade-in time">0</param>
                 </action>
                 <action behavior="Fade" id="1" name="Start fade" sid="368029275369645" type="FadeEffect" />
+                <action behavior="Platform" id="1" name="Set max speed" sid="669193170229854" type="Player">
+                    <param id="0" name="Max Speed">0</param>
+                </action>
             </actions>
             <sub-events>
                 <comment>Activates or deactivates tiles selection/absorption</comment>
@@ -282,6 +285,19 @@
             <actions>
                 <action id="0" name="Load" sid="400227425766193" type="XML">
                     <param id="0" name="XML">AJAX.LastData</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="233026267202499">
+            <conditions>
+                <condition id="-10" name="Compare opacity" sid="211245064371297" type="FadeEffect">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="Opacity">10</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="1" name="Set max speed" sid="406439956214678" type="Player">
+                    <param id="0" name="Max Speed">self.BaseSpeed</param>
                 </action>
             </actions>
         </event-block>

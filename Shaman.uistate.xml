@@ -13,12 +13,15 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="2">Intro</layout>
         <layout order="3">Level1</layout>
         <layout order="5">Level2</layout>
-        <layout active="1" order="7">Level3</layout>
-        <event-sheet order="0">Main</event-sheet>
+        <layout order="7">Level3</layout>
+        <event-sheet active="1" order="0">Main</event-sheet>
         <event-sheet order="1">esIntro</event-sheet>
         <event-sheet order="4">esLevel1</event-sheet>
         <event-sheet order="6">esLevel2</event-sheet>
         <event-sheet order="8">esLevel3</event-sheet>
+        <event-sheet order="9">esBossLevel1</event-sheet>
+        <event-sheet order="10">esBossLevel2</event-sheet>
+        <event-sheet order="11">esBossLevel3</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -31,10 +34,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="0" name="Obstacle" />
     </families-expanded>
     <folders-expanded>
-        <folder expanded="0" path="object-folder/" />
-        <folder expanded="1" path="layout-folder/" />
-        <folder expanded="1" path="event-folder/" />
-        <folder expanded="0" path="event-folder/Enemies/" />
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="layout-folder/" />
+        <folder expanded="0" path="event-folder/" />
+        <folder expanded="1" path="event-folder/Enemies/" />
         <folder expanded="0" path="event-folder/Levels/" />
         <folder expanded="0" path="event-folder/BossFights/" />
         <folder expanded="0" path="event-folder/Environment/" />
@@ -111,5 +114,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Pause/" />
         <folder expanded="1" path="animation-folder/CursorPauseMenu/" />
         <folder expanded="1" path="animation-folder/BossCutsceneArea/" />
+        <folder expanded="1" path="animation-folder/AbsorbingSphere/" />
     </folders-expanded>
 </c2uistate>
