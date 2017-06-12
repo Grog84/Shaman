@@ -71,10 +71,10 @@
                     <param id="0" name="Instance variable">IsMoving</param>
                     <param id="1" name="Value">0</param>
                 </action>
-                <action id="6" name="Set speed" sid="923707903655531" type="Tornado">
-                    <param id="0" name="Speed">0</param>
+                <action id="4" name="Set animation" sid="260495340091123" type="Tornado">
+                    <param id="0" name="Animation">&quot;Death&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
-                <action behavior="Fade" id="1" name="Start fade" sid="521342770647473" type="Tornado" />
             </actions>
         </event-block>
         <event-block sid="243457478261931">
@@ -200,6 +200,16 @@
                     <param id="0" name="Instance variable">hasJustChangedDirection</param>
                     <param id="1" name="Value">0</param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block sid="297196133443489">
+            <conditions>
+                <condition id="4" name="On finished" sid="113040893213481" type="Tornado">
+                    <param id="0" name="Animation">&quot;Death&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="225995343429189" type="Tornado" />
             </actions>
         </event-block>
     </events>

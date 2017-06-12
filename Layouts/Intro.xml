@@ -153,6 +153,7 @@
                     </properties>
                     <instance-variables>
                         <IsDestroyed>false</IsDestroyed>
+                        <canBeAbsorbed>0</canBeAbsorbed>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
