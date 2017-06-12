@@ -735,14 +735,14 @@
                     <frame duration="0.8" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
                 <animation framecount="8" loop="1" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="203115721234131" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.34375" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.34375" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.34375" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.34375" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.34375" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.34375" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.34375" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.34375" hotspotY="0.5" />
                 </animation>
                 <animation framecount="2" loop="0" name="Falling" pingpong="0" repeatcount="1" repeatto="0" sid="580991396314930" speed="5">
                     <frame duration="0.8" hotspotX="0.5" hotspotY="0.5" />
@@ -1247,14 +1247,14 @@
             <instance-variables>
                 <instance-variable name="isVisible" sid="775120147873212" type="boolean" />
             </instance-variables>
-            <texture original-source="C:\Users\dbga_51\Downloads\alfabetariobianco.png" />
+            <texture original-source="C:\Users\dbga_55\Downloads\alfabetario_nuovo_pixeled.png" />
         </object-type>
         <object-type name="SkallFont" sid="574860478158727">
             <plugin id="Spritefont2" />
             <instance-variables>
                 <instance-variable name="isVisible" sid="233618636769360" type="boolean" />
             </instance-variables>
-            <texture original-source="C:\Users\dbga_51\Downloads\alfabetariobianco.png" />
+            <texture original-source="C:\Users\dbga_55\Downloads\alfabetario_nuovo_pixeled.png" />
         </object-type>
         <object-type name="Portrait" sid="466732616491070">
             <plugin id="Sprite" />
@@ -1273,7 +1273,7 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_55\Downloads\Happy.png" />
                 </animation>
                 <animation framecount="1" loop="0" name="SkallWorried" pingpong="0" repeatcount="1" repeatto="0" sid="840533674984398" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_55\Downloads\Cry.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_55\Downloads\Cry (1).png">
                         <collision-poly>
                             <point x="0.25" y="0.25" />
                             <point x="0.5" y="0.0078125" />
@@ -2586,7 +2586,6 @@
             <event-sheet>esLevel1.xml</event-sheet>
             <event-sheet>esLevel2.xml</event-sheet>
             <event-sheet>esLevel3.xml</event-sheet>
-            <event-sheet>esLevel4.xml</event-sheet>
             <event-sheet>esIntro.xml</event-sheet>
             <event-sheet>esEnding.xml</event-sheet>
         </event-folder>
@@ -2594,7 +2593,6 @@
             <event-sheet>esBossLevel1.xml</event-sheet>
             <event-sheet>esBossLevel2.xml</event-sheet>
             <event-sheet>esBossLevel3.xml</event-sheet>
-            <event-sheet>esBossLevel4.xml</event-sheet>
         </event-folder>
         <event-folder name="Environment">
             <event-sheet>SpecialTies.xml</event-sheet>
@@ -2655,6 +2653,10 @@
         <file name="Selezione sbagliata.ogg" />
         <file name="Posizionamento Blocco.m4a" />
         <file name="Posizionamento Blocco.ogg" />
+        <file name="eventuale altro menu.m4a" />
+        <file name="eventuale altro menu.ogg" />
+        <file name="screen finale.m4a" />
+        <file name="screen finale.ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>

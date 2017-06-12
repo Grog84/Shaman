@@ -53,6 +53,7 @@
                     <param id="3" name="Volume">-10</param>
                     <param id="1" name="Tag (optional)">&quot;level1bkg&quot;</param>
                 </action>
+                <action id="-21" name="Reset global variables" sid="357315228191690" type="System" />
             </actions>
             <sub-events>
                 <comment>Activates or deactivates tiles selection/absorption</comment>

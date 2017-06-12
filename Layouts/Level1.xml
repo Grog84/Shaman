@@ -632,8 +632,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>18.001419067</x>
-                        <y>383.114501953</y>
+                        <x>18</x>
+                        <y>383</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -717,8 +717,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>18.001419067</x>
-                        <y>387.114501953</y>
+                        <x>18</x>
+                        <y>387</y>
                         <z>0</z>
                         <width>20</width>
                         <height>55</height>
@@ -774,15 +774,15 @@
                     <properties>
                         <character-width>32</character-width>
                         <character-height>32</character-height>
-                        <character-set>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,:;&apos;?!=-_()</character-set>
+                        <character-set>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZàèìòùÀÈÌÒÙ0123456789.,:;&apos;?!=-_()</character-set>
                         <text>Text</text>
-                        <scale>0.4</scale>
+                        <scale>0.6</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
-                        <character-spacing>-1</character-spacing>
+                        <character-spacing>-7</character-spacing>
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
@@ -807,15 +807,15 @@
                     <properties>
                         <character-width>32</character-width>
                         <character-height>32</character-height>
-                        <character-set>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,:;&apos;?!=-_()</character-set>
+                        <character-set>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZàèìòùÀÈÌÒÙ0123456789.,:;&apos;?!=-_()</character-set>
                         <text></text>
-                        <scale>0.4</scale>
+                        <scale>0.6</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
-                        <character-spacing>-1</character-spacing>
+                        <character-spacing>-7</character-spacing>
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
@@ -1609,7 +1609,7 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>0</opacity>
+                        <opacity>1</opacity>
                     </world>
                 </instance>
                 <instance type="AbsorbingSphere" uid="485">

@@ -46,7 +46,7 @@
 	</Dialogo>
 	
 	<Dialogo id = "5">
-		<linea id="1" charachter = "Skall" mood = "Desperate" type = "" >Mia padrona mi lasci andare, ne ho abbastanza! Torno a casa!</linea>
+		<linea id="1" charachter = "Skall" mood = "Worried" type = "" >Mia padrona mi lasci andare, ne ho abbastanza! Torno a casa!</linea>
 		<linea id="2" charachter = "Ana" mood = "Normal" type = "" >Pure fifone sei! Stai buono che sicuramente dovremo affrontare qualcosa di grosso...</linea>
 		<linea id="3" charachter = "Skall" mood = "Sad" type = "End"></linea>
 			

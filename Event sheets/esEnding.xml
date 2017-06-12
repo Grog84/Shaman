@@ -24,6 +24,12 @@
                     <param id="0" name="Tag">&quot;Outro&quot;</param>
                     <param id="1" name="File">Outro2.xml</param>
                 </action>
+                <action id="0" name="Play" sid="839442044744867" type="Audio">
+                    <param id="0" name="Audio file">eventuale altro menu</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-10</param>
+                    <param id="1" name="Tag (optional)">&quot;endingBkg&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="346500821492268">

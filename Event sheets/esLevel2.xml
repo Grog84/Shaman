@@ -51,15 +51,13 @@
                     <param id="0" name="Fade-in time">0</param>
                 </action>
                 <action behavior="Fade" id="1" name="Start fade" sid="647372487985099" type="FadeEffect" />
-                <action behavior="Platform" id="1" name="Set max speed" sid="104114420408798" type="Player">
-                    <param id="0" name="Max Speed">0</param>
-                </action>
                 <action id="0" name="Play" sid="259397855478674" type="Audio">
                     <param id="0" name="Audio file">Level 2</param>
                     <param id="2" name="Loop">1</param>
                     <param id="3" name="Volume">-10</param>
                     <param id="1" name="Tag (optional)">&quot;level2bkg&quot;</param>
                 </action>
+                <action id="-21" name="Reset global variables" sid="521587402826952" type="System" />
             </actions>
             <sub-events>
                 <comment>Activates or deactivates tiles selection/absorption</comment>
@@ -167,19 +165,6 @@
             <actions>
                 <action id="0" name="Load" sid="944220240210453" type="XML">
                     <param id="0" name="XML">AJAX.LastData</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="143480935339322">
-            <conditions>
-                <condition id="-10" name="Compare opacity" sid="402959863316703" type="FadeEffect">
-                    <param id="0" name="Comparison">2</param>
-                    <param id="1" name="Opacity">10</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="1" name="Set max speed" sid="333433494611905" type="Player">
-                    <param id="0" name="Max Speed">self.BaseSpeed</param>
                 </action>
             </actions>
         </event-block>

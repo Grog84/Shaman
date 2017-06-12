@@ -180,15 +180,15 @@
                     <properties>
                         <character-width>32</character-width>
                         <character-height>32</character-height>
-                        <character-set>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,:;&apos;?!=-_()</character-set>
+                        <character-set>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZàèìòùÀÈÌÒÙ0123456789.,:;&apos;?!=-_()</character-set>
                         <text>Text</text>
-                        <scale>0.4</scale>
+                        <scale>0.6</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
-                        <character-spacing>-1</character-spacing>
+                        <character-spacing>-7</character-spacing>
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
@@ -3231,15 +3231,15 @@
                     <properties>
                         <character-width>32</character-width>
                         <character-height>32</character-height>
-                        <character-set>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,:;&apos;?!=-_()</character-set>
+                        <character-set>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZàèìòùÀÈÌÒÙ0123456789.,:;&apos;?!=-_()</character-set>
                         <text></text>
-                        <scale>0.4</scale>
+                        <scale>0.6</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
-                        <character-spacing>-1</character-spacing>
+                        <character-spacing>-7</character-spacing>
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>

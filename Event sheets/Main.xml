@@ -838,9 +838,20 @@
                                                             <param id="0" name="Object">ValidArea</param>
                                                         </condition>
                                                     </conditions>
-                                                    <actions>
-                                                        <action id="-9" name="Destroy" sid="184138158962532" type="ValidArea" />
-                                                    </actions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="536002572915554">
+                                                            <conditions>
+                                                                <condition id="3" name="Compare frame" sid="390378341216487" type="BkgTile">
+                                                                    <param id="0" name="Comparison">1</param>
+                                                                    <param id="1" name="Number">31</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-9" name="Destroy" sid="184138158962532" type="ValidArea" />
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                                 <event-block sid="524702325009176">
                                                     <conditions>
