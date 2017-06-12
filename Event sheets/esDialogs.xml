@@ -94,6 +94,64 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="992774271410156">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="417448096354646" type="System">
+                            <param id="0" name="First value">XML.StringValue(&quot;/Dialoghi/Dialogo[@id = &quot; &amp; Function.Param(0) &amp; &quot;]/linea[@id = &quot;&amp; CurrentLine &amp;&quot;]/@charachter&quot;) </param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;Manu&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="416090998639531" type="System">
+                            <param id="0" name="Variable">AnimName</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;/Dialoghi/Dialogo[@id = &quot;&amp;Function.Param(0)&amp;&quot;]/linea[@id = &quot;&amp;CurrentLine&amp;&quot;]/@charachter&quot;) &amp; XML.StringValue(&quot;/Dialoghi/Dialogo[@id = &quot;&amp;Function.Param(0)&amp;&quot;]/linea[@id = &quot;&amp;CurrentLine&amp;&quot;]/@mood&quot;)</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="720286163034403" type="Portrait">
+                            <param id="0" name="Animation">AnimName</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="548970586559044" type="Portrait">
+                            <param id="0" name="X">Undertext.ImagePointX(2)</param>
+                            <param id="1" name="Y">Undertext.ImagePointY(2)</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="899583376477640" type="AnaFont">
+                            <param id="0" name="X">25</param>
+                            <param id="1" name="Y">420</param>
+                        </action>
+                        <action id="0" name="Set text" sid="711924791727137" type="AnaFont">
+                            <param id="0" name="Text">XML.StringValue(&quot;/Dialoghi/Dialogo[@id = &quot; &amp;Function.Param(0)&amp;&quot;]/linea[@id = &quot;&amp;CurrentLine&amp;&quot;]/text()&quot;)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="917645109771966">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="486739928991387" type="System">
+                                    <param id="0" name="First value">XML.StringValue(&quot;/Dialoghi/Dialogo[@id = &quot; &amp; Function.Param(0) &amp; &quot;]/linea[@id = &quot;&amp; CurrentLine &amp;&quot;]/@type&quot;) </param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;End&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set time scale" sid="383490261446764" type="System">
+                                    <param id="0" name="Time scale">1.0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="767364650715015" type="System">
+                                    <param id="0" name="Variable">IsDialogues</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="811953992861867" type="System">
+                                    <param id="0" name="Variable">CurrentDialogue</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="859622511488013" type="System">
+                                    <param id="0" name="Variable">CurrentLine</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <event-block sid="434055507271462">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="804593656057014" type="System">

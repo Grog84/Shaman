@@ -1259,8 +1259,15 @@
         <object-type name="Portrait" sid="466732616491070">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="816883212373294" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                <animation framecount="1" loop="0" name="ManuNormal" pingpong="0" repeatcount="1" repeatto="0" sid="816883212373294" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_55\Downloads\ShamanCutScene\LastShaman\Animations\Portrait\ManuNormal\000.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.995833" y="0.00416667" />
+                            <point x="0.995833" y="0.995833" />
+                            <point x="0.00416667" y="0.995833" />
+                        </collision-poly>
+                    </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="SkallHappy" pingpong="0" repeatcount="1" repeatto="0" sid="679471467052085" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_55\Downloads\Happy.png" />
@@ -2500,6 +2507,41 @@
         <object-type name="Audio" sid="454775303014114">
             <plugin id="Audio" />
         </object-type>
+        <object-type name="Glow" sid="126141016681150">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="873957637919352">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="379525622692959" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Fine" sid="122322839692544">
+            <plugin id="Spritefont2" />
+            <behaviors>
+                <behavior-type name="Fade" sid="741210193382220">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\dbga_51\Downloads\alfabetario_nuovo_pixeled.png" />
+        </object-type>
+        <object-type name="PicNic" sid="675560094507235">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="1" name="WithOutAna" pingpong="0" repeatcount="1" repeatto="0" sid="971130444451358" speed="3">
+                    <frame duration="1" hotspotX="0.504762" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.504762" hotspotY="0.5" />
+                </animation>
+                <animation framecount="2" loop="1" name="WithAna" pingpong="0" repeatcount="1" repeatto="0" sid="470429601493594" speed="3">
+                    <frame duration="1" hotspotX="0.50505" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.50505" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Tile" plugin-id="Sprite" sid="792340356286362">
@@ -2528,12 +2570,11 @@
         <layout>Level1.xml</layout>
         <layout>Level2.xml</layout>
         <layout>Level3.xml</layout>
-        <layout>Level4.xml</layout>
         <layout>BossLevel1.xml</layout>
         <layout>BossLevel2.xml</layout>
         <layout>BossLevel3.xml</layout>
-        <layout>BossLevel4.xml</layout>
         <layout>Intro.xml</layout>
+        <layout>Ending.xml</layout>
     </layout-folder>
     <event-folder>
         <event-folder name="Enemies">
@@ -2547,6 +2588,7 @@
             <event-sheet>esLevel3.xml</event-sheet>
             <event-sheet>esLevel4.xml</event-sheet>
             <event-sheet>esIntro.xml</event-sheet>
+            <event-sheet>esEnding.xml</event-sheet>
         </event-folder>
         <event-folder name="BossFights">
             <event-sheet>esBossLevel1.xml</event-sheet>

@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>esEnding</name>
+    <events>
+        <include>esDialogs</include>
+        <event-block sid="567613003079971">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="469868284398546" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="462414134656960" type="FadeEffect">
+                    <param id="0" name="X">320</param>
+                    <param id="1" name="Y">240</param>
+                </action>
+                <action behavior="Fade" id="2" name="Set fade-in time" sid="375482429437609" type="FadeEffect">
+                    <param id="0" name="Fade-in time">0</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="132920774397745" type="FadeEffect" />
+                <action id="-16" name="Wait" sid="721630809337497" type="System">
+                    <param id="0" name="Seconds">2.5</param>
+                </action>
+                <action id="1" name="Request project file" sid="775904394154292" type="AJAX">
+                    <param id="0" name="Tag">&quot;Outro&quot;</param>
+                    <param id="1" name="File">Outro2.xml</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="346500821492268">
+            <conditions>
+                <condition id="0" name="On completed" sid="228235492787046" type="AJAX">
+                    <param id="0" name="Tag">&quot;Outro&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Load" sid="782306544977679" type="XML">
+                    <param id="0" name="XML">Ajax.LastData</param>
+                </action>
+                <action id="-9" name="Set value" sid="700290119032310" type="System">
+                    <param id="0" name="Variable">IsDialogues</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Call function" sid="425439267939013" type="Function">
+                    <param id="0" name="Name">&quot;StartDialogue&quot;</param>
+                    <param id="1" name="Parameter {n}">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="423795558593590">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="980696331827638" type="System">
+                    <param id="0" name="Variable">CurrentDialogue</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+                <condition id="-1" name="Compare X" sid="608075329091812" type="PlayerSprite">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="X co-ordinate">310</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="562372602581919" type="PlayerSprite">
+                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="124350738755853" type="PlayerSprite">
+                    <param id="0" name="X">Self.X + 80 * dt</param>
+                    <param id="1" name="Y">Self.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="838340419409428">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="424516240245113" type="PlayerSprite">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="X co-ordinate">310</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="201400678933205" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="734915157896818" type="PlayerSprite">
+                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="166463595796973" type="PlayerSprite">
+                    <param id="0" name="X">Self.X</param>
+                    <param id="1" name="Y">Self.Y</param>
+                </action>
+                <action id="-9" name="Set value" sid="311669452604499" type="System">
+                    <param id="0" name="Variable">IsDialogues</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Call function" sid="491353942816679" type="Function">
+                    <param id="0" name="Name">&quot;StartDialogue&quot;</param>
+                    <param id="1" name="Parameter {n}">CurrentDialogue</param>
+                </action>
+                <action behavior="Fade" id="2" name="Set fade-in time" sid="994120598309269" type="FadeEffect">
+                    <param id="0" name="Fade-in time">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="265287395426879" type="FadeEffect" />
+            </actions>
+        </event-block>
+        <event-block sid="855886703503758">
+            <conditions>
+                <condition behavior="Fade" id="1" name="On fade-in finished" sid="568105209074322" type="FadeEffect" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="403075090893398" type="PicNic">
+                    <param id="0" name="Animation">&quot;WithAna&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="591201612938013" type="PlayerSprite">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="398164161674333">
+            <conditions>
+                <condition behavior="Fade" id="0" name="On fade-out finished" sid="671838608585971" type="FadeEffect" />
+                <condition id="-14" name="Compare variable" sid="886778188695231" type="System">
+                    <param id="0" name="Variable">CurrentDialogue</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="442560593124515" type="System">
+                    <param id="0" name="Variable">IsDialogues</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Call function" sid="445825763867947" type="Function">
+                    <param id="0" name="Name">&quot;StartDialogue&quot;</param>
+                    <param id="1" name="Parameter {n}">CurrentDialogue</param>
+                </action>
+                <action id="-3" name="Set position" sid="800621119466574" type="Fine">
+                    <param id="0" name="X">192</param>
+                    <param id="1" name="Y">64</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="826375568511114" type="Fine" />
+            </actions>
+        </event-block>
+        <event-block sid="948948796861100">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="915797162502236" type="System">
+                    <param id="0" name="First value">LayerOpacity(6)</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Second value">100</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="108418013737912" type="System">
+                    <param id="0" name="Variable">CurrentDialogue</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-18" name="Set layer opacity" sid="218874476362987" type="System">
+                    <param id="0" name="Layer">6</param>
+                    <param id="1" name="Opacity">LayerOpacity(6) + 20 * dt</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="447069730393173">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="536907956022014" type="System">
+                            <param id="0" name="First value">LayerOpacity(6)</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">100</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="853996961614287" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="758895917066510" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action behavior="Fade" id="2" name="Set fade-in time" sid="538230699855892" type="FadeEffect">
+                            <param id="0" name="Fade-in time">3</param>
+                        </action>
+                        <action behavior="Fade" id="4" name="Set fade-out time" sid="541546407016507" type="FadeEffect">
+                            <param id="0" name="Fade-out time">0</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="620554424832944" type="FadeEffect" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="956572983938436">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="404491806504928" type="System" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="288887096469718" type="Audio" />
+            </actions>
+        </event-block>
+        <event-block sid="959857516563985">
+            <conditions>
+                <condition id="-10" name="Compare opacity" sid="136383001203601" type="FadeEffect">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Opacity">99</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="168972857394372" type="System">
+                    <param id="0" name="Variable">CurrentDialogue</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="418512844016092" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="803265659964388" type="System">
+                    <param id="0" name="Layout">Menu</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
