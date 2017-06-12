@@ -151,6 +151,11 @@
                     <param id="0" name="Comparison">4</param>
                     <param id="1" name="Opacity">90</param>
                 </condition>
+                <condition id="-7" name="Compare instance variable" sid="373580947587178" type="Tornado">
+                    <param id="0" name="Instance variable">IsMoving</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-9" name="Set value" sid="336320827542181" type="System">
