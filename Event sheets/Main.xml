@@ -729,9 +729,24 @@
                                     <param id="0" name="Object">BkgTile</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-9" name="Destroy" sid="495592380655592" type="Interaction" />
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="466683741282527">
+                                    <conditions>
+                                        <condition id="3" name="Compare frame" sid="580077477404075" type="BkgTile">
+                                            <param id="0" name="Comparison">1</param>
+                                            <param id="1" name="Number">31</param>
+                                        </condition>
+                                        <condition id="3" name="Compare frame" sid="236604609476934" type="BkgTile">
+                                            <param id="0" name="Comparison">1</param>
+                                            <param id="1" name="Number">32</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="495592380655592" type="Interaction" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-group>
