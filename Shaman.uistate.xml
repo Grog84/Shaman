@@ -10,13 +10,17 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="4">Level1</layout>
-        <layout active="1" order="6">Level3</layout>
+        <layout order="2">Intro</layout>
+        <layout order="3">Level1</layout>
         <layout order="5">Level2</layout>
+        <layout active="1" order="10">Level3</layout>
         <event-sheet order="0">Main</event-sheet>
-        <event-sheet order="1">esLevel1</event-sheet>
-        <event-sheet order="2">SpecialTies</event-sheet>
-        <event-sheet order="3">esLevel3</event-sheet>
+        <event-sheet order="1">esIntro</event-sheet>
+        <event-sheet order="4">esLevel1</event-sheet>
+        <event-sheet order="6">esLevel2</event-sheet>
+        <event-sheet order="7">esBossLevel1</event-sheet>
+        <event-sheet order="8">esBossLevel2</event-sheet>
+        <event-sheet order="9">esLevel3</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -31,7 +35,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <folders-expanded>
         <folder expanded="0" path="object-folder/" />
         <folder expanded="1" path="layout-folder/" />
-        <folder expanded="0" path="event-folder/" />
+        <folder expanded="1" path="event-folder/" />
         <folder expanded="0" path="event-folder/Enemies/" />
         <folder expanded="0" path="event-folder/Levels/" />
         <folder expanded="0" path="event-folder/BossFights/" />
@@ -108,6 +112,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/PauseMenuBkg/" />
         <folder expanded="1" path="animation-folder/Pause/" />
         <folder expanded="1" path="animation-folder/CursorPauseMenu/" />
-        <folder expanded="1" path="animation-folder/Boss1CutsceneArea/" />
+        <folder expanded="1" path="animation-folder/BossCutsceneArea/" />
     </folders-expanded>
 </c2uistate>

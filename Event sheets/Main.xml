@@ -1502,6 +1502,22 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="301687810632613">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="254540847212255" type="Grigliainvisibile">
+                                    <param id="0" name="Object">Tile</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="753385500356488" type="Grigliainvisibile">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="416047041189088" type="Grigliainvisibile">
+                                    <param id="0" name="Instance variable">IsValid</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <comment>Second Alternative for valid area definition</comment>
                         <event-block disabled="1" sid="598087431357546">
                             <conditions>
