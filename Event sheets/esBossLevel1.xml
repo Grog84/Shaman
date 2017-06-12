@@ -51,6 +51,12 @@
                 <action behavior="Platform" id="1" name="Set max speed" sid="793137966090841" type="Player">
                     <param id="0" name="Max Speed">0</param>
                 </action>
+                <action id="0" name="Play" sid="990933190301573" type="Audio">
+                    <param id="0" name="Audio file">prima boss fight coh and cambria</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-10</param>
+                    <param id="1" name="Tag (optional)">&quot;firstBossFight&quot;</param>
+                </action>
             </actions>
             <sub-events>
                 <comment>Activates or deactivates tiles selection/absorption</comment>
@@ -108,6 +114,14 @@
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="935702158478847">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="681454552119354" type="System" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="115009665404542" type="Audio" />
+            </actions>
         </event-block>
         <event-block sid="769778309249403">
             <conditions>
@@ -169,6 +183,12 @@
                     <param id="0" name="Duration">self.shakeDuration</param>
                     <param id="1" name="Type">0</param>
                     <param id="2" name="Tag">&quot;shake&quot;</param>
+                </action>
+                <action id="0" name="Play" sid="251155738439033" type="Audio">
+                    <param id="0" name="Audio file">sfx_wpn_cannon2</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;caveHit&quot;</param>
                 </action>
             </actions>
         </event-block>

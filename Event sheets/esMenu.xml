@@ -16,6 +16,12 @@
                     <param id="1" name="&apos;Off&apos; time">0.3</param>
                     <param id="2" name="Duration">Infinity</param>
                 </action>
+                <action id="0" name="Play" sid="306531815559976" type="Audio">
+                    <param id="0" name="Audio file">altro menu proposta</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-10</param>
+                    <param id="1" name="Tag (optional)">&quot;menuBkg&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="630818255288843">
@@ -61,6 +67,14 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="224548237377713">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="759432174376810" type="System" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="534535377558617" type="Audio" />
+            </actions>
+        </event-block>
         <event-group description="" sid="747196013994790" title="MainLayer">
             <sub-events>
                 <event-block sid="353121469228856">
@@ -92,6 +106,10 @@
                                     <param id="0" name="Variable">SelectionPositionMain</param>
                                     <param id="1" name="Value">2</param>
                                 </action>
+                                <action id="0" name="Call function" sid="622968385024369" type="Function">
+                                    <param id="0" name="Name">&quot;SetCursorPosition&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="158626268104361">
@@ -108,12 +126,7 @@
                                     <param id="0" name="Variable">SelectionPositionMain</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="792186644158012">
-                            <conditions />
-                            <actions>
-                                <action id="0" name="Call function" sid="622968385024369" type="Function">
+                                <action id="0" name="Call function" sid="259821952492676" type="Function">
                                     <param id="0" name="Name">&quot;SetCursorPosition&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
@@ -150,6 +163,10 @@
                                     <param id="0" name="Variable">SelectionPositionMain</param>
                                     <param id="1" name="Value">3</param>
                                 </action>
+                                <action id="0" name="Call function" sid="353095949913662" type="Function">
+                                    <param id="0" name="Name">&quot;SetCursorPosition&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="828637198847153">
@@ -166,11 +183,6 @@
                                     <param id="0" name="Variable">SelectionPositionMain</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="656877153108771">
-                            <conditions />
-                            <actions>
                                 <action id="0" name="Call function" sid="176958247187939" type="Function">
                                     <param id="0" name="Name">&quot;SetCursorPosition&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
@@ -208,6 +220,10 @@
                                     <param id="0" name="Variable">SelectionPositionMain</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
+                                <action id="0" name="Call function" sid="281119841645416" type="Function">
+                                    <param id="0" name="Name">&quot;SetCursorPosition&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="757363667638466">
@@ -224,12 +240,7 @@
                                     <param id="0" name="Variable">SelectionPositionMain</param>
                                     <param id="1" name="Value">3</param>
                                 </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="578853808602695">
-                            <conditions />
-                            <actions>
-                                <action id="0" name="Call function" sid="632830222556324" type="Function">
+                                <action id="0" name="Call function" sid="932858060799728" type="Function">
                                     <param id="0" name="Name">&quot;SetCursorPosition&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
@@ -266,6 +277,10 @@
                                     <param id="0" name="Variable">SelectionPositionMain</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="0" name="Call function" sid="569325641818756" type="Function">
+                                    <param id="0" name="Name">&quot;SetCursorPosition&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="960656742332282">
@@ -282,12 +297,7 @@
                                     <param id="0" name="Variable">SelectionPositionMain</param>
                                     <param id="1" name="Value">2</param>
                                 </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="955812131789142">
-                            <conditions />
-                            <actions>
-                                <action id="0" name="Call function" sid="569325641818756" type="Function">
+                                <action id="0" name="Call function" sid="668451523620493" type="Function">
                                     <param id="0" name="Name">&quot;SetCursorPosition&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
@@ -310,6 +320,12 @@
                             <param id="0" name="Duration">self.MoveTimer</param>
                             <param id="1" name="Type">0</param>
                             <param id="2" name="Tag">&quot;waiting&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="369301078668577" type="Audio">
+                            <param id="0" name="Audio file">Scelta menu</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;menuSelection&quot;</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -506,6 +522,12 @@
                             <param id="1" name="Type">0</param>
                             <param id="2" name="Tag">&quot;waiting&quot;</param>
                         </action>
+                        <action id="0" name="Play" sid="346070399945407" type="Audio">
+                            <param id="0" name="Audio file">Scelta menu</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;menuSelection&quot;</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="858048702115062">
@@ -629,6 +651,10 @@
                                     <param id="0" name="Variable">SelectionPositionLevels</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="0" name="Call function" sid="148380254551296" type="Function">
+                                    <param id="0" name="Name">&quot;SetCursorPositionLevels&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="229062462475647">
@@ -645,12 +671,7 @@
                                     <param id="0" name="Variable">SelectionPositionLevels</param>
                                     <param id="1" name="Value">3</param>
                                 </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="769466641598396">
-                            <conditions />
-                            <actions>
-                                <action id="0" name="Call function" sid="148380254551296" type="Function">
+                                <action id="0" name="Call function" sid="857506154952013" type="Function">
                                     <param id="0" name="Name">&quot;SetCursorPositionLevels&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
@@ -687,6 +708,10 @@
                                     <param id="0" name="Variable">SelectionPositionLevels</param>
                                     <param id="1" name="Value">2</param>
                                 </action>
+                                <action id="0" name="Call function" sid="922078570348258" type="Function">
+                                    <param id="0" name="Name">&quot;SetCursorPositionLevels&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="788790845360755">
@@ -702,6 +727,10 @@
                                 <action id="-9" name="Set value" sid="138571473973460" type="System">
                                     <param id="0" name="Variable">SelectionPositionLevels</param>
                                     <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="299223756899508" type="Function">
+                                    <param id="0" name="Name">&quot;SetCursorPositionLevels&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
@@ -719,12 +748,7 @@
                                     <param id="0" name="Variable">SelectionPositionLevels</param>
                                     <param id="1" name="Value">4</param>
                                 </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="640063745339255">
-                            <conditions />
-                            <actions>
-                                <action id="0" name="Call function" sid="253468581644649" type="Function">
+                                <action id="0" name="Call function" sid="589074986811809" type="Function">
                                     <param id="0" name="Name">&quot;SetCursorPositionLevels&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
@@ -761,6 +785,10 @@
                                     <param id="0" name="Variable">SelectionPositionLevels</param>
                                     <param id="1" name="Value">3</param>
                                 </action>
+                                <action id="0" name="Call function" sid="515515703247417" type="Function">
+                                    <param id="0" name="Name">&quot;SetCursorPositionLevels&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="945689628324118">
@@ -776,6 +804,10 @@
                                 <action id="-9" name="Set value" sid="576684796522082" type="System">
                                     <param id="0" name="Variable">SelectionPositionLevels</param>
                                     <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="674111635305423" type="Function">
+                                    <param id="0" name="Name">&quot;SetCursorPositionLevels&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
@@ -793,12 +825,7 @@
                                     <param id="0" name="Variable">SelectionPositionLevels</param>
                                     <param id="1" name="Value">5</param>
                                 </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="953104981397643">
-                            <conditions />
-                            <actions>
-                                <action id="0" name="Call function" sid="515515703247417" type="Function">
+                                <action id="0" name="Call function" sid="529456175849431" type="Function">
                                     <param id="0" name="Name">&quot;SetCursorPositionLevels&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
@@ -835,6 +862,10 @@
                                     <param id="0" name="Variable">SelectionPositionLevels</param>
                                     <param id="1" name="Value">4</param>
                                 </action>
+                                <action id="0" name="Call function" sid="143872551625756" type="Function">
+                                    <param id="0" name="Name">&quot;SetCursorPositionLevels&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="989501331624447">
@@ -850,6 +881,10 @@
                                 <action id="-9" name="Set value" sid="440993139277855" type="System">
                                     <param id="0" name="Variable">SelectionPositionLevels</param>
                                     <param id="1" name="Value">2</param>
+                                </action>
+                                <action id="0" name="Call function" sid="401950249563303" type="Function">
+                                    <param id="0" name="Name">&quot;SetCursorPositionLevels&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
@@ -867,12 +902,7 @@
                                     <param id="0" name="Variable">SelectionPositionLevels</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="912575263267308">
-                            <conditions />
-                            <actions>
-                                <action id="0" name="Call function" sid="143872551625756" type="Function">
+                                <action id="0" name="Call function" sid="101422138038191" type="Function">
                                     <param id="0" name="Name">&quot;SetCursorPositionLevels&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
@@ -909,6 +939,10 @@
                                     <param id="0" name="Variable">SelectionPositionLevels</param>
                                     <param id="1" name="Value">5</param>
                                 </action>
+                                <action id="0" name="Call function" sid="938106335478387" type="Function">
+                                    <param id="0" name="Name">&quot;SetCursorPositionLevels&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="379777710042202">
@@ -924,6 +958,10 @@
                                 <action id="-9" name="Set value" sid="156472896057821" type="System">
                                     <param id="0" name="Variable">SelectionPositionLevels</param>
                                     <param id="1" name="Value">3</param>
+                                </action>
+                                <action id="0" name="Call function" sid="535135996743619" type="Function">
+                                    <param id="0" name="Name">&quot;SetCursorPositionLevels&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
@@ -941,12 +979,7 @@
                                     <param id="0" name="Variable">SelectionPositionLevels</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="929222323346471">
-                            <conditions />
-                            <actions>
-                                <action id="0" name="Call function" sid="743997798271518" type="Function">
+                                <action id="0" name="Call function" sid="793673179001121" type="Function">
                                     <param id="0" name="Name">&quot;SetCursorPositionLevels&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
@@ -983,6 +1016,10 @@
                                     <param id="0" name="Variable">SelectionPositionLevels</param>
                                     <param id="1" name="Value">4</param>
                                 </action>
+                                <action id="0" name="Call function" sid="836993850872710" type="Function">
+                                    <param id="0" name="Name">&quot;SetCursorPositionLevels&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="932685045877536">
@@ -999,12 +1036,7 @@
                                     <param id="0" name="Variable">SelectionPositionLevels</param>
                                     <param id="1" name="Value">2</param>
                                 </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="575977007413070">
-                            <conditions />
-                            <actions>
-                                <action id="0" name="Call function" sid="709215333351865" type="Function">
+                                <action id="0" name="Call function" sid="438339339835498" type="Function">
                                     <param id="0" name="Name">&quot;SetCursorPositionLevels&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>

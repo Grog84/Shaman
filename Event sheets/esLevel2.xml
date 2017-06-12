@@ -56,7 +56,7 @@
                 </action>
                 <action id="0" name="Play" sid="259397855478674" type="Audio">
                     <param id="0" name="Audio file">Level 2</param>
-                    <param id="2" name="Loop">0</param>
+                    <param id="2" name="Loop">1</param>
                     <param id="3" name="Volume">-10</param>
                     <param id="1" name="Tag (optional)">&quot;level2bkg&quot;</param>
                 </action>
