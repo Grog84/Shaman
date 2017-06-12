@@ -1085,7 +1085,7 @@
                                             <param id="1" name="Layer">&quot;Tiles&quot;</param>
                                             <param id="2" name="Image point">0</param>
                                         </action>
-                                        <action id="-10" name="Set value" sid="826951950643720" type="Tile_Air">
+                                        <action id="-10" name="Set value" sid="826951950643720" type="Tile_water">
                                             <param id="0" name="Instance variable">Type</param>
                                             <param id="1" name="Value">&quot;Water&quot;</param>
                                         </action>
