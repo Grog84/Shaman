@@ -1050,6 +1050,12 @@
                                     <param id="1" name="Type">1</param>
                                     <param id="2" name="Tag">&quot;waitTilePlacing&quot;</param>
                                 </action>
+                                <action id="0" name="Play" sid="802841790395860" type="Audio">
+                                    <param id="0" name="Audio file">Posizionamento Blocco</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;dropBlock&quot;</param>
+                                </action>
                             </actions>
                             <sub-events>
                                 <event-block sid="232702358614801">
@@ -1147,6 +1153,39 @@
                                     </actions>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                        <event-block sid="455472540176109">
+                            <conditions>
+                                <condition id="6" name="On button pressed" sid="698727643222188" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">2</param>
+                                </condition>
+                                <condition id="3" name="Is button down" sid="537998533635325" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">7</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="790660127085775" type="Grigliainvisibile">
+                                    <param id="0" name="Instance variable">IsValid</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="635364957206976" type="Player">
+                                    <param id="0" name="Instance variable">TotalNumberOfTiles</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="790071928844782" type="Player">
+                                    <param id="0" name="Instance variable">CanPlaceTile</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="302291454722063" type="Audio">
+                                    <param id="0" name="Audio file">Selezione sbagliata</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;wrongSelection&quot;</param>
+                                </action>
+                            </actions>
                         </event-block>
                         <event-block sid="421433406694517">
                             <conditions>
