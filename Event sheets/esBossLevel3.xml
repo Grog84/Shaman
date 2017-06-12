@@ -828,6 +828,7 @@
                                 <action id="-16" name="Wait" sid="324732274509835" type="System">
                                     <param id="0" name="Seconds">2</param>
                                 </action>
+                                <action id="-9" name="Destroy" sid="153870694358981" type="FadeEffect" />
                                 <action id="-2" name="Go to layout" sid="185403309814857" type="System">
                                     <param id="0" name="Layout">Ending</param>
                                 </action>
