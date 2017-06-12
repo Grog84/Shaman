@@ -10,10 +10,15 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="1">Intro</layout>
+        <layout order="1">Level1</layout>
+        <layout order="2">Level2</layout>
         <layout order="3">Level3</layout>
+        <layout order="4">BossLevel1</layout>
+        <layout order="5">BossLevel2</layout>
+        <layout order="6">BossLevel3</layout>
+        <layout order="8">Menu</layout>
         <event-sheet order="0">Main</event-sheet>
-        <event-sheet active="1" order="2">esIntro</event-sheet>
+        <event-sheet active="1" order="7">esMenu</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -95,9 +100,15 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/ButtonA/" />
         <folder expanded="1" path="animation-folder/ButtonB/" />
         <folder expanded="1" path="animation-folder/MenuControls/" />
-        <folder expanded="1" path="animation-folder/Sprite4/" />
+        <folder expanded="1" path="animation-folder/MenuBkg2/" />
         <folder expanded="1" path="animation-folder/FlameBossHitbox/" />
         <folder expanded="1" path="animation-folder/Cristallo/" />
         <folder expanded="1" path="animation-folder/Tend/" />
+        <folder expanded="1" path="animation-folder/Continue/" />
+        <folder expanded="1" path="animation-folder/GoToCheckpoints/" />
+        <folder expanded="1" path="animation-folder/GoToMenu/" />
+        <folder expanded="1" path="animation-folder/PauseMenuBkg/" />
+        <folder expanded="1" path="animation-folder/Pause/" />
+        <folder expanded="1" path="animation-folder/CursorPauseMenu/" />
     </folders-expanded>
 </c2uistate>

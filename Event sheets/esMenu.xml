@@ -519,7 +519,7 @@
                             <actions>
                                 <action id="-3" name="Set position" sid="386021799589018" type="Cursor">
                                     <param id="0" name="X">134</param>
-                                    <param id="1" name="Y">366</param>
+                                    <param id="1" name="Y">350</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -534,7 +534,7 @@
                             <actions>
                                 <action id="-3" name="Set position" sid="264222054012411" type="Cursor">
                                     <param id="0" name="X">134</param>
-                                    <param id="1" name="Y">402</param>
+                                    <param id="1" name="Y">386</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -549,7 +549,7 @@
                             <actions>
                                 <action id="-3" name="Set position" sid="681207745294880" type="Cursor">
                                     <param id="0" name="X">134</param>
-                                    <param id="1" name="Y">440</param>
+                                    <param id="1" name="Y">424</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -564,7 +564,7 @@
                             <actions>
                                 <action id="-3" name="Set position" sid="956493259237080" type="Cursor">
                                     <param id="0" name="X">365</param>
-                                    <param id="1" name="Y">366</param>
+                                    <param id="1" name="Y">350</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -579,7 +579,7 @@
                             <actions>
                                 <action id="-3" name="Set position" sid="249279999891771" type="Cursor">
                                     <param id="0" name="X">365</param>
-                                    <param id="1" name="Y">402</param>
+                                    <param id="1" name="Y">386</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -594,7 +594,7 @@
                             <actions>
                                 <action id="-3" name="Set position" sid="744610229880055" type="Cursor">
                                     <param id="0" name="X">365</param>
-                                    <param id="1" name="Y">440</param>
+                                    <param id="1" name="Y">424</param>
                                 </action>
                             </actions>
                         </event-block>

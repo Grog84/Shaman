@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Main</name>
     <events>
+        <variable constant="0" name="SelectionPositionPause" sid="994354346244039" static="0" type="number">0</variable>
         <variable constant="0" name="LastCheckPoint" sid="892873940625470" static="0" type="number">-1</variable>
         <variable constant="0" name="LastRockSpawn" sid="262164579340656" static="0" type="number">-1</variable>
         <variable constant="0" name="SelectedTile" sid="812664699407104" static="0" type="number">0</variable>
@@ -4148,6 +4149,385 @@
                 <action id="0" name="Call function" sid="654526324840183" type="Function">
                     <param id="0" name="Name">&quot;RespawnAtChkPoint&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="176963329267712">
+            <conditions>
+                <condition id="6" name="On button pressed" sid="162664868631370" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">9</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set time scale" sid="694678375416289" type="System">
+                    <param id="0" name="Time scale">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="403266668229853" type="System">
+                    <param id="0" name="Layer">&quot;PauseMenu&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="249856610951954" type="System">
+                    <param id="0" name="Group name">&quot;PauseMenu&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="871132294701635" type="System">
+                    <param id="0" name="Group name">&quot;PlayerActions&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="288139360244803" type="System">
+                    <param id="0" name="Group name">&quot;PlayerAnimations&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="888530071378621" type="System">
+                    <param id="0" name="Group name">&quot;PlayerMovement&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="662611052798319" title="PauseMenu">
+            <sub-events>
+                <event-block sid="193524088881642">
+                    <conditions>
+                        <condition id="0" name="On function" sid="562268767148972" type="Function">
+                            <param id="0" name="Name">&quot;SetCursorPositionPause&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="807059942332405" type="CursorPauseMenu">
+                            <param id="0" name="Instance variable">CanMove</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="687445929653594">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="292502677970783" type="System">
+                                    <param id="0" name="Variable">SelectionPositionPause</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="336672905626866" type="CursorPauseMenu">
+                                    <param id="0" name="X">238</param>
+                                    <param id="1" name="Y">195</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="141028518767608">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="662345627963973" type="System">
+                                    <param id="0" name="Variable">SelectionPositionPause</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="555386613508518" type="CursorPauseMenu">
+                                    <param id="0" name="X">85</param>
+                                    <param id="1" name="Y">256</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="813077144828014">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="528953596450162" type="System">
+                                    <param id="0" name="Variable">SelectionPositionPause</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="369381992078414" type="CursorPauseMenu">
+                                    <param id="0" name="X">189</param>
+                                    <param id="1" name="Y">317</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="650201643066311">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="965981603148907" type="System">
+                            <param id="0" name="First value">SelectionPositionPause</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="396389949963228" type="CursorPauseMenu">
+                            <param id="0" name="Instance variable">CanMove</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="5" name="Compare axis" sid="650655755309266" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Axis">1</param>
+                            <param id="2" name="Comparison">4</param>
+                            <param id="3" name="Value">50</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="763189479529025" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="342789853943051" type="System">
+                            <param id="0" name="Variable">SelectionPositionPause</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="784882008754799" type="Function">
+                            <param id="0" name="Name">&quot;SetCursorPositionPause&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="345217908945644">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="641441166491179" type="System">
+                            <param id="0" name="First value">SelectionPositionPause</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="509285455272507" type="CursorPauseMenu">
+                            <param id="0" name="Instance variable">CanMove</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="5" name="Compare axis" sid="451819591372896" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Axis">1</param>
+                            <param id="2" name="Comparison">2</param>
+                            <param id="3" name="Value">-50</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="804439243984425" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="153482424116628" type="System">
+                            <param id="0" name="Variable">SelectionPositionPause</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="0" name="Call function" sid="981083580252349" type="Function">
+                            <param id="0" name="Name">&quot;SetCursorPositionPause&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="755185422452151">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="165189794405312" type="System">
+                            <param id="0" name="First value">SelectionPositionPause</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="865965548961642" type="CursorPauseMenu">
+                            <param id="0" name="Instance variable">CanMove</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="5" name="Compare axis" sid="808390719301247" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Axis">1</param>
+                            <param id="2" name="Comparison">4</param>
+                            <param id="3" name="Value">50</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="835295987791027" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="787200030961585" type="System">
+                            <param id="0" name="Variable">SelectionPositionPause</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="0" name="Call function" sid="563069315294012" type="Function">
+                            <param id="0" name="Name">&quot;SetCursorPositionPause&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="241711879432894">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="738058245784955" type="System">
+                            <param id="0" name="First value">SelectionPositionPause</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="466946318321617" type="CursorPauseMenu">
+                            <param id="0" name="Instance variable">CanMove</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="5" name="Compare axis" sid="649955895607789" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Axis">1</param>
+                            <param id="2" name="Comparison">2</param>
+                            <param id="3" name="Value">-50</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="284830862037012" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="921259415339613" type="System">
+                            <param id="0" name="Variable">SelectionPositionPause</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="801402461569428" type="Function">
+                            <param id="0" name="Name">&quot;SetCursorPositionPause&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="644064939341334">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="381247309271931" type="System">
+                            <param id="0" name="First value">SelectionPositionPause</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">2</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="701850117325589" type="CursorPauseMenu">
+                            <param id="0" name="Instance variable">CanMove</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="5" name="Compare axis" sid="364107363320815" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Axis">1</param>
+                            <param id="2" name="Comparison">4</param>
+                            <param id="3" name="Value">50</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="437813310755495" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="724833975626346" type="System">
+                            <param id="0" name="Variable">SelectionPositionPause</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="986307872781731" type="Function">
+                            <param id="0" name="Name">&quot;SetCursorPositionPause&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="173126596158887">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="400976916383054" type="System">
+                            <param id="0" name="First value">SelectionPositionPause</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">2</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="469162137662644" type="CursorPauseMenu">
+                            <param id="0" name="Instance variable">CanMove</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="5" name="Compare axis" sid="845115913253206" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Axis">1</param>
+                            <param id="2" name="Comparison">2</param>
+                            <param id="3" name="Value">-50</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="412626825391930" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="666269103675933" type="System">
+                            <param id="0" name="Variable">SelectionPositionPause</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="748753366872643" type="Function">
+                            <param id="0" name="Name">&quot;SetCursorPositionPause&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="106549558695311">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="759758486943670" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="667273310079769">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="405248039091450" type="System">
+                                    <param id="0" name="First value">SelectionPositionPause</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="740796902783221" type="System">
+                                    <param id="0" name="Layer">&quot;PauseMenu&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="907128751191939" type="System">
+                                    <param id="0" name="Group name">&quot;PauseMenu&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="-13" name="Set time scale" sid="328320362968958" type="System">
+                                    <param id="0" name="Time scale">1.0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="968419838963889" type="System">
+                                    <param id="0" name="Group name">&quot;PlayerActions&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="921676623315154" type="System">
+                                    <param id="0" name="Group name">&quot;PlayerAnimations&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="659198173093722" type="System">
+                                    <param id="0" name="Group name">&quot;PlayerMovement&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="927891957069590">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="208128801917807" type="System">
+                                    <param id="0" name="First value">SelectionPositionPause</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="319812159697630" type="Function">
+                                    <param id="0" name="Name">&quot;RespawnAtChkPoint&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="192192533449862">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="395754288478382" type="System">
+                                    <param id="0" name="First value">SelectionPositionPause</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="868983406291257" type="System">
+                                    <param id="0" name="Layout">Menu</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block any="1" sid="570437986723259">
+            <conditions>
+                <condition id="5" name="Compare axis" sid="497848019199574" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Axis">1</param>
+                    <param id="2" name="Comparison">2</param>
+                    <param id="3" name="Value">20</param>
+                </condition>
+                <condition id="5" name="Compare axis" sid="845218081084307" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Axis">1</param>
+                    <param id="2" name="Comparison">4</param>
+                    <param id="3" name="Value">20</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="334571326436420" type="CursorPauseMenu">
+                    <param id="0" name="Instance variable">CanMove</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
