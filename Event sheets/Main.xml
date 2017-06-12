@@ -522,6 +522,12 @@
                                             <param id="0" name="Instance variable">CanAbsorb</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
+                                        <action id="0" name="Play" sid="376028965527939" type="Audio">
+                                            <param id="0" name="Audio file">Assorbimento</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;absorb&quot;</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
@@ -4278,7 +4284,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="671362720713452">
+        <event-block disabled="1" sid="671362720713452">
             <conditions>
                 <condition id="0" name="On key pressed" sid="600158643999130" type="Keyboard">
                     <param id="0" name="Key">32 (Barra Spaziatrice)</param>
