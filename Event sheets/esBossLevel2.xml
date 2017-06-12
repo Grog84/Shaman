@@ -217,84 +217,104 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="569686041689098">
+        <event-block sid="980841873246505">
             <conditions>
-                <condition id="1" name="Is overlapping another object" sid="292766601667012" type="Shark">
+                <condition id="1" name="Is overlapping another object" sid="478846695638063" type="Shark">
                     <param id="0" name="Object">Tile_Air</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="194436026458649" type="Shark">
+                    <param id="0" name="Instance variable">hasHit</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="272826934482357">
+                <event-block sid="735659511405817">
                     <conditions>
-                        <condition id="-8" name="Compare two values" sid="949703849375198" type="System">
-                            <param id="0" name="First value">Shark.ImagepointY(1)</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Second value">Tile_Air.Y</param>
+                        <condition id="-8" name="Compare two values" sid="546956542718269" type="System">
+                            <param id="0" name="First value">Shark.Bullet.AngleOfMotion</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="929380182787152" type="Tile_Air" />
+                        <action id="-9" name="Destroy" sid="768717964037278" type="Tile_Air" />
                     </actions>
                 </event-block>
-                <event-block sid="863249246512275">
+                <event-block sid="373519614157941">
                     <conditions>
-                        <condition id="-8" name="Compare two values" sid="551092556306086" type="System">
+                        <condition id="-8" name="Compare two values" sid="863121862758021" type="System">
                             <param id="0" name="First value">Shark.ImagepointY(1)</param>
                             <param id="1" name="Comparison">3</param>
                             <param id="2" name="Second value">Tile_Air.Y</param>
                         </condition>
-                        <condition id="-8" name="Compare two values" sid="291012787164694" type="System">
+                        <condition id="-8" name="Compare two values" sid="736909992234615" type="System">
                             <param id="0" name="First value">Shark.Bullet.AngleOfMotion</param>
                             <param id="1" name="Comparison">4</param>
                             <param id="2" name="Second value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Bullet" id="0" name="Set speed" sid="802923631974709" type="Shark">
+                        <action behavior="Bullet" id="0" name="Set speed" sid="273199868260628" type="Shark">
                             <param id="0" name="Speed">0</param>
                         </action>
-                        <action behavior="Bullet" id="2" name="Set gravity" sid="644876600707376" type="Shark">
+                        <action behavior="Bullet" id="2" name="Set gravity" sid="247627491814908" type="Shark">
                             <param id="0" name="Gravity">0</param>
                         </action>
-                        <action id="-4" name="Set position to another object" sid="107026819932244" type="Shark">
+                        <action id="-4" name="Set position to another object" sid="993109027949350" type="Shark">
                             <param id="0" name="Object">Tile_Air</param>
                             <param id="1" name="Image point (optional)">1</param>
                         </action>
-                        <action id="-9" name="Set value" sid="366779174768074" type="System">
+                        <action id="-9" name="Set value" sid="923726459941117" type="System">
                             <param id="0" name="Variable">IsBeached</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-8" name="Set angle" sid="421402587983779" type="Shark">
+                        <action id="-8" name="Set angle" sid="765960726758106" type="Shark">
                             <param id="0" name="Angle">180</param>
                         </action>
-                        <action id="0" name="Call function" sid="848426522581485" type="Function">
+                        <action id="0" name="Call function" sid="729921170008307" type="Function">
                             <param id="0" name="Name">&quot;WaterAnimation&quot;</param>
                             <param id="1" name="Parameter {n}">Tile_Air.UID</param>
                         </action>
-                        <action id="11" name="Set collisions enabled" sid="187967296362884" type="Shark">
+                        <action id="11" name="Set collisions enabled" sid="506374345996796" type="Shark">
                             <param id="0" name="Collisions">0</param>
                         </action>
-                        <action id="-16" name="Wait" sid="518273431847172" type="System">
+                        <action id="-16" name="Wait" sid="696113543928970" type="System">
                             <param id="0" name="Seconds">3</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="693238131379699" type="Tile_Air" />
-                        <action behavior="Bullet" id="2" name="Set gravity" sid="833063971071349" type="WaterCrystal">
+                        <action id="-9" name="Destroy" sid="321177890248353" type="Tile_Air" />
+                        <action behavior="Bullet" id="2" name="Set gravity" sid="823341951514783" type="WaterCrystal">
                             <param id="0" name="Gravity">200</param>
                         </action>
-                        <action id="-16" name="Wait" sid="374253215420235" type="System">
+                        <action id="-16" name="Wait" sid="336127969627207" type="System">
                             <param id="0" name="Seconds">2</param>
                         </action>
-                        <action id="11" name="Set collisions enabled" sid="292170613159984" type="Shark">
+                        <action id="11" name="Set collisions enabled" sid="225448265286984" type="Shark">
                             <param id="0" name="Collisions">1</param>
                         </action>
-                        <action id="-9" name="Set value" sid="165988322924215" type="System">
+                        <action id="-9" name="Set value" sid="552376339754200" type="System">
                             <param id="0" name="Variable">IsBeached</param>
                             <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="569686041689098">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="292766601667012" type="Shark">
+                    <param id="0" name="Object">Tile_Air</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="915284785388012" type="Shark">
+                    <param id="0" name="Instance variable">hasHit</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="929380182787152" type="Tile_Air" />
+            </actions>
         </event-block>
         <event-block sid="164610458373142">
             <conditions>
@@ -428,6 +448,7 @@
             </conditions>
             <actions>
                 <action id="33" name="Stop all" sid="317043286244489" type="Audio" />
+                <action id="-9" name="Destroy" sid="830892224510126" type="CloudInfinite" />
                 <action behavior="Platform" id="5" name="Set gravity" sid="341218545976052" type="Player">
                     <param id="0" name="Gravity">0</param>
                 </action>
@@ -619,6 +640,27 @@
                 <action id="-10" name="Set value" sid="141722006438613" type="Tile_Air">
                     <param id="0" name="Instance variable">LifeDuration</param>
                     <param id="1" name="Value">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="591841851561817">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="856955229841685" type="Shark">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="840626950336385" type="Function">
+                    <param id="0" name="Name">&quot;Knockback&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-11" name="Subtract from" sid="201827805831469" type="System">
+                    <param id="0" name="Variable">PlayerHealth</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="465242105477810" type="Shark">
+                    <param id="0" name="Instance variable">hasHit</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>

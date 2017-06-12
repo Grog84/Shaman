@@ -2061,11 +2061,11 @@
                         <action id="-16" name="Set opacity" sid="645893311959364" type="PlayerSprite">
                             <param id="0" name="Opacity">100</param>
                         </action>
-                        <action id="-26" name="Move to layer" sid="292785210233028" type="PlayerSprite">
+                        <action disabled="1" id="-26" name="Move to layer" sid="292785210233028" type="PlayerSprite">
                             <param id="0" name="Layer">&quot;Fade&quot;</param>
                         </action>
-                        <action id="-24" name="Move to top" sid="924991188433808" type="PlayerSprite" />
-                        <action id="-3" name="Set position" sid="671824094415207" type="PlayerSprite">
+                        <action disabled="1" id="-24" name="Move to top" sid="924991188433808" type="PlayerSprite" />
+                        <action disabled="1" id="-3" name="Set position" sid="671824094415207" type="PlayerSprite">
                             <param id="0" name="X">320</param>
                             <param id="1" name="Y">240</param>
                         </action>

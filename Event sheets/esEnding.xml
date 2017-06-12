@@ -9,6 +9,7 @@
                 <condition id="-2" name="On start of layout" sid="469868284398546" type="System" />
             </conditions>
             <actions>
+                <action id="-21" name="Reset global variables" sid="334843911379809" type="System" />
                 <action id="-3" name="Set position" sid="462414134656960" type="FadeEffect">
                     <param id="0" name="X">320</param>
                     <param id="1" name="Y">240</param>

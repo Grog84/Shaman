@@ -2088,6 +2088,7 @@
                     <instance-variables>
                         <SharkID>0</SharkID>
                         <HasDestroyed>false</HasDestroyed>
+                        <hasHit>0</hasHit>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Bullet">

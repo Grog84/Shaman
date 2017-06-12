@@ -429,7 +429,7 @@
         <event-block sid="103405276391568">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="156031454857882" type="Tile_water">
-                    <param id="0" name="Object">FlameBossHitbox</param>
+                    <param id="0" name="Object">FlameBoss</param>
                 </condition>
                 <condition id="-4" name="Trigger once while true" sid="542192899963031" type="System" />
             </conditions>
@@ -526,6 +526,11 @@
                     <param id="0" name="Comparison">0</param>
                     <param id="1" name="Number">35</param>
                 </condition>
+                <condition id="-14" name="Compare variable" sid="236089947322136" type="System">
+                    <param id="0" name="Variable">IsDeathAnimation</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
                 <condition id="-4" name="Trigger once while true" sid="537105210727088" type="System" />
             </conditions>
             <actions>
@@ -575,6 +580,7 @@
                 </action>
                 <action behavior="Fade" id="1" name="Start fade" sid="814713108108440" type="FlameBoss" />
                 <action id="-9" name="Destroy" sid="580618549158218" type="FireCrystal" />
+                <action id="-9" name="Destroy" sid="690420993514828" type="ShineEffect" />
             </actions>
             <sub-events>
                 <event-block disabled="1" sid="218636440970412">
@@ -632,6 +638,7 @@
                 </action>
                 <action behavior="Fade" id="1" name="Start fade" sid="783220714528536" type="FlameBoss" />
                 <action id="-9" name="Destroy" sid="327767305240711" type="FireCrystal" />
+                <action id="-9" name="Destroy" sid="290306645518568" type="ShineEffect" />
             </actions>
             <sub-events>
                 <event-block sid="854937208842270">
@@ -663,6 +670,11 @@
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="259960227743079" type="Player">
                             <param id="0" name="Object">FlameBoss</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="619877902530129" type="System">
+                            <param id="0" name="Variable">IsDeathAnimation</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
