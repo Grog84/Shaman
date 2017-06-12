@@ -168,7 +168,82 @@
                     <param id="0" name="Name">&quot;CreateMap&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
+                <action id="-16" name="Wait" sid="245558988634310" type="System">
+                    <param id="0" name="Seconds">0</param>
+                </action>
             </actions>
+            <sub-events>
+                <event-block sid="451166764861898">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="476126083751052" type="System">
+                            <param id="0" name="Object">WaterBkg</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="933442586753850">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="152645395795722" type="System">
+                                    <param id="0" name="Object">BkgTile</param>
+                                </condition>
+                                <condition id="-1" name="Compare X" sid="364203199529573" type="BkgTile">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="X co-ordinate">WaterBkg.X</param>
+                                </condition>
+                                <condition id="-2" name="Compare Y" sid="636747425807995" type="BkgTile">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">WaterBkg.Y</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Solid" id="0" name="Set enabled" sid="124697879504382" type="BkgTile">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="Physics" id="27" name="Set enabled" sid="417770571070135" type="BkgTile">
+                                    <param id="0" name="Mode">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="255458840404783">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="508500572923987" type="System">
+                            <param id="0" name="Object">BkgTile</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="331272007974555">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="600320305667906" type="System">
+                                    <param id="0" name="Object">WaterBkg</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="258338291599777">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="866181125995913" type="System">
+                                            <param id="0" name="First value">distance(BkgTile.X, BkgTile.Y, WaterBkg.X, WaterBkg.Y)</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Solid" id="0" name="Set enabled" sid="184350262556112" type="BkgTile">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action behavior="Physics" id="27" name="Set enabled" sid="969843985593731" type="BkgTile">
+                                            <param id="0" name="Mode">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="593648897349085">
             <conditions>

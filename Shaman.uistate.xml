@@ -10,15 +10,18 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="5">BossLevel3</layout>
         <layout order="1">BossLevel1</layout>
-        <layout order="8">Level3</layout>
         <layout order="3">BossLevel2</layout>
+        <layout order="5">BossLevel3</layout>
+        <layout order="8">Level3</layout>
+        <layout order="9">Menu</layout>
+        <layout order="10">Level1</layout>
         <event-sheet order="0">Main</event-sheet>
-        <event-sheet order="6">esBossLevel3</event-sheet>
         <event-sheet order="2">esBossLevel1</event-sheet>
-        <event-sheet order="7">SpecialTies</event-sheet>
         <event-sheet order="4">esBossLevel2</event-sheet>
+        <event-sheet order="6">esBossLevel3</event-sheet>
+        <event-sheet order="7">SpecialTies</event-sheet>
+        <event-sheet active="1" order="11">esLevel3</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -31,12 +34,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="0" name="Obstacle" />
     </families-expanded>
     <folders-expanded>
-        <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="object-folder/" />
         <folder expanded="0" path="layout-folder/" />
-        <folder expanded="0" path="event-folder/" />
+        <folder expanded="1" path="event-folder/" />
         <folder expanded="0" path="event-folder/Enemies/" />
-        <folder expanded="0" path="event-folder/Levels/" />
-        <folder expanded="1" path="event-folder/BossFights/" />
+        <folder expanded="1" path="event-folder/Levels/" />
+        <folder expanded="0" path="event-folder/BossFights/" />
         <folder expanded="0" path="event-folder/Environment/" />
         <folder expanded="0" path="file-folder/" />
         <folder expanded="0" path="sound-folder/" />
@@ -117,5 +120,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/FlameCrystalArea/" />
         <folder expanded="1" path="animation-folder/ShineEffect/" />
         <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/WaterSolid/" />
     </folders-expanded>
 </c2uistate>

@@ -12,11 +12,7 @@
             <conditions>
                 <condition id="-25" name="On loader layout complete" sid="704042039426717" type="System" />
             </conditions>
-            <actions>
-                <action id="-16" name="Set opacity" sid="843793036517925" type="FadeEffect">
-                    <param id="0" name="Opacity">100</param>
-                </action>
-            </actions>
+            <actions />
         </event-block>
         <event-block sid="608847691396930">
             <conditions>
@@ -31,18 +27,14 @@
                     <param id="0" name="Variable">LastCheckPoint</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action behavior="Fade" id="4" name="Set fade-out time" sid="350545318779153" type="FadeEffect">
-                    <param id="0" name="Fade-out time">2</param>
-                </action>
-                <action behavior="Fade" id="2" name="Set fade-in time" sid="940734528835427" type="FadeEffect">
-                    <param id="0" name="Fade-in time">0</param>
-                </action>
-                <action behavior="Fade" id="1" name="Start fade" sid="251837998169722" type="FadeEffect" />
                 <action id="0" name="Play" sid="574837194697586" type="Audio">
                     <param id="0" name="Audio file">seconda boss fight</param>
                     <param id="2" name="Loop">1</param>
                     <param id="3" name="Volume">-10</param>
                     <param id="1" name="Tag (optional)">&quot;bossFight2bkg&quot;</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="616189476776018" type="FadeEffect">
+                    <param id="0" name="Opacity">0</param>
                 </action>
                 <action id="-21" name="Reset global variables" sid="540404500227756" type="System" />
             </actions>

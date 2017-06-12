@@ -38,6 +38,9 @@
                     <param id="1" name="Tag (optional)">&quot;firstBossFight&quot;</param>
                 </action>
                 <action id="-21" name="Reset global variables" sid="594230021181572" type="System" />
+                <action id="-16" name="Set opacity" sid="487691622661488" type="FadeEffect">
+                    <param id="0" name="Opacity">0</param>
+                </action>
             </actions>
             <sub-events>
                 <comment>Activates or deactivates tiles selection/absorption</comment>

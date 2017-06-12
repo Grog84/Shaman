@@ -3827,6 +3827,10 @@
                                                                     <sub-events>
                                                                         <event-block any="1" sid="791834162228713">
                                                                             <conditions>
+                                                                                <condition id="3" name="Compare frame" sid="927604074947868" type="BkgTile">
+                                                                                    <param id="0" name="Comparison">0</param>
+                                                                                    <param id="1" name="Number">20</param>
+                                                                                </condition>
                                                                                 <condition id="3" name="Compare frame" sid="490162697868865" type="BkgTile">
                                                                                     <param id="0" name="Comparison">0</param>
                                                                                     <param id="1" name="Number">21</param>
