@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>esBossLevel3</name>
     <events>
+        <variable constant="0" name="Boss3StartCutscene" sid="368437355203050" static="0" type="number">0</variable>
         <variable constant="0" name="TreeOnFire" sid="865318697326016" static="0" type="number">0</variable>
         <variable constant="0" name="TreeDestroyed" sid="613080021648169" static="0" type="number">0</variable>
         <include>SpecialTies</include>
@@ -114,6 +115,11 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">1</param>
                 </condition>
+                <condition id="-14" name="Compare variable" sid="398739334166422" type="System">
+                    <param id="0" name="Variable">Boss3StartCutscene</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-3" name="Create object" sid="959714338091047" type="System">
@@ -142,7 +148,12 @@
         <event-block sid="721670734156442">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="432099620888738" type="System">
-                    <param id="0" name="Interval (seconds)">10</param>
+                    <param id="0" name="Interval (seconds)">8</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="306741857743192" type="System">
+                    <param id="0" name="Variable">Boss3StartCutscene</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions />
@@ -153,7 +164,7 @@
                     <actions>
                         <action id="-9" name="Set value" sid="543326879859873" type="System">
                             <param id="0" name="Variable">position</param>
-                            <param id="1" name="Value">random(310, 390)</param>
+                            <param id="1" name="Value">random(330, 390)</param>
                         </action>
                         <action id="-3" name="Create object" sid="554990966307800" type="System">
                             <param id="0" name="Object to create">FireBall</param>
@@ -504,23 +515,6 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="651218374469977">
-            <conditions>
-                <condition id="1" name="Is overlapping another object" sid="259960227743079" type="Player">
-                    <param id="0" name="Object">FlameBoss</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-11" name="Subtract from" sid="881458230750175" type="System">
-                    <param id="0" name="Variable">PlayerHealth</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="0" name="Call function" sid="667012733230591" type="Function">
-                    <param id="0" name="Name">&quot;Knockback&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="278284250258321">
             <conditions>
                 <condition id="9" name="Is overlapping at offset" sid="905025559013262" type="Player">
@@ -545,5 +539,234 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="920078412593489">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="483910957250987" type="Player">
+                    <param id="0" name="Object">FlameCrystalArea</param>
+                </condition>
+                <condition id="2" name="Is playing" sid="966816909819788" type="FlameBoss">
+                    <param id="0" name="Animation">&quot;0Lives&quot;</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="986613732888265" type="System" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="302868121196919" type="Audio" />
+                <action behavior="Platform" id="5" name="Set gravity" sid="155624645382388" type="Player">
+                    <param id="0" name="Gravity">0</param>
+                </action>
+                <action behavior="Platform" id="9" name="Set vector Y" sid="713282611476026" type="Player">
+                    <param id="0" name="Vector Y">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="625824791357766" type="System">
+                    <param id="0" name="Group name">&quot;PlayerBoss3Interactions&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="514807663925799" type="FadeEffect" />
+                <action id="-24" name="Move to top" sid="980831400252204" type="FadeEffect" />
+                <action id="-24" name="Move to top" sid="188600894345925" type="PlayerSprite" />
+                <action id="0" name="Spawn another object" sid="981432526603307" type="FlameBoss">
+                    <param id="0" name="Object">Cristallo</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="449946193428159" type="Cristallo">
+                    <param id="0" name="Animation">&quot;Fire&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="783220714528536" type="FlameBoss" />
+                <action id="-9" name="Destroy" sid="327767305240711" type="FireCrystal" />
+            </actions>
+            <sub-events>
+                <event-block sid="854937208842270">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="578415096506516" type="System">
+                            <param id="0" name="Object">WaterBkg</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="556365907754363" type="WaterBkg">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="948672750042360">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="882502419932374" type="System">
+                            <param id="0" name="Variable">Boss3StartCutscene</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="476855656172072" title="PlayerBoss3Interactions">
+            <sub-events>
+                <event-block sid="651218374469977">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="259960227743079" type="Player">
+                            <param id="0" name="Object">FlameBoss</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="881458230750175" type="System">
+                            <param id="0" name="Variable">PlayerHealth</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="667012733230591" type="Function">
+                            <param id="0" name="Name">&quot;Knockback&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="677866758652140" title="EndCinematic3">
+            <sub-events>
+                <event-block sid="307788605708271">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="502197945418026" type="System">
+                            <param id="0" name="Variable">Boss3StartCutscene</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="225466175649901">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="546955079220089" type="BossCutsceneArea">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="255551408037653">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="497075114848613" type="System">
+                                            <param id="0" name="First value">distance(Player.X,Player.Y, BossCutsceneArea.X, BossCutsceneArea.Y)</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="126077115864705" type="Player">
+                                            <param id="0" name="X">Player.X - (abs(Player.X - BossCutsceneArea.X)/(Player.X - BossCutsceneArea.X)) * 100 * dt</param>
+                                            <param id="1" name="Y">Player.Y - (abs(Player.Y - BossCutsceneArea.Y)/(Player.Y - BossCutsceneArea.Y)) * 100 * dt</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="111266672061604">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="262848986988999" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="566586683236048" type="Player">
+                                            <param id="0" name="X">BossCutsceneArea.X</param>
+                                            <param id="1" name="Y">BossCutsceneArea.Y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="337821046937755" type="Player">
+                                            <param id="0" name="Instance variable">canAbsorbCrystalCutscene</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="877945902704820">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="106251534653494" type="Cristallo">
+                                    <param id="0" name="Instance variable">canBeAbsorbed</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="275570036187378" type="Player">
+                                    <param id="0" name="Instance variable">canAbsorbCrystalCutscene</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="231616258634123" type="Cristallo">
+                                    <param id="0" name="X">self.X - 100*dt</param>
+                                    <param id="1" name="Y">self.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="944652342292518">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="267929240181795" type="BossCutsceneArea">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="104515427603106" type="Cristallo">
+                                    <param id="0" name="Instance variable">canBeAbsorbed</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="351076918330316">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="335843531100678" type="System">
+                                            <param id="0" name="First value">distance(Cristallo.X,Cristallo.Y, BossCutsceneArea.X, BossCutsceneArea.Y)</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="403614317668934" type="Cristallo">
+                                            <param id="0" name="X">Cristallo.X - (abs(Cristallo.X - BossCutsceneArea.X)/(Cristallo.X - BossCutsceneArea.X)) * 50 * dt</param>
+                                            <param id="1" name="Y">Cristallo.Y - (abs(Cristallo.Y - BossCutsceneArea.Y)/(Cristallo.Y - BossCutsceneArea.Y)) * 50 * dt</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="981953444649167">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="816289116506520" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="221865539459939" type="Cristallo">
+                                            <param id="0" name="Instance variable">canBeAbsorbed</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="215411585374239">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="176263663983052" type="Cristallo">
+                                    <param id="0" name="Instance variable">canBeAbsorbed</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="1" name="Is overlapping another object" sid="798191897395564" type="Player">
+                                    <param id="0" name="Object">Cristallo</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="404379454615637" type="Player">
+                                    <param id="0" name="Instance variable">canAbsorbCrystalCutscene</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="391139963257088" type="Cristallo" />
+                                <action id="-16" name="Wait" sid="324732274509835" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="185403309814857" type="System">
+                                    <param id="0" name="Layout">Ending</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

@@ -1797,6 +1797,7 @@
                     </properties>
                     <instance-variables>
                         <TreeType>0</TreeType>
+                        <pinnedShineUID>0</pinnedShineUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -1825,6 +1826,7 @@
                     </properties>
                     <instance-variables>
                         <TreeType>1</TreeType>
+                        <pinnedShineUID>0</pinnedShineUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -1842,6 +1844,42 @@
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="FadeEffect" uid="551">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <isFading>0</isFading>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>1</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0</fade-out-time>
+                                <destroy>No</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>320</x>
+                        <y>240</y>
+                        <z>0</z>
+                        <width>640</width>
+                        <height>480</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0</opacity>
                     </world>
                 </instance>
             </instances>
@@ -1952,6 +1990,17 @@
                         <FireSpreadSpeed>40</FireSpreadSpeed>
                         <Health>3</Health>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0.5</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -2001,6 +2050,7 @@
                         <CanAbsorb>1</CanAbsorb>
                         <ImmunityWindow>1</ImmunityWindow>
                         <IsAbsorbingNbr>0</IsAbsorbingNbr>
+                        <canAbsorbCrystalCutscene>0</canAbsorbCrystalCutscene>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="BoundToLayout">
@@ -2121,6 +2171,50 @@
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="FlameCrystalArea" uid="550">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>456</x>
+                        <y>248.5</y>
+                        <z>0</z>
+                        <width>69</width>
+                        <height>45</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.200000003</opacity>
+                    </world>
+                </instance>
+                <instance type="FlameBossHitbox" uid="431">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>395.649230957</x>
+                        <y>264.215942383</y>
+                        <z>0</z>
+                        <width>54.672271729</width>
+                        <height>124.706512451</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.5</opacity>
                     </world>
                 </instance>
             </instances>
@@ -2328,7 +2422,7 @@
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
-                        <character-spacing>0</character-spacing>
+                        <character-spacing>-7</character-spacing>
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
@@ -2341,7 +2435,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>208</x>
-                        <y>16</y>
+                        <y>10</y>
                         <z>0</z>
                         <width>64</width>
                         <height>32</height>
@@ -2364,7 +2458,7 @@
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
-                        <character-spacing>0</character-spacing>
+                        <character-spacing>-7</character-spacing>
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
@@ -2377,7 +2471,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>368</x>
-                        <y>16</y>
+                        <y>10</y>
                         <z>0</z>
                         <width>64</width>
                         <height>32</height>
@@ -2400,7 +2494,7 @@
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
-                        <character-spacing>0</character-spacing>
+                        <character-spacing>-7</character-spacing>
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
@@ -2413,7 +2507,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>528</x>
-                        <y>16</y>
+                        <y>10</y>
                         <z>0</z>
                         <width>64</width>
                         <height>32</height>
@@ -2439,8 +2533,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>330.142883301</x>
-                        <y>71.109207153</y>
+                        <x>702</x>
+                        <y>46</y>
                         <z>0</z>
                         <width>273.327911377</width>
                         <height>129.017120361</height>
@@ -2449,28 +2543,6 @@
                         <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="FlameBossHitbox" uid="431">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>395.649230957</x>
-                        <y>264.215942383</y>
-                        <z>0</z>
-                        <width>54.672271729</width>
-                        <height>124.706512451</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>0.5</opacity>
                     </world>
                 </instance>
                 <instance type="CheckPoint" uid="238">
@@ -2501,7 +2573,7 @@
                         <opacity>0</opacity>
                     </world>
                 </instance>
-                <instance type="BossCutsceneArea" uid="491">
+                <instance type="BossCutsceneArea" uid="552">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2514,8 +2586,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>18</x>
-                        <y>204.5</y>
+                        <x>160</x>
+                        <y>255</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -2526,7 +2598,7 @@
                         <opacity>0</opacity>
                     </world>
                 </instance>
-                <instance type="BossCutsceneArea" uid="492">
+                <instance type="BossCutsceneArea" uid="553">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2539,8 +2611,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>306</x>
-                        <y>221.5</y>
+                        <x>448</x>
+                        <y>272</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -2549,6 +2621,28 @@
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>0</opacity>
+                    </world>
+                </instance>
+                <instance type="ShineEffect" uid="554">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>855</x>
+                        <y>430</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
                     </world>
                 </instance>
             </instances>

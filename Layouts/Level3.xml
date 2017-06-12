@@ -269,6 +269,7 @@
                     </properties>
                     <instance-variables>
                         <TreeType>0</TreeType>
+                        <pinnedShineUID>0</pinnedShineUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -323,6 +324,7 @@
                     </properties>
                     <instance-variables>
                         <TreeType>0</TreeType>
+                        <pinnedShineUID>0</pinnedShineUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
@@ -352,7 +354,7 @@
                     <instance-variables>
                         <TreeID>0</TreeID>
                         <isPassage>0</isPassage>
-                        <fireTimer>3</fireTimer>
+                        <fireTimer>4</fireTimer>
                         <isOnFire>0</isOnFire>
                         <fireUID>0</fireUID>
                     </instance-variables>
@@ -883,6 +885,7 @@
                         <CanAbsorb>1</CanAbsorb>
                         <ImmunityWindow>1</ImmunityWindow>
                         <IsAbsorbingNbr>0</IsAbsorbingNbr>
+                        <canAbsorbCrystalCutscene>0</canAbsorbCrystalCutscene>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="BoundToLayout">
@@ -1690,6 +1693,28 @@
                         <z>0</z>
                         <width>640</width>
                         <height>480</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="ShineEffect" uid="555">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>875</x>
+                        <y>-109</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

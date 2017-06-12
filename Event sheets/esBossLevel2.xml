@@ -456,6 +456,10 @@
                     <param id="1" name="Layer">&quot;Main&quot;</param>
                     <param id="2" name="Image point">1</param>
                 </action>
+                <action id="4" name="Set animation" sid="823413760770073" type="Cristallo">
+                    <param id="0" name="Animation">&quot;Water&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
                 <action id="-9" name="Destroy" sid="664014301414463" type="WaterCrystal" />
             </actions>
             <sub-events>

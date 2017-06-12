@@ -329,44 +329,11 @@
                     <param id="1" name="Layer">&quot;Main&quot;</param>
                     <param id="2" name="Image point">1</param>
                 </action>
+                <action id="4" name="Set animation" sid="475458560805145" type="Cristallo">
+                    <param id="0" name="Animation">&quot;Air&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
                 <action id="-9" name="Set value" sid="799597016200866" type="System">
-                    <param id="0" name="Variable">Boss1StartCutscene</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block disabled="1" sid="299778004806568">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="493868799200772" type="Keyboard">
-                    <param id="0" name="Key">75 (K)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="33" name="Stop all" sid="587001773919537" type="Audio" />
-                <action id="-10" name="Set value" sid="245576386745286" type="Boss">
-                    <param id="0" name="Instance variable">isMoving</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action behavior="Platform" id="5" name="Set gravity" sid="753162982922997" type="Player">
-                    <param id="0" name="Gravity">0</param>
-                </action>
-                <action behavior="Platform" id="9" name="Set vector Y" sid="905358165779416" type="Player">
-                    <param id="0" name="Vector Y">0</param>
-                </action>
-                <action id="-12" name="Set group active" sid="722766154624194" type="System">
-                    <param id="0" name="Group name">&quot;PlayerBoss1Interactions&quot;</param>
-                    <param id="1" name="State">0</param>
-                </action>
-                <action behavior="Fade" id="1" name="Start fade" sid="836105566897619" type="FadeEffect" />
-                <action id="-24" name="Move to top" sid="677466645732180" type="FadeEffect" />
-                <action id="-24" name="Move to top" sid="236219863502881" type="PlayerSprite" />
-                <action behavior="Fade" id="1" name="Start fade" sid="519124453999329" type="Boss" />
-                <action id="0" name="Spawn another object" sid="440196946811032" type="Boss">
-                    <param id="0" name="Object">Cristallo</param>
-                    <param id="1" name="Layer">&quot;Main&quot;</param>
-                    <param id="2" name="Image point">1</param>
-                </action>
-                <action id="-9" name="Set value" sid="391288159222248" type="System">
                     <param id="0" name="Variable">Boss1StartCutscene</param>
                     <param id="1" name="Value">1</param>
                 </action>

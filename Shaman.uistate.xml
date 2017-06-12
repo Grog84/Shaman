@@ -10,9 +10,15 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="1">BossLevel3</layout>
+        <layout order="5">BossLevel3</layout>
+        <layout order="1">BossLevel1</layout>
+        <layout order="8">Level3</layout>
+        <layout order="3">BossLevel2</layout>
         <event-sheet order="0">Main</event-sheet>
-        <event-sheet active="1" order="2">esBossLevel3</event-sheet>
+        <event-sheet active="1" order="6">esBossLevel3</event-sheet>
+        <event-sheet order="2">esBossLevel1</event-sheet>
+        <event-sheet order="7">SpecialTies</event-sheet>
+        <event-sheet order="4">esBossLevel2</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -27,7 +33,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <folders-expanded>
         <folder expanded="0" path="object-folder/" />
         <folder expanded="0" path="layout-folder/" />
-        <folder expanded="1" path="event-folder/" />
+        <folder expanded="0" path="event-folder/" />
         <folder expanded="0" path="event-folder/Enemies/" />
         <folder expanded="0" path="event-folder/Levels/" />
         <folder expanded="1" path="event-folder/BossFights/" />
@@ -108,5 +114,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/AbsorbingSphere/" />
         <folder expanded="1" path="animation-folder/Glow/" />
         <folder expanded="1" path="animation-folder/PicNic/" />
+        <folder expanded="1" path="animation-folder/FlameCrystalArea/" />
+        <folder expanded="1" path="animation-folder/ShineEffect/" />
+        <folder expanded="1" path="animation-folder/Sprite/" />
     </folders-expanded>
 </c2uistate>
