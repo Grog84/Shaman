@@ -29,11 +29,19 @@
                     <param id="1" name="File">Outro2.xml</param>
                 </action>
                 <action id="0" name="Play" sid="839442044744867" type="Audio">
-                    <param id="0" name="Audio file">eventuale altro menu</param>
-                    <param id="2" name="Loop">0</param>
+                    <param id="0" name="Audio file">Pupo - Su di Noi - 8 bit Cover (online-audio-converter.com)</param>
+                    <param id="2" name="Loop">1</param>
                     <param id="3" name="Volume">-10</param>
                     <param id="1" name="Tag (optional)">&quot;endingBkg&quot;</param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block sid="213842002201324">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="506649742155506" type="System" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="281339134166775" type="Audio" />
             </actions>
         </event-block>
         <event-block sid="346500821492268">

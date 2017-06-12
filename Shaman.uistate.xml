@@ -16,8 +16,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="6">Ending</layout>
         <event-sheet order="0">Main</event-sheet>
         <event-sheet order="2">esBossLevel1</event-sheet>
-        <event-sheet active="1" order="5">esBossLevel3</event-sheet>
-        <event-sheet order="7">esEnding</event-sheet>
+        <event-sheet order="5">esBossLevel3</event-sheet>
+        <event-sheet active="1" order="7">esEnding</event-sheet>
+        <event-sheet order="8">esIntro</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -32,9 +33,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <folders-expanded>
         <folder expanded="0" path="object-folder/" />
         <folder expanded="0" path="layout-folder/" />
-        <folder expanded="0" path="event-folder/" />
+        <folder expanded="1" path="event-folder/" />
         <folder expanded="0" path="event-folder/Enemies/" />
-        <folder expanded="0" path="event-folder/Levels/" />
+        <folder expanded="1" path="event-folder/Levels/" />
         <folder expanded="0" path="event-folder/BossFights/" />
         <folder expanded="0" path="event-folder/Environment/" />
         <folder expanded="0" path="file-folder/" />

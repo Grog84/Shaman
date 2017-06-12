@@ -31,6 +31,20 @@
                     <param id="0" name="Tag">&quot;Intro&quot;</param>
                     <param id="1" name="File">Intro.xml</param>
                 </action>
+                <action id="0" name="Play" sid="235783116958197" type="Audio">
+                    <param id="0" name="Audio file">introdoubledragon (online-audio-converter.com)</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-10</param>
+                    <param id="1" name="Tag (optional)">&quot;intro&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="928280814980354">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="527670517326286" type="System" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="485534373848301" type="Audio" />
             </actions>
         </event-block>
         <event-block sid="695437803237284">
