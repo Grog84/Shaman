@@ -252,7 +252,7 @@
                 <action id="-9" name="Destroy" sid="406599561321227" type="TileDrop" />
             </actions>
         </event-block>
-        <event-block disabled="1" sid="876761968465244">
+        <event-block sid="876761968465244">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="313388107804154" type="AnaFoot">
                     <param id="0" name="Object">GlobeArea</param>
@@ -283,7 +283,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block any="1" sid="960782371110595">
+        <event-block any="1" disabled="1" sid="960782371110595">
             <conditions>
                 <condition id="0" name="On key pressed" sid="475814584979085" type="Keyboard">
                     <param id="0" name="Key">75 (K)</param>

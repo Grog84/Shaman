@@ -170,6 +170,10 @@
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
+                                <condition id="-10" name="Compare opacity" sid="999642407910541" type="Liane">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Opacity">90</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action behavior="Platform" id="6" name="Set max fall speed" sid="273388384244175" type="Player">
@@ -207,6 +211,10 @@
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
+                                <condition id="-10" name="Compare opacity" sid="130764121681425" type="Liane">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Opacity">90</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action behavior="Platform" id="6" name="Set max fall speed" sid="673886527468136" type="Player">
@@ -239,6 +247,10 @@
                             <conditions>
                                 <condition id="1" inverted="1" name="Is overlapping another object" sid="417745057934545" type="Player">
                                     <param id="0" name="Object">Liane</param>
+                                </condition>
+                                <condition id="-10" name="Compare opacity" sid="177813693020982" type="Liane">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Opacity">90</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -586,6 +598,10 @@
                                                 <action behavior="Bullet" id="3" name="Set angle of motion" sid="419146652149874" type="Interaction">
                                                     <param id="0" name="Angle">90</param>
                                                 </action>
+                                                <action id="-10" name="Set value" sid="348813874726332" type="Interaction">
+                                                    <param id="0" name="Instance variable">TravelledDistance</param>
+                                                    <param id="1" name="Value">20</param>
+                                                </action>
                                             </actions>
                                         </event-block>
                                     </sub-events>
@@ -768,6 +784,16 @@
                                                     </conditions>
                                                     <actions>
                                                         <action id="-9" name="Destroy" sid="427560738287653" type="ValidArea" />
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="494494638146501">
+                                                    <conditions>
+                                                        <condition id="1" name="Is overlapping another object" sid="127895203319462" type="BkgTile">
+                                                            <param id="0" name="Object">ValidArea</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Destroy" sid="184138158962532" type="ValidArea" />
                                                     </actions>
                                                 </event-block>
                                                 <event-block sid="524702325009176">
@@ -3637,6 +3663,10 @@
                                                                     <sub-events>
                                                                         <event-block any="1" sid="791834162228713">
                                                                             <conditions>
+                                                                                <condition id="3" name="Compare frame" sid="490162697868865" type="BkgTile">
+                                                                                    <param id="0" name="Comparison">0</param>
+                                                                                    <param id="1" name="Number">21</param>
+                                                                                </condition>
                                                                                 <condition id="3" name="Compare frame" sid="892768755653969" type="BkgTile">
                                                                                     <param id="0" name="Comparison">0</param>
                                                                                     <param id="1" name="Number">31</param>
@@ -3645,10 +3675,17 @@
                                                                                     <param id="0" name="Comparison">0</param>
                                                                                     <param id="1" name="Number">32</param>
                                                                                 </condition>
+                                                                                <condition id="3" name="Compare frame" sid="561262192514714" type="BkgTile">
+                                                                                    <param id="0" name="Comparison">0</param>
+                                                                                    <param id="1" name="Number">33</param>
+                                                                                </condition>
                                                                             </conditions>
                                                                             <actions>
                                                                                 <action behavior="Solid" id="0" name="Set enabled" sid="482693240302252" type="BkgTile">
                                                                                     <param id="0" name="State">0</param>
+                                                                                </action>
+                                                                                <action behavior="Physics" id="27" name="Set enabled" sid="547798217667874" type="BkgTile">
+                                                                                    <param id="0" name="Mode">0</param>
                                                                                 </action>
                                                                             </actions>
                                                                             <sub-events>
@@ -4185,8 +4222,30 @@
                 </action>
             </actions>
         </event-block>
-        <event-group description="" sid="662611052798319" title="PauseMenu">
+        <event-group description="" inactive="1" sid="662611052798319" title="PauseMenu">
             <sub-events>
+                <event-block sid="570437986723259">
+                    <conditions>
+                        <condition id="5" name="Compare axis" sid="497848019199574" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Axis">1</param>
+                            <param id="2" name="Comparison">2</param>
+                            <param id="3" name="Value">10</param>
+                        </condition>
+                        <condition id="5" name="Compare axis" sid="845218081084307" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Axis">1</param>
+                            <param id="2" name="Comparison">4</param>
+                            <param id="3" name="Value">-10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="334571326436420" type="CursorPauseMenu">
+                            <param id="0" name="Instance variable">CanMove</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="193524088881642">
                     <conditions>
                         <condition id="0" name="On function" sid="562268767148972" type="Function">
@@ -4500,6 +4559,29 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-4" name="Set layer visible" sid="315481459375254" type="System">
+                                    <param id="0" name="Layer">&quot;PauseMenu&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="451596437443207" type="System">
+                                    <param id="0" name="Group name">&quot;PlayerActions&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="768381579246553" type="System">
+                                    <param id="0" name="Group name">&quot;PlayerAnimations&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="262719696626744" type="System">
+                                    <param id="0" name="Group name">&quot;PlayerMovement&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-13" name="Set time scale" sid="565831456583045" type="System">
+                                    <param id="0" name="Time scale">1.0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="118686142350696" type="System">
+                                    <param id="0" name="Group name">&quot;PauseMenu&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
                                 <action id="-2" name="Go to layout" sid="868983406291257" type="System">
                                     <param id="0" name="Layout">Menu</param>
                                 </action>
@@ -4509,27 +4591,5 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block any="1" sid="570437986723259">
-            <conditions>
-                <condition id="5" name="Compare axis" sid="497848019199574" type="Gamepad">
-                    <param id="0" name="Gamepad">0</param>
-                    <param id="1" name="Axis">1</param>
-                    <param id="2" name="Comparison">2</param>
-                    <param id="3" name="Value">20</param>
-                </condition>
-                <condition id="5" name="Compare axis" sid="845218081084307" type="Gamepad">
-                    <param id="0" name="Gamepad">0</param>
-                    <param id="1" name="Axis">1</param>
-                    <param id="2" name="Comparison">4</param>
-                    <param id="3" name="Value">20</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="334571326436420" type="CursorPauseMenu">
-                    <param id="0" name="Instance variable">CanMove</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-        </event-block>
     </events>
 </c2eventsheet>

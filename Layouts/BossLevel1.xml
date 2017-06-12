@@ -1777,6 +1777,7 @@
                         <IsFalling>1</IsFalling>
                         <IsSolid>0</IsSolid>
                         <pinnedInteraction>0</pinnedInteraction>
+                        <canStopOnBranch>1</canStopOnBranch>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -2298,6 +2299,7 @@
                         <IsFalling>1</IsFalling>
                         <IsSolid>0</IsSolid>
                         <pinnedInteraction>0</pinnedInteraction>
+                        <canStopOnBranch>1</canStopOnBranch>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">

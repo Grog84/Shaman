@@ -541,6 +541,159 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <comment>One Tile</comment>
+                        <event-block sid="592812272932888">
+                            <conditions>
+                                <condition id="9" name="Is overlapping at offset" sid="968671491109990" type="Tile_earth">
+                                    <param id="0" name="Object">Bark</param>
+                                    <param id="1" name="Offset X">0</param>
+                                    <param id="2" name="Offset Y">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="892949944499875" type="Tile_earth">
+                                    <param id="0" name="Instance variable">canStopOnBranch</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="236654397644019">
+                                    <conditions>
+                                        <condition id="3" name="Compare frame" sid="920298776883573" type="Bark">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">4</param>
+                                        </condition>
+                                        <condition id="3" name="Compare frame" sid="171842006738902" type="Bark">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">5</param>
+                                        </condition>
+                                        <condition id="3" name="Compare frame" sid="937667119579131" type="Bark">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">6</param>
+                                        </condition>
+                                        <condition id="3" name="Compare frame" sid="472566801076997" type="Bark">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">7</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Physics" id="27" name="Set enabled" sid="559688744125899" type="Tile_earth">
+                                            <param id="0" name="Mode">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Two Tiles</comment>
+                        <event-block sid="608406066624383">
+                            <conditions>
+                                <condition id="9" name="Is overlapping at offset" sid="599473606603235" type="Tile_earth">
+                                    <param id="0" name="Object">Bark</param>
+                                    <param id="1" name="Offset X">0</param>
+                                    <param id="2" name="Offset Y">33</param>
+                                </condition>
+                                <condition id="9" name="Is overlapping at offset" sid="888087961279349" type="Tile_earth">
+                                    <param id="0" name="Object">Tile_earth</param>
+                                    <param id="1" name="Offset X">0</param>
+                                    <param id="2" name="Offset Y">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="241659352332002" type="Tile_earth">
+                                    <param id="0" name="Instance variable">canStopOnBranch</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="207384960724703">
+                                    <conditions>
+                                        <condition id="3" name="Compare frame" sid="119773602651816" type="Bark">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">4</param>
+                                        </condition>
+                                        <condition id="3" name="Compare frame" sid="577708189660514" type="Bark">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">5</param>
+                                        </condition>
+                                        <condition id="3" name="Compare frame" sid="533514791836636" type="Bark">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">6</param>
+                                        </condition>
+                                        <condition id="3" name="Compare frame" sid="487865933957779" type="Bark">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">7</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Physics" id="27" name="Set enabled" sid="638253638180848" type="Tile_earth">
+                                            <param id="0" name="Mode">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="436279060910160">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="785035598524709" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Physics" id="27" name="Set enabled" sid="818743879587583" type="Tile_earth">
+                                            <param id="0" name="Mode">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Three Tiles</comment>
+                        <event-block sid="226843424307267">
+                            <conditions>
+                                <condition id="9" name="Is overlapping at offset" sid="940687107486250" type="Tile_earth">
+                                    <param id="0" name="Object">Bark</param>
+                                    <param id="1" name="Offset X">0</param>
+                                    <param id="2" name="Offset Y">65</param>
+                                </condition>
+                                <condition id="9" name="Is overlapping at offset" sid="391467359832259" type="Tile_earth">
+                                    <param id="0" name="Object">Tile_earth</param>
+                                    <param id="1" name="Offset X">0</param>
+                                    <param id="2" name="Offset Y">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="835119526310788" type="Tile_earth">
+                                    <param id="0" name="Instance variable">canStopOnBranch</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="191378843766788">
+                                    <conditions>
+                                        <condition id="3" name="Compare frame" sid="663764659535900" type="Bark">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">4</param>
+                                        </condition>
+                                        <condition id="3" name="Compare frame" sid="611191622755072" type="Bark">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">5</param>
+                                        </condition>
+                                        <condition id="3" name="Compare frame" sid="112013232467810" type="Bark">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">6</param>
+                                        </condition>
+                                        <condition id="3" name="Compare frame" sid="221496372698560" type="Bark">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">7</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Physics" id="27" name="Set enabled" sid="836942472203947" type="Tile_earth">
+                                            <param id="0" name="Mode">0</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="150814569277649" type="Function">
+                                            <param id="0" name="Name">&quot;EnableRockPhysics&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                         <event-block sid="267579369270198">
                             <conditions>
                                 <condition behavior="Timer" id="0" name="On timer" sid="237959556747154" type="Bark">
@@ -622,6 +775,45 @@
                                     </actions>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="500363617085946">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="245410699411760" type="Tile_earth">
+                            <param id="0" name="Object">Bark</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="488982590856589" type="Tile_earth">
+                            <param id="0" name="Instance variable">canStopOnBranch</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="760775358963573">
+                    <conditions>
+                        <condition id="0" name="On function" sid="759429789244580" type="Function">
+                            <param id="0" name="Name">&quot;EnableRockPhysics&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="789728762989663">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="437522980725137" type="System">
+                                    <param id="0" name="Object">Tile_earth</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="27" name="Set enabled" sid="685436728945000" type="Tile_earth">
+                                    <param id="0" name="Mode">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="440484522337152" type="Tile_earth">
+                                    <param id="0" name="Instance variable">canStopOnBranch</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>

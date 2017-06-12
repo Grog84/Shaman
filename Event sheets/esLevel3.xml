@@ -66,6 +66,10 @@
                 <action id="-5" name="Set width" sid="905111841728009" type="Forest">
                     <param id="0" name="Width">LayoutWidth</param>
                 </action>
+                <action id="-9" name="Set value" sid="790552037649986" type="System">
+                    <param id="0" name="Variable">SelectionPositionPause</param>
+                    <param id="1" name="Value">0</param>
+                </action>
             </actions>
             <sub-events>
                 <comment>Activates or deactivates tiles selection/absorption</comment>
